@@ -1,0 +1,553 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>phome_enewsgroup 数据表字段解释</title>
+<link href="../images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%" border="0" align="center">
+  <tr> 
+    <td width="100%"><strong><font color="#0000FF">phome_enewsgroup 数据表字段解释（用户组表）</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="800" border="0" cellspacing="1" cellpadding="3" class="tableborder">
+  <tr class="header"> 
+    <td width="20%" height="30">字段名</td>
+    <td width="15%">类型</td>
+    <td width="21%">解释</td>
+    <td width="44%">附加说明</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>groupid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">用户组ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>groupname</strong></td>
+    <td bgcolor="#FFFFFF">varchar(50)</td>
+    <td bgcolor="#FFFFFF">用户组名称</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dopublic</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">系统参数设置权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doclass</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">栏目管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dotemplate</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">模板管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dopicnews</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">图片信息管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dofile</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">附件管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>douser</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">用户管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dolog</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">日志管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>domember</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">会员管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dobefrom</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">信息来源管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doword</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">过滤字符管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dokey</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">内容关键字管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doad</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">广告管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dovote</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">投票管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dogroup</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">用户组管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doall</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">可操作所有信息栏目</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>docj</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">采集管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dobq</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">标签管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>domovenews</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">批量转移信息权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dopostdata</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">远程发布权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dochangedata</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">数据更新权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dopl</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">评论管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dof</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">自定义字段权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dom</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">系统模型管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dodo</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">刷新任务管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dodbdata</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">数据备份权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dorepnewstext</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">批量替换字段值权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dotempvar</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">模板变量管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dostats</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">统计权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dowriter</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">作者管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dototaldata</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">统计信息数据权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dosearchkey</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">搜索关键字管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dozt</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">专题管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>docard</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">点卡管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dolink</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">友情链接管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doselfinfo</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">只能操作自己发布的信息</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doexecsql</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">执行SQL语句权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dotable</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">数据表管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dodownurl</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">下载地址前缀管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dodeldownrecord</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">删除下载记录权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doshoppayfs</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">商城支付方式管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doshopps</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">商城配送方式管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doshopdd</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">商城订单管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dogbook</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">留言管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dofeedback</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">反馈信息管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>douserpage</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">自定义页面管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>donotcj</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">防采集字符管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dodownerror</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">错误报告管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dodelinfodata</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">批量删除信息权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doaddinfo</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">信息增加权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doeditinfo</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">信息编辑权限<font color="#666666">&nbsp;</font></td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dodelinfo</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">信息删除权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doadminstyle</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">后台风格管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dorepdownpath</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">批量替换下载地址权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>douserjs</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">自定义JS管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>douserlist</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">自定义列表管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>domsg</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">站内短信息管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dosendemail</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">批量发送邮件权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dosetmclass</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">批量设置栏目属性权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doinfodoc</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">批量归档信息权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dotempgroup</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">模板组管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dofeedbackf</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">自定义反馈字段权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dotask</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">计划任务管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>domemberf</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">会员字段管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dospacestyle</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">会员空间模板管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dospacedata</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">会员空间数据管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dovotemod</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">预设投票管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doplayer</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">播放器管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dowap</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">WAP设置权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dopay</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">在线支付管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dobuygroup</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">充值类型管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dosearchall</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">全站搜索权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doinfotype</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">标题分类管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doplf</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">评论自定义字段权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dopltable</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">管理评论分表权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dochadminstyle</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">改变后台风格权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dotags</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">TAGS管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dosp</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">碎片管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doyh</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">优化方案管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dofirewall</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">网站防火墙权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dosetsafe</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">安全参数设置权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>douserclass</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">部门管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doworkflow</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">工作流管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>domenu</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">扩展菜单管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dopubvar</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">扩展变量管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doclassf</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">栏目字段管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doztf</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">专题字段管理权限</td>
+    <td bgcolor="#FFFFFF">1为有权限，0为无权限</td>
+  </tr>
+</table>
+</body>
+</html>

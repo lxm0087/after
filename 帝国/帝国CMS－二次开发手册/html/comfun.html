@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">常用函数介绍</strong></td>
+    <td width="50%"><div align="center"> </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="EmpireCMSPath"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">帝国CMS常用函数介绍</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> <font color=blue><b>一、esub()截取字段函数</b></font><br>
+      <b>语法：</b>esub(字符串,截取字数,后缀)<br><b>说明：</b>后缀为截取字符后附带内容，此参数可以省略。<br><b>使用范例：</b><br>&lt;?=esub('12345678',6)?&gt;，返回结果为：123456<br>&lt;?=esub('12345678',6,'...')?&gt;，返回结果为：123456...<br><br><br><font color=blue><b>二、date()转换时间格式函数</b></font><br><b>语法：</b>date(时间格式,时间戳)<br>
+      <b>说明：</b>PHP本身函数，使用说明可以参考：<a href="http://cn.php.net/manual/en/function.date.php" target="_blank">http://cn.php.net/manual/en/function.date.php</a><br>
+      <b>使用范例：</b><br>&lt;?=date('Y-m-d H:i:s',1277865010)?&gt;，返回结果为：2010-06-30 10:30:10<br><br><br><font color=blue><b>三、format_datetime()转换时间格式函数2</b></font><br><b>语法：</b>format_datetime(正常时间,时间格式)<br><b>说明：</b>和date()的区别是format_datetime是转换正常时间，而date是转换unix时间戳。<br><b>使用范例：</b><br>&lt;?=format_datetime('2010-06-30 10:30:10','m/d')?&gt;，返回结果为：06/30<br><br><br><font color=blue><b>四、通过ID取得栏目地址函数</b></font><br><b>语法：</b>sys_ReturnBqClassname($r,9)<br><b>说明：</b>$r为含栏目ID的数组，变量名可任意命名。<br><b>使用范例：</b>取得栏目ID=2的栏目地址。<br>&lt;?php<br>$cr['classid']=2;<br>$classurl=sys_ReturnBqClassname($cr,9);<br>echo $classurl;<br>?&gt;<br><br><b>通过ID取得栏目地址的其他方法：</b><br>(1)、/e/public/ClassUrl/?classid=栏目ID<br>(2)、/&lt;?=$class_r[栏目ID]['classpath']?&gt;<br><br><br><font color=blue><b>五、取得信息内容页地址函数</b></font><br><b>语法：</b>sys_ReturnBqTitleLink($r)<br><b>说明：</b>$r为含“id,classid,newspath,filename,groupid,titleurl”字段内容的数组，变量名可任意命名。<br><b>使用范例：</b>取得信息ID=8的新闻页面地址<br>&lt;?php<br>$nr=$empire-&gt;fetch1(&quot;select id,classid,newspath,filename,groupid,titleurl from {$dbtbpre}ecms_news where id='8' limit 1&quot;);<br>$titleurl=sys_ReturnBqTitleLink($nr);<br>echo $titleurl;<br>?&gt;<br><br><b>通过ID取得信息内容页地址的其他方法：</b><br>/e/public/InfoUrl/?classid=栏目ID&amp;id=信息ID<br><br><br><font color=blue><b>六、提示信息函数1</b></font><br><b>语法：</b>printerror($error,$gotourl,$ecms,$noautourl,$novar)<br><b>说明：</b><br>$error：提示信息内容，可以为语言包变量，也可以直接提示内容。<br>$gotourl：提示信息转向链接地址<br>$ecms：0为后台提示信息、1为前台提示信息、8为后台提示信息(alert方式)、9为前台提示信息(alert方式)<br>$noautourl：0为自动转向页面，1为不自动转向页面。此参数可省略，默认为0<br>$novar：0为提示信息内容采用语言包变量，1为提示信息内容为直接提示内容。此参数可以省略，默认为0<br><b>使用范例：</b><br>printerror('DbError','http://www.phome.net',1)，前台提示，提示信息内容为语言包DbError变量内容，转向帝国网站<br>printerror('数据库出错','http://www.phome.net',1,0,1)，前台提示，提示信息内容为“数据库出错”，转向帝国网站<br><b>附加说明：</b><br>此函数需结合$editor变量来确定目录层次。默认$editor变量为0。<br>当程序文件在/e/path/目录，$editor不用设置，也就是用默认0。<br>当程序文件在/e/path/path2/目录，$editor=1。<br>当程序文件在/e/path/path2/path3/目录，$editor=2。<br>当程序文件在/e/path/path2/path3/path4/目录，$editor=3。<br><br><br><font color=blue><b>七、提示信息函数2 (直接提示内容)</b></font><br><b>语法：</b>printerror2($error,$gotourl,$ecms,$noautourl)<br><b>说明：</b><br>$error：直接提示信息的内容。<br>$gotourl：提示信息转向链接地址<br>$ecms：0为默认提示信息方式、9为弹出提示信息方式(alert方式)。此参数可省略，默认为0<br>$noautourl：0为自动转向页面，1为不自动转向页面。此参数可省略，默认为0<br><b>使用范例：</b><br>printerror2('添加完毕','http://www.phome.net')，提示信息内容为“添加完毕”，转向帝国网站<br><b>附加说明：</b><br>此函数不需要结合其他变量，可以在任意目录层次使用。不支持使用语言包变量。<br><br><br><font color=blue><b>八、设置系统COOKIE变量函数</b></font><br><b>语法：</b>esetcookie($var,$val,$life,$ecms)<br><b>说明：</b><br>$var：为变量名<br>$val：为变量值<br>$life：为COOKIE有效时间，单位秒，0为不保存。此参数可省略，默认为不保存。<br>$ecms：0为设置前台COOKIE变量，1为设置后台COOKIE变量。此参数可省略，默认为0。<br><b>使用范例：</b><br>esetcookie('mybody','帝国')，定义前台“COOKIE前缀+mybody”变量，变量内容为“帝国”<br>esetcookie('mybody','帝国',0,1)，定义后台“COOKIE前缀+mybody”变量，变量内容为“帝国”<br><b>附加说明：</b><br>此设置COOKIE函数会给变量名加上COOKIE前缀，你可也可以直接用PHP本身的setcookie来定义。<br><br><br><font color=blue><b>九、取得系统COOKIE变量函数</b></font><br><b>语法：</b>getcvar($var,$ecms)<br><b>说明：</b><br>$var：为变量名<br>$ecms：0为设置前台COOKIE变量，1为设置后台COOKIE变量。此参数可省略，默认为0。<br><b>使用范例：</b><br>getcvar('mlusername')，取得前台登陆会员的用户名<br>getcvar('loginusername',1)，取得后台登陆管理员的用户名<br><b>附加说明：</b><br>此取得COOKIE函数是取得变量名加上COOKIE前缀的变量，你可也可以直接用PHP本身的$_COOKIE['变量名']来取得。<br><br><br><font color=blue><b>十、取得IP地址函数</b></font><br><b>语法：</b>egetip()<br><b>使用范例：</b><br>&lt;?php<br>$ip=egetip();<br>echo $ip;<br>?&gt;<br><br><br><font color=blue><b>十一、动态页面显示分页函数</b></font><br><b>语法：</b>page1($num,$line,$page_line,$start,$page,$search)<br><b>说明：</b><br>$num：总记录数<br>$line：每页显示数量<br>$page_line：每页显示分页链接数<br>$start：预设变量，设置0即可。<br>$page：当前页码(0为起始页码)<br>$search：链接附加参数<br><br><br><font color=blue><b>十二、通过栏目ID取得栏目名和栏目别名方法：</b></font><br>栏目名：&lt;?=$class_r[栏目ID]['classname']?&gt;<br>栏目别名：&lt;?=$class_r[栏目ID]['bname']?&gt;<br>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

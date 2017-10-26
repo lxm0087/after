@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>phome_enewsmod 数据表字段解释</title>
+<link href="../images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%" border="0" align="center">
+  <tr> 
+    <td width="100%"><strong><font color="#0000FF">phome_enewsmod 数据表字段解释（系统模型表）</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="800" border="0" cellspacing="1" cellpadding="3" class="tableborder">
+  <tr class="header"> 
+    <td width="20%" height="30">字段名</td>
+    <td width="15%">类型</td>
+    <td width="20%">解释</td>
+    <td width="45%">附加说明</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>mid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">模型ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>mname</strong></td>
+    <td bgcolor="#FFFFFF">varchar(100)</td>
+    <td bgcolor="#FFFFFF">模型名称</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>mtemp</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">录入表单模板</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>mzs</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">注释</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>cj</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">采集项</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>enter</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">录入项</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tempvar</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">内容模板项</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>sonclass</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">终极栏目ID集合</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>searchvar</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">搜索项</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">数据表ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tbname</strong></td>
+    <td bgcolor="#FFFFFF">varchar(60)</td>
+    <td bgcolor="#FFFFFF">数据表名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qenter</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">投稿项</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>mustqenterf</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">必填项</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qmtemp</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">前台投稿表单模板</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>listandf</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">结合项</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>setandf</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">结合项匹配</td>
+    <td bgcolor="#FFFFFF">0为完全匹配，1为模糊匹配</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>listtempvar</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">列表模板项</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qmname</strong></td>
+    <td bgcolor="#FFFFFF">varchar(30)</td>
+    <td bgcolor="#FFFFFF">模型别名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>canaddf</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">可增加项</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>caneditf</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">可修改项</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>definfovoteid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">信息预设投票ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>showmod</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否显示到前台导航</td>
+    <td bgcolor="#FFFFFF">0为显示，1为不显示</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>usemod</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否启用</td>
+    <td bgcolor="#FFFFFF">0为开启，1为不使用</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>myorder</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">排序</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>orderf</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">排序项</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>isdefault</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否默认模型</td>
+    <td bgcolor="#FFFFFF">1为默认，0为非默认</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>listfile</strong></td>
+    <td bgcolor="#FFFFFF">varchar(30)</td>
+    <td bgcolor="#FFFFFF">信息列表名称</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>printtempid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">打印模板ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+</table>
+</body>
+</html>

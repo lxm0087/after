@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">灵动标签调用栏目导航技巧</strong></td>
+  </tr>
+  <tr>
+    <td height="27" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>本节通过用灵动标签的SQL语句查询来调用栏目导航。（当然栏目导航一般我们用现成的showclasstemp或listshowclass栏目导航标签调用）</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">灵动标签调用栏目导航技巧：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>例一：灵动标签显示栏目导航</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'><p>&lt;table 
+              width=&quot;200&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; 
+              cellspacing=&quot;1&quot; bgcolor=&quot;#4FB4DE&quot;&gt;<br>
+              &lt;tr&gt;<br>
+              &lt;td height=&quot;25&quot;&gt;&lt;strong&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;栏目导航&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;<br>
+              &lt;/tr&gt; <br>
+              <font color="#FF0000">[e:loop={&quot;select classid,classname from 
+              {$dbtbpre}enewsclass where bclassid=父栏目id order by myorder,classid 
+              desc&quot;,0,24,0}]</font><br>
+              &lt;?php<br>
+              $classurl=sys_ReturnBqClassname($bqr,9);//取得栏目地址<br>
+              ?&gt;<br>
+              &lt;tr&gt;<br>
+              &lt;td height=&quot;25&quot; bgcolor=&quot;#FFFFFF&quot;&gt;&lt;a 
+              href=&quot;&lt;?=$classurl?&gt;&quot;&gt;&lt;?=$bqr[classname]?&gt;&lt;/a&gt;&lt;/td&gt;<br>
+              &lt;/tr&gt;<br>
+              [/e:loop]<br>
+              &lt;/table&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">显示效果：<br> <img src="img/eloopgetclass1.jpg" width="229" height="166" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>例二：灵动标签显示栏目导航，且给当前终极栏目的背景设为蓝色</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'><p>&lt;table 
+              width=&quot;200&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; 
+              cellspacing=&quot;1&quot; bgcolor=&quot;#4FB4DE&quot;&gt;<br>
+              &lt;tr&gt;<br>
+              &lt;td height=&quot;25&quot;&gt;&lt;strong&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;栏目导航&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;<br>
+              &lt;/tr&gt; <br>
+              [e:loop={&quot;select classid,classname from {$dbtbpre}enewsclass 
+              where bclassid=父栏目id order by myorder,classid desc&quot;,0,24,0}]<br>
+              &lt;?php<br>
+              $classurl=sys_ReturnBqClassname($bqr,9);//取得栏目地址<br>
+              $bgcolor=&quot;#FFFFFF&quot;;<br>
+              <font color="#FF0000">if($bqr[classid]==$GLOBALS[navclassid])</font>//当前栏目ID<br>
+              {<br>
+              $bgcolor=&quot;#C3EFFF&quot;;<br>
+              } <br>
+              ?&gt;<br>
+              &lt;tr&gt;<br>
+              &lt;td height=&quot;25&quot; bgcolor=&quot;&lt;?=$bgcolor?&gt;&quot;&gt;&lt;a 
+              href=&quot;&lt;?=$classurl?&gt;&quot;&gt;&lt;?=$bqr[classname]?&gt;&lt;/a&gt;&lt;/td&gt;<br>
+              &lt;/tr&gt;<br>
+              [/e:loop]<br>
+              &lt;/table&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><font color="#FF0000">$GLOBALS[navclassid]</font>为当前栏目ID。</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>例三：灵动标签显示一级栏目导航，且在子栏目时也给当前一级栏目的背景设为蓝色</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'><p>&lt;table 
+              width=&quot;200&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; 
+              cellspacing=&quot;1&quot; bgcolor=&quot;#4FB4DE&quot;&gt;<br>
+              &lt;tr&gt;<br>
+              &lt;td height=&quot;25&quot;&gt;&lt;strong&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;栏目导航&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;<br>
+              &lt;/tr&gt; <br>
+              [e:loop={&quot;select classid,classname from {$dbtbpre}enewsclass 
+              where <font color="#FF0000">bclassid=0</font> order by myorder,classid 
+              desc&quot;,0,24,0}]<br>
+              &lt;?php<br>
+              $classurl=sys_ReturnBqClassname($bqr,9);//取得栏目地址<br>
+              $bgcolor=&quot;#FFFFFF&quot;;<br>
+              <font color="#FF0000">if($GLOBALS[navclassid])<br>
+              {<br>
+              $fcr=explode('|',$class_r[$GLOBALS[navclassid]][featherclass]);<br>
+              $topbclassid=$fcr[1]?$fcr[1]:$GLOBALS[navclassid];//取得当前栏目的一级栏目ID<br>
+              if($bqr[classid]==$topbclassid)<br>
+              {<br>
+              $bgcolor=&quot;#C3EFFF&quot;;<br>
+              }<br>
+              }</font><br>
+              ?&gt;<br>
+              &lt;tr&gt;<br>
+              &lt;td height=&quot;25&quot; bgcolor=&quot;&lt;?=$bgcolor?&gt;&quot;&gt;&lt;a 
+              href=&quot;&lt;?=$classurl?&gt;&quot;&gt;&lt;?=$bqr[classname]?&gt;&lt;/a&gt;&lt;/td&gt;<br>
+              &lt;/tr&gt;<br>
+              [/e:loop]<br>
+              &lt;/table&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

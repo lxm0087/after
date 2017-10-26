@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">模型使用相关技巧</strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">模型使用相关技巧<b>：</b></font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> <b>1、前台发布投稿，如何设置发布后返回指定页面？</b><br>
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr>
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>(1)、投稿表单加提交后返回地址变量：ecmsfrom<br>
+            ecmsfrom变量值有三种方式：<br>
+            1、如果不设置则返回系统默认的地址；<br>
+            2、如果值为9，那么返回的是提交地址，系统自动识别；<br>
+            3、如果设置除了9以外其它值，将返回变量值的地址。<br>
+            例子：&lt;input type=&quot;hidden&quot; name=&quot;ecmsfrom&quot; value=&quot;http://www.phome.net&quot;&gt;<br>
+            <br>
+            (2)、如果是设置增加投稿后返回内容页，则在投稿表单中加：&lt;input type=&quot;hidden&quot; name=&quot;gotoinfourl&quot; 
+            value=&quot;1&quot;&gt;<br>
+            (3)、如果是设置修改投稿后返回内容页，则在投稿表单中加：&lt;input type=&quot;hidden&quot; name=&quot;editgotoinfourl&quot; 
+            value=&quot;1&quot;&gt; </td>
+        </tr></table>
+      <br>
+      <b>2、字段处理函数使用：</b><br>
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr>
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>帝国CMS功能解密之字段处理函数：<a href="http://bbs.phome.net/showthread-13-116152-0.html" target="_blank">http://bbs.phome.net/showthread-13-116152-0.html</a></td>
+        </tr></table>
+      <br>
+      <b>3、如何单独制作投稿页面，不用系统默认的：</b><br>
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr>
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>做个HTML表单，表单含原信息投稿的字段变量(含classid/id/enews/字段等变量)即可，且表单的action指向/e/DoInfo/ecms.php就可以(action=&quot;/e/DoInfo/ecms.php&quot;)。</td>
+        </tr></table>
+      <br>
+        <b>4、如何记录发布者IP</b><b>：</b>
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>增加“infoip”字段，infoip为记录IP的字段，只需将字段设置为录入项或投稿项，增加信息时自动存储发布者IP，字段类型用VARCHAR、长度15。</td>
+        </tr>
+      </table> 
+      <br>
+      <b>5、如何制作字母导航</b><b>：</b> 
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>增加“infozm”字段，infozm为取得标题字母的字段，只需将字段设置为录入项或投稿项，增加或修改信息时自动存储标题第一个拼音字母，字段类型用VARCHAR、长度1。<br>
+            <br>
+            列表页调用字母导航有以下两种方法：<br>
+            1、增加26个字母的自定义列表导航页；<br>
+            2、还有一种就是用结合项做导航，比如：/e/action/ListInfo.php?mid=系统模型ID&amp;ph=1&amp;infozm=A</td>
+        </tr>
+      </table> 
+      <br>
+      <b>6、限制一个注册用户在某一个特定栏目只能发布一条信息？</b> 
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>建个会员ID字段，比如mymemberid，字段类型int，设置值唯一<br>
+            字段的投稿表单替换html代码：<br>
+            &lt;input name=&quot;mymemberid&quot; type=&quot;hidden&quot; value=&quot;&lt;?=$ecmsfirstpost==1?$memberinfor[userid]:DoReqValue($mid,'mymemberid',stripSlashes($r[mymemberid]))?&gt;&quot; 
+            size=&quot;&quot;&gt; </td>
+        </tr>
+      </table> 
+      <br>
+      <b>7、什么时候把字段放在主表或副表？</b> 
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>字段不在列表页或标签中调用的最好都放到副表，主表字段越少效率越高。</td>
+        </tr>
+      </table> 
+      <br>
+      <b>8、投稿表单如何自动获取会员注册资料里面的内容呢？</b> 
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>修改字段，设置字段初始值为：$memberinfor[会员字段名]，比如：$memberinfor[oicq]</td>
+        </tr>
+      </table> </td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

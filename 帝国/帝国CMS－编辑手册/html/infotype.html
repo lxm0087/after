@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">标题分类管理</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="ttsay">&nbsp; &nbsp; &gt; 标题分类功能说明</option>
+          <option value="gettt">&nbsp; &nbsp; &gt; 标题分类调用说明</option>
+          <option value="tt">&nbsp; &nbsp; &gt; 管理标题分类</option>
+          <option value="classtt">&nbsp; &nbsp; &gt; 不同栏目设置不同的标题分类</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="ttsay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、标题分类功能说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">帝国CMS在信息支持按专题、头条、推荐、字段等跨栏目调用相同的分类基础上，还加入了标题分类功能，使信息归类更多样化、更方便。例如：原先要增加头条、推荐以外的属性，一般要用增加专题的方式操作，而新版你也可以用增加标题分类的功能来增加分类属性，更多样化；再例如：供求系统中要选择“供应”、“需求”等信息类型，原来要用字段的结合项来实现，而新版你也可以用增加标题分类作为供求类型等等方式。 
+      <p><strong>标题分类功能支持以下特性：</strong><br>
+        1、每个模型支持设置不同的标题分类；<br>
+        2、标签支持按标题分类调用，并支持同时调用多个标题分类的信息；<br>
+        3、结合项列表支持按标题分类列出信息；<br>
+        4、不同栏目支持设置不同的标题分类。 </p></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="gettt"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、标题分类调用说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><p><strong>1、标签按标题分类调用：</strong></p></td>
+  </tr>
+  <tr>
+    <td height="25">标签操作类型用如下：<br>
+      25 标题分类最新信息 (栏目ID=标题分类ID) <br>
+      26 标题分类点击排行 (栏目ID=标题分类ID) <br>
+      27 标题分类推荐信息 (栏目ID=标题分类ID) <br>
+      28 标题分类评论排行 (栏目ID=标题分类ID) <br>
+      29 标题分类头条信息 (栏目ID=标题分类ID) <br>
+      30 标题分类下载排行 (栏目ID=标题分类ID) </td>
+  </tr>
+  <tr>
+    <td height="25"><p><strong>2、标题分类的信息列表：</strong></p>
+      </td>
+  </tr>
+  <tr>
+    <td height="25">可以链接到结合项页面：/e/action/ListInfo.php?ttid=标题分类ID&amp;tempid=列表模板ID</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tt"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、管理标题分类</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>系统</strong>”菜单，选择“<strong>管理数据表</strong>”子菜单，进入管理数据表界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/infotype1.jpg" width="285" height="307" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入管理数据表界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/infotype2.jpg" width="834" height="435" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、从管理数据表页面点击“<strong>新闻系统数据表</strong>”的“<strong>[管理系统模型]</strong>”，进入管理系统模型页面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/infotype3.jpg" width="729" height="255"></td>
+  </tr>
+  <tr> 
+    <td height="25">4、从管理系统模型页面，点击“<strong>[标题分类]</strong>”，进入标题分类管理：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/infotype4.jpg" width="684" height="449"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>分类名称</strong></td>
+          <td>填写标题分类名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%" height="25"><strong>优化方案</strong></td>
+          <td width="85%">选择此标题分类使用的优化方案。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>排序</strong></td>
+          <td>设置标题分类的显示顺序(排序值越小越前面)。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">5、增加标题分类后，增加/修改信息页面就可以选择我们增加的标题分类，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/infotype5.jpg" width="786" height="401"></td>
+  </tr>
+  <tr>
+    <td height="25">6、默认前台投稿不显示标题分类选择，如果前台也要让会员选择，则按下面操作：</td>
+  </tr>
+  <tr>
+    <td height="25">(1)、修改title字段的“投稿表单替换html代码”，加上显示选择标题分类如下代码：<br>
+      <font color="#FF0000">&lt;?=$tts?&quot;&lt;select name='ttid'&gt;&lt;option 
+      value='0'&gt;标题分类&lt;/option&gt;$tts&lt;/select&gt;&quot;:&quot;&quot;?&gt;</font></td>
+  </tr>
+  <tr>
+    <td height="25">(2)、修改后，查看前台投稿页面就可以看到标题分类选择，如下图：</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/infotype9.jpg" width="774" height="267"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="classtt"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、不同栏目设置不同的标题分类</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台&gt;“<strong>栏目</strong>”&gt;“<strong>栏目管理</strong>”&gt;“<strong>管理栏目</strong>”，点击“<strong>分类</strong>”链接，进入栏目标题分类设置界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/infotype6.jpg" width="792" height="238" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入栏目标题分类设置界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/infotype7.jpg" width="509" height="339" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、栏目设置标题分类后，增加/修改信息页面就只可以选择我们设置的标题分类，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/infotype8.jpg" width="792" height="398"></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="votesay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">相关链接</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><a href="http://bbs.phome.net/showthread-13-108251-0.html" target="_blank">1、帝国CMS功能解密之新版结合项功能</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

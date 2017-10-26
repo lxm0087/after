@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>phome_enewszt 数据表字段解释</title>
+<link href="../images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%" border="0" align="center">
+  <tr> 
+    <td width="100%"><strong><font color="#0000FF">phome_enewszt 数据表字段解释（专题主表）</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="800" border="0" cellspacing="1" cellpadding="3" class="tableborder">
+  <tr class="header"> 
+    <td width="20%" height="30">字段名</td>
+    <td width="15%">类型</td>
+    <td width="20%">解释</td>
+    <td width="45%">附加说明</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ztid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">专题ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ztname</strong></td>
+    <td bgcolor="#FFFFFF">varchar(60)</td>
+    <td bgcolor="#FFFFFF">专题名称</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>onclick</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">点击数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ztnum</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">每页显示记录数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>listtempid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">列表模板ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ztpath</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">专题存放文件夹</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>zttype</strong></td>
+    <td bgcolor="#FFFFFF">varchar(10)</td>
+    <td bgcolor="#FFFFFF">文件扩展名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>newline</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">最新专题JS显示数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>zturl</strong></td>
+    <td bgcolor="#FFFFFF">varchar(200)</td>
+    <td bgcolor="#FFFFFF">绑定域名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>hotline</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">热门专题JS显示数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>goodline</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">推荐专题JS显示数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>classid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">隶属信息栏目ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>hotplline</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">热门评论信息JS显示数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>firstline</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">头条信息JS显示数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>islist</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">页面显示模式</td>
+    <td bgcolor="#FFFFFF">0为封面式，1为列表式，2为页面内容式</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>maxnum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">显示总记录数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">数据表ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tbname</strong></td>
+    <td bgcolor="#FFFFFF">varchar(60)</td>
+    <td bgcolor="#FFFFFF">数据表名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>reorder</strong></td>
+    <td bgcolor="#FFFFFF">varchar(50)</td>
+    <td bgcolor="#FFFFFF">列表式页面排序方式</td>
+    <td bgcolor="#FFFFFF">默认：newstime DESC</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>intro</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">专题简介</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ztimg</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">专题缩略图</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>jstempid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">JS模板ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>zcid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">分类ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>showzt</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否显示到导航</td>
+    <td bgcolor="#FFFFFF">0为显示，1为不显示</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ztpagekey</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">网页关键字</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>classtempid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">封面模板ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>myorder</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">排序</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>nrejs</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否生成JS调用</td>
+    <td bgcolor="#FFFFFF">0为生成，1为不生成</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>usezt</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">信息可选择</td>
+    <td bgcolor="#FFFFFF">0为可选择，1为不可选择</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>yhid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">使用优化方案ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+</table>
+</body>
+</html>

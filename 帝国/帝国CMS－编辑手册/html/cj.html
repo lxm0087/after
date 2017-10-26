@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>采集教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">管理采集节点</strong></td>
+    <td width="50%"><div align="center"><select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="cj">&nbsp; &nbsp; &gt; 管理采集节点</option>
+          <option value="cj1">&nbsp; &nbsp; &gt; 采集数据入库</option>
+		  <option value="cj2">&nbsp; &nbsp; &gt; 生成采集入库后的信息页面</option>
+        </select></div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="cj">
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">管理采集节点</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>管理采集节点</strong>”子菜单，进入管理采集节点界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/cj1.jpg" width="394" height="411" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>管理采集节点</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/cj2.jpg" width="783" height="380" border="0"><br>
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%" height="25"><strong>[开始采集]</strong></td>
+          <td width="85%">点击开始采集可对某一节点进行采集操作。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[预览]</strong>节点</td>
+          <td><font color="#FF0000">增加采集节点后，要先预览采集正则是否正确，确认无误后方可进行采集操作。</font></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <p><strong>[审核采集]</strong></p></td>
+          <td>对已经采集数据的审核，并将数据入库到栏目里。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[复制]</strong>节点</td>
+          <td>方便增加相同正则的节点。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[清空]</strong>节点</td>
+          <td>清空采集入库记录，使此节点数据可重复采集。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[批量采集节点]</strong></td>
+          <td>点击对选中的多个节点进行采集操作。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr id="cj1"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">采集数据入库</font></strong></td>
+  </tr>
+  <tr> 
+    <td>1、从上面的“<strong>管理采集节点</strong>”点击“<strong>审核采集</strong>”进入如下界面：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/cj3.jpg" width="845" height="574" border="0"><br> <br> <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="22%" height="25"><strong>[直接审核]</strong></td>
+          <td width="78%">正常情况选择直接审核，如果不选择：所有信息将都是未审核状态，需要手动审核信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[入库选中]</strong></td>
+          <td>可以只入库选中的信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <p><strong>[入库全部信息</strong><strong>]</strong></p></td>
+          <td>将本节点采集的信息一次性全部入库到栏目。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[发布时间设为入库时间]</strong></td>
+          <td>把入库时间作为信息发布时间。可以批量采集信息，然后每天只入库一些信息。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="cj2"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">生成采集入库后的信息页面</font></strong></td>
+  </tr>
+  <tr>
+    <td height="25"><font color="#FF0000">入库后的信息不会直接生成html页面，需要到数据更新中心生成当天的信息页面。</font></td>
+  </tr>
+  <tr> 
+    <td height="25">“系统”&gt;“数据更新中心”&gt;“[按条件刷新内容页]”：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/cj4.jpg" width="835" height="275" border="0"></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

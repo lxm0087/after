@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>登陆表单制作语法说明</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">登陆表单制作</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="loginformvar">&nbsp; &nbsp; &gt; 登陆表单变量说明</option>
+          <option value="loginformexp">&nbsp; &nbsp; &gt; 登陆表单制作范例</option>
+          <option value="other">&nbsp; &nbsp; &gt; 登陆表单其它说明</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>前台会员登陆表单的制作。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="loginformvar"> 
+    <td height="25"><strong><font color="#FFFFFF">登陆表单变量说明</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr bgcolor="#C3EFFF"> 
+    <td width="16%" height="23"><font color="#000000">&nbsp;</font></td>
+    <td width="29%"><font color="#000000">变量名</font></td>
+    <td width="55%"><font color="#000000">例子</font></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">登陆表单提交地址</td>
+    <td>/e/enews/index.php</td>
+    <td>&lt;form name=&quot;login&quot; method=&quot;post&quot; action=&quot;<strong>/e/enews/index.php</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">用户名输入框变量</td>
+    <td>username</td>
+    <td>&lt;input name=&quot;<strong>username</strong>&quot; type=&quot;text&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">密码输入框变量</td>
+    <td>password</td>
+    <td>&lt;input name=&quot;<strong>password</strong>&quot; type=&quot;password&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">登陆信息保存时间</td>
+    <td>lifetime</td>
+    <td>单位为秒，如：&lt;input type=&quot;radio&quot; name=&quot;<strong>lifetime</strong>&quot; 
+      value=&quot;3600&quot;&gt;一小时</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">验证码输入框变量</td>
+    <td>key</td>
+    <td>&lt;input name=&quot;<strong>key</strong>&quot; type=&quot;text&quot; 
+      size=&quot;6&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">显示验证码</td>
+    <td>/e/ShowKey/?v=login</td>
+    <td>&lt;img src=&quot;<strong>/e/ShowKey/?v=login</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">登陆事件变量</td>
+    <td>enews</td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>enews</strong>&quot; 
+      value=&quot;<strong>login</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">提交后返回地址变量：<strong>ecmsfrom</strong></td>
+    <td> ecmsfrom变量值有三种方式：<br>
+      1、如果不设置则返回系统默认的地址；<br>
+      2、如果值为9，那么返回的是提交地址，系统自动识别；<br>
+      3、如果设置除了9以外其它值，将返回变量值的地址。 <br></td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>ecmsfrom</strong>&quot; 
+      value=&quot;http://www.phome.net&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td height="25">返回提示信息方式：prtype</td>
+    <td>不设置为默认方式(e/message)；<br>
+      1为弹出对话框方式(alert)。</td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;prtype&quot; value=&quot;1&quot;&gt;</td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="loginformexp"> 
+    <td height="25"><strong><font color="#FFFFFF">登陆表单制作范例</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">一、表单范例1：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、用Dreamweaver制作好表单：</td>
+  </tr>
+  <tr> 
+    <td height="25">设计视图：<br>
+      <img src="img/loginform2.gif" width="321" height="198" border="1"><br> 
+      <br>
+      代码模式下的表单代码<br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 21px'> 
+            <p>&lt;table width=&quot;300&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; 
+              cellspacing=&quot;1&quot; bgcolor=&quot;#8CBDEF&quot;&gt;<br>
+              <font color="#FF0000">&lt;form name=&quot;login&quot; method=&quot;post&quot; 
+              action=&quot;/e/enews/index.php&quot;&gt;</font><br>
+              &nbsp; &nbsp; &lt;tr&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td height=&quot;25&quot; colspan=&quot;2&quot;&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+              &lt;div align=&quot;center&quot;&gt;&lt;strong&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;会员登陆&lt;/font&gt;&lt;/strong&gt;&lt;/div&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;/td&gt;<br>
+              &nbsp; &nbsp; &lt;/tr&gt;<br>
+              &nbsp; &nbsp; &lt;tr bgcolor=&quot;#FFFFFF&quot;&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td width=&quot;97&quot; height=&quot;25&quot;&gt;用户帐号&lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td width=&quot;188&quot; height=&quot;25&quot;&gt; 
+              <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<font color="#FF0000">&lt;input 
+              name=&quot;username&quot; type=&quot;text&quot;&gt;</font><br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;/td&gt;<br>
+              &nbsp; &nbsp; &lt;/tr&gt;<br>
+              &nbsp; &nbsp; &lt;tr bgcolor=&quot;#FFFFFF&quot;&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td height=&quot;25&quot;&gt;用户密码&lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td height=&quot;25&quot;&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<font color="#FF0000">&lt;input 
+              name=&quot;password&quot; type=&quot;password&quot;&gt;</font><br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;/td&gt;<br>
+              &nbsp; &nbsp; &lt;/tr&gt;<br>
+              &nbsp; &nbsp; &lt;tr bgcolor=&quot;#FFFFFF&quot;&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td height=&quot;25&quot;&gt;保存时间&lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td height=&quot;25&quot;&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<font color="#FF0000">&lt;select 
+              name=&quot;lifetime&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;0&quot;&gt;不保存&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;3600&quot;&gt;一小时&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;86400&quot;&gt;一天&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;2592000&quot;&gt;一个月&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;315360000&quot;&gt;永久&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;/select&gt;</font><br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;/td&gt;<br>
+              &nbsp; &nbsp; &lt;/tr&gt;<br>
+              &nbsp; &nbsp; &lt;tr bgcolor=&quot;#FFFFFF&quot;&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td height=&quot;25&quot;&gt;验证码&lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td height=&quot;25&quot;&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<font color="#FF0000">&lt;input 
+              name=&quot;key&quot; type=&quot;text&quot; size=&quot;6&quot;&gt; 
+              &lt;img src=&quot;/e/ShowKey/?v=login&quot;&gt;</font><br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;/td&gt;<br>
+              &nbsp; &nbsp; &lt;/tr&gt;<br>
+              &nbsp; &nbsp; &lt;tr bgcolor=&quot;#FFFFFF&quot;&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td height=&quot;25&quot;&gt;&amp;nbsp;&lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td height=&quot;25&quot;&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;input type=&quot;submit&quot; 
+              name=&quot;Submit&quot; value=&quot;登陆&quot;&gt; &lt;input type=&quot;button&quot; 
+              name=&quot;Submit&quot; value=&quot;注册&quot; onclick=&quot;self.location.href='/e/member/register/';&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<font color="#FF0000">&lt;input 
+              name=&quot;enews&quot; type=&quot;hidden&quot; value=&quot;login&quot;&gt;</font>&lt;/td&gt;<br>
+              &nbsp; &nbsp; &lt;/tr&gt;<br>
+              &lt;/form&gt;<br>
+              &lt;/table&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">2、最终登陆表单显示效果为下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"><img src="img/loginform1.gif" width="324" height="203" border="1"> 
+    </td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="other"> 
+    <td height="25"><strong><font color="#FFFFFF">登陆表单其它说明</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr> 
+    <td height="23">1、如果后台关闭登陆需要验证码，则不用加key验证码参数。</td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,2939 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>系统内置标签语法</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="38%"><strong>系统内置标签语法介绍：</strong></td>
+    <td><select name="bq" id="bq" onchange=window.location='#'+this.options[this.selectedIndex].value>
+        <option value="">标签导航</option>
+		
+		<option value="infobq" style="background-color:#AFCFF3">信息调用标签</option>
+		<option value="ecmsinfo">&nbsp; &gt; 带模板的信息调用标签:[万能标签](ecmsinfo)</option>
+		<option value='eloop'>&nbsp; &gt; 灵动标签 (e:loop)</option>
+        <option value="phomenews">&nbsp; &gt; 文字调用标签(phomenews)</option>
+        <option value="phomenewspic">&nbsp; &gt; 图文信息调用:[调用带图片的信息](phomenewspic)</option>
+		<option value="phomeflashpic">&nbsp; &gt; FLASH幻灯信息调用(phomeflashpic)</option>
+		<option value="phomeautopic">&nbsp; &gt; 滚动图片信息标签(phomeautopic)</option>
+        <option value="listsonclass">&nbsp; &gt; 循环子栏目数据标签(listsonclass)</option>
+		<option value='tagsinfo'>&nbsp; &gt; 调用TAGS的信息标签(tagsinfo)</option>
+		<option value='spinfo'>&nbsp; &gt; 调用碎片的信息标签(spinfo)</option>
+		<option value='showtags'>&nbsp; &gt; 调用TAGS标签(showtags)</option>
+		<option value="totaldata">&nbsp; &gt; 网站信息统计(totaldata)</option>
+		<option value="otherlink">&nbsp; &gt; 相关链接标签(otherlink)</option>
+		<option value="eshowphoto">&nbsp; &gt; 图库模型分页标签(eshowphoto)</option>
+		<option value="showsearch">&nbsp; &gt; 搜索关键字调用标签(showsearch)</option>
+		<option value="phomenewstext">&nbsp; &gt; 简介型调用信息标签(phomenewstext)</option>
+		
+		<option value="classbq" style="background-color:#AFCFF3">栏目调用标签</option>
+		<option value="showclasstemp">&nbsp; &gt; 带模板的栏目导航标签(showclasstemp)</option>
+		<option value="phomeshowclass">&nbsp; &gt; 显示栏目导航标签(phomeshowclass)</option>
+		<option value="eshowzt">&nbsp; &gt; 专题调用标签(eshowzt)</option>
+        <option value="phomeshowmap">&nbsp; &gt; 显示网站地图标签(phomeshowmap)</option>
+		<option value='listshowclass'>&nbsp; &gt; 循环栏目导航标签(listshowclass)</option>
+		
+		<option value="noinfobq" style="background-color:#AFCFF3">非信息调用标签</option>
+		<option value="phomead">&nbsp; &gt; 广告调用标签(phomead)</option>
+        <option value="phomevote">&nbsp; &gt; 投票调用标签(phomevote)</option>
+		<option value="phomelink">&nbsp; &gt; 友情链接调用标签(phomelink)</option>
+		<option value="gbookinfo">&nbsp; &gt; 留言板调用标签(gbookinfo)</option>
+		<option value="showplinfo">&nbsp; &gt; 评论调用标签(showplinfo)</option>
+		<option value="echocheckbox">&nbsp; &gt; 复选字段输出内容标签(echocheckbox)</option>
+		
+		<option value="otherbq" style="background-color:#AFCFF3">其它标签</option>
+        <option value="includefile">&nbsp; &gt; 引用文件标签(includefile)</option>
+        <option value="readhttp">&nbsp; &gt; 读取远程页面(readhttp)</option>
+        <option value="phomepic">&nbsp; &gt; 图片信息标签:[调用单个](phomepic)</option>
+        <option value="phomemorepic">&nbsp; &gt; 图片信息标签:[调用多个](phomemorepic)</option>
+		<option value='ShowMemberInfo'>&nbsp; &gt; 会员信息调用函数</option>
+		<option value='ListMemberInfo'>&nbsp; &gt; 会员列表调用函数</option>
+		<option value='spaceeloop'>&nbsp; &gt; 会员空间信息标签调用</option>
+		<option value='resizeimg'>&nbsp; &gt; 生成缩图函数</option>
+		<option value='egetzy'>&nbsp; &gt; 转义字符函数</option>
+      </select></td>
+  </tr>
+</table>
+<br>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" class="tableborder">
+  <tr> 
+    <td colspan="2" class="header"><strong><font color="#FFFFFF">信息标签调用操作类型</font></strong></td>
+  </tr>
+  <tr> 
+    <td width="50%" bgcolor="#FFFFFF"> <table width="100%" border="0">
+        <tr> 
+          <td width="12%" rowspan="6" bgcolor="dbeaf5"> <div align="center"><strong>按<br>
+              栏<br>
+              目<br>
+              调<br>
+              用</strong></div></td>
+          <td width="16%" height="20"><div align="center"><strong>0</strong></div></td>
+          <td width="72%">栏目最新信息 <font color="#666666">(栏目ID=栏目ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>1</strong></div></td>
+          <td>栏目点击排行 <font color="#666666">(栏目ID=栏目ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>2</strong></div></td>
+          <td>栏目推荐信息 <font color="#666666">(栏目ID=栏目ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>9</strong></div></td>
+          <td>栏目评论排行 <font color="#666666">(栏目ID=栏目ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>12</strong></div></td>
+          <td>栏目头条信息 <font color="#666666">(栏目ID=栏目ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>15</strong></div></td>
+          <td>栏目下载排行 <font color="#666666">(栏目ID=栏目ID)</font></td>
+        </tr>
+      </table></td>
+    <td bgcolor="#FFFFFF"> <table width="100%" border="0">
+        <tr> 
+          <td width="11%" rowspan="6" bgcolor="dbeaf5"> <div align="center"><strong>按<br>
+              默<br>
+              认<br>
+              表<br>
+              调<br>
+              用</strong></div></td>
+          <td width="16%" height="20"><div align="center"><strong>3</strong></div></td>
+          <td width="73%">默认表最新信息 <font color="#666666">(栏目ID=0)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>4</strong></div></td>
+          <td>默认表点击排行 <font color="#666666">(栏目ID=0)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>5</strong></div></td>
+          <td>默认表推荐信息 <font color="#666666">(栏目ID=0)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>10</strong></div></td>
+          <td>默认表评论排行 <font color="#666666">(栏目ID=0)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>13</strong></div></td>
+          <td>默认表头条信息 <font color="#666666">(栏目ID=0)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>16</strong></div></td>
+          <td>默认表下载排行 <font color="#666666">(栏目ID=0)</font></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#FFFFFF"> <table width="100%" border="0">
+        <tr> 
+          <td width="12%" rowspan="6" bgcolor="dbeaf5"> <div align="center"><strong>按<br>
+              专<br>
+              题<br>
+              调<br>
+              用</strong></div></td>
+          <td width="16%" height="20"><div align="center"><strong>6</strong></div></td>
+          <td width="72%">专题最新信息 <font color="#666666">(栏目ID=专题ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>7</strong></div></td>
+          <td>专题点击排行 <font color="#666666">(栏目ID=专题ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>8</strong></div></td>
+          <td>专题推荐信息 <font color="#666666">(栏目ID=专题ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>11</strong></div></td>
+          <td>专题评论排行 <font color="#666666">(栏目ID=专题ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>14</strong></div></td>
+          <td>专题头条信息 <font color="#666666">(栏目ID=专题ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>17</strong></div></td>
+          <td>专题下载排行 <font color="#666666">(栏目ID=专题ID)</font></td>
+        </tr>
+      </table></td>
+    <td bgcolor="#FFFFFF"> <table width="100%" border="0">
+        <tr> 
+          <td width="11%" rowspan="6" bgcolor="dbeaf5"> <div align="center"><strong>按<br>
+              数<br>
+              据<br>
+              表<br>
+              调<br>
+              用</strong></div></td>
+          <td width="16%" height="20"><div align="center"><strong>18</strong></div></td>
+          <td width="73%">各表最新信息 <font color="#666666">(栏目ID='表名')</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>19</strong></div></td>
+          <td>各表点击排行<font color="#666666"> (栏目ID='表名')</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>20</strong></div></td>
+          <td>各表推荐信息 <font color="#666666">(栏目ID='表名')</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>21</strong></div></td>
+          <td>各表评论排行 <font color="#666666">(栏目ID='表名')</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>22</strong></div></td>
+          <td>各表头条信息 <font color="#666666">(栏目ID='表名')</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>23</strong></div></td>
+          <td>各表下载排行 <font color="#666666">(栏目ID='表名')</font></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#FFFFFF"> <table width="100%" border="0">
+        <tr> 
+          <td width="12%" rowspan="6" bgcolor="dbeaf5"> <div align="center"><strong>按<br>
+              标<br>
+              题<br>
+              分<br>
+              类<br>
+              调<br>
+              用</strong></div></td>
+          <td width="16%" height="20"><div align="center"><strong>25</strong></div></td>
+          <td width="72%">标题分类最新信息 <font color="#666666">(栏目ID=标题分类ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>26</strong></div></td>
+          <td>标题分类点击排行 <font color="#666666">(栏目ID=标题分类ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>27</strong></div></td>
+          <td>标题分类推荐信息 <font color="#666666">(栏目ID=标题分类ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>28</strong></div></td>
+          <td>标题分类评论排行 <font color="#666666">(栏目ID=标题分类ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>29</strong></div></td>
+          <td>标题分类头条信息 <font color="#666666">(栏目ID=标题分类ID)</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><div align="center"><strong>30</strong></div></td>
+          <td>标题分类下载排行 <font color="#666666">(栏目ID=标题分类ID)</font></td>
+        </tr>
+      </table></td>
+    <td bgcolor="#FFFFFF"> <table width="100%" border="0">
+        <tr> 
+          <td width="12%" rowspan="6" bgcolor="dbeaf5"> <div align="center"><strong>按<br>
+              S<br>
+              Q<br>
+              L<br>
+              调<br>
+              用</strong></div></td>
+          <td width="15%" height="20" rowspan="2"><div align="center"><strong>24</strong></div></td>
+          <td width="73%" height="20">按sql查询 <font color="#666666">(栏目ID='sql语句')</font></td>
+        </tr>
+        <tr> 
+          <td height="20"><font color="#666666">数据表前缀可用：“[!db.pre!]&quot;表示</font></td>
+        </tr>
+        <tr> 
+          <td height="20">&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td height="20">&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td height="20">&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td height="20">&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td width="50%" height="23"><strong><font color="#FFFFFF">标签语法说明</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CADFF7"  id="infobq">
+  <tr> 
+    <td width="50%" height="23"><strong>一、信息调用标签系列</strong></td>
+  </tr>
+  <tr>
+    <td height="23" bgcolor="#FFFFFF"><p><strong><font color="#FF0000">注意事项：标签参数中的“栏目ID/专题ID/SQL语句/表”参数必须与操作类型一一相对应。</font></strong><br>
+        比如操作类型为：<strong>0</strong>(各栏目最新)那么“<strong>栏目ID/专题ID/SQL语句/表</strong>”参数必须为<strong>栏目ID</strong>；<br>
+        比如操作类型为：<strong>6</strong>(专题最新信息)那么“<strong>栏目ID/专题ID/SQL语句/表</strong>”参数必须为<strong>专题ID</strong>；<br>
+        比如是操作类型为：<strong>18</strong>(各表最新)那么“<strong>栏目ID/专题ID/SQL语句/表</strong>”参数必须为<strong>数据表名</strong>；<br>
+        比如是操作类型为：<strong>24</strong>(按sql查询)那么“<strong>栏目ID/专题ID/SQL语句/表</strong>”参数必须为<strong>SQL语句</strong>；<br>
+        比如是操作类型为：<strong>3</strong>(所有信息最新<font color="#666666">(默认表)</font>)那么“<strong>栏目ID/专题ID/SQL语句/表</strong>”参数要为<strong>0</strong>。 
+        <br>
+        <strong>总结：</strong>栏目调用对应栏目调用的操作类型；专题调用对应专题调用的操作类型；按表调用对应按表调用的操作类型；按SQL调用对应按SQL调用的操作类型。</p>
+      </td>
+  </tr>
+</table>
+<br>
+<table width="100%" border="0">
+  <tr id="ecmsinfo"> 
+    <td width="100%" height="25" bgcolor="#CCCCCC"><strong>·带模板的信息调用标签:[万能标签](ecmsinfo)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">带模板的信息调用标签&nbsp;(sys_GetEcmsInfo)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"><input type=text name="text" style="WIDTH: 100%" size=105 value="[ecmsinfo]栏目ID/专题ID,显示条数,标题截取数,是否显示栏目名,操作类型,模板ID,只显示有标题图片,附加SQL条件,显示排序[/ecmsinfo]"></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong><font color="#FF0000">（帝国模板制作的精髓所在，此标签实现各种显示效果。）</font></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">栏目ID/专题ID</div></td>
+                        <td height="25">要调用信息的栏目ID或专题ID，当前栏目或专题ID='selfinfo'<br />
+                          多个栏目ID或专题ID可用“,”号格开，如'1,2'<br>
+                          如果是按SQL语句调用，则此处为SQL语句。</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示条数</div></td>
+                        <td height="25">显示前几条记录</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">标题截取数</div></td>
+                        <td height="25">截取标题多少个字符</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">是否显示栏目名</div></td>
+                        <td height="25">0为不显示，1为显示</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">操作类型</div></td>
+                        <td height="25"><p>具体查看<strong>信息调用</strong><strong>操作类型说明</strong></p></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">标签模板ID</div></td>
+                        <td height="25">此标签所用的标签模板ID</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">只显示有标题图片</div></td>
+                        <td height="25">0为不限制，1为只显示有标题图片的信息</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">附加SQL条件</div></td>
+                        <td height="25">附加调用条件，如：&quot;title='帝国'&quot;</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示排序</div></td>
+                        <td height="25">可指定按相应的字段排序，如：&quot;id desc&quot;</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#dbeaf5"> 它的显示效果由<strong>标签模板</strong>决定，万能调用标签使用教程可以<a href="ecmsinfo.html" target="_blank"><strong>点击这里</strong></a>查看。</td>
+        </tr>
+        <tr> 
+          <td height="25"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td height="25"><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top">[ecmsinfo]2,3,14,1,0,5,1[/ecmsinfo]<br>
+                  栏目ID为2<br>
+                  显示条数为3<br>
+                  标题截取数为14个字符<br>
+                  是否显示栏目名 1为显示<br>
+                  操作类型为0<br>
+                  模板ID为5<br>
+                  只显示有标题图片</td>
+                <td valign="top">演示效果：<br> <img src="img/bq/ecmsinfo.gif" width="100" height="170" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="phomenews"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·文字调用标签(phomenews)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">文字调用标签&nbsp;(sys_GetClassNews)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"><input type=text name="text2" style="WIDTH: 100%" size=105 value="[phomenews]栏目ID/专题ID,显示条数,标题截取数,是否显示时间,操作类型,是否显示栏目名,'时间格式化',附加SQL条件,显示排序[/phomenews]"></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">栏目ID/专题ID</div></td>
+                        <td height="25">要调用信息的栏目ID或专题ID，当前栏目或专题ID='selfinfo'<br />
+                          多个栏目ID或专题ID可用“,”号格开，如'1,2'<br>
+                          如果是按SQL语句调用，则此处为SQL语句。</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示条数</div></td>
+                        <td height="25">显示前几条记录</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">标题截取数</div></td>
+                        <td height="25">截取标题多少个字符</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">是否显示时间</div></td>
+                        <td height="25">是否在标题后显示时间，0为不显示，1为显示</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">操作类型</div></td>
+                        <td height="25">具体查看<strong>信息调用操作类型说明</strong></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">是否显示栏目名</div></td>
+                        <td height="25">0为不显示，1为显示</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">时间格式化</div></td>
+                        <td height="25">形式：Y-m-d H:i:s．默认为：'(m-d)'，如：“Y-m-d”为“2008-08-08”</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">附加SQL条件</div></td>
+                        <td height="25">附加调用条件，如：&quot;title='帝国'&quot;</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示排序</div></td>
+                        <td height="25">可指定按相应的字段排序，如：&quot;id desc&quot;</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#dbeaf5"> <div align="center"><img src="img/bq/phomenews.gif" width="274" height="143"></div></td>
+        </tr>
+        <tr> 
+          <td height="25"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td height="25"><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top">[phomenews]2,5,14,1,0,1,'Y-m-d'[/phomenews]<br>
+                  栏目ID为2<br>
+                  显示条数为5<br>
+                  标题截取数为14个字符<br>
+                  是否显示时间 1为显示<br>
+                  操作类型为0<br>
+                  是否显示栏目名1为显示<br>
+                  '时间格式化' 年月日<br></td>
+                <td valign="top">演示效果：<br> <img src="img/bq/phomenews2.gif" width="208" height="99" border="1"> 
+                  <br>
+                  作用：调用栏目名为“新闻”的5条最新信息，显示日期。</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="phomenewspic"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·图文信息调用:[调用带标题图片的信息](phomenewspic)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">图文信息调用（信息调用以图片型式显示）&nbsp;(sys_GetClassNewsPic)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text3" style="WIDTH: 100%" size=105 value="[phomenewspic]栏目ID/专题ID,每行显示条数,显示总信息数,图片宽度,图片高度,是否显示标题,标题截取数,操作类型,附加SQL条件,显示排序[/phomenewspic]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">栏目ID/专题ID</div></td>
+                        <td height="25">要调用信息的栏目ID或专题ID，当前栏目或专题ID='selfinfo'<br />
+                          多个栏目ID或专题ID可用“,”号格开，如'1,2'<br>
+                          如果是按SQL语句调用，则此处为SQL语句。</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">每行显示条数</div></td>
+                        <td height="25">每行显示几个图片</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示总信息数</div></td>
+                        <td height="25">调用信息总数</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">图片宽度，图片高度</div></td>
+                        <td height="25">图文信息图片大小</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">是否显示标题</div></td>
+                        <td height="25">是否在图片下显示标题，0为不显示，1为显示</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">标题截取数</div></td>
+                        <td height="25">截取标题多少个字符</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">操作类型说明</div></td>
+                        <td height="25">具体查看<strong>信息操作类型说明</strong></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">附加SQL条件</div></td>
+                        <td height="25">附加调用条件，如：&quot;title='帝国'&quot;</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">显示排序</div></td>
+                        <td height="25">可指定按相应的字段排序，如：&quot;id desc&quot;</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#dbeaf5"><div align="center"><img src="img/bq/phomenewspic.gif" width="560" height="88"></div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top">[phomenewspic]4,4,4,80,80,1,14,0[/phomenewspic]<br>
+                  栏目ID为4<br>
+                  每行显示条数为4个图片<br>
+                  显示总信息数为4个信息<br>
+                  图片宽度为80像素<br>
+                  图片高度为80像素<br>
+                  是否显示标题1为显示<br>
+                  标题截取数为14个字符<br>
+                  操作类型为0<br></td>
+                <td valign="top">演示效果：<br> <img src="img/bq/phomenewspic2.gif" width="393" height="102" border="1"> 
+                  <br>
+                  作用：调用栏目名为“电影”的4条最新标题图片信息 </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="phomeflashpic"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·FLASH幻灯信息调用[调用带标题图片的信息](phomeflashpic)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">FLASH幻灯信息调用&nbsp;(sys_FlashPixpic)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input name="text17" style="WIDTH: 100%" type=text value="[phomeflashpic]栏目ID/专题ID,显示总数,图片宽度,图片高度,是否显示标题,标题截取数,操作类型,停顿秒数,附加SQL条件,显示排序[/phomeflashpic]" size=105> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td> <table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center"> 
+                            <div align="center">栏目ID/专题ID</div>
+                          </div></td>
+                        <td height="25">要调用信息的栏目ID或专题ID，当前栏目或专题ID='selfinfo'<br />
+                          多个栏目ID或专题ID可用“,”号格开，如'1,2'<br>
+                          如果是按SQL语句调用，则此处为SQL语句。</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示总数</div></td>
+                        <td height="25">调用信息总数</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">图片宽度，图片高度</div></td>
+                        <td height="25">图文信息图片大小</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">是否显示标题</div></td>
+                        <td height="25">是否在图片下显示标题，0为不显示，1为显示</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">标题截取数</div></td>
+                        <td height="25">截取标题多少个字符</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">操作类型</div></td>
+                        <td height="25">具体查看<strong>信息调用操作类型说明</strong></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">停顿秒数</div></td>
+                        <td height="25">默认值为5秒</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">附加SQL条件</div></td>
+                        <td height="25">附加调用条件，如：&quot;title='帝国'&quot;</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">显示排序</div></td>
+                        <td height="25">可指定按相应的字段排序，如：&quot;id desc&quot;</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#dbeaf5"><div align="center"><img src="img/bq/phomeflashpic.jpg" width="304" height="254"></div></td>
+        </tr>
+        <tr> 
+          <td><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top"> [phomeflashpic]2,3,90,90,1,14,0,5[/phomeflashpic]<br>
+                  栏目ID为2<br>
+                  显示总数为3<br>
+                  图片宽度90像素<br>
+                  图片高度90像素<br>
+                  是否显示标题1-为显示<br>
+                  标题截取数14个字符<br>
+                  操作类型为0<br>
+                  停顿描述为5秒</td>
+                <td valign="top">演示效果：<br> <img src="img/bq/phomeflashpic.gif" width="91" height="109" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="phomeautopic"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·滚动图片信息标签[调用带标题图片的信息](phomeautopic)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">滚动图片信息标签&nbsp;(sys_GetAutoPic)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text9" style="WIDTH: 100%" size=105 value="[phomeautopic]栏目ID/专题ID,显示总数,图片宽度,图片高度,是否显示标题,标题截取数,显示速度,操作类型,附加SQL条件,显示排序[/phomeautopic]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">栏目ID/专题ID</div></td>
+                        <td height="25">要调用信息的栏目ID或专题ID，当前栏目或专题ID='selfinfo'<br />
+                          多个栏目ID或专题ID可用“,”号格开，如'1,2'<br>
+                          如果是按SQL语句调用，则此处为SQL语句。</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示总数</div></td>
+                        <td height="25">显示信息总数</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">图片宽度，图片高度</div></td>
+                        <td height="25">图文信息图片大小</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">是否显示标题</div></td>
+                        <td height="25">是否在图片下显示标题，0为不显示，1为显示</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">标题截取数</div></td>
+                        <td height="25">截取几个字符</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">显示速度</div></td>
+                        <td height="25">默认值为5000毫秒(5秒)</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">操作类型说明</div></td>
+                        <td height="25">具体看<strong>信息调用操作类型说明</strong></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">附加SQL条件</div></td>
+                        <td height="25">附加调用条件，如：&quot;title='帝国'&quot;</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">显示排序</div></td>
+                        <td height="25">可指定按相应的字段排序，如：&quot;id desc&quot;</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#dbeaf5"><div align="center"> 
+              <script src="img/bq/phomeautopic.js"></script>
+            </div></td>
+        </tr>
+        <tr> 
+          <td><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top">[phomeautopic]2,3,90,90,1,14,5000,0[/phomeautopic]<br>
+                  栏目ID为2<br>
+                  显示条数为3<br>
+                  图片宽度90 像素<br>
+                  图片高度90像素<br>
+                  是否显示标题 1为显示<br>
+                  标题截取数14个字符<br>
+                  显示速度5000毫秒<br>
+                  操作类型为0</td>
+                <td valign="top">演示效果：<br> <img src="img/bq/phomeautopic.gif" width="118" height="122" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr bgcolor="#CCCCCC" id="listsonclass"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·循环子栏目数据标签(listsonclass)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">循环子栏目数据标签&nbsp;(sys_ForSonclassData)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <INPUT style="WIDTH: 100%" size=80 value="[listsonclass]栏目ID,显示条数,标题截取数,是否显示栏目名,操作类型,模板ID,只显示有标题图片,显示栏目数,显示头条操作类型,头条标题截取数,头条简介截取数,头条只显示有标题图片,附加SQL条件,显示排序[/listsonclass]"  name="text19"> </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">栏目ID</div></td>
+                        <td height="25">父栏目ID<br>
+                          单个为父类别ID<br>
+                          多类别可用&quot;,&quot;格开<br>
+                          '0'为显示所有一级栏目的信息</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示条数</div></td>
+                        <td height="25">显示前几条ā记录</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">标题截取数</div></td>
+                        <td height="25">截取几个字符</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">是否显示栏目名</div></td>
+                        <td height="25">0为不显示，1为显示</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">操作类型</div></td>
+                        <td height="25">0：栏目最新<br />
+                          1：栏目热门<br />
+                          2：栏目推荐<br />
+                          3：栏目评论排行<br />
+                          4：栏目头条<br />
+                          5：栏目下载排行</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">标签模板ID</div></td>
+                        <td height="25">此标签所用的标签模板ID</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">只显示有标题图片</div></td>
+                        <td height="25">0为不限制，1为只显示有标题图片的信息</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示栏目数</div></td>
+                        <td height="25">0为不限制</td>
+                      </tr>
+                      <TR bgColor=#ffffff> 
+                        <TD height=25> <DIV align=center>显示头条操作类型</DIV></TD>
+                        <TD 
+                  height=25>0：不显示栏目头条<BR>
+                          1：栏目内容简介<BR>
+                          2：栏目推荐信息<BR>
+                          3：栏目头条信息<BR>
+                          4：栏目最新信息 </TD>
+                      </TR>
+                      <TR bgColor=#ffffff> 
+                        <TD height=25> <DIV align=center>头条标题截取数</DIV></TD>
+                        <TD height=25>截取几个字符</TD>
+                      </TR>
+                      <TR bgColor=#ffffff> 
+                        <TD height=25> <DIV align=center>头条简介截取数</DIV></TD>
+                        <TD height=25>截取几个字符</TD>
+                      </TR>
+                      <TR bgColor=#ffffff> 
+                        <TD height=25> <DIV align=center>头条只显示有标题图片</DIV></TD>
+                        <TD height=25>0为不限制，1为只显示有标题图片的信息</TD>
+                      </TR>
+                      <TR bgColor=#ffffff> 
+                        <TD height=25><div align="center">附加SQL条件</div></TD>
+                        <TD height=25>附加调用条件，如：&quot;title='帝国'&quot;</TD>
+                      </TR>
+                      <TR bgColor=#ffffff> 
+                        <TD height=25><div align="center">显示排序</div></TD>
+                        <TD height=25>可指定按相应的字段排序，如：&quot;id desc&quot;</TD>
+                      </TR>
+                      <TR bgColor=#ffffff> 
+                        <TD height=25> <DIV align=center>头条的模板变量<BR>
+                            (标签模板的页面模板内容中使用)</DIV></TD>
+                        <TD 
+                  height=25>[!--sonclass.id--]：信息ID<BR>
+                          [!--sonclass.title--]：信息标题<BR>
+                          [!--sonclass.oldtitle--]：信息标题(不截取字数)<BR>
+                          [!--sonclass.titlepic--]：标题图片<BR>
+                          [!--sonclass.titleurl--]：信息链接<BR>
+                          [!--sonclass.text--]：信息简介</TD>
+                      </TR>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">样式如下：</td>
+        </tr>
+        <tr> 
+          <td bgcolor="#dbeaf5"><div align="center"><img src="img/bq/listsonclass.jpg" width="535" height="411"></div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><table width="100%" border="0ā" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top"> [listsonclass]9,2,14,0,0,7,0,2[/listsonclass]<br>
+                  栏目ID为9<br>
+                  显示条数为2<br>
+                  标题截取数为14个字符<br>
+                  是否显示栏目名0为不显示<br>
+                  操作类型为0<br>
+                  模板ID为7<br>
+                  只显示有标题图片0为不限制<br>
+                  显示栏目数为2<br></td>
+                <td valign="top">演示效果：<br> <img src="img/bq/listsonclass.gif" width="163" height="176" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr id="eloop">
+    <td height="25" bgcolor="#CCCCCC"><strong>·<B>灵动标签&nbsp;(e:loop)</B></strong></td>
+  </tr>
+  <tr>
+    <td height="25" bgcolor="#FFFFFF"><TABLE class=tableborder cellSpacing=1 cellPadding=3 width="100%" 
+align=center border=0>
+        <TBODY>
+          <TR> 
+            <TD class=header> <TABLE cellSpacing=1 cellPadding=3 width="100%" border=0>
+                <TBODY>
+                  <TR class=header> 
+                    <TD width="10%">标签名称：</TD>
+                    <TD width="90%"><B>灵动标签&nbsp;(e:loop)</B></TD>
+                  </TR>
+                </TBODY>
+              </TABLE></TD>
+          </TR>
+          <TR> 
+            <TD bgColor=#ffffff> <TABLE cellSpacing=1 cellPadding=3 width="100%" border=0>
+                <TBODY>
+                  <TR> 
+                    <TD width="10%">格式:</TD>
+                    <TD width="90%">
+<TEXTAREA style="WIDTH: 100%" name=textarea rows=4 cols=80>[e:loop={栏目ID/专题ID,显示条数,操作类型,只显示有标题图片,附加SQL条件,显示排序}]
+模板代码内容
+[/e:loop]</TEXTAREA></TD>
+                  </TR>
+                  <TR> 
+                    <TD>例子:</TD>
+                    <TD><TEXTAREA style="WIDTH: 100%" name=textarea rows=9 cols=80>&lt;table width="100%" border="0" cellspacing="1" cellpadding="3"&gt;
+[e:loop={栏目ID/专题ID,显示条数,操作类型,只显示有标题图片,附加SQL条件,显示排序}]
+&lt;tr&gt;&lt;td&gt;
+&lt;a href="&lt;?=$bqsr[titleurl]?&gt;" target="_blank"&gt;&lt;?=$bqr[title]?&gt;&lt;/a&gt;
+(&lt;?=date('Y-m-d',$bqr[newstime])?&gt;)
+&lt;/td&gt;&lt;/tr&gt;
+[/e:loop]
+&lt;/table&gt;</TEXTAREA></TD>
+                  </TR>
+                </TBODY>
+              </TABLE></TD>
+          </TR>
+          <TR> 
+            <TD bgColor=#ffffff> <TABLE cellSpacing=1 cellPadding=3 width="100%" align=center border=0>
+                <TBODY>
+                  <TR> 
+                    <TD height=23><STRONG>标签说明</STRONG></TD>
+                  </TR>
+                  <TR> 
+                    <TD 
+height=23>灵动标签是无需做标签模板，且模板内容为PHP代码，因而更灵活，可以使用php所有处理函数。<font color="#666666">使用本标签，需开启模板支持程序代码(参数设置)。</font></TD>
+                  </TR>
+                  <TR> 
+                    <TD height=23><STRONG>参数</STRONG></TD>
+                  </TR>
+                  <TR> 
+                    <TD> <TABLE cellSpacing=1 cellPadding=3 width="100%" bgColor=#dbeaf5 
+            border=0>
+                        <TBODY>
+                          <TR> 
+                            <TD width="23%"> <DIV align=center>参数</DIV></TD>
+                            <TD>参数说明</TD>
+                          </TR>
+                          <TR bgColor=#ffffff> 
+                            <TD height=25> <DIV align=center>栏目ID/专题ID</DIV></TD>
+                            <TD height=25>当前ID='selfinfo'<BR>
+                              多个栏目ID与专题ID可用,号格开，如'1,2'<br>
+                              如果是按SQL语句调用，则此处为SQL语句。 </TD>
+                          </TR>
+                          <TR bgColor=#ffffff> 
+                            <TD height=25> <DIV align=center>显示条数</DIV></TD>
+                            <TD height=25>显示前几条记录</TD>
+                          </TR>
+                          <TR bgColor=#ffffff> 
+                            <TD height=25> <DIV align=center>操作类型</DIV></TD>
+                            <TD height=25>具体看操作类型说明</TD>
+                          </TR>
+                          <TR bgColor=#ffffff> 
+                            <TD height=25> <DIV align=center>只显示有标题图片</DIV></TD>
+                            <TD height=25>0为不限制，1为只显示有标题图片的信息</TD>
+                          </TR>
+                          <TR bgColor=#ffffff> 
+                            <TD height=25><div align="center">附加SQL条件</div></TD>
+                            <TD height=25>附加调用条件，如：&quot;title='帝国'&quot;</TD>
+                          </TR>
+                          <TR bgColor=#ffffff> 
+                            <TD height=25><div align="center">显示排序</div></TD>
+                            <TD height=25>可指定按相应的字段排序，如：&quot;id desc&quot;</TD>
+                          </TR>
+                        </TBODY>
+                      </TABLE></TD>
+                  </TR>
+                  <TR> 
+                    <TD><STRONG>变量说明</STRONG></TD>
+                  </TR>
+                  <TR> 
+                    <TD height=139> <TABLE cellSpacing=1 cellPadding=3 width="100%" bgColor=#dbeaf5 
+            border=0>
+                        <TBODY>
+                          <TR> 
+                            <TD height=25> <DIV align=center>数组或变量</DIV></TD>
+                            <TD height=25>说明</TD>
+                          </TR>
+                          <TR> 
+                            <TD width="23%" bgColor=#ffffff height=25> <DIV align=center>$bqr</DIV></TD>
+                            <TD bgColor=#ffffff height=25>$bqr[字段名]：显示字段的内容</TD>
+                          </TR>
+                          <TR> 
+                            <TD bgColor=#ffffff height=25> <DIV align=center>$bqsr</DIV></TD>
+                            <TD bgColor=#ffffff 
+                  height=25>$bqsr[titleurl]：标题链接<BR>
+                              $bqsr[classname]：栏目名称<BR>
+                              $bqsr[classurl]：栏目链接</TD>
+                          </TR>
+                          <TR> 
+                            <TD bgColor=#ffffff height=25> <DIV align=center>$bqno</DIV></TD>
+                            <TD bgColor=#ffffff height=25>$bqno：为调用序号</TD>
+                          </TR>
+                          <TR> 
+                            <TD bgColor=#ffffff height=25> <DIV align=center>$public_r</DIV></TD>
+                            <TD bgColor=#ffffff 
+              height=25>$public_r[newsurl]：网站地址</TD>
+                          </TR>
+                        </TBODY>
+                      </TABLE></TD>
+                  </TR>
+                  <TR> 
+                    <TD><STRONG>常用函数介绍</STRONG></TD>
+                  </TR>
+                  <TR> 
+                    <TD>文字截取：<strong>esub(字符串,截取长度)</strong>，例子：esub($bqr[title],30)截取标题前30个字符<BR>
+                      时间格式：<strong>date('格式字串',时间字段)</strong>，例子：date('Y-m-d',$bqr[newstime])时间显示格式为&quot;2008-10-01&quot;</TD>
+                  </TR>
+                  <TR>
+                    <TD height="25"><strong>样式如下：</strong></TD>
+                  </TR>
+                  <TR>
+                    <TD><div align="center"><img src="img/bq/eloop.jpg" width="687" height="191"></div></TD>
+                  </TR>
+                </TBODY>
+              </TABLE>
+              <br>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE></td>
+  </tr>
+  <tr id="tagsinfo"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·<b>调用TAGS的信息标签&nbsp;(tagsinfo)</b></strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">调用TAGS的信息标签&nbsp;(sys_eShowTagsInfo)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text16" style="WIDTH: 100%" size=105 value="[tagsinfo]TAGS的ID,显示条数,标题截取数,标签模板ID,栏目ID,系统模型ID[/tagsinfo]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td> <div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">TAGS的ID</div></td>
+                        <td height="25"> 多个ID可以用,号格开，如'1,2'</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">显示条数</div></td>
+                        <td height="25">显示前几条记录</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">标题截取数</div></td>
+                        <td height="25">截取几个字符</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">标签模板ID</div></td>
+                        <td height="25">此标签所用的标签模板ID</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">栏目ID</div></td>
+                        <td height="25">限制只调用某一个或多个栏目的信息<br />
+                          多个ID可以用,号格开，如'1,2'</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">系统模型ID</div></td>
+                        <td height="25">限制只调用某一个或多个系统模型的信息<br />
+                          多个ID可以用,号格开，如'1,2'</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">[tagsinfo]1,10,26,1,0,0[/tagsinfo]</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  
+  <tr id="spinfo"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·<b>调用碎片的信息标签&nbsp;(spinfo)</b></strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">调用碎片的信息标签&nbsp;(sys_eShowSpInfo)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text16" style="WIDTH: 100%" size=105 value="[spinfo]碎片变量名,显示条数,标题截取数[/spinfo]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td>参数说明：</td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td width="23%"> <div align="center">参数</div></td>
+                        <td width="77%">参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">碎片变量名</div></td>
+                        <td height="25">碎片变量名</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">显示条数</div></td>
+                        <td height="25">显示前几条记录</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">标题截取数</div></td>
+                        <td height="25">截取几个字符</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br> <table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td colspan="2"> <div align="center">碎片标签模板变量说明</div></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td width="23%" height="25"> <div align="center">静态碎片</div></td>
+                        <td width="77%" height="25">模板标签变量说明：[!--the.spname--]：碎片名称,[!--the.spid--]：碎片ID,[!--the.sppic--]：碎片效果图,[!--the.spsay--]：碎片描述 
+                          <p>list.var模板标签：<br>
+                            [!--title--]：标题,[!--oldtitle--]：标题ALT,[!--newstime--]：发布时间,[!--id--]：碎片信息ID,[!--titleurl--]：标题链接,[!--titlepic--]：标题缩图,[!--bigpic--]：标题大图,[!--titlepre--]：标题左边,[!--titlenext--]：标题右边,[!--smalltext--]：内容简介,[!--no.num--]：编号</p></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">动态碎片</div></td>
+                        <td height="25">模板标签变量说明：[!--the.spname--]：碎片名称,[!--the.spid--]：碎片ID,[!--the.sppic--]：碎片效果图,[!--the.spsay--]：碎片描述 
+                          <p>list.var模板标签：<br>
+                            支持变量同模型信息调用</p></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">代码碎片</div></td>
+                        <td height="25">无需标签模板，直接显示代码内容</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">[spinfo]'testsp',10,26[/spinfo]<br>
+            作用：调用碎片testsp的信息。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  
+  <tr id="showtags"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·<b>调用TAGS标签&nbsp;(showtags)</b></strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">调用TAGS标签&nbsp;(sys_eShowTags)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text16" style="WIDTH: 100%" size=105 value="[showtags]分类ID,显示数量,每行显示数量,显示排序,只显示推荐,推荐TAGS属性,显示间隔符,是否显示信息数,链接附加参数[/showtags]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td>参数说明：</td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td> <div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">分类ID</div></td>
+                        <td height="25">''空为不限制<br />
+                          多个可以用,号格开，如'1,2'<br />
+                          内容页显示当前TAGS可以用'selfinfo'</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">显示数量</div></td>
+                        <td height="25">显示前几条记录，0为显示所有（'selfinfo'本设置无效）</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">每行显示数量</div></td>
+                        <td height="25">一行显示多少个TAGS，0为不换行</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">显示排序</div></td>
+                        <td height="25">使用默认设置''空就可以，默认是'tagid desc'（'selfinfo'本设置无效）</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">只显示推荐</div></td>
+                        <td height="25">只显示推荐的TAGS，0为不限制，1为限制（'selfinfo'本设置无效）</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">推荐TAGS属性</div></td>
+                        <td height="25">如果是推荐的TAGS，内容是否要加粗或加红（'selfinfo'本设置无效）<br />
+                          设置's'表示加粗、'r'表示加红、同时加粗加红用's,r'</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">显示间隔符</div></td>
+                        <td height="25">TAGS之间显示间隔符，默认是' &amp;nbsp; '</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">是否显示信息数量</div></td>
+                        <td height="25">是否在TAGS后显示信息数量，0为不显示，1为显示（'selfinfo'本设置无效）</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"> <div align="center">链接附加参数</div></td>
+                        <td height="25">可指定在TAGS链接后面增加参数，比如：'&amp;tempid=模板ID'</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">[showtags]'',10,10,'tagid desc',0,'',' &amp;nbsp; 
+            ',0,''[/showtags]</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  
+  <tr id="totaldata"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·网站信息统计(totaldata)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">网站信息统计&nbsp;(sys_TotalData)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text16" style="WIDTH: 100%" size=105 value="[totaldata]栏目ID,操作类型,时间范围[/totaldata]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td>操作类型说明： 
+                  <table cellspacing="1" cellpadding="3" width="100%" border="0">
+                    <tbody>
+                      <tr bgcolor="#dbeaf5"> 
+                        <td width="25%"><div align="center">操作类型</div></td>
+                        <td width="75%">内容</td>
+                      </tr>
+                      <tr> 
+                        <td><div align="center">0</div></td>
+                        <td>统计栏目数据</td>
+                      </tr>
+                      <tr> 
+                        <td><div align="center">1</div></td>
+                        <td>统计专题</td>
+                      </tr>
+                      <tr> 
+                        <td><div align="center">2</div></td>
+                        <td>统计数据表</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br />
+                  时间范围：0为不限；1为今日；2为本月；3为本年<br />
+                  如果操作类型是“统计数据表”，栏目ID='数据表名' </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">[totaldata]2,0,0[/totaldata]<br>
+            作用：栏目ID为2的栏目数据数量。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  
+  <tr id="otherlink"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·<b>相关链接标签&nbsp;(otherlink)</b></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">相关链接标签&nbsp;(sys_GetOtherLinkInfo)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text22" style="WIDTH: 100%" size=105 value="[otherlink]标签模板ID,操作对象,调用条数,标题截取字数,是否显示栏目名,操作类型,只显示标题图片的信息[/otherlink]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><strong>标签模板ID</strong>：标签模板ID<br /> <strong>操作类型</strong>：0为默认；1为按表；2为按栏目；3为按专题<br /> 
+                  <strong>操作对象</strong>：对应操作类型的表/栏目/专题。空则为默认。<br /> <strong>是否显示栏目名</strong>：0为不显示；1为显示<br /> 
+                  <strong>只显示标题图片的信息</strong>：0为不限；1为只显示标题图片的信息</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">[otherlink]2,'',3,14,1,0,0[/otherlink]<br>
+            标签模板ID为2<br>
+            操作对象为空-''<br>
+            调用条数为3条<br>
+            标题截取字数为14个字符<br>
+            是否显示栏目名-1为显示<br>
+            操作类型为0<br>
+            只显示标题图片的信息-0为不限</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="eshowphoto"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·<b>图库模型分页标签&nbsp;(eshowphoto)</b></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">图库模型分页标签&nbsp;(sys_PhotoMorepage)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text20" style="WIDTH: 100%" size=105 value="[eshowphoto]标签模板ID,导航图片宽度,导航图片高度[/eshowphoto]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td> <table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center"> 
+                            <div align="center">标签模板ID</div>
+                          </div></td>
+                        <td height="25">标签模板ID（后台新增标签模板）</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center"></div></td>
+                        <td height="25"><p><strong>模板标签变量说明：</strong><br />
+                            图片集JS数组：[!--photor--]，缩略图导航：[!--smalldh--]<br />
+                            分页导航：[!--select--]，标题分页导航：[!--titleselect--]，分页列表式导航：[!--listpage--]</p>
+                          <p><strong>list.var模板标签：</strong><br />
+                            图片名称：[!--picname--]，图片地址：[!--picurl--]</p></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">导航图片宽度<br />
+                            导航图片高度</div></td>
+                        <td height="25">0为按原图大小</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br>
+                  作用：内容模板，图片模型中用到</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">[eshowphoto]4,0,0[/eshowphoto]</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="showsearch"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·搜索关键字调用标签(showsearch)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">搜索关键字调用标签&nbsp;(sys_ShowSearchKey)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text18" style="WIDTH: 100%" size=105 value="[showsearch]每行显示条数,总条数,栏目id,操作类型[/showsearch]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><p>栏目id为0，则显示所有栏目的关键字</p>
+                  <p>操作类型：0为搜索热行排行，1为最新搜索排行</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"> <strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#dbeaf5"><div align="center"><img src="img/bq/showsearch.jpg" width="216" height="44"></div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top"> [showsearch]3,4,0,1[/showsearch]<br>
+                  每行显示条数为3<br>
+                  总显示条数为4<br>
+                  栏目ID为0-显示所有栏目<br>
+                  操作类型为1-最新搜索排行<br></td>
+                <td valign="top">演示效果：<br> <img src="img/bq/showsearch.gif" width="91" height="39" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="phomenewstext"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·简介型调用信息标签(phomenewstext)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">简介型调用信息标签&nbsp;(sys_GetClassNewsText)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text8" style="WIDTH: 100%" size=105 value="[phomenewstext]栏目ID/专题ID,显示条数,'表格颜色',操作类型,是否显示栏目名,附加SQL条件,显示排序[/phomenewstext]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">栏目ID/专题ID</div></td>
+                        <td height="25">要调用信息的栏目ID或专题ID，当前栏目或专题ID='selfinfo'<br />
+                          多个栏目ID或专题ID可用“,”号格开，如'1,2'<br>
+                          如果是按SQL语句调用，则此处为SQL语句。</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示条数</div></td>
+                        <td height="25">显示信息记录数</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">表格颜色</div></td>
+                        <td height="25">请加上''(单引号)</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">操作类型</div></td>
+                        <td height="25">具体看<strong>信息调用操作类型说明</strong></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">是否显示栏目名</div></td>
+                        <td height="25">0为不显示，1为显示</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">附加SQL条件</div></td>
+                        <td height="25">附加调用条件，如：&quot;title='帝国'&quot;</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">显示排序</div></td>
+                        <td height="25">可指定按相应的字段排序，如：&quot;id desc&quot;</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#dbeaf5"><div align="center"><img src="img/bq/phomenewstext.jpg" width="556" height="108"></div></td>
+        </tr>
+        <tr> 
+          <td><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top">[phomenewstext]2,3,'CCCCCC',0,1[/phomenewstext]<br>
+                  栏目ID为2<br>
+                  显示条数为3<br>
+                  ‘表格颜色’为'CCCCCC'<br>
+                  操作类型为0<br>
+                  是否显示栏目名 1为显示</td>
+                <td valign="top">演示效果：<br> <img src="img/bq/phomenewstext.gif" width="498" height="122" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+  
+<br>
+<br>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CADFF7" id="classbq">
+  <tr> 
+    <td width="50%" height="23"><strong>二、栏目调用标签系列</strong></td>
+  </tr>
+</table>
+<br>
+<table width="100%" border="0">
+  <tr id="showclasstemp"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·带模板的栏目导航标签(showclasstemp)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">带模板的栏目导航标签&nbsp;(sys_ShowClassByTemp)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text12" style="WIDTH: 100%" size=105 value="[showclasstemp]父栏目ID,标签模板ID,是否显示栏目信息数,显示栏目数[/showclasstemp]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td width="18%"><div align="center">参数</div></td>
+                        <td width="82%">参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">父栏目ID</div></td>
+                        <td height="25">父栏目ID<br /> <strong>'0'</strong>为显示所有一级栏目<br /> 
+                          <strong>'selfinfo'</strong>显示本栏目下级栏目</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td rowspan="2"> <div align="center"> 
+                            <div align="center">标签模板ID</div>
+                          </div>
+                          <div align="center"></div></td>
+                        <td height="25">标签模板ID（后台新增标签模板）</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><p><strong>模板标签变量说明：<br>
+                            </strong>[!--bclassname--]：父栏目名,[!--bclassurl--]：父栏目链接,[!--bclassid--]：父栏目id<br>
+                            <br>
+                            <strong>list.var模板标签：</strong><br />
+                            [!--classurl--]：栏目链接,[!--classname--]：栏目名称,[!--classid--]：栏目id,[!--classimg--]：栏目图片,[!--intro--]：栏目简介,[!--num--]：信息数,[!--no--]：序号</p></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">是否显示栏目信息数</div></td>
+                        <td height="25">0为不显示，1为显示</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示栏目数</div></td>
+                        <td height="25">0为不限制</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#dbeaf5">显示样式由<strong>标签模板</strong>决定。</td>
+        </tr>
+        <tr> 
+          <td height="25"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td height="25"><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top">[showclasstemp]9,1,0,0[/showclasstemp]<br>
+                  栏目ID为9<br>
+                  标签模板ID为1<br>
+                  是否显示栏目信息数-0为不显示<br>
+                  显示栏目数-0为不限制</td>
+                <td valign="top">演示效果：<br> <img src="img/bq/showclasstemp.gif" width="221" height="28" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="phomeshowclass"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·显示栏目导航标签(phomeshowclass)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">显示栏目导航标签&nbsp;(sys_ShowClass)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text11" style="WIDTH: 100%" size=80 value="[phomeshowclass]是否显示栏目记录数[/phomeshowclass]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td>显示本栏目的下级栏目导航，如果是非栏目页面则显示所有一级栏目</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#dbeaf5"><div align="center"><img src="img/bq/phomeshowclass.jpg" width="240" height="167"></div></td>
+        </tr>
+        <tr> 
+          <td><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top">[phomeshowclass]1[/phomeshowclass]<br>
+                  是否显示栏目记录数 1为显示</td>
+                <td valign="top">演示效果：<br> <img src="img/bq/phomeshowclass.gif" width="108" height="143" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="eshowzt"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·<b>专题调用标签&nbsp;(eshowzt)</b></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">专题调用标签&nbsp;(sys_ShowZtData)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text1922" style="WIDTH: 100%" size=105 value="[eshowzt]标签模板ID,专题类别ID,显示专题数,所属栏目ID[/eshowzt]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center"> 
+                            <div align="center">标签模板ID</div>
+                          </div></td>
+                        <td height="25">标签模板ID（后台新增标签模板）</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center"></div></td>
+                        <td height="25"><p>模板标签变量说明：(list.var)<br />
+                            [!--classurl--]：专题链接，[!--classname--]：专题名称<br />
+                            [!--classid--]：专题id，[!--classimg--]：专题图片<br />
+                            [!--intro--]：专题简介,[!--no--]：序号</p></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">专题类别ID</div></td>
+                        <td height="25"><div align="left">分类ID，0为调用所有专题，多个分类ID用逗号隔开，如'1,2'</div></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示专题数</div></td>
+                        <td height="25">0为不限制</td>
+                      </tr>
+                      <tr bgcolor="#ffffff">
+                        <td height="25"><div align="center">所属栏目ID</div></td>
+                        <td height="25">0为不限制，多个栏目ID用逗号隔开，如'1,2'</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">[eshowzt]9,1,2,0[/eshowzt]<br>
+            标签模板ID为9<br>
+            专题类别ID为1<br>
+            显示专题数为2</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="phomeshowmap"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·显示网站地图标签(phomeshowmap)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">显示网站地图标签&nbsp;(sys_ShowMap)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text13" style="WIDTH: 100%" size=105 value="[phomeshowmap]栏目ID,子栏目每行显示记录数,'大栏目颜色','子栏目颜色',是否显示栏目记录数[/phomeshowmap]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">栏目ID</div></td>
+                        <td height="25">父栏目ID</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">子栏目每行显示记录数</div></td>
+                        <td height="25">子栏目每行显示多少个栏目</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">大栏目颜色</div></td>
+                        <td height="25">大栏目单元格颜色,记得加上单引号</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">子栏目颜色</div></td>
+                        <td height="25">子栏目表格颜色,记得加上单引号</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">是否显示栏目记录数</div></td>
+                        <td height="25">0为不显示，1为显示.如显示效率比较低</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#dbeaf5"><div align="center"><img src="img/bq/phomeshowmap.jpg" width="650" height="373"></div></td>
+        </tr>
+        <tr> 
+          <td><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top">[phomeshowmap]9,4,'CCCCCC','FFFFFF',1[/phomeshowmap]<br>
+                  栏目ID为9<br>
+                  子栏目每行显示记录数为4<br>
+                  '大栏目颜色'为'CCCCCC'<br>
+                  '子栏目颜色'为'FFFFFFF'<br>
+                  是否显示栏目记录数 1为显示<br></td>
+                <td valign="top">演示效果：<br> <img src="img/bq/phomeshowmap.gif" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id=listshowclass>
+    <td height="25" bgcolor="#CCCCCC"><strong>·<B>循环栏目导航标签&nbsp;(listshowclass)</B></strong></td>
+  </tr>
+  <tr>
+    <td height="25"><TABLE class=tableborder cellSpacing=1 cellPadding=3 
+width="100%" align=center border=0>
+        <TBODY>
+          <TR> 
+            <TD class=header> <TABLE cellSpacing=1 cellPadding=3 width="100%" border=0>
+                <TBODY>
+                  <TR class=header> 
+                    <TD width="10%">标签名称：</TD>
+                    <TD 
+      width="90%"><B>循环栏目导航标签&nbsp;(listshowclass) <strong><B> </B></strong></B>注：5.1版以上才有的标签</TD>
+                  </TR>
+                </TBODY>
+              </TABLE></TD>
+          </TR>
+          <TR> 
+            <TD bgColor=#ffffff> <TABLE cellSpacing=1 cellPadding=3 width="100%" border=0>
+                <TBODY>
+                  <TR> 
+                    <TD width="10%">格式:</TD>
+                    <TD><INPUT style="WIDTH: 100%" size=80 value="[listshowclass]父栏目ID,标签模板ID,是否显示栏目信息数,显示栏目数[/listshowclass]" name=text24></TD>
+                  </TR>
+                </TBODY>
+              </TABLE></TD>
+          </TR>
+          <TR> 
+            <TD bgColor=#ffffff> <TABLE cellSpacing=1 cellPadding=3 width="100%" align=center border=0>
+                <TBODY>
+                  <TR> 
+                    <TD><strong>参数说明：</strong></TD>
+                  </TR>
+                  <TR> 
+                    <TD> <P> 
+                      <TABLE cellSpacing=1 cellPadding=3 width="100%" bgColor=#dbeaf5 
+            border=0>
+                        <TBODY>
+                          <TR> 
+                            <TD> <DIV align=center>参数</DIV></TD>
+                            <TD>参数说明</TD>
+                          </TR>
+                          <TR bgColor=#ffffff> 
+                            <TD height=25> <DIV align=center>父栏目ID</DIV></TD>
+                            <TD height=25> '0'为显示所有一级栏目<BR>
+                              'selfinfo'显示本栏目下级栏目<BR>
+                              多栏目固定调用可用","格开</TD>
+                          </TR>
+                          <TR bgColor=#ffffff> 
+                            <TD height=25> <DIV align=center> 
+                                <DIV align=center>标签模板ID</DIV>
+                              </DIV></TD>
+                            <TD height=25>标签模板ID</TD>
+                          </TR>
+                          <TR bgColor=#ffffff> 
+                            <TD height=25> <DIV align=center></DIV></TD>
+                            <TD height=25> <P>模板标签变量说明：[!--bclassname--]：父栏目名,[!--bclassurl--]：父栏目链接,[!--bclassid--]：父栏目id，[!--bclassimg--]：父栏目图片,[!--bintro--]：父栏目简介,[!--bnum--]：父栏目信息数,[!--bno--]：父栏目序号</P>
+                              <P>list.var模板标签：<BR>
+                                [!--classurl--]：栏目链接,[!--classname--]：栏目名称,[!--classid--]：栏目id,[!--classimg--]：栏目图片,[!--intro--]：栏目简介,[!--num--]：信息数,[!--no--]：序号</P></TD>
+                          </TR>
+                          <TR bgColor=#ffffff> 
+                            <TD height=25> <DIV align=center>是否显示栏目信息数</DIV></TD>
+                            <TD height=25>0为不显示，1为显示</TD>
+                          </TR>
+                          <TR bgColor=#ffffff> 
+                            <TD height=25> <DIV align=center>显示栏目数</DIV></TD>
+                            <TD 
+    height=25>0为不限制</TD>
+                          </TR>
+                        </TBODY>
+                      </TABLE>
+                      <p></P></TD>
+                  </TR>
+                </TBODY>
+              </TABLE> 
+            </TD>
+          </TR>
+          <TR>
+            <TD height="25" bgColor=#ffffff><strong>样式如下：</strong></TD>
+          </TR>
+          <TR>
+            <TD bgColor=#ffffff><div align="center"><img src="img/bq/listshowclass.jpg" width="142" height="405"></div></TD>
+          </TR>
+        </TBODY>
+      </TABLE></td>
+  </tr>
+</table>
+  
+<br>
+<br>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CADFF7" id="noinfobq">
+  <tr> 
+    <td width="50%" height="23"><strong>三、非信息调用标签系列</strong></td>
+  </tr>
+</table>
+<br>
+<table width="100%" border="0">
+  <tr id="phomead"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·广告调用标签(phomead)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">广告调用标签&nbsp;(sys_GetAd)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text6" style="WIDTH: 100%" size=105 value="[phomead]广告ID[/phomead]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">广告ID</div></td>
+                        <td height="25">后台增加的广告ID<a href="../tool/ListAd.php" target="_blank"><strong><u></u></strong></a>值</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">[phomead]2[/phomead]<br>
+            广告ID为2</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="phomevote"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·投票调用标签(phomevote)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">投票调用标签&nbsp;(sys_GetVote)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text7" style="WIDTH: 100%" size=105 value="[phomevote]投票ID[/phomevote]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">投票ID</div></td>
+                        <td height="25">后台增加的投票ID值<a href="../tool/ListVote.php" target="_blank"><strong><u></u></strong></a></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#dbeaf5">样式由<strong>投票模板</strong>决定，投票模板制作教程可以<a href="votetemp.html" target="_blank"><strong>点击这里</strong></a>查看。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top">[phomevote]2[/phomevote]<br>
+                  投票ID为2</td>
+                <td valign="top">演示效果：<br> <img src="img/bq/phomevote.gif" width="241" height="151" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="phomelink"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·友情链接标签(phomelink)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">友情链接标签&nbsp;(sys_GetSitelink)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text10" style="WIDTH: 100%" size=105 value="[phomelink]每行显示数,显示总数,操作类型,分类id,是否显示原链接[/phomelink]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><TABLE cellSpacing=1 cellPadding=3 width="100%" bgColor=#dbeaf5 border=0>
+                    <TBODY>
+                      <TR> 
+                        <TD width="40%"> <DIV align=center>参数</DIV></TD>
+                        <TD width="60%">参数说明</TD>
+                      </TR>
+                      <TR bgColor=#ffffff> 
+                        <TD height=25> <DIV align=center>每行显示记录数</DIV></TD>
+                        <TD height=25>每行显示记录数</TD>
+                      </TR>
+                      <TR bgColor=#ffffff> 
+                        <TD height=25> <DIV align=center>显示总记录数</DIV></TD>
+                        <TD height=25> <DIV align=left>总记录数</DIV></TD>
+                      </TR>
+                      <TR bgColor=#ffffff> 
+                        <TD height=25> <DIV align=center>操作类型</DIV></TD>
+                        <TD height=25> <DIV align=left>0为所有记录，1为图片链接，2为文字链接</DIV></TD>
+                      </TR>
+                      <TR bgColor=#ffffff> 
+                        <TD height=25><div align="center">分类ID</div></TD>
+                        <TD height=25><div align="left">友情链接的分类ID</div></TD>
+                      </TR>
+                      <TR bgColor=#ffffff> 
+                        <TD height=25><div align="center">是否显示原链接</div></TD>
+                        <TD height=25><div align="left">1为显示原链接，0为统计链接</div></TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#dbeaf5"><div align="center"><img src="img/bq/phomelink.jpg" width="585" height="153"></div></td>
+        </tr>
+        <tr> 
+          <td><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top">[phomelink]3,6,0,0,0[/phomelink]<br>
+                  每行显示数为3<br>
+                  显示总记录数为6<br>
+                  操作类型为0<br>
+                  图片高度90像素<br>
+                  分类ID为0-不限制<br>
+                  是否显示原连接0-统计点击链接</td>
+                <td valign="top">演示效果：<br> <img src="img/bq/phomelink.gif" width="295" height="69" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="gbookinfo"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·<b>留言板调用标签&nbsp;(gbookinfo)</b></strong></td>
+  </tr>
+  <tr>
+    <td height="25"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">留言板调用标签&nbsp;(sys_ShowLyInfo)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text192" style="WIDTH: 100%" size=105 value="[gbookinfo]显示信息数,标签模板ID,留言分类ID[/gbookinfo]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td width="40%"><div align="center">参数</div></td>
+                        <td width="60%">参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">显示信息数</div></td>
+                        <td height="25">显示记录数</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">标签模板ID</div></td>
+                        <td height="25"><div align="left">标签模板ID（后台新增标签模板）</div></td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center"></div></td>
+                        <td height="25">模板标签变量说明：<br />
+                          留言ID：[!--lyid--]，留言内容：[!--lytext--]<br />
+                          回复内容：[!--retext--]，留言时间：[!--lytime--]<br />
+                          留言者：[!--name--]，留言者邮箱：[!--email--]<br />
+                          序号：[!--no--]</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">留言分类ID</div></td>
+                        <td height="25"><div align="left">分类ID，0为调用所有留言</div></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">[gbookinfo]2,9,1[/gbookinfo]<br>
+            显示信息数2-显示2条留言<br>
+            标签模板ID为9<br>
+            留言分类ID为1</td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr id="showplinfo">
+    <td height="25" bgcolor="#CCCCCC"><strong>·<b>评论调用标签&nbsp;(showplinfo)</b></strong></td>
+  </tr>
+  <tr>
+    <td height="25"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">评论调用标签&nbsp;(sys_ShowPlInfo)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text23" style="WIDTH: 100%" size=105 value="[showplinfo]调用条数,标签模板ID,栏目ID,信息ID,显示推荐评论,操作类型[/showplinfo]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><strong>标签模板ID</strong>：标签模板ID<br />
+                  <strong>栏目ID</strong>：0为不限调用栏目，父栏目会应用于子栏目<br />
+                  <strong>信息ID</strong>：0为不限<br />
+                  <strong>显示推荐评论</strong>：0为不限；1为只显示推荐评论<br />
+                  <strong>操作类型</strong>：0为按发布时间；1为按支持数；2为按反对数<br />
+                  <strong>标签模板说明</strong>：[!--title--]:信息标题；[!--titleurl--]:信息链接；[!--id--]:信息ID<br />
+                  [!--classid--]:栏目ID；[!--plid--]:评论ID；[!--username--]:发表者；[!--no--]:编号<br />
+                  [!--pltext--]:评论内容；[!--pltime--]:评论时间；[!--zcnum--]:支持数；[!--fdnum--]:反对数</td>
+              </tr>
+            </table> </td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">[showplinfo]3,10,0,0,0,0[/showplinfo]<br>
+            调用条数为3<br>
+            标签模板ID为10<br>
+            栏目ID为0-不限<br>
+            信息ID为0-不限<br>
+            显示推荐评论为0-不限<br>
+            操作类型为0-按发布时间显示</td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr id="echocheckbox">
+    <td height="25" bgcolor="#CCCCCC"><strong>·<b>复选项输出函数&nbsp;(echocheckbox)</b></strong></td>
+  </tr>
+  <tr>
+    <td height="25"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">复选项输出函数&nbsp;(sys_EchoCheckboxFValue)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text21" style="WIDTH: 100%" size=105 value="[echocheckbox]'字段','分隔符'[/echocheckbox]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+            </table>
+            作用：字段的表单显示元素为复选框的时候才用到，标签加在内容模板中。按分隔符间隔输出各选项的数据。 </td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">如：[echocheckbox]'title','&lt;br&gt;'[/echocheckbox]：表示按回车分隔输出title字段的项</td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  </table>
+  
+<br>
+<br>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CADFF7" id="otherbq">
+  <tr> 
+    <td width="50%" height="23"><strong>四、其它标签</strong></td>
+  </tr>
+</table>
+<br>
+<table width="100%" border="0">
+  <tr id="includefile"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·引用文件标签(includefile)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">引用文件标签&nbsp;(sys_IncludeFile)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text14" style="WIDTH: 100%" size=105 value="[includefile]'文件地址'[/includefile]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td height="49"> <P>[includefile]'文件地址'[/includefile]</P>
+                  <P>文件地址需要为相对地址,并且从后台目录算起："../../header.html"（这个地址的header.html是放在ecms根目录）</P></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">[includefile]'../../a.php'[/includefile]<br>
+            作用：调用引用文件夹（a.php）里面的内容</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="readhttp"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·读取远程页面(readhttp)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">读取远程页面&nbsp;(sys_ReadFile)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text15" style="WIDTH: 100%" size=105 value="[readhttp]'页面地址'[/readhttp]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td>参数说明：</td>
+              </tr>
+              <tr> 
+                <td>[readhttp]'页面地址'[/readhttp]</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF">[readhttp]'http://www.phome.net'[/readhttp]<br>
+            作用：读取远程页面（http://www.phome.net）里面的内容</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="phomepic"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·图片信息标签:[调用单个](phomepic)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>标签名称：</strong></td>
+                <td width="90%">图片信息标签：（调用单个）&nbsp;(sys_GetPicNews)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="10%"><strong>格式：</strong></td>
+                <td width="90%"> <input type=text name="text4" style="WIDTH: 100%" size=105 value="[phomepic]图片信息ID,是否显示标题,是否显示简介[/phomepic]"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td>参数说明：</td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">图片信息ID</div></td>
+                        <td height="25">后台增加的图片信息的ID</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">是否显示标题</div></td>
+                        <td height="25">是否在图片下显示标题，0为不显示，1为显示</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">是否显示简介</div></td>
+                        <td height="25">是否在图片下显示简介，0为不显示，1为显示</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#dbeaf5"><div align="center"><img src="img/bq/phomepic.gif" width="307" height="134"></div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top">[phomepic]2,1,1[/phomepic]<br>
+                  图片信息ID为2<br>
+                  是否显示标题1为显示<br>
+                  是否显示简介1为显示</td>
+                <td valign="top">演示效果：<br> <img src="img/bq/phomepic2.gif" width="384" height="113" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="phomemorepic"> 
+    <td height="25" bgcolor="#CCCCCC"><strong>·图片信息标签:[调用多个](phomemorepic)</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="14%"><strong>标签名称：</strong></td>
+                <td width="86%">图片信息标签：（调用多个）&nbsp;(sys_GetMorePicNews)</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="14%"><strong>格式：</strong></td>
+                <td width="86%"><input type=text name="text5" style="WIDTH: 100%" size=80 value="[phomemorepic]图片信息类别ID,每行显示条数,调用总条数,图片宽度,图片高度,是否显示标题,标题截取数,是否显示原链接[/phomemorepic]"></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td><strong>参数说明：</strong></td>
+              </tr>
+              <tr> 
+                <td><table cellspacing="1" cellpadding="3" width="100%" bgcolor="#dbeaf5" border="0">
+                    <tbody>
+                      <tr> 
+                        <td><div align="center">参数</div></td>
+                        <td>参数说明</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">图片信息类别ID</div></td>
+                        <td height="25">图片信息的类别ID</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">每行显示条数</div></td>
+                        <td height="25">每行显示几个图片</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">调用总条数</div></td>
+                        <td height="25">调用信息总数</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">图片宽度，图片高度</div></td>
+                        <td height="25">图片信息图片大小</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td height="25"><div align="center">是否显示标题</div></td>
+                        <td height="25">是否在图片下显示标题，0为不显示，1为显示</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">标题截取数</div></td>
+                        <td height="25">截取标题多少个字符</td>
+                      </tr>
+                      <tr bgcolor="#ffffff"> 
+                        <td bgcolor="#ffffff" height="25"><div align="center">是否显示原链接</div></td>
+                        <td height="25">0为显示,1为不显示</td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>样式如下：</strong></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#dbeaf5"><div align="center"><img src="img/bq/phomemorepic.gif" width="560" height="88"></div></td>
+        </tr>
+        <tr> 
+          <td><strong>举例说明：</strong></td>
+        </tr>
+        <tr> 
+          <td><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="50%" valign="top">[phomemorepic]1,3,3,90,90,1,14,1[/phomemorepic]<br>
+                  图片信息类别ID为1<br>
+                  每行显示条数为3个图片<br>
+                  调用总条数为3条信息<br>
+                  图片宽度为90像素<br>
+                  图片高度为90像素<br>
+                  是否显示标题 1为显示<br>
+                  标题截取数14个字符<br>
+                  是否显示原链接 1为显示</td>
+                <td valign="top">演示效果：<br> <img src="img/bq/phomemorepic2.gif" width="335" height="111" border="1"> 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="25"><br> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" id="ShowMemberInfo">
+        <tr> 
+          <td bgcolor="#CCCCCC"> 
+            <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr class="header"> 
+                <td width="14%">标签名称：</td>
+                <td width="86%"><b>会员信息调用函数</b></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="6%">格式:</td>
+                <td> <input type=text name="text25" size=80 value="sys_ShowMemberInfo(用户ID,查询字段)" style="width:100%"></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td>用户ID：设置要调用的会员信息的用户ID，在信息内容页下调用可以设置为0，表示调用信息发布者的资料。<br>
+                  查询字段：默认为查询所有会员字段，此参数一般不用设置，如果为了效率更高可以指定相应的字段。如：“u.userid,ui.company”(u为主表，ui为副表)。<br> 
+                  <strong>使用教程：</strong><a href="http://bbs.phome.net/showthread-13-108558-0.html" target="_blank">http://bbs.phome.net/showthread-13-108558-0.html</a></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" id="ListMemberInfo">
+        <tr> 
+          <td bgcolor="#CCCCCC"> 
+            <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr class="header"> 
+                <td width="14%">标签名称：</td>
+                <td width="86%"><b>会员列表调用函数</b></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="6%">格式:</td>
+                <td> <input type=text name="text25" size=80 value="sys_ListMemberInfo(调用条数,操作类型,会员组ID,用户ID,查询字段)" style="width:100%"></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td>调用条数：调用前几条记录。<br>
+                  操作类型：0为按注册时间、1为按积分排行、2为按资金排行、3为按会员空间人气排行<br>
+                  会员组ID：指定要调用的会员组ID，不设置为不限，多个会员组用逗号隔开，如：'1,2'<br>
+                  用户ID：指定要调用的会员ID，不设置为不限，多个用户ID用逗号隔开，如：'25,27'<br>
+                  查询字段：默认为查询所有会员字段，此参数一般不用设置，如果为了效率更高可以指定相应的字段。如：“u.userid,ui.company”(u为主表，ui为副表)。<br> 
+                  <strong>使用教程：</strong><a href="http://bbs.phome.net/showthread-13-108558-0.html" target="_blank">http://bbs.phome.net/showthread-13-108558-0.html</a></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" id="spaceeloop">
+        <tr> 
+          <td bgcolor="#CCCCCC"> 
+            <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr class="header"> 
+                <td width="14%">标签名称：</td>
+                <td width="86%"><b>会员空间信息标签调用</b></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="6%">格式:</td>
+                <td> <textarea name="textarea2" cols="80" rows="11" style="width:100%">&lt;?php
+$spacesql=espace_eloop(栏目ID,显示条数,操作类型,只显示有标题图片,附加SQL条件,显示排序);
+while($spacer=$empire->fetch($spacesql))
+{
+        $spacesr=espace_eloop_sp($spacer);
+?&gt;
+模板代码内容
+&lt;?
+}
+?&gt;</textarea></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td> <strong>使用教程：</strong><a href="http://bbs.phome.net/showthread-13-109152-0.html" target="_blank">http://bbs.phome.net/showthread-13-109152-0.html</a></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" id="resizeimg">
+        <tr> 
+          <td bgcolor="#CCCCCC"> 
+            <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr class="header"> 
+                <td width="14%">标签名称：</td>
+                <td width="86%"><b>生成缩图函数</b></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="6%">格式:</td>
+                <td> <input type=text name="text25" size=80 value="sys_ResizeImg(原图片,缩图宽度,缩图高度,是否裁翦图片,目标文件名)" style="width:100%"></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="6%">格式:</td>
+                <td> <textarea name="textarea2" cols="80" rows="5" style="width:100%">&lt;?php
+$resizeimgurl=sys_ResizeImg($bqr[titlepic],170,120,1,'');
+echo"&lt;img src='$resizeimgurl'&gt;";
+?&gt;</textarea></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td>原图片：要生成缩图的源文件。<br>
+                  缩图宽度、缩图高度：生成缩图的规格。<br>
+                  是否裁翦图片：按比例缩图后超出部分是事采用裁翦方式。<br>
+                  目标文件名：此项可省略，如果设置目标文件名将覆盖此文件名，防止重复生成临时图片文件。</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <br>
+      <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" id="egetzy">
+        <tr> 
+          <td bgcolor="#CCCCCC"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr class="header"> 
+                <td width="14%">标签名称：</td>
+                <td width="86%"><b>转义字符函数</b></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td><table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="6%">格式:</td>
+                <td> <input type=text name="text252" size=80 value="egetzy(转义字符)" style="width:100%"></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="6%">格式:</td>
+                <td> <textarea name="textarea3" cols="80" rows="5" style="width:100%">&lt;?php
+$zystr=egetzy('rn');
+echo"$zystr";
+?&gt;</textarea></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+              <tr> 
+                <td>本函数方便用户在调用模板使用反斜扛转义：<br>
+                  (1)、函数语法：egetzy(转义字符)<br>
+                  (2)、转义字符rn转为\r\n、n转为\n、r转为\n、t转为\t、syh转为\&quot;、dyh转为\'<br>
+                  (3)、转义字符为数字，则转为对应数量的\，比如：2转为\\<br>
+                  (4)、分割换行符例子：$er=explode(egetzy('rn'),$navinfor[downpath]); </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFFFF">例子：<br>
+            <img src="img/bq/egetzy.jpg" width="604" height="420"> </td>
+        </tr>
+      </table> </td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">管理栏目字段</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="addclassf">&nbsp; &nbsp; &gt; 增加栏目字段</option>
+          <option value="classf">&nbsp; &nbsp; &gt; 管理栏目字段</option>
+          <option value="getclassf">&nbsp; &nbsp; &gt; 栏目字段调用说明</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>栏目属性自定义字段功能：在系统支持信息属性自定义字段的基础上，6.6版又新增了栏目属性自定义字段功能，让灵活系统更灵活。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="addclassf"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、增加栏目字段</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>栏目自定义字段</strong>”子菜单，进入管理栏目字段界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/classf1.jpg" width="395" height="425" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>管理栏目字段</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/classf2.jpg" width="748" height="280"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、从管理栏目字段页面点击“<strong>增加栏目字段</strong>”按钮，进入<strong>增加栏目字段</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/classf3.jpg" width="761" height="752" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF"><strong>字段名</strong></td>
+          <td width="85%" bgcolor="#FFFFFF">填写字段名，字段名由英文和数字组成。比如：title。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>字段标识</strong></td>
+          <td bgcolor="#FFFFFF">字段标识方便识别字段。比如：标题</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>字段类型</strong></td>
+          <td bgcolor="#FFFFFF">选择字段的存放类型。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>字段长度：</strong>选择字段的存放长度。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>输入表单显示元素</strong></td>
+          <td bgcolor="#FFFFFF">选择前台表单录入的方式。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>元素长度：</strong>表单元素显示的大小。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">初始值</td>
+          <td bgcolor="#FFFFFF">填写字段默认值或选项(多个值用&quot;回车&quot;格开；默认选项后面加：:default)。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">显示顺序</td>
+          <td bgcolor="#FFFFFF">会员表单的字段显示顺序越小越前面。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>输入表单替换html代码</strong></td>
+          <td bgcolor="#FFFFFF">增加字段后自动生成字段显示的html代码内容，增加字段时一般不设置，可增加字段后再修改。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">注释</td>
+          <td bgcolor="#FFFFFF">填写备注内容。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="classf"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、管理栏目字段</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、增加栏目字段后，返回管理栏目字段界面，就可以看到我们增加的字段：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/classf4.jpg" width="761" height="368" border="0"></td>
+  </tr>
+  <tr>
+    <td height="25">2、增加/修改栏目页面也可以看到我们增加的栏目字段，如图：</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/classf5.jpg" width="917" height="531"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="getclassf"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、栏目字段调用说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>字段调用说明：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">使用内置调用栏目自定义字段函数：ReturnClassAddField(栏目ID,字段名)，栏目ID=0为当前栏目ID。取多个字段内容可用逗号隔开，例子：<br>
+      取得'classtext'字段内容：$value=ReturnClassAddField(0,'classtext'); //$value就是字段内容。<br>
+      取得多个字段内容：$value=ReturnClassAddField(1,'classid,classtext'); //$value['classtext']才是字段内容。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>范例1：显示当前栏目的“diyclassf”字段的内容。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">diyclassf字段内容为：<font color="#FF0000">&lt;?=ReturnClassAddField(0,'diyclassf')?&gt;</font></td>
+  </tr>
+  <tr>
+    <td height="25"><strong>范例2：显示栏目ID=6的“diyclassf”和“diyclassf2”这两个字段的内容。</strong></td>
+  </tr>
+  <tr>
+    <td height="25">&lt;?php<br>
+      <font color="#FF0000">$cfr=ReturnClassAddField(6,'diyclassf,diyclassf2');</font><br>
+      ?&gt;<br>
+      diyclassf字段内容为：<font color="#FF0000">&lt;?=$cfr['diyclassf']?&gt;</font><br>
+      diyclassf2字段内容为：<font color="#FF0000">&lt;?=$cfr['diyclassf2']?&gt;</font></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

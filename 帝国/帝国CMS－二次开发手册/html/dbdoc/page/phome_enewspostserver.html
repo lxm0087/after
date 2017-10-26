@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>phome_enewspostserver 数据表字段解释</title>
+<link href="../images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%" border="0" align="center">
+  <tr> 
+    <td width="100%"><strong><font color="#0000FF">phome_enewspostserver 数据表字段解释（远程同步发布表）</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="800" border="0" cellspacing="1" cellpadding="3" class="tableborder">
+  <tr class="header"> 
+    <td width="20%" height="30">字段名</td>
+    <td width="15%">类型</td>
+    <td width="24%">解释</td>
+    <td width="41%">附加说明</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF">pid</td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">发布ID</td>
+    <td bgcolor="#FFFFFF">1为附件</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF">pname</td>
+    <td bgcolor="#FFFFFF">varchar(60)</td>
+    <td bgcolor="#FFFFFF">发布名称</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF">purl</td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">远程访问地址</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF">ptype</td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">发布类型</td>
+    <td bgcolor="#FFFFFF">1为附件</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF">ftphost</td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">FTP服务器地址</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="30" bgcolor="#FFFFFF">ftpport</td>
+    <td bgcolor="#FFFFFF">varchar(20)</td>
+    <td bgcolor="#FFFFFF">FTP服务器端口</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="30" bgcolor="#FFFFFF">ftpusername</td>
+    <td bgcolor="#FFFFFF">varchar(120)</td>
+    <td bgcolor="#FFFFFF">FTP用户名</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="30" bgcolor="#FFFFFF">ftppassword</td>
+    <td bgcolor="#FFFFFF">varchar(120)</td>
+    <td bgcolor="#FFFFFF">FTP密码</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="30" bgcolor="#FFFFFF">ftppath</td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">FTP存放目录</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="30" bgcolor="#FFFFFF">ftpmode</td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">FTP传送模式</td>
+    <td bgcolor="#FFFFFF">1为ASCII，0为二进制</td>
+  </tr>
+  <tr>
+    <td height="30" bgcolor="#FFFFFF">ftpssl</td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">FTP启用 SSL 连接</td>
+    <td bgcolor="#FFFFFF">1为启用，0为关闭</td>
+  </tr>
+  <tr>
+    <td height="30" bgcolor="#FFFFFF">ftppasv</td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">FTP启用被动模式(pasv)连接</td>
+    <td bgcolor="#FFFFFF">1为启用，0为关闭</td>
+  </tr>
+  <tr>
+    <td height="30" bgcolor="#FFFFFF">ftpouttime</td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">FTP 传输超时时间</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF">lastposttime</td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">最后发布时间</td>
+    <td bgcolor="#FFFFFF">unix时间戳</td>
+  </tr>
+</table>
+</body>
+</html>

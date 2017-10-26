@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">投票系统</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="votesay">&nbsp; &nbsp; &gt; 投票系统说明</option>
+          <option value="addvote">&nbsp; &nbsp; &gt; 增加投票</option>
+          <option value="vote">&nbsp; &nbsp; &gt; 管理投票</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="27" colspan="2"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>网站的投票管理。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="votesay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、投票系统说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>前台投票调用方式：同时支持标签调用和JS调用</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>标签调用投票：</strong>用投票调用标签（[phomevote]投票ID[/phomevote]）</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>JS调用投票：</strong>&lt;script src=&quot;投票JS文件地址&quot;&gt;&lt;/script&gt;，比如：&lt;script 
+      src=&quot;http://127.0.0.1/d/js/vote/vote1.js&quot;&gt;&lt;/script&gt;</td>
+  </tr>
+  <tr> 
+    <td height="25">（以上两种方式选其一，页面经常更新的可以用标签调用，页面不经常更新的推荐用JS调用）</td>
+  </tr>
+  <tr>
+    <td height="25"><strong>投票调用结果显示示例，如下图：</strong><br>
+      <img src="img/vote1.gif" width="132" height="128" border="1"> </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="addvote">
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、增加投票</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>插件</strong>”菜单，选择“<strong>增加投票</strong>”子菜单，进入增加投票界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/vote2.jpg" width="552" height="295" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>增加投票</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/vote3.jpg" width="731" height="602" border="0"><br>
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>主题标题</strong></td>
+          <td width="86%">输入投票的主题（60个汉字上限）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>投票项目</strong></td>
+          <td>输入各投票选项名称，还可预设投票数。不填投票名称表示不使用。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>增加投票选项：</strong>当投票选项多于系统默认设置时，可在投票扩展数量选框中输入需增加选项数量，单击“输出地址”按钮，增加投票选项。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>投票类型</strong></td>
+          <td>选择投票是单选投票还是可以多选。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>限制IP</strong></td>
+          <td>选择是否限制同一IP只能投一次票。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>过期时间</strong></td>
+          <td>设置投票过期时间，超过此期限，将不能投票，0000-00-00为不限制。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>查看投票窗口</strong></td>
+          <td>设置查看投票结果窗口显示的宽度及高度。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>选择模板</strong></td>
+          <td>选择投票模板<font color="#666666">（投票模板制作可查看美工手册）</font>。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="vote"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、管理投票</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、增加投票后，返回“管理投票”界面（见下图）：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/vote4.jpg" width="732" height="282">
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>[预览]</strong><br></td>
+          <td width="86%">对投票JS调用效果的预览。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="vote"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">相关内容</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">重复投票时间限制：如果不限制同一IP只能投一次票，那么可对重复投票的时间间隔做出限制。 <br>
+      操作步骤：单击菜单“系统”》“系统设置”》“系统参数设置”，进入参数设置界面，选择“信息设置”，进行“重复投票时间限制”设置。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

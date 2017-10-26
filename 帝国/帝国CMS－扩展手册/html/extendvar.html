@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">模板程序扩展变量说明</strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">帝国CMS模板程序扩展变量说明：通过这些变量可实现各种更复杂的显示格式。</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>一、列表/封面模板变量说明：<font color="#666666">（栏目页或专题页中使用）</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>(一)、当前栏目ID或专题ID：<font color="#0000FF">$GLOBALS[navclassid]</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">通过这个变量可以输出这个栏目id的所有数据（如：select * from phome_enewsclass where 
+      classid='$GLOBALS[navclassid]'）</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>(二)、使用范例：调用当前栏目下的栏目简介。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>用SQL标签调用：</strong><br>
+      [e:loop={&quot;select intro from phome_enewsclass where classid='<font color="#0000FF">$GLOBALS[navclassid]</font>'&quot;,1,24,0}]<br> 
+      &lt;?=$bqr[intro]?&gt;<br>
+      [/e:loop]</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>或用PHP调用：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">&lt;?php<br>
+      $cr=$empire-&gt;fetch1(&quot;select intro from phome_enewsclass where classid='<font color="#0000FF">$GLOBALS[navclassid]</font>'&quot;);<br>
+      echo $cr[intro];<br>
+      ?&gt; </td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>二、内容模板变量说明：<font color="#666666">（信息内容页中使用）</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>(一)、字段值数组：<font color="#0000FF">$navinfor</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">调用方法：<font color="#0000FF">$navinfor['字段名']</font>，比如要显示＂信息ID字段＂，那在模板里用：&lt;?=$navinfor['id']?&gt;即可输出（单引号加不加均可）</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>(二)、使用范例1：调用与当前信息的标题相同的下载信息。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>灵动标签调用：</strong><br>
+      [e:loop={'download',10,18,0,&quot;title='<font color="#0000FF">$navinfor[title]</font>'&quot;}]<br>
+      &lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot;&gt;&lt;?=$bqr[title]?&gt;&lt;/a&gt; 
+      &lt;br&gt; <br>
+      [/e:loop]</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>(三)、使用范例2：显示当前商城信息的“市场价格(tprice)”与“购买价格(price)”的差额。</strong></td>
+  </tr>
+  <tr>
+    <td height="25"><p>&lt;?php<br>
+        $m=<font color="#0000FF">$navinfor['tprice']</font>-<font color="#0000FF">$navinfor['price']</font>;<br>
+        echo&quot;为您节省：&quot;.$m.&quot; 元&quot;; <br>
+        ?&gt; </p>
+      </td>
+  </tr>
+  <tr>
+    <td height="25"><strong>(四)、使用范例3：当前信息的标题截取4个字符。</strong></td>
+  </tr>
+  <tr>
+    <td height="25">标题前面四个字符为：&lt;?=esub(<font color="#0000FF">$navinfor['title']</font>,4)?&gt;</td>
+  </tr>
+  <tr>
+    <td height="25"><strong>(五)、使用范例4：当前信息的关键字加上链接。</strong></td>
+  </tr>
+  <tr>
+    <td height="25"><p>&lt;?php<br>
+        $keyr=explode(',',<font color="#0000FF">$navinfor['keyboard']</font>);<br>
+        for($i=0;$i&lt;count($keyr);$i++)<br>
+        {<br>
+        echo&quot;&lt;a href='/e/search/?searchget=1&amp;show=keyboard&amp;keyboard=&quot;.$keyr[$i].&quot;' 
+        target='_blank'&gt;&quot;.$keyr[$i].&quot;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&quot;; 
+        <br>
+        } <br>
+        ?&gt;</p>
+      </td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>(六)、使用范例5：在自定义函数中引用当前信息的字段。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">function user_EchoInfoField($ecms){<br>
+      <font color="#FF0000">global</font> $empire,$public_r,$class_r,<font color="#0000FF">$navinfor</font>;<br>
+      $title=<font color="#0000FF">$navinfor['title']</font>;<br>
+      echo&quot;标题：&quot;.$title;<br>
+      }</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

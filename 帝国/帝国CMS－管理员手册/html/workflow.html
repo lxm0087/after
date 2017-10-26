@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">工作流</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="workflowsay">&nbsp; &nbsp; &gt; 工作流介绍</option>
+		  <option value="workflowstep">&nbsp; &nbsp; &gt; 工作流基本操作流程</option>
+		  <option value="addworkflow">&nbsp; &nbsp; &gt; 增加工作流</option>
+          <option value="workflow">&nbsp; &nbsp; &gt; 管理工作流</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="workflowsay"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><font color="#FFFFFF"><strong>一、工作流介绍：</strong></font></td>
+  </tr>
+  <tr> 
+    <td height="25">工作流是门户网站或政府单位用来控制文档流转的自定义流程，将定制的工作流设置到栏目上，则栏目中的文档会自动按照定制的工作流自动流转，并由系统控制其执行的过程以方便多人协同工作。<br>
+      <br>
+      <strong>帝国CMS的工作流有以下特点：</strong><br>
+      1、最高可支持100级审核流程；<br>
+      2、每个节点支持设定按“用户”、“用户组”与“部门”进行审核；<br>
+      3、节点支持两种流转方式：普通流转、会签；<br>
+      普通流转只要“用户/用户组/部门”某一个通过就可以继续流转<br>
+      会签需要所有“用户/用户组/部门”通过才会继续流转<br>
+      4、返工可指定返回相应节点或作者本人；<br>
+      5、否决支持删除或者返回作者本人；<br>
+      6、每个节点均可设置批注。 </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="workflowstep"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><font color="#FFFFFF"><strong>二、工作流基本操作流程：</strong></font></td>
+  </tr>
+  <tr> 
+    <td height="25">1、先增加工作流，然后增加工作流节点，一个节点为一级审核；<br>
+      2、增加栏目时选择要使用的工作流；<br>
+      3、管理签发可以看到需要签发的文档流转。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="addworkflow"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、增加工作流：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF">(一)、增加工作流流程：</td>
+  </tr>
+  <tr> 
+    <td height="25">1、先增加工作流；<br>
+      2、增加工作流节点；<br>
+      3、完成。 </td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF">(二)、增加工作流节点的说明：</td>
+  </tr>
+  <tr> 
+    <td height="25"><font color="#FF0000">增加工作流节点时，最后一个节点的节点编号一定要设置100，也就是结束节点。</font><br> 
+      <strong>比如一级审核，只需增加一个节点：</strong><br>
+      节点编号：100<br>
+      节点名称：一级审核<br>
+      状态说明：审核中<br>
+      设置签发权限 <p><strong>比如二级审核，只需增加两个节点：</strong><br>
+        <font color="#0000FF">节点一：</font><br>
+        节点编号：1<br>
+        节点名称：一级审核<br>
+        状态说明：一级审核中<br>
+        设置签发权限<br>
+        <font color="#0000FF">节点二：</font><br>
+        节点编号：100<br>
+        节点名称：二级审核<br>
+        状态说明：二级审核中<br>
+        设置签发权限</p>
+      <p><strong>多少级审核就增加多少个节点，最高可增加至100个 </strong></p></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF">(三)、增加工作流：</td>
+  </tr>
+  <tr> 
+    <td width="100%" height="25">1、登录后台，单击“<strong>系统</strong>”菜单，选择“<strong>增加工作流</strong>”子菜单，进入增加工作流界面：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/workflow2.jpg" width="338" height="324" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入增加工作流界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/workflow3.jpg" width="700" height="253"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%">工作流名称</td>
+          <td width="86%">填写工作流名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>工作流描述</td>
+          <td>填写工作流备注信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>排序</td>
+          <td>设置此工作流显示顺序。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">3、增加工作流后，返回<strong>管理工作流</strong>界面，然后点击“<strong>管理节点</strong>”进入工作流节点管理页面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/workflow4.jpg" width="740" height="148"></td>
+  </tr>
+  <tr> 
+    <td height="25">4、进入工作流节点管理页面，然后点击“<strong>增加节点</strong>”按钮，进入<strong>增加工作流节点</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/workflow5.jpg" width="700" height="122"></td>
+  </tr>
+  <tr> 
+    <td height="25">5、进入增加工作流节点界面</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/workflow6.jpg" width="700" height="578"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>节点编号</strong></td>
+          <td width="86%">填写本节点的编号，编号要比上一个节点大，最高为100。（最后一个节点的编号一定要设置100）</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>节点名称</strong></td>
+          <td>填写节点的名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>状态说明</strong></td>
+          <td>填写本节点操作前的状态。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>节点描述</strong></td>
+          <td>填写节点备注内容。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td rowspan="3"><strong>接收对象</strong></td>
+          <td><strong>用户：</strong>选择参与签发的用户。多个用户名用“,”逗号隔开</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>用户组：</strong>选择参与签发的用户组。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>部门：</strong>选择参与签发的部门。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>流转方式</strong></td>
+          <td><strong>普通流转：</strong>只要“接收对象”中任何一个人签发通过就直接转向下一个节点。<br> <strong>会签：</strong> 
+            必须“接收对象”所有人同时签发通过才会转向下一个节点。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>返工时打回</strong></td>
+          <td>信息需要返工时的操作。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>否决时操作</strong></td>
+          <td>信息否决后的操作。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">6、增加工作流节点后，返回<strong>管理节点</strong>界面，查看我们刚增加的节点列表：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/workflow7.jpg" width="700" height="181"></td>
+  </tr>
+  <tr> 
+    <td height="25">7、至此“一级审核”工作流增加完毕。</td>
+  </tr>
+  <tr> 
+    <td height="25">8、在增加终极栏目时就可以选择我们刚才增加的工作流：</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/workflow8.jpg" width="700" height="565"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="workflow"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、管理工作流：</font></strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/workflow9.jpg" width="700" height="253" border="0"></td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

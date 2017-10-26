@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>投票模板制作说明</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">打印模板</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="printurl">&nbsp; &nbsp; &gt; 打印页面的调用</option>
+          <option value="printtemp">&nbsp; &nbsp; &gt; 管理打印模板</option>
+          <option value="other">&nbsp; &nbsp; &gt; 其他说明</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>打印模板是指信息打印页面的模板，不同系统模型可以设置不同的打印模板(/e/DoPrint/)。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr id="printurl"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、打印页面的调用</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">内容模板加打印页面链接：[!--news.url--]e/DoPrint/?classid=[!--classid--]&amp;id=[!--id--]</td>
+  </tr>
+  <tr> 
+    <td height="25">指定使用打印模板的链接：[!--news.url--]e/DoPrint/?classid=[!--classid--]&amp;id=[!--id--]<font color="#FF0000">&amp;tempid=打印模板ID</font></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="printtemp"> 
+    <td height="25"><strong><font color="#FFFFFF">二、管理打印模板</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>模板</strong>”菜单，选择“<strong>管理打印模板</strong>”子菜单，进入管理打印模板界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> 图片1：菜单导航<br> <img src="img/printtemp1.jpg" width="443" height="491" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入管理打印模板界面：<font color="#666666">(蓝色背景为默认模板)</font></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/printtemp2.jpg" width="707" height="227"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、点击“<strong>修改</strong>”进入<strong>修改打印模板</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="32"><img src="img/printtemp3.jpg" width="700" height="642" border="0"> 
+    </td>
+  </tr>
+  <tr>
+    <td height="32"><strong>打印模板支持的变量</strong>：<br>
+      <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="25%" height="25">[!--newsnav--]：导航条</td>
+          <td width="33%">[!--news.url--]：网站地址(参数设置的站点地址)</td>
+          <td width="25%">[!--class.menu--]：一级栏目导航</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--pagetitle--]：页面标题</td>
+          <td>[!--pagekey--]：页面关键字</td>
+          <td>[!--pagedes--]：页面描述</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--id--]：信息ID</td>
+          <td>[!--classid--]：栏目ID</td>
+          <td>[!--titleurl--]：标题链接</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--keyboard--]：关键字</td>
+          <td>[!--class.name--]：栏目名称</td>
+          <td>[!--userid--]：发布者ID</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--bclass.id--]：父栏目ID</td>
+          <td>[!--bclass.name--]：父栏目名称</td>
+          <td>[!--username--]：发布者</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--userfen--]：查看信息扣除点数</td>
+          <td>[!--onclick--]：点击数</td>
+          <td>[!--totaldown--]：下载数</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--plnum--]：评论数</td>
+          <td>[!--ttid--]：标题分类ID</td>
+          <td>[!--tt.name--]：标题分类名称</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[!--字段名--]:数据表字段内容调用</strong></td>
+          <td><strong>支持公共模板变量</strong></td>
+          <td><strong>支持PHP代码</strong></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="other"> 
+    <td height="25"><strong><font color="#FFFFFF">三、其他说明</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr> 
+    <td height="25">系统模型里可以指定当前模型使用哪个打印模板。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

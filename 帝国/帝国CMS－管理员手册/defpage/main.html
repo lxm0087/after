@@ -1,0 +1,568 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">帝国网站管理系统(EmpireCMS) 
+      v6.6 使用手册</strong></td>
+    <td width="50%"><div align="right">【<a href="http://www.phome.net" target="_blank">官方网站</a>】&nbsp;&nbsp;【<a href="http://bbs.phome.net" target="_blank">技术交流</a>】&nbsp;&nbsp;【<a href="http://www.phome.net/service/about.html" target="_blank">关于帝国软件</a>】&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF" size="4">帝国网站管理系统（EmpireCMS）主要特性：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+        <tr> 
+          <td id="mod"><strong><font color="#154BA0" size="3">一、超强系统模型扩展功能</font></strong></td>
+        </tr>
+        <tr> 
+          <td> <table border="0" width="100%" cellspacing="1" cellpadding="10">
+              <tr> 
+                <td width='100%' height="95" bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'>EmpireCMS卓越之处在于：不仅提供了网站管理功能，而且还提供了系统扩展框架，您可以直接在后台通过新建表、自定义字段，然后组成新的系统模型，以实现各种适合用户自己的系统。如下载系统、音乐系统、商城系统、产品库、分类信息等等......不同模型不同录入界面与管理列表。同时，此功能可将信息量分配于不同的信息表，支持无限分表无限容量，为数据量较大的网站进行数据部署。因系统模型扩展特性，EmpireCMS又被誉为“<strong><font color="#FF0000">万能建站工具</font></strong>”。在4.7以上版本中，此功能又一次得到升华，不仅增强了后台管理系统的可扩展性，而且前台互动性系统的扩展也能发挥得淋漓尽致，在稳定性、扩展性与完善性等诸多方面都得到了更完美的提升！</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="cj"> 
+          <td><strong><font color="#154BA0" size="3">二、大容量数据结构设计</font></strong></td>
+        </tr>
+        <tr id="cj"> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10">
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><strong>·支持无限分表无限容量：</strong><br>
+                  帝国支持一个栏目一个数据表，有多少栏目就建多少个数据存放表，并且每个单独的数据表还支持继续无限分表，因此容量是无限级；<br />
+                  并且支持内容存文本，使单个数据表更超容量；<br />
+                  支持信息归档，将过期的信息归档到其它数据表，以减轻主数据表的负担，使系统稳定性与效率更高。<font color="#333333"><br>
+                  </font><strong>·网站大数据优化方案功能：<br>
+                  </strong>优化方案功能让你管理的数据量永远只有规定时间范围内的数量，让信息显示不随数据库增大而效率下降，让你实现更大的门户网站。</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="cj"> 
+          <td><strong><font color="#154BA0" size="3">三、系统高安全性设计</font></strong></td>
+        </tr>
+        <tr id="cj"> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10">
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p><strong>高安全性设计：<br>
+                    ·</strong>系统验证采用随机密码认证，每次登录或退出都会产生新的随机密码，无规律可寻；<br />
+                    <strong>·</strong>管理员密码采用双重md5加密模式，防止密码泄漏被暴力破解；<br />
+                    <strong>·</strong>登录新增认证码功能，要同时满足密码跟认证码同时正确才能登录，此功能可防止非法用户知道密码也无法登录；<br>
+                    <strong>·</strong>后台认证采用：数据库、COOKIE、文件三重安全认证，更加牢固。 <br />
+                    <strong>·</strong>登录次数限制采用COOKIE+数据库双重验证；<br>
+                    <strong>·</strong>后台登录支持登陆帐号密码、认证码、帐号安全问题三道登录验证，更加牢固。<br>
+                    <strong>·</strong>后台登录提问答案采用双重md5加密，即使数据库被偷也无法破解答案内容。<br />
+                    <strong>·</strong>登录错误日志记录，使用户第一时间检查非法登录IP，做出及时的非法IP封锁；<br>
+                    <strong>·</strong>后台登陆新增上一次登陆时间与登陆IP记录，方便用户查看是否有异常登陆。 <br>
+                    <strong>·</strong>COOKIE认证码验证，为身份认证再加一把锁。<br>
+                    <strong>·</strong>COOKIE认证码验证与IP绑定，IP不正确无法通过认证。 <br />
+                    <strong>·</strong>登陆验证COOKIE变量前缀设置。<br>
+                    <strong>·</strong>后台目录自定义，假如对方知道密码也找不到登录后台。<br>
+                    <strong>网站安全防火墙功能：</strong><br>
+                    <strong>·</strong>支持屏蔽前台提交的敏感字符，可以将所有可能出现的攻击内容或字符加入屏蔽黑名单(比如SQL中的“select”)，防火墙将对包含黑名单内容进行屏蔽。<br>
+                    <strong>·</strong>可设置防火墙后台外层非法访问拦截，如果开启，除了后台登陆页面外，其它程序页面陌生人都无法直接访问，在验证登陆前面又加了道锁，更牢固。<br>
+                    <strong>·</strong>可控制只能由哪个绑定的域名登陆后台，登陆地址二重加密保护(第一重是以前版本的重命名后台目录)。<br>
+                    <strong>·</strong>可限制几点、星期几才能登陆后台，方便工作时间工作的单位设置，使网站安全维护更容易把控。<br>
+                    <strong>·</strong>用户可在线设置是否开启防火墙及相关参数配置。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="cj"> 
+          <td><strong><font color="#154BA0" size="3">四、强大的信息采集功能</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10">
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'>本系统无论是内置的系统模型还是用户自定义的模型都有自己相应的采集。自动化内容采集的支持，大大降低了内容维护的工作量，并让网站管理系统与企业的其它信息化系统无缝集成，提高了信息的利用率。<br /> 
+                  <table width="100%" border="0" cellpadding="3" cellspacing="1" style='word-break:break-all;line-height: 20px'>
+                    <tr> 
+                      <td><strong>·使用简单：</strong>无需会任何程序，只需在相应的采集内容加上相应的标签即可。<br /> 
+                        <strong>·多重过滤：</strong>同一链接可设置不重复采集；设置采集关键字(不包含不采集)；内容字符替换；广告过滤；整页代码过滤；过滤相似信息；过滤标题相同信息；设置采集记录数。<br /> 
+                        <strong>·采集区域更准确：</strong>整体页面区域正则＋信息链接区域正则。<br /> <strong>·支持多种页面编码转换：</strong>支持GB2312、BIG5、UTF8、UNICODE编码转换。<br /> 
+                        <strong>·效率更高：</strong>采用分组采集与入库；支持多线程(节点)采集。<br /> <strong>·方便性：</strong>采集可选是否马上入库(特别对于挂机采，非常方便)；填写采集正则后可预览采集结果，可验证采集正则的正确性；复制、清空节点；可选择“选择式”与“全部式”入库；对采集的临时数据进行管理。<br /> 
+                        <strong>·远程保存文件：</strong>支持远程保存图片/FLASH/附件，图片加水印。<br /> 
+                        <strong>·其它特性：</strong>支持多列表采集、内容分页采集。</td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="member"> 
+          <td><strong><font color="#154BA0" size="3">五、完善的会员系统</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10">
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p><strong>·灵活的会员组功能：</strong>通过会员组功能对会员进行权限级别划分，可设置会员级别、收藏夹数、每天下载最大次数、短信息数等；后台直接增加、编辑与删除。<br />
+                    <strong>·会员字段自定义及字段搜索，不同会员组都可以有不同的会员信息表单、不同的会员列表样式。</strong>如：可以分为个人注册与公司注册。<strong><br />
+                    ·会员空间功能：</strong>支持不同会员选择不同的会员空间模板。（模板后台直接增加与管理）。<strong><br />
+                    ·完善的会员收费机制：</strong>可按“会员有效期(包年/季/月)”、“点数”等形式对会员收费。<br />
+                    <strong>·在线支付与充值系统：</strong>支持“点卡充值”、“在线网银支付充值”、“购买充值类型”等多种充值方式，可充值“有效期”、“会员级别”、“点数”，操作全自动无需人工干预。<br />
+                    <strong>·会员消费机制：</strong>会员通过权限级别、有效期、点数可在网站各个系统中查看信息、下载资料、发布信息与购买商品进行消费。发布信息支持增加积分或扣除积分、支持级别限制。<br />
+                    <strong>·站内信息功能：</strong>会员可拥有自己的“收件箱”、“发件箱”，并且可向各会员进行信息发送与相互交流。<br />
+                    <strong>·前台信息投稿与管理：</strong>所有会员均可发布与管理后台开放投稿的系统模型数据。后台可设置发布会员级别、扣除或增加点数、是否可管理信息、发布是否需要审核、每天发布量限制等等。<br />
+                    <strong>·收藏夹功能：</strong>会员可对网站的所有信息进行收藏与分类。<br />
+                    <strong>·查看消费记录：</strong>会员可查看自己的充值点卡与下载扣除点数记录。<br />
+                    <strong>·购物车与定单查询<br>
+                    ·帐号邮件激活与取回密码<br>
+                    ·栏目页和信息内容页访问权限支持限制多会员组访问。<br>
+                    ·支持限制提交和查看信息IP范围。</strong></p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="usercom"> 
+          <td><strong><font color="#154BA0" size="3">六、万能会员整合接口</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'>通过“万能会员整合接口”可整合任意语言开发的mysql的系统；配置简易，支持会员组与点数的整合。</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="template"> 
+          <td><p><strong><font color="#154BA0" size="3">七、可视化模板制作完全标签化</font></strong></p></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><strong>·制作门槛低：</strong>只需会网页编辑软件(如Dreamweaver、Frontpage)即可制作各种出色的模板，无需会任何程序代码，甚至HTML也无需懂。<br> 
+                  <strong>·标签自动生成功能：</strong>支持所有内置标签自动生成，有效防止标签参数误写以及提高做模板效率，非常方便高效。 
+                  <br /> <strong>·内置非常灵活的万能调用标签与灵动标签：</strong>能实现各式各样的效果，随心所欲，适用于所有模型。<br /> 
+                  <strong>·每个栏目都可拥有自己的风格：</strong>所有栏目或专题页面都可以有自己的页面模板、列表模板、内容模板、JS模板与搜索模板。<br /> 
+                  <strong>·多个网站风格并存：</strong>用户可对网站风格进行导入、导出与管理，网站使用哪个风格，只需点击设为默认网站风格即可。<br /> 
+                  <strong>·自定义模板变量：</strong>可将一些共用的模块放到公共变量，调用时只需加上变量标签即可，以后修改变量的值即可修改所有显示这个变量标签的内容。<br /> 
+                  <strong>·模板批量操作：</strong>可对模板内容进行批量替换、批量导入栏目模板、批量更换列表模板与批量更换内容模板。<br /> 
+                  <strong>·内置完整与全面的模板调用标签：</strong>内置众多的标签足以满足各类网站模板制作需求。<br /> 
+                  <strong>·</strong><strong>模板标签支持多种操作类型</strong>：内置标签支持调用的操作类型：可按“所有信息/栏目/专题/数据表”调用“最新/热门/推荐/评论排行/头条信息/下载排行”的信息，并且支持按SQL语句调用信息；支持多栏目/专题调用：多个调用栏目/专题的ID用&quot;,&quot;隔开即可。<br /> 
+                  <strong>·自定义标签：</strong>系统不仅提供了内置的模板标签调用，还提供了标签扩展功能。拥有此功能，用户可自己写函数，然后后台增加标签，就能得到模板解析。一般用于显示系统以外的数据，如：论坛数据、环保监测站中的实时显示数据等等。<br /> 
+                  <strong>·支持多个EmpireCMS系统使用同一数据，可设置默认使用的模板组<br>
+                  ·模板支持PHP和SQL语法调用，可实现各式各样复杂功能效果。<br>
+                  ·模板支持自动备份，可随时还原备份，修改模板无后顾之忧，更人性化。<br>
+                  ·模板所有版本通用。</strong></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="editor"> 
+          <td><strong><font color="#154BA0" size="3">八、强大的碎片调用信息功能</font></strong></td>
+        </tr>
+        <tr id="editor"> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>碎片是门户网站必备的功能之一。<strong>帝国CMS碎片调用有以下优势：</strong><br>
+                    第一、大数据量下碎片调用信息效率超强，采用碎片调用和模板中不加标签调用效率相当的。<br>
+                    第二、碎片支持对帝国CMS多表信息集合调用。 <br>
+                    第三、碎片支持调用无规则的内容。 <br>
+                    第四、碎片支持调用外部数据。比如：帝国CMS+论坛+SNS+商城+...，把推荐的信息全部都放在一起调用。<br>
+                    第五、碎片也同时实现了单信息发布到多栏目/页面调用：支持将一个信息推送到多个碎片中调用。<br>
+                    <strong>帝国CMS碎片功能有以下特点：</strong><br>
+                    (1)、碎片分类管理：可以按分类来搜索碎片，特别适合在碎片数量多的情况下非常有用；<br>
+                    (2)、碎片管理：碎片可设定使用的标签模板、是否开启等。<br>
+                    (3)、碎片信息更新与管理：只有碎片分配更新权限的用户才有权限更新；<br>
+                    (4)、支持三种碎片类型：静态信息碎片、动态信息碎片、代码碎片；<br>
+                    (5)、可按用户组、部门、帐号分配碎片更新权限，并且支持越权限推送设置；<br>
+                    (6)、内置碎片调用标签“[spinfo]碎片变量名,显示条数,标题截取数[/spinfo]”，可按碎片调用信息；<br>
+                    (7)、可推送任意表或任意栏目的信息到动态信息碎片；<br>
+                    (8)、支持设定单个碎片存放最大的信息数量，减少冗余数据，调用效率更高。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="editor"> 
+          <td><strong><font color="#154BA0" size="3">九、自定义分类的TAGS及调用信息功能</font></strong></td>
+        </tr>
+        <tr id="editor"> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'>帝国CMS的tags功能不仅是tags信息列表使用，而且是将tags作为自定义分类来使用，可按TAGS调用信息，可以实现碎片同样的功能，只是tags随时都能分类，更加灵活。比如：某一专题的信息，现在可以不用专题了，直接用tags就可以调用出相同tags名称的专题信息。 
+                  <br> <strong>帝国CMS的TAGS功能有以下特点：</strong><br>
+                  (1)、TAGS分类管理：可对TAGS进行分类<br>
+                  (2)、管理TAGS<br>
+                  (3)、 TAGS参数设置：可设定启用TAGS的系统模型和只能选择TAGS的系统模型等<br>
+                  (4)、新增TAGS调用标签：可按分类/推荐等属性调用 TAGS<br>
+                  “[showtags]分类ID,显示数量,每行显示数量,显示排序,只显示推荐,推荐TAGS属性,显示间隔符,是否显示信息数,链接附加参数[/showtags]”<br>
+                  (5)、TAGS信息标签调用：标签可按TAGS调用对应信息<br>
+                  “[tagsinfo]TAGS的ID, 显示条数,标题截取数,标签模板ID,栏目ID,系统模型ID[/tagsinfo]”<br>
+                  (6)、清理多余TAGS信息<br>
+                  (7)、删除使用率低TAGS信息<br>
+                  (8)、删除过期TAGS信息<br>
+                  (9)、合并TAGS</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="fileserver"> 
+          <td><strong><font color="#154BA0" size="3">十、支持远程附件独立服务器</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'>新增远程附件功能，支持上传附件、删除附件、生成缩图、图片加水印实时同步到远程附件服务器。附件独立服务器，网站速度更快、更优化。</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="classfield"> 
+          <td><strong><font color="#154BA0" size="3">十一、栏目属性和专题属性支持自定义字段</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'>栏目属性和专题属性支持自定义字段，在系统支持信息属性自定义字段的基础上，6.6版又新增了栏目属性和专题属性自定义字段功能，让灵活系统更灵活。</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="editor"> 
+          <td><strong><font color="#154BA0" size="3">十二、所见即所得的编辑功能</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'>EmpireCMS的系统界面与Word 
+                  等Office产品紧密集成，可直接从Word里粘贴到EmpireCMS中来。用户也可以在EmpireCMS里直接进行文字的排版处理，还可以在线对图片进行简单处理。系统支持插入图片、Flash、附件、音频视频、超链接、表格等等。系统会自动将插入的图片、Flash 
+                  等文件上传到系统中指定的目录，直接从网上粘贴的文章其图片可以自动保存到本地服务器，可以在图片的指定位置添加指定的水印，这一切都是自动的。</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="savetxt"> 
+          <td><strong><font color="#154BA0" size="3">十三、信息内容支持存放文本</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>对于数据量非常大的信息内容，如小说、论文或其它大型的内容数据来说，存放数据库是非常不适合的。如果存放数据库，单表容量很容易爆增，从而影响数据库效率。因而帝国引入了此功能，可以将这些大型数据存储到文本文件里，并且系统对文件加密，安全性得到保障。信息内容越大，此方案效果越佳。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="searchall"> 
+          <td><strong><font color="#154BA0" size="3">十四、全站全文搜索</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p><strong>全站全文搜索功能，采用中文分词、编码转码和Mysql全文检索技术结合，搜索非常高效。解决了同时搜索多个表的数据、搜索存文本模型的内容、在大数据量情况下的全文搜索解决方案。</strong><br>
+                    用户可以将各个数据表数据导入全文搜索，包括存文本模型、主表或副表字段，支持设置导入字段及多表批量导入；并增加清理搜索多余数据功能，可将已经删除或失效信息删除。<br>
+                    全文搜索除了全站搜索，还可以指定只搜索某一栏目，支持多个关键字同时搜索。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="pl"> 
+          <td><strong><font color="#154BA0" size="3">十五、互动评论系统</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p><strong>·不同栏目可设置不同的评论模板</strong>，使网站栏目更加个性。<br>
+                    <strong>·评论支持自定义字段</strong>，可自定义增加评论项，如：可设置多项的评分功能等。<br>
+                    <strong>·评论支持分表</strong>，在大数据量的评论数据下效果明显，可在评论达到一定数据量后设置新分表。<br>
+                    <strong>·可设置发表评论的会员权限</strong>，如：可以设置游客不能发表评论。<br>
+                    <strong>·评论屏蔽字符功能</strong>，可设置评论内容包含屏蔽字符不让发表。<br>
+                    <strong>·评论支持标签和JS调用<br>
+                    ·评论内容表情功能</strong>，使评论内容更丰富。<br>
+                    <strong>·评论审核设置及支持设置整个栏目或单独信息关闭评论</strong>。 <br>
+                    <strong>·多条件删除评论功能，清理评论更快捷</strong>。 </p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="infotog"> 
+          <td><strong><font color="#154BA0" size="3">十六、结合项功能：灵活组合信息内容</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>帝国独创的结合项功能支持按自定义字段、栏目、数据表、专题、标题分类、发布时间等对信息进行组合显示，非常灵活。<br>
+                    <strong>·</strong>支持按信息各个字段进行显示组合，无限字段条件，支持完全匹配与模糊匹配；<br>
+                    <strong>·</strong>支持列出某一个数据表的所有信息；<br>
+                    <strong>·</strong>支持列出多栏目的信息列表(多个栏目ID用逗号格开)；<br>
+                    <strong>·</strong>支持列出多专题的信息列表(多个专题ID用逗号格开)；<br>
+                    <strong>·</strong>支持列出标题分类的信息列表(多个标题分类ID用逗号格开)；<br>
+                    <strong>·</strong>支持指定显示的列表模板；<br>
+                    <strong>·</strong>支持指定每页显示记录数。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="moreuser"> 
+          <td><strong><font color="#154BA0" size="3">十七、多级用户权限与内容管理支持</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>可以通过用户组，把不同的后台管理权限分配给不同的用户，可设置用户只能管理一个或多个栏目的信息与附件，可设置添加、编辑、删除权限分配。管理员可直接后台增加/修改/删除用户组。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="log"> 
+          <td><strong><font color="#154BA0" size="3">十八、全面的操作日志记录</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>系统会记录用户的登陆日志与操作日志，便于对用户行为的跟踪和对价值数据的发掘，并且可设置是否开启记录日志。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="zt"> 
+          <td><strong><font color="#154BA0" size="3">十九、专题及专题组合</font></strong></td>
+        </tr>
+        <tr> 
+          <td> <table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p><strong>·专题：</strong>对于新闻类网站，当一些突发事件发生时，来不及专门新开栏目，这时可以将有关该事件的内容整理成一个专题。EmpireCMS允许编辑自行根据情况随时增加新的专题，在第一时间给网站的访问者提供丰富的相关信息。专题中的内容即可以是从其它频道里挑选出来的，也可以直接让编辑往该专题里录入内容。<br />
+                    <strong>·专题组合：</strong>可对已录入的信息依不同条件组合到相应的专题。专题组合支持按关键字查询、SQL条件、相应栏目、发布时间范围、信息ID范围、是否头条/推荐/标题图片等条件进行筛选组合。并且可保存专题组合设置参数，随时可调用。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="ebak"> 
+          <td><strong><font color="#154BA0" size="3">二十、内置强健、稳定的备份恢复系统</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>·采用分组备份，系统自动将数据库分成多部分进入导出．理论上不限数据库大小，均可备份与恢复．<br />
+                    ·安全性：备份文件均生成*.php文件，并且采用登陆验证，只有登陆的管理员才能进行数据恢复．<br />
+                    ·稳定性：系统采集分组备份，每组备份数据大小后台直接设置．<br />
+                    ·使用方便：备份文件在线打包、下载与删除．<br />
+                    ·灵活性：备份目录、压缩目录在线自定义．<br />
+                    ·在线建立、删除数据库，优化、修复、清空、删除数据表功能．<br />
+                    ·在线直接恢复数据<br />
+                    ·备份EmpireCMS整站非常简单：只需备份数据库＋“d”附件目录即可完全备份，其它信息均可后台直接恢复与全站更新。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="adsys"> 
+          <td><strong><font color="#154BA0" size="3">二十一、强大的广告管理插件</font></strong></td>
+        </tr>
+        <tr> 
+          <td height="23"><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p><strong>·支持广告类型：</strong>图片广告、FLASH广告、文字广告、HTML代码广告、弹出广告<br />
+                    <strong>·支持广告效果：</strong>普通显示、满屏浮动显示、上下浮动显示（左/右）、全屏幕渐隐消失、可移动对话框、对联式广告<br />
+                    <strong>·支持标签与JS调用</strong>，如果用JS调用，以后只需后台修改广告即可更新广告；可设置广告过期时间，广告管理员更换广告。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="feedbacksys"> 
+          <td><strong><font color="#154BA0" size="3">二十二、自定义信息反馈表单</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p><strong>·多分类的信息反馈系统：</strong>后台可增加无限个信息反馈表单。<br />
+                    <strong>·自定义反馈表单字段：</strong>不同反馈分类的表单都可以有不同的提交字段。后台直接增加、修改与删除反馈字段。<br />
+                    <strong>·提交权限控制：</strong>可设置哪些级别的会员才可提交反馈。如：设置游客可反馈、设置VIP会员才可反馈等等。<br />
+                    <strong>·表单模板：</strong>每个分类都可以拥有自己的表单模板。<br />
+                    <strong>·管理信息反馈：</strong>后台可查看与管理反馈的信息，不同分类支持设置不同管理员权限。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="tool"> 
+          <td><strong><font color="#154BA0" size="3">二十三、内置一些实用的插件</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p><strong>·投票插件：</strong>无限投票项目个数、支持单选/多选、可限制IP投票、可设置投票期限；支持标签与JS调用<br />
+                    <strong>·友情链接插件：</strong>支持多分类<br />
+                    <strong>·多分类留言板：</strong>可在不同的栏目设置不同的留言板(增加留言分类即可)；留言可设置是否需审核；留言可回复；留言权限设置。<br />
+                    <strong>·防采集插件：</strong>原理是给页面加上各种规则的采集正则，防采集字符越多，采集的难度越大。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="havemod"> 
+          <td><strong><font color="#154BA0" size="3">二十四、内置部分完善的模型</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>除了用户可自定义系统模型外，系统还内置了部分模型，以后会陆续增加，用户可选装：<br />
+                    <strong>·新闻系统模型：</strong>系统默认的模型。附带信息来源管理、作者管理、内容关键字管理、过滤字符管理<br />
+                    <strong>·下载系统模型：</strong>附带下载服务器管理、删除下载记录管理、错误报告管理、批量替换地址权限等功能；防盗链方面：采用定时更新下载验证码＋定时更换下载服务器＋定时更换下载地址相结合。<br />
+                    <strong>·影视系统模型：</strong>同下载系统模型，不过它同时支持在线观看多媒体的信息；防盗链方面：采用定时更新下载验证码＋定时更换下载服务器＋定时更换下载地址相结合、并且在线观看采用更严密的加密方式，保护多媒体地址<br />
+                    <strong>·图库系统模型</strong><strong>：</strong>支持单图片与图片集。<br />
+                    <strong>·FLASH系统模型</strong><br />
+                    <strong>·商城系统模型：</strong>附带支付方式管理、配送方式管理、订单管理；支持各种支付方式。<br />
+                    <strong>·文章系统模型(存放文本)：</strong>此模型与数据库式的新闻模型不同的是，它将信息内容存放于文本文件，用户可依不同情况选用。<br />
+                    <strong>·信息分类系统模型</strong></p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="class"> 
+          <td><strong><font color="#154BA0" size="3">二十五、无限级栏目分类</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>系统支持无限级栏目分类；各栏目可绑定相应的二级域名。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="postdata"> 
+          <td><strong><font color="#154BA0" size="3">二十六、远程发布功能</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>远程发布即用户可以将机器装于127.0.0.1下，然后将信息发布到远程的服务器的功能。目前是采集WEB方式发布，以后版本会考虑采用.exe的形式发布，效率更高。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="qf"> 
+          <td><strong><font color="#154BA0" size="3">二十七、自定义工作流功能</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>工作流是门户网站或政府单位用来控制文档流转的自定义流程，将定制的工作流设置到栏目上，则栏目中的文档会自动按照定制的工作流自动流转，并由系统控制其执行的过程以方便多人协同工作。<br>
+                    <strong>帝国CMS工作流有以下特点：</strong><br>
+                    1、最高可支持100级审核流程；<br>
+                    2、每个节点支持设定按“用户”、“用户组”与“部门”进行审核；<br>
+                    3、节点支持两种流转方式：普通流转、会签；<br>
+                    普通流转只要“用户/用户组/部门”某一个通过就可以继续流转<br>
+                    会签需要所有“用户/用户组/部门”通过才会继续流转<br>
+                    4、返工可指定返回相应节点或作者本人；<br>
+                    5、否决支持删除或者返回作者本人；<br>
+                    6、每个节点均可设置批注。 </p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="file"> 
+          <td><strong><font color="#154BA0" size="3">二十八、文件管理模块</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>文件管理支持数据库式与目录式管理；附件可按栏目进行管理；用户可在信息增加时选择已上传的图片/FLASH/多媒体/附件等；删除相应的信息，系统会删除隶属于此信息的附件；清理失效附件功能。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="behtml"> 
+          <td><strong><font color="#154BA0" size="3">二十九、前台全生成静态页面</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>EmpireCMS将网站内容全部生成静态HTML文件,这样可以极大地节约主机资源，提高系统性能，全静态处理技术是做为构建大型站点的必要条件。无论是再强大的CPU，再高明的数据库，在大量用户访问的情况下也会当机的，而使用我们的程序会避免此类问题发生。这也就是为什么“新浪”“网易”甚至包括SOHU的网站界面都是静态发布的原因了。<br />
+                  </p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="autodo"> 
+          <td><strong><font color="#154BA0" size="3">三十、计划任务</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>1、刷新任务：可设置定时更新首页/栏目页面；只要后台开着，系统自己会执行相应的任务；<br />
+                    2、计划任务，定义执行特定脚本，如定义刷新页面、采集等。<br>
+                    3、信息定时上线和下线功能，可预先增加信息，更方便。 <br />
+                  </p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="adminstyle"> 
+          <td><strong><font color="#154BA0" size="3">三十一、后台多界面样式</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>不同用户可选择不同的后台操作界面，并且用户可以自己制作后台界面，然后添加到后台界面管理里。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="dtpost"> 
+          <td><strong><font color="#154BA0" size="3">三十二、动态发布</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>首页、封面页、列表页支持动态显示<br />
+                    内容页支持触发刷新与支持动态页显示<br />
+                    <font color="#333333">通过动态发布与系统模型相结合，可实现各种交互性更强的系统，如：供求系统，分类信息，人才招骋等系统。</font></p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="web2"> 
+          <td><strong><font color="#154BA0" size="3">三十三、前台支持会员发布与管理信息</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>EmpireCMS4.7版在保持原有完善的后台管理系统基础上，融入了Web2.0互动元素，不仅增强了后台管理系统的可扩展性，而且前台互动性系统的扩展也能发挥得淋漓尽致。只要是后台可投稿的系统模型，前台会员均可发布与管理信息，其有以下功能设置：<br />
+                    <strong>·权限设置：</strong>设置可以提交信息的会员级别。<br />
+                    <strong>·信息审核：</strong>可设置发布信息是否需要审核(不同会员等级可设置不同)，设为审核增加信息后系统直接生成内容静态页面。<br />
+                    <strong>·发布信息消费：</strong>设置发布信息需要增加或扣除的点数。<br />
+                    <strong>·发布信息自动刷新静态页面：</strong>提交信息后可设置是否直接刷新首页、父栏目页与当前栏目页。<br />
+                    <strong>·管理信息：</strong>可设置投稿信息是否能管理/未审核信息是否可管理。<br />
+                    <strong>·</strong><strong>所有系统模型均支持前台会员发布信息</strong>，无论是系统内置还是用户自定义的系统模型<br />
+                    此功能的应用范围：如分类信息系统、房产系统等互动性系统的扩展。</p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="doc"> 
+          <td><strong><font color="#154BA0" size="3">三十四、信息归档</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p>对于一些旧的信息，用户可以采用信息归档功能，将其<font color="#333333">归档到其它数据表，以减轻主数据表的负担，使系统稳定性与效率更高。<br />
+                    (1)、可按各种条件设置归档<br />
+                    (2)、增加栏目时设置归档时间<br />
+                    (3)、对归档的信息进行管理，并且可还原归档</font></p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr id="andmore"> 
+          <td><strong><font color="#154BA0" size="3">三十五、更多特性</font></strong></td>
+        </tr>
+        <tr> 
+          <td><table border="0" width="100%" cellspacing="1" cellpadding="10" bgcolor='#ffffff'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 20px'><p><strong> 
+                    ·支持WAP、RSS、XML、ATOM等浏览方式<br>
+                    ·点击统计支持文件缓存，大访问量更加高效<br>
+                    ·支持一键设置关闭前台所有动态页面功能<br>
+                    ·关闭前台相关模块总开关设置。<br>
+                    ·标题分类功能<br>
+                    ·裁剪图片功能<br>
+                    ·多首页方案功能<br>
+                    ·常用操作、插件菜单及扩展菜单自定义功能<br />
+                    ·用户自定义JS功能</strong><br />
+                    <strong>·自定义信息列表功能：</strong>通过SQL语句，自己组合各种列表，如报刊中按日期分类等。<br />
+                    <strong>·用户自定义页面功能：</strong>像公司介绍、联系方式等页面是不需要新建栏目的，定义一个页面即可，并且自定义页面支持所有标签。<br />
+                    <strong>·语言包：</strong>通过修改语言包就可以更换成其它语言<br />
+                    <strong>·系统模型的导入与导出<br />
+                    ·标签的导入与导出<br />
+                    ·模板组的导入与导出 </strong><br />
+                    <strong>·支持右键菜单：</strong>更方便的管理<br />
+                    <strong>·发布信息分卷保存目录可定制性：</strong>可按/2008/10/01/*.html、/2008-10-01/*.html或直接*.html等形式的目录结构，文件扩展名可后台直接设置<br />
+                    <strong>·信息html保存目录可定制性：</strong>可存于各栏目目录，也可以自定义存放目录任意目录<br />
+                    <strong>·图片支持加水印(支持文字/图片水印)、生成缩略图；图片/flash/多媒体/附件均支持远程保存</strong><br />
+                    <strong>·批量替换字段值功能：</strong>可替换任何数据表的字段值<br />
+                    <strong>·可按不同条件刷新信息</strong>(按数据表/栏目/时间范围/信息ID范围等条件进行刷新)，而不是全部信息一起刷新，一般增加信息后，只需刷新单天的信息即可；可设置是否重复刷新信息，如果生成过一次后，信息是不重复刷新，大大提高效率；栏目/专题刷新支持选择式多页面刷新或全部刷新<br>
+                    <strong>·防发贴机验证码算法</strong> <br />
+                    <strong>·搜索关键字排行后台直接管理</strong><br />
+                    <strong>·对所有信息进行统计</strong><br />
+                    <strong>·安装非常容易：</strong>只需运行e/install文件，然后下一步、下一步即可完成系统安装<br />
+                    <strong>·安装EmpireCMS的运行环境全是免费程序</strong>，如：apache、php、mysql均为免费软件，降低成本。<br />
+                    <br />
+                    －－－还有更多特性，不方便列出。如栏目批量转移、图片新闻管理、评论管理等等，太多了。。。等着您下载程序体验！<br />
+                  </p></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

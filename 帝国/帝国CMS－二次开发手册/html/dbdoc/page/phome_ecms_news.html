@@ -1,0 +1,289 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>phome_ecms_news 数据表字段解释</title>
+<link href="../images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%" border="0" align="center">
+  <tr> 
+    <td width="100%"><strong><font color="#0000FF">phome_ecms_news 数据表字段解释（新闻系统模型－主表）</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="800" border="0" cellspacing="1" cellpadding="3" class="tableborder">
+  <tr class="header"> 
+    <td width="20%" height="30">字段名</td>
+    <td width="15%">类型</td>
+    <td width="20%">解释</td>
+    <td width="45%">附加说明</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>id</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">信息ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>classid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">栏目ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>onclick</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">点击数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>newspath</strong></td>
+    <td bgcolor="#FFFFFF">char(20)</td>
+    <td bgcolor="#FFFFFF">存放日期目录</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>keyboard</strong></td>
+    <td bgcolor="#FFFFFF">char(160)</td>
+    <td bgcolor="#FFFFFF">关键字</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>keyid</strong></td>
+    <td bgcolor="#FFFFFF">char(255)</td>
+    <td bgcolor="#FFFFFF">相关链接信息ID集合</td>
+    <td bgcolor="#FFFFFF">多个信息ID用半角逗号“,”隔开</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>userid</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">发布者用户ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>username</strong></td>
+    <td bgcolor="#FFFFFF">char(30)</td>
+    <td bgcolor="#FFFFFF">发布者用户名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ztid</strong></td>
+    <td bgcolor="#FFFFFF">char(255)</td>
+    <td bgcolor="#FFFFFF">专题ID</td>
+    <td bgcolor="#FFFFFF">多个专题ID用“|”隔开，例如：|1|5|</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>checked</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否审核</td>
+    <td bgcolor="#FFFFFF">1为已审核，0为未审核</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>istop</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">置顶级别</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>truetime</strong></td>
+    <td bgcolor="#FFFFFF">int(10)</td>
+    <td bgcolor="#FFFFFF">真实发布时间</td>
+    <td bgcolor="#FFFFFF">unix时间戳</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ismember</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否会员发布</td>
+    <td bgcolor="#FFFFFF">0为后台发布，1为前台会员发布</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dokey</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否替换内容关键字</td>
+    <td bgcolor="#FFFFFF">0为不替换，1为替换</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>userfen</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">扣除点数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>isgood</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否推荐</td>
+    <td bgcolor="#FFFFFF">1为推荐，0为不推荐</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>titlefont</strong></td>
+    <td bgcolor="#FFFFFF">char(20)</td>
+    <td bgcolor="#FFFFFF">标题加色、加粗</td>
+    <td bgcolor="#FFFFFF">格式：“#ff0000,b|i|s|”</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>titleurl</strong></td>
+    <td bgcolor="#FFFFFF">char(200)</td>
+    <td bgcolor="#FFFFFF">外部链接地址</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>filename</strong></td>
+    <td bgcolor="#FFFFFF">char(60)</td>
+    <td bgcolor="#FFFFFF">信息文件名</td>
+    <td bgcolor="#FFFFFF">不含扩展名</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>groupid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">查看会员组ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>newstempid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">内容模板ID</td>
+    <td bgcolor="#FFFFFF">0为使用栏目选择的内容模板</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>plnum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">评论数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>firsttitle</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否头条</td>
+    <td bgcolor="#FFFFFF">1为头条，0为普通信息</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>isqf</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否签发信息</td>
+    <td bgcolor="#FFFFFF">1为签发信息，0为非签发信息</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>totaldown</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">下载数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>title</strong></td>
+    <td bgcolor="#FFFFFF">char(200)</td>
+    <td bgcolor="#FFFFFF">标题字段</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>newstime</strong></td>
+    <td bgcolor="#FFFFFF">int(10)</td>
+    <td bgcolor="#FFFFFF">发布时间字段</td>
+    <td bgcolor="#FFFFFF">unix时间戳</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>titlepic</strong></td>
+    <td bgcolor="#FFFFFF">char(200)</td>
+    <td bgcolor="#FFFFFF">标题图片字段</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>closepl</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否关闭评论</td>
+    <td bgcolor="#FFFFFF">1为关闭评论，0为不关闭评论</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>havehtml</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否生成过HTML标记</td>
+    <td bgcolor="#FFFFFF">1为已生成，0为未生成</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>lastdotime</strong></td>
+    <td bgcolor="#FFFFFF">int(10)</td>
+    <td bgcolor="#FFFFFF">信息修改时间</td>
+    <td bgcolor="#FFFFFF">unix时间戳</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>haveaddfen</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否赠送过点数标记</td>
+    <td bgcolor="#FFFFFF">投稿赠送点数后不再赠送的标记</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>infopfen</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">总评分数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>infopfennum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">总评分人数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>votenum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">信息投票总数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>stb</strong></td>
+    <td bgcolor="#FFFFFF">char(4)</td>
+    <td bgcolor="#FFFFFF">存放副表名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>copyids</strong></td>
+    <td bgcolor="#FFFFFF">char(255)</td>
+    <td bgcolor="#FFFFFF">同步复制信息的ID记录</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ttid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">标题分类ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>infotags</strong></td>
+    <td bgcolor="#FFFFFF">char(160)</td>
+    <td bgcolor="#FFFFFF">TAGS</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ispic</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否标题图片</td>
+    <td bgcolor="#FFFFFF">1为标题图片信息，0为普通信息</td>
+  </tr>
+  <tr>
+    <td height="30"><strong>以下为自定义字段</strong></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ftitle</strong></td>
+    <td bgcolor="#FFFFFF">char(120)</td>
+    <td bgcolor="#FFFFFF">副标题字段</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>smalltext</strong></td>
+    <td bgcolor="#FFFFFF">char(255)</td>
+    <td bgcolor="#FFFFFF">简介字段</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>diggtop</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">DIGG字段</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+</table>
+</body>
+</html>

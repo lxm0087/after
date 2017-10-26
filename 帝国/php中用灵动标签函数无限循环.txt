@@ -1,0 +1,30 @@
+<?php
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(栏目ID/专题ID,显示条数,操作类型,只显示有标题图片,附加SQL条件,显示排序);
+$bqno=0;
+while($bqr=$empire->fetch($ecms_bq_sql))
+{
+        $bqsr=sys_ReturnEcmsLoopStext($bqr);
+        $bqno++;
+        ?>
+        
+        <?php
+        $ecms_bq_sql2=sys_ReturnEcmsLoopBq(栏目ID/专题ID,显示条数,操作类型,只显示有标题图片,附加SQL条件,显示排序);
+        $bqno2=0;
+        while($bqr2=$empire->fetch($ecms_bq_sql2))
+        {
+                $bqsr2=sys_ReturnEcmsLoopStext($bqr2);
+                $bqno2++;
+                ?>
+                模板代码内容2 <?=$bqr2[title]?>
+                <?php
+        }
+        ?>
+
+        模板代码内容 <?=$bqr[title]?>
+        <?php
+}
+?> 
+
+红色部分是二次嵌套，还可以加三次、四次...，由上可以看出通过PHP代码是可以实现标签无限嵌套，只要$ecms_bq_sql、$bqno、$bqr、$bqsr变量名改下就可以了。  
+
+

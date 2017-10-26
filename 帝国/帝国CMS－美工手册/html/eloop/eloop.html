@@ -1,0 +1,1050 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》一招鲜吃天遍天系列教程之 灵动标签使用</title>
+<style type=text/css><!--
+body{ font-family: 宋体; font-size: 14px; text-decoration: none}
+a:hover { color: #FF0000}
+a:hover { text-decoration: none}
+a:hover { line-height: 19px}
+a:link { font-family: 宋体; font-size: 14px; line-height: 19px; color: #333333;text-decoration: none}
+a:visited { text-decoration: none; }Table{ font-family: 宋体; font-size: 13px; color: #000000;line-height: 21px; text-decoration: none } }
+--></Style>
+</head>
+
+<body topmargin="0">
+<table width="748" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+  <tr> 
+    <td><table width="741" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF">
+        <tr bgcolor="8CBDEF"> 
+          <td height="40" colspan="2" bgcolor="#01A8EC"> <div align="center"><strong><font color="#FFFFFF">&nbsp;</font><font color="#FFFF00" size="4">《帝国网站管理系统》一招鲜吃天遍天系列教程之 
+              灵动标签使用</font></strong> </div></td>
+        </tr>
+        <tr> 
+          <td width="262" height="28" bgcolor="#FFFFFF"> <strong>　<a href="http://bbs.phome.net/showthread-13-126114-0.html" target="_blank"><font color="#0000FF">点击进入论坛讨论</font></a></strong> 
+            <strong><font color="#0000FF">&nbsp; </font></strong> 
+            <div align="left"></div>
+            <div align="left"></div></td>
+          <td width="479" height="28" bgcolor="#FFFFFF"><div align="right"><strong><font color="#0000FF"> 
+              <select name="select" id="select2" onchange=window.location='#'+this.options[this.selectedIndex].value>
+                <option value="">- - -选择本节内容- - - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <option value="xgym" style="background-color:#01A8EC">&nbsp;1、制作显示效果页面</option>
+                <option value="ldbq" style="background-color:#01A8EC">&nbsp;2、修改效果页面加上e:loop调用标签</option>
+                <option value="ldbqyf">&nbsp; &nbsp; &gt;e:loop灵动标签语法</option>
+                <option value="l1" style="background-color:#FFFF66">&nbsp; &nbsp; 
+                &gt;【例1】使用灵动标签调用“国内新闻”栏目的最新3条信息</option>
+                <option value="1dyb">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·第一步，确定需要用灵动标签调用的信息内容及其代码</option>
+                <option value="1deb">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·第二步，将调用内容用灵动标签表示</option>
+                <option value="1cs">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::确定灵动标签的参数</option>
+                <option value="1mbdm">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::确定灵动标签的模板代码</option>
+                <option value="1bl">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::确定灵动标签模板代码中的变量</option>
+                <option value="l2" style="background-color:#FFFF66">&nbsp; &nbsp; 
+                &gt;【例2】使用灵动标签调用"新闻数据表"中,最新4条带标题图片的信息</option>
+                <option value="2dyb">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·第一步，确定需要用灵动标签调用的信息内容及其代码</option>
+                <option value="2deb">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;·第二步，将调用内容用灵动标签表示</option>
+                <option value="2cs">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::确定灵动标签的参数</option>
+                <option value="2mbdm">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::确定灵动标签的模板代码</option>
+                <option value="2bl">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::确定灵动标签模板代码中的变量</option>
+                <option value="htgx" style="background-color:#01A8EC">&nbsp;3、将已加上灵动标签的HTML效果页面代码复制到后台更新</option>
+                <option value="scxg" style="background-color:#01A8EC">&nbsp;4、查看生成后的页面效果</option>
+                <option value="xglj" style="background-color:#01A8EC">&nbsp;相关链接</option>
+              </select>
+              </font></strong></div></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<div align="center"></div>
+<div align="center"><br>
+  <table width="748" border="0" cellpadding="3" cellspacing="0" bgcolor="#CCCCCC" id="jmjs">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+          <tr bgcolor="#01A8EC"> 
+            <td height="25" colspan="2"><strong><font color="#FFFFFF">&nbsp;《帝国网站管理系统》英文名“EmpireCMS”，简称帝国CMS。</font></strong> 
+              <font color="#FFFFFF"> 本教程适用于帝国CMS5.1以上版本。</font></td>
+          </tr>
+          <tr bgcolor="#CCCCCC"> 
+            <td height="25"><strong><font color="#0000FF"><font color="#000000"><strong><font color="#0000FF">&nbsp;&nbsp;</font><font color="#01A8EC">面向用户</font></strong></font><font color="#01A8EC"><strong>：</strong></font></font></strong></td>
+            <td width="431" height="25"><font color="#0066FF"><strong><font color="#0000FF">&nbsp;&nbsp;</font><font color="#01A8EC">网站部署：</font></strong></font></td>
+          </tr>
+          <tr> 
+            <td width="308" height="25" bgcolor="#FFFFFF"><div align="left"><font color="#0000FF"><font color="#000000">·EmpireCMS零基础的用户；</font></font></div></td>
+            <td bgcolor="#FFFFFF">·网站栏目与数据：默认安装，调用安装时内置的初始数据。</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><font color="#0000FF"><font color="#000000">·会使用Dreamweaver设计简单表格式模板的用户</font><font color="#0000FF"><font color="#000000">；</font></font></font></td>
+            <td bgcolor="#FFFFFF">·页面调用：用灵动标签调用各新闻栏目的数据。</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><font color="#0000FF"><font color="#000000">·能看懂基本HTML的用户。</font></font></td>
+            <td bgcolor="#FFFFFF">·系统模型：使用内置的新闻系统模型。</td>
+          </tr>
+        </table>
+        <table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;&nbsp;<font color="#01A8EC">准备工具：</font></font></strong><font color="#0000FF"><font color="#0066FF"><font color="#000000">·Dreamweaver（网站模板<font color="#0000FF"><font color="#000000">制作</font></font>工具）</font></font></font></td>
+          </tr>
+        </table> </td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="0" bgcolor="#CCCCCC">
+    <tr> 
+      <td width="742"><table width="741" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF">
+          <tr bgcolor="8CBDEF"> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF"><strong>&nbsp;&nbsp;</strong></font><font color="#089AD4">实例效果图：</font></strong></td>
+          </tr>
+        </table>
+        <table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF">
+          <tr> 
+            <td height="23" bgcolor="#FFFFFF"><img src="img/0.jpg" width="729" height="505" border="0"> 
+            </td>
+          </tr>
+        </table> </td>
+    </tr>
+  </table>
+  <table width="748" height="17" border="0" cellpadding="0" cellspacing="0">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲top</font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF">
+          <tr bgcolor="8CBDEF"> 
+            <td height="25" colspan="2" bgcolor="#01A8EC"> <div align="left"><strong><font color="#FFFFFF">&nbsp;网页制作流程：</font><font color="#FFFFFF"></font></strong></div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"> <div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>1、制作显示效果页面；</div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>2、修改效果页面加上e:loop调用标签；</div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>3、将已加上灵动标签的HTML效果页面代码复制到后台更新；<strong><font color="#FFFFFF"></font></strong></div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>4、查看生成后的页面效果。</div></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="750" border="0" cellpadding="0" cellspacing="0" id="fzlm">
+    <tr> 
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999" id="xgym">
+          <tr bgcolor="#CCCCCC"> 
+            <td height="25" bgcolor="#01A8EC"><strong><font color="#0000FF"><strong><font color="#0066FF">&nbsp;<font color="#FFFF33">1、制作显示效果页面</font></font></strong></font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"> <div align="left"><strong><font color="#0000FF"><strong><font color="#0066FF">&nbsp;&nbsp;</font></strong></font></strong>先用Dreamweaver做出网页效果，如下为我们预先做的普通HTML页面效果（图1）：</div></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"> <div align="left"><img src="img/1.jpg" width="740" height="603"></div></td>
+          </tr>
+        </table>
+        <table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+          <tr> 
+            <td height="28"><strong><font color="#FFFFFF">&nbsp;</font>效果页面HTML代码如下</strong>（HTML代码1）： 
+            </td>
+          </tr>
+        </table>
+        <table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+          <tr> 
+            <td height="25"><textarea name="textarea" cols="100" rows="14" wrap="OFF" style="WIDTH: 100%">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot;&gt;
+&lt;title&gt;e:loop灵动标签使用教程&lt;/title&gt;
+&lt;style&gt;
+td {font-size: 10pt;}
+.line{line-height: 14pt;font-size: 10pt;}
+A:link {text-decoration: none; color:#000000}
+A:visited {text-decoration: none; color: #000000} 
+A:active {text-decoration: underline; color: #000000 } 
+A:hover {text-decoration: underline;	color: #FF0000;}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body topmargin=&quot;0&quot;&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;60&quot;&gt; 
+      &lt;div align=&quot;center&quot;&gt;&lt;font size=&quot;6&quot;&gt;&lt;strong&gt;e:loop灵动标签使用教程&lt;/strong&gt;&lt;/font&gt;&lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;25&quot; bgcolor=&quot;#FFFFFF&quot;&gt;&amp;nbsp; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+  &lt;tr&gt; 
+    &lt;td width=&quot;50%&quot; valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;国内新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;
+              &lt;tr&gt; 
+                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+    &lt;td width=&quot;50%&quot; valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; align=&quot;right&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;国际新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;
+              &lt;tr&gt; 
+                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td colspan=&quot;2&quot;&gt;
+&lt;div align=&quot;center&quot;&gt;
+        &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+          &lt;tr&gt; 
+            &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;图片新闻&lt;/strong&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt; 
+            &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;3&quot; cellpadding=&quot;1&quot;&gt;
+                &lt;tr&gt; 
+                  &lt;td width=&quot;25%&quot; height=&quot;92&quot;&gt; 
+                    &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;http://www.phome.net&quot; title=&quot;帝国软件&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;pic.gif&quot; width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                  &lt;td width=&quot;25%&quot;&gt;
+                    &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;http://www.phome.net&quot; title=&quot;帝国软件&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;pic.gif&quot; width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                  &lt;td width=&quot;25%&quot;&gt;
+                    &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;http://www.phome.net&quot; title=&quot;帝国软件&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;pic.gif&quot; width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                  &lt;td width=&quot;25%&quot;&gt;
+                    &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;http://www.phome.net&quot; title=&quot;帝国软件&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;pic.gif&quot; width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;娱乐新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;
+              &lt;tr&gt; 
+                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+    &lt;td valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; align=&quot;right&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;体育新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;
+              &lt;tr&gt; 
+                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;23&quot;&gt;
+&lt;div align=&quot;center&quot;&gt;Powered by &lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;EmpireCMS&lt;/a&gt;&lt;br&gt;
+      &lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="750" border="0" cellpadding="0" cellspacing="0" id="sclm">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲top</font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td width="744"><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999" id="ldbq">
+          <tr bgcolor="#01A8EC"> 
+            <td height="25"><strong><font color="#FFFFFF">&nbsp;<font color="#FFFF00">2、修改效果页面加上<strong>e:loop调用标签</strong>：</font></font><font color="#FFFF00"></font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"> <strong><font color="#FFFFFF">&nbsp;<font color="#FFFF00"></font></font></strong>我们来分析下上面做好的HTML网页调用样式，如下（图2）：</td>
+          </tr>
+          <tr> 
+            <td height="516" bgcolor="#FFFFFF"> <img src="img/2.jpg" width="729" height="505"></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF">&nbsp;上图我们分析了该网页共有两种调用样式：文字调用样式、图片调用样式:</td>
+          </tr>
+        </table>
+        <table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+          <tr> 
+            <td height="22" colspan="2">&nbsp;<strong>文字调用样式</strong>：一行一列,内容包括&quot;标题&quot;(标题长度截取36个字符)、&quot;标题链接&quot;、&quot;发布日期&quot;格式；</td>
+          </tr>
+          <tr> 
+            <td width="98" height="22">&nbsp;</td>
+            <td width="644" height="22">应用于国内、国际、娱乐、体育新闻4个栏目,每个栏目显示最新3条信息。</td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2">&nbsp;<strong>图片调用样式</strong>：一行一列,内容包括&quot;标题&quot;、&quot;标题图片&quot;、&quot;图片链接&quot;格式；</td>
+          </tr>
+          <tr> 
+            <td height="22">&nbsp;</td>
+            <td height="22">调用新闻数据表内所有栏目带标题图片的信息,共显示4条最新信息。</td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2">&nbsp;因此我们需要为上述每个类别的文字（图片）调用样式中添加灵动标签，调用并显示该样式。</td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" height="11" id="xglmsx">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲top</font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF" id="ldbqyf">
+          <tr bgcolor="8CBDEF"> 
+            <td height="25" colspan="2" bgcolor="#01A8EC"> <div align="left"><strong><font color="#FFFFFF">&nbsp;e:loop灵动标签语法：</font></strong><font color="#FFFFFF">(详细语法可以<a href="http://www.phome.net/doc/ecmsedu/base/mbzz/html/sysbq.html#eloop" target="_blank"><u>点击这里</u></a>查看)<strong></strong></font></div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"> <div align="left"><strong><font color="#0000FF">&nbsp;</font>[e:loop={栏目ID,显示条数,操作类型,只显示有标题图片}]<br>
+                <font color="#0000FF">&nbsp;</font>模板代码内容<br>
+                <font color="#0000FF">&nbsp;</font>[/e:loop]</strong></div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="left"><strong><font color="#0000FF">&nbsp;</font>灵动标签参数说明</strong>：</div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF">
+<div align="left"> 
+                <table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="25" colspan="3"> <strong><font color="#0000FF">&nbsp;</font></strong>&quot;操作类型&quot;决定&quot;栏目ID&quot;值,即标签参数中的&quot;栏目ID/专题ID/SQL语句/表&quot;参数必须与操作类型一一相对应.<a href="http://www.phome.net/doc/ecmsedu/base/mbzz/html/sysbq.html" target="_blank"><font color="#666666"> 
+                      操作类型查询</font></a></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="25" colspan="3"><strong><font color="#0000FF">&nbsp;</font></strong>首先确定信息的调用范围(调用的是栏目?专题?数据表?默认表?标题分类还是SQL的信息),再确定操作类型和栏目ID值,例如：</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td width="23%" height="25"> <div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>调用某栏目的最新信息</div></td>
+                    <td width="28%" height="25">操作类型按栏目调用 值为0，</td>
+                    <td width="49%" height="25">栏目ID=调用栏目的ID值（在帝国CMS后台查询该栏目ID值）。</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td> <div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>调用默认表的最新信息</div></td>
+                    <td>操作类型按默认表调用 值为3，</td>
+                    <td height="40">栏目ID=0或者'' （在CMS后台设置某数据表为系统默认表）。<br>
+                      假如新闻表为系统的默认表，则调用新闻表的最新信息时：<br>
+                      栏目ID=0，操作类型=3。或者栏目ID=''，操作类型=3 </td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="30"> <div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>调用某专题的最新信息</div></td>
+                    <td height="30">操作类型按专题调用 值为6，</td>
+                    <td height="30">栏目ID=调用专题的ID值,(在帝国CMS后台查询该专题ID值)。</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td> <div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>调用某数据表的最新信息</div></td>
+                    <td>操作类型按数据表调用 值为18，</td>
+                    <td height="40">栏目ID='数据表名'。<br>
+                      例如调用新闻表的最新信息时(这里新闻表不一定是默认表)。<br>
+                      栏目ID='news'，操作类型=18 </td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="25"> <div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>调用某标题分类的最新信息</div></td>
+                    <td height="25">操作类型按标题分类调用 值为25，</td>
+                    <td height="25">栏目ID=标题分类ID,(在帝国CMS后台查询该标题分类ID值)<strong>。</strong></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="12"> <div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>按SQL调用查询最新信息</div></td>
+                    <td height="12">操作类型按SQL调用 值为24，</td>
+                    <td height="12">栏目ID=&quot;sql语句&quot;。数据表前缀可用[!db.pre!]表示。</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="18" colspan="3">&nbsp;调用多个栏目或专题的信息时，栏目ID或专题ID可以用,逗号格开并引用''单引号；<br>
+                      &nbsp;例如调用两个栏目(栏目ID值为1和2)的最新3信息，则灵动标签语法为：[e:loop={'2,3',3,0,0}]模板代码内容[/ecmsinfo]</td>
+                  </tr>
+                </table>
+                <strong><font color="#FFFFFF"></font></strong></div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"> <table width="100%">
+                <tr> 
+                  <td width="11%" rowspan="2"><div align="center">调用步骤：</div></td>
+                  <td width="89%" height="25">* 确定需要用灵动标签调用的信息内容及其代码、显示样式；</td>
+                </tr>
+                <tr> 
+                  <td height="25">* 用灵动标签表示信息内容<strong>:</strong>分析并确定灵动标签参数,模板代码,模板代码中的变量,得出完整的灵动标签语法。</td>
+                </tr>
+              </table>
+              <div align="left"></div></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" height="11" id="xglmsx">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲top</font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td width="744"><table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#999999" id="l1">
+          <tr bgcolor="8CBDEF"> 
+            <td height="25" bgcolor="#01A8EC"><strong><font color="#FFFFFF">【例1】<strong> 
+              使用灵动标签调用“国内新闻”栏目的最新3条信息</strong></font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><table width="100%" cellpadding="0" cellspacing="0">
+                <tr id="1dyb"> 
+                  <td height="25" bgcolor="#CCCCCC"><strong>&nbsp;第一步，确定需要用灵动标签调用的信息内容及其代码</strong>：</td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;我们需要用灵动标签调用&quot;国内新闻&quot;栏目的最新3条信息,并且3条信息具有相同的显示样式（见文字调用样式）。</td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;调用内容：如图11中黑色加粗的部分，即为我们要使用灵动标签调用“国内新闻”栏目的信息<strong>：</strong></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;（图11：）<br>
+                    <strong><font color="#0000FF">&nbsp;</font></strong><img src="img/11.jpg" width="347" height="109"></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;由此，调用内容的代码（查看图11黑色加粗部分对应的，即为图12中蓝色框内代码），就要用灵动标签的语法表示<strong>：</strong></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;（图12：） <table width="100%">
+                      <tr> 
+                        <td bgcolor="#999999"><img src="img/12.jpg" width="735" height="183"></td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><table width="100%" cellpadding="0" cellspacing="0">
+                <tr id="1deb"> 
+                  <td height="25" bgcolor="#CCCCCC"><strong>&nbsp;第二步，将调用内容用灵动标签表示：</strong></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong>&nbsp;</strong>下面我们来逐一分析本例中的灵动标签语法。</td>
+                </tr>
+                <tr id="1cs"> 
+                  <td height="25"><strong>&nbsp;<font color="#FF0000">::分析并确定灵动标签的参数</font></strong><font color="#FF0000">：</font>{栏目ID/专题ID,显示条数,操作类型,只显示有标题图片}</td>
+                </tr>
+                <tr> 
+                  <td height="60"><strong>&nbsp;</strong>按照第一步的设定，例1中调用“国内新闻”栏目的最新3条信息，灵动标签参数应设为：<br>
+                    <strong>&nbsp;[e:loop={34,3,0,0}]<br>
+                    &nbsp;模板代码内容<br>
+                    &nbsp;[/e:loop]</strong></td>
+                </tr>
+                <tr> 
+                  <td><strong>&nbsp;标签参数说明</strong><br> <table width="740" border="0" cellpadding="3" cellspacing="1" bordercolor="#CCCCCC" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td width="9%" bgcolor="#FFFFFF"> <div align="center">34</div></td>
+                        <td width="91%" height="25" bgcolor="#FFFFFF">在帝国CMS后台查得“国内新闻”栏目的ID=34；</td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">3</div></td>
+                        <td height="25" bgcolor="#FFFFFF">每个新闻栏目显示3条信息；</td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">0</div></td>
+                        <td height="25" bgcolor="#FFFFFF"> <p>操作类型=0，调用栏目的最新信息.操作类型<a href="http://www.phome.net/doc/ecmsedu/base/mbzz/html/sysbq.html" target="_blank"><u>点击这里</u></a>查询</p></td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">0</div></td>
+                        <td height="25" bgcolor="#FFFFFF">0为 是否只调用带标题图片的信息——不限制，有无标题图片的信息都做调用。</td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr id="1mbdm"> 
+                  <td height="28"><strong>&nbsp;<font color="#FF0000">::分析并确定灵动标签的模板代码</font></strong>，根据灵动标签语法，找出本例的模板代码：</td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;模板代码内容代表了灵动标签的显示样式；即使用灵动标签调用的信息最终显示样式，取决于模板代码是如何设置的。</td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong>&nbsp;</strong>图12中，调用内容的代码（蓝色框内代码）用灵动标签的模板代码表示，</td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;由于调用内容的3条信息,具有相同显示样式(文字调用样式),所以我们只需要取一条信息的显示样式代码做为模板代码就可以了，<strong></strong></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;其他信息会根据灵动标签设置循环此调用，</td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong>&nbsp;</strong>因此模板代码为：</td>
+                </tr>
+                <tr> 
+                  <td height="60">
+<table width="100%" border="1">
+                      <tr>
+                        <td>&lt;tr&gt; <br> &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a 
+                          href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;<br> 
+                          &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;<br> 
+                          &lt;/tr&gt;</td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;再将模板代码的顶部和底部加上灵动标签参数，如：</td>
+                </tr>
+                <tr> 
+                  <td height="12" bgcolor="#FFFFFF">（图13：）</td>
+                </tr>
+                <tr>
+                  <td height="158" valign="top" bgcolor="#CCCCCC"><img src="img/13.jpg"></td>
+                </tr>
+                <tr id="1bl"> 
+                  <td height="28"><strong>&nbsp;<font color="#FF0000">::分析并确定灵动标签模板代码内容中的变量</font></strong><font color="#FF0000">：</font></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font></strong>在模板代码中，找出与其他信息不同之处并用变量替换，如标题，标题链接，发布日期：</td>
+                </tr>
+                <tr> 
+                  <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+                      <tr bgcolor="#FFFFFF"> 
+                        <td width="13%"> <div align="left">标题变量</div></td>
+                        <td width="87%">标题字段名：title；所以本例中，灵动标签标题字段变量为：<font color="#FF0000">$bqr[title]</font><br>
+                          例如截取标题前36个字符显示，则变量表示为<font color="#FF0000">esub($bqr[title],36)</font>。<br>
+                          其中文字截取用esub(字符串,截取长度)表示。 </td>
+                      </tr>
+                      <tr bgcolor="#FFFFFF"> 
+                        <td> <div align="left">标题链接变量</div></td>
+                        <td height="25">灵动标签的标题链接变量是特殊变量，固定表示为：<font color="#FF0000">$bqsr[titleurl]</font></td>
+                      </tr>
+                      <tr bgcolor="#FFFFFF"> 
+                        <td> <div align="left">发布日期变量</div></td>
+                        <td> <p>发布日期字段名：newstime；所以本例中，灵动标签发布日期变量为：$bqr[newstime]<br>
+                            发布日期变量的格式：<font color="#FF0000">date('Y-m-d',$bqr[newstime])</font>，其中date('格式字串',时间字段)为帝国CMS6.0版本的时间格式<br>
+                          </p></td>
+                      </tr>
+                      <tr bgcolor="#FFFFFF"> 
+                        <td height="70" colspan="2"><strong>变量说明</strong>：在灵动标签中<br>
+                          $bqr： 调用对应的字段内容，表示方法为$bqr[字段名]，如标题字段$bqr[title]等； <br>
+                          $bqsr：调用特殊字段变量，$bqsr[titleurl]：标题链接；$bqsr[classname]：栏目名称；$bqsr[classurl]：栏目链接。<br>
+                          $bqno：调用序号。 <br>
+                          $public_r[newsurl]：调用网站地址 。</td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font></strong>熟悉了灵动标签变量语法后，下面我们将标题、标题链接、发布日期变量加入到模板代码内容中：</td>
+                </tr>
+                <tr> 
+                  <td height="25">（图14：） <br> <img src="img/14.jpg" width="740" height="198"></td>
+                </tr>
+                <tr> 
+                  <td height="110"><strong><font color="#0000FF">&nbsp;</font>模板代码内容：</strong><br>
+                    <table width="100%" border="1">
+                      <tr>
+                        <td>&lt;tr&gt; <br>
+                          &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a 
+                          href=&quot;<font color="#009933">&lt;?=</font><font color="#FF0000">$bqsr[titleurl]</font><font color="#009933">?&gt;</font>&quot; 
+                          target=&quot;_blank&quot;&gt;<font color="#009933">&lt;?=</font><font color="#FF0000">esub($bqr[title],36)</font><font color="#009933">?&gt;</font>&lt;/a&gt;&lt;/td&gt;<br> &lt;td width=&quot;18%&quot;&gt;&lt;div 
+                          align=&quot;right&quot;&gt;[<font color="#009933">&lt;?=</font><font color="#FF0000">date('m-d',$bqr[newstime])</font><font color="#009933">?&gt;</font>]&lt;/div&gt;&lt;/td&gt;<br> 
+                          &lt;/tr&gt;</td>
+                      </tr>
+                    </table>
+                    
+                  </td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font>切记：因为这段代码中要输出变量内容，所以在变量名两侧都要加上</strong><font color="#009933"><strong>&lt;?=</strong></font> 
+                    和 <font color="#009933"><strong>?&gt;</strong></font>，如&lt;?=$bqsr[titleurl]?&gt;</td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font>最后，例1调用国内新闻栏目最新信息的灵动标签语法即为（粗体部分）：</strong></td>
+                </tr>
+                <tr> 
+                  <td height="80">
+<table width="100%" border="1">
+                      <tr>
+                        <td>&lt;table width=&quot;100%&quot; border=&quot;0&quot; 
+                          cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;<br>
+                          <strong>[e:loop=<font color="#FF0000">{34,3,0,0}</font>]<br>
+                          &lt;tr&gt; <br>
+                          &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a 
+                          href=&quot;<font color="#FF0000">&lt;?=$bqsr[titleurl]?&gt;</font>&quot; 
+                          target=&quot;_blank&quot;&gt;<font color="#FF0000">&lt;?=esub($bqr[title],36)?&gt;</font>&lt;/a&gt;&lt;/td&gt;<br>
+                          &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[<font color="#FF0000">&lt;?=date('m-d',$bqr[newstime])?&gt;</font>]&lt;/div&gt;&lt;/td&gt;<br>
+                          &lt;/tr&gt;<br>
+                          [/e:loop]</strong><br>
+                          &lt;/table&gt; </td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font></strong>自己动手试试使用灵动标签调用其他新闻栏目的信息^-^</td>
+                </tr>
+              </table></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" height="8" id="zjlmsxzh">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲top</font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#999999" id="l2">
+          <tr bgcolor="8CBDEF"> 
+            <td height="25" bgcolor="#01A8EC"><strong><font color="#FFFFFF">【例2】 
+              <strong>使用灵动标签调用新闻数据表中，所有栏目最新发布的4条带标题图片的信息</strong></font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><table width="100%" cellpadding="0" cellspacing="0">
+                <tr id="2dyb"> 
+                  <td height="25" bgcolor="#CCCCCC"><strong>&nbsp;第一步，确定需要用灵动标签表示的信息内容及其代码：</strong></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font></strong>（图21：）<br> <img src="img/21.jpg" width="702" height="135"> 
+                    <br> <br>
+                    <strong><font color="#0000FF">&nbsp;</font></strong>（图22：）<br> <img src="img/22.jpg" width="665" height="320"> 
+                  </td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font>调用内容</strong>，如图21中黑色加粗的部分，即为我们要使用灵动标签调用新闻数据表中所有栏目带标题图片的信息。</td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font></strong>由此，<strong>调用内容的代码</strong>（查看图21黑色加粗部分对应的，即为图22中蓝色框内代码），就要用灵动标签语法表示。 
+                  </td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><table width="100%" cellpadding="0" cellspacing="0">
+                <tr id="2deb"> 
+                  <td height="25" bgcolor="#CCCCCC"><strong>&nbsp;第二步，将调用内容用灵动标签表示</strong>：</td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong>&nbsp;</strong>下面我们来逐一分析本例中的灵动标签语法。</td>
+                </tr>
+                <tr id="2cs"> 
+                  <td height="28"><strong><font color="#0000FF">&nbsp;</font><font color="#FF0000">::分析并确定灵动标签的参数:</font></strong></td>
+                </tr>
+                <tr> 
+                  <td height="70">&nbsp;按照例2第一步的设定，调用新闻数据表中最新4条带标题图片的信息，灵动标签参数应设为：<br> 
+                    <strong>[e:loop={'news',4,18,1}] <br>
+                    模板代码内容<br>
+                    [/e:loop]</strong></td>
+                </tr>
+                <tr> 
+                  <td><strong>&nbsp;</strong><strong>标签参数说明</strong><br> <table width="740" border="0" cellpadding="3" cellspacing="1" bordercolor="#CCCCCC" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td width="9%" bgcolor="#FFFFFF"> <div align="center">18</div></td>
+                        <td width="91%" height="25" bgcolor="#FFFFFF">由于例2的标签是调用新闻表的信息，因此操作类型选择按数据表调用各表最新信息，值为18；操作类型<a href="http://www.phome.net/doc/ecmsedu/base/mbzz/html/sysbq.html" target="_blank"><u>点击这里</u></a>查询。</td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">'news'</div></td>
+                        <td height="25" bgcolor="#FFFFFF">操作类型决定栏目ID='数据表'，所以例2中的栏目ID值为'news'。</td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">4</div></td>
+                        <td height="25" bgcolor="#FFFFFF"> <p>显示4条带标题图片的信息。</p></td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">1</div></td>
+                        <td height="25" bgcolor="#FFFFFF">1为 只调用带标题图片的信息。</td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr id="2mbdm"> 
+                  <td height="28"><strong><font color="#0000FF">&nbsp;</font><font color="#FF0000">::分析并确定灵动标签的模板代码</font></strong>，根据灵动标签语法，找出本例的模板代码：</td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font></strong>图22中调用的4条标题图片信息,具有相同显示样式,所以我们只需取一条标题图片信息的代码显示样式做为模板代码就可以了。</td>
+                </tr>
+                <tr> 
+                  <td height="70"><strong><font color="#0000FF">&nbsp;</font></strong>因此模板代码为：<br>
+                    <table width="100%" border="1">
+                      <tr>
+                        <td>&lt;td width=&quot;25%&quot; height=&quot;92&quot;&gt; 
+                          <br> &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;http://www.phome.net&quot; 
+                          title=&quot;帝国软件&quot; target=&quot;_blank&quot;&gt;<br> 
+                          &lt;img src=&quot;pic.gif&quot; width=&quot;135&quot; 
+                          height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;<br> 
+                          &lt;/td&gt;</td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font></strong>再将模板代码顶部和底部加上灵动标签参数，如：<br> 
+                    <strong><font color="#0000FF">&nbsp;</font></strong>（图23：）<br> 
+                    <img src="img/23.jpg" width="670" height="218"></td>
+                </tr>
+                <tr id="2bl"> 
+                  <td height="28"><strong><font color="#0000FF">&nbsp;</font><font color="#FF0000">::分析并确定灵动标签模板代码内容中的变量</font></strong><font color="#FF0000">：</font></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font></strong>在模板代码中，找出与其他信息不同之处并用变量替换，</td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font></strong>如标题变量为$bqr[title]；标题链接变量为$bqsr[titleurl]；标题图片变量为$bqr[titlepic]。</td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font></strong>熟悉了灵动标签变量语法后，下面我们将标题、标题链接、标题图片变量加入到模板代码内容中：</td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font></strong>（图24：）<br> 
+                    <img src="img/24.jpg" width="659" height="174"></td>
+                </tr>
+                <tr> 
+                  <td height="100"><strong><font color="#0000FF">&nbsp;</font>模板代码内容：</strong><br>
+                    <table width="100%" border="1">
+                      <tr>
+                        <td>&lt;td width=&quot;25%&quot; height=&quot;92&quot;&gt; 
+                          <br> &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;<font color="#009933">&lt;?=</font><font color="#FF0000">$bqsr[titleurl]</font><font color="#009933">?&gt;</font>&quot; 
+                          title=&quot;<font color="#009933">&lt;?=</font><font color="#FF0000">$bqr[title]</font><font color="#009933">?&gt;</font>&quot; 
+                          target=&quot;_blank&quot;&gt;<br> &lt;img src=&quot;<font color="#009933">&lt;?=</font><font color="#FF0000">$bqr[titlepic]</font><font color="#009933">?&gt;</font>&quot; 
+                          width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;<br> 
+                          &lt;/td&gt;</td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font>切记：因为这段代码中要输出变量内容，所以在变量名两侧都要加上</strong><font color="#009933"><strong>&lt;?=</strong></font> 
+                    和 <font color="#009933"><strong>?&gt;</strong></font>，如&lt;?=$bqsr[titleurl]?&gt;</td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font>最后，例2调用新闻数据表所有栏目最新信息的灵动标签语法即为（粗体部分）</strong>：</td>
+                </tr>
+                <tr> 
+                  <td height="135">
+<table width="100%" border="1">
+                      <tr>
+                        <td><font color="#333333">&lt;table width=&quot;100%&quot; 
+                          border=&quot;0&quot; cellspacing=&quot;3&quot; cellpadding=&quot;1&quot;&gt;<br>
+                          &lt;tr&gt;</font><br> <strong>[e:loop=<font color="#FF0000">{'news',4,18,1}</font>] 
+                          </strong><br> <strong>&lt;td width=&quot;25%&quot; height=&quot;92&quot;&gt; 
+                          <br>
+                          &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;<font color="#FF0000">&lt;?=$bqsr[titleurl]?&gt;</font>&quot; 
+                          title=&quot;<font color="#FF0000">&lt;?=$bqr[title]?&gt;</font>&quot; 
+                          target=&quot;_blank&quot;&gt;<br>
+                          &lt;img src=&quot;<font color="#FF0000">&lt;?=$bqr[titlepic]?&gt;</font>&quot; 
+                          width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;<br>
+                          &lt;/td&gt;</strong><br> <strong>[/e:loop]</strong><br> 
+                          <font color="#333333">&lt;/tr&gt;<br>
+                          &lt;/table&gt;</font></td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" id="gllmfy">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲top</font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999">
+          <tr bgcolor="#01A8EC"> 
+            <td height="25"><strong><font color="#0000FF">&nbsp;</font><font color="#FFFFFF">加入调用【例1】【例2】灵动标签后的页面效果（图3）：</font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><img src="img/3.jpg" width="740" height="477"></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font>已加上e:loop调用标签后的模板(见图3)HTML代码</strong>如下（HTML代码2）：</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><textarea name="textarea9" cols="100" rows="12" wrap="OFF" style="WIDTH: 100%">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot;&gt;
+&lt;title&gt;e:loop灵动标签使用教程&lt;/title&gt;
+&lt;style&gt;
+td {font-size: 10pt;}
+.line{line-height: 14pt;font-size: 10pt;}
+A:link {text-decoration: none; color:#000000}
+A:visited {text-decoration: none; color: #000000} 
+A:active {text-decoration: underline; color: #000000 } 
+A:hover {text-decoration: underline;	color: #FF0000;}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body topmargin=&quot;0&quot;&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;60&quot;&gt; 
+      &lt;div align=&quot;center&quot;&gt;&lt;font size=&quot;6&quot;&gt;&lt;strong&gt;e:loop灵动标签使用教程&lt;/strong&gt;&lt;/font&gt;&lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;25&quot; bgcolor=&quot;#FFFFFF&quot;&gt;&amp;nbsp; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+  &lt;tr&gt; 
+    &lt;td width=&quot;50%&quot; valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;国内新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;
+			  [e:loop={34,3,0,0}]
+              &lt;tr&gt; 
+                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; target=&quot;_blank&quot;&gt;&lt;?=esub($bqr[title],36)?&gt;&lt;/a&gt;&lt;/td&gt;
+                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[&lt;?=date('m-d',$bqr[newstime])?&gt;]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+			  [/e:loop]
+            &lt;/table&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+    &lt;td width=&quot;50%&quot; valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; align=&quot;right&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;国际新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;
+              [e:loop={35,3,0,0}] 
+              &lt;tr&gt; 
+                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; target=&quot;_blank&quot;&gt;&lt;?=esub($bqr[title],36)?&gt;&lt;/a&gt;&lt;/td&gt;
+                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[&lt;?=date('m-d',$bqr[newstime])?&gt;]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              [/e:loop]
+            &lt;/table&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td colspan=&quot;2&quot;&gt;
+&lt;div align=&quot;center&quot;&gt;
+        &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+          &lt;tr&gt; 
+            &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;图片新闻&lt;/strong&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt; 
+            &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;3&quot; cellpadding=&quot;1&quot;&gt;
+                &lt;tr&gt;
+				[e:loop={'news',4,18,1}] 
+                  &lt;td width=&quot;25%&quot; height=&quot;92&quot;&gt; 
+                    &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; title=&quot;&lt;?=$bqr[title]?&gt;&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;&lt;?=$bqr[titlepic]?&gt;&quot; width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+				[/e:loop]
+                &lt;/tr&gt;
+              &lt;/table&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;娱乐新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;
+              [e:loop={36,3,0,0}] 
+              &lt;tr&gt; 
+                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; target=&quot;_blank&quot;&gt;&lt;?=esub($bqr[title],36)?&gt;&lt;/a&gt;&lt;/td&gt;
+                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[&lt;?=date('m-d',$bqr[newstime])?&gt;]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              [/e:loop]
+            &lt;/table&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+    &lt;td valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; align=&quot;right&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;体育新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;
+              [e:loop={37,3,0,0}] 
+              &lt;tr&gt; 
+                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; target=&quot;_blank&quot;&gt;&lt;?=esub($bqr[title],36)?&gt;&lt;/a&gt;&lt;/td&gt;
+                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[&lt;?=date('m-d',$bqr[newstime])?&gt;]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              [/e:loop]
+            &lt;/table&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;23&quot;&gt;
+&lt;div align=&quot;center&quot;&gt;Powered by &lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;EmpireCMS&lt;/a&gt;&lt;br&gt;
+      &lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="0" cellspacing="0" id="plszlmsx">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲top</font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999" id="htgx">
+          <tr bgcolor="#01A8EC"> 
+            <td height="25"><strong><font color="#FFFFFF">&nbsp;<font color="#FFFF00">3、将已加上灵动标签后的HTML效果页面代码复制到后台更新</font><font color="#FFFF00">：</font></font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"> <strong><font color="#0000FF">&nbsp;</font></strong>位置：后台 
+              &gt; “模板管理” &gt; “管理自定义页面” &gt; “增加自定义页面”：</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>页面名称：<strong>e:loop灵动标签调用测试页面</strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>文件名：<strong>../../eloop.html</strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>页面内容：<strong>将已加上e:loop调用标签后的模板HTML代码（HTML代码2）复制到页面内容框中（图4）：</strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><img src="img/4.jpg" width="669" height="790"></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>点击页面底部的“提交”按钮，e:loop灵动标签调用测试页面增加完毕。</td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲top</font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC" id="kjcz">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999" id="scxg">
+          <tr bgcolor="#01A8EC"> 
+            <td height="25"><strong><font color="#0000FF">&nbsp;</font><font color="#FFFFFF"><font color="#FFFF00">4、查看生成后的页面效果：</font></font><font color="#0000FF"></font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>管理自定义页面，可看到我们刚才增加的页面（图5）：</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><img src="img/5.jpg" width="668" height="212"></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>点击页面名称查看最终页面在网站前台的生成效果（图6）：</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><img src="img/6.jpg" width="707" height="502"></td>
+          </tr>
+          <tr> 
+            <td height="12" bgcolor="#FFFFFF">&nbsp;</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>至此，e:loop灵动标签使用讲解完毕。</td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="0" cellspacing="0">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲top</font></a></div></td>
+    </tr>
+  </table>
+  <div align="right"> </div>
+  <div align="left"></div>
+  <div align="left"></div>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC" id="kjcz">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999" id="xglj">
+          <tr bgcolor="#01A8EC"> 
+            <td height="25"><strong><font color="#0000FF">&nbsp;</font><font color="#FFFFFF">附:</font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font>本例子使用素材：</strong><a href="http://www.phome.net/doc/ecmsedu/yizhao/eloop/sc.zip" target="_blank"><u>点击这里下载素材</u></a></td>
+          </tr>
+          <tr> 
+            <td height="12" bgcolor="#FFFFFF">&nbsp;</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font>相关链接：</strong><font color="#333333"><a href="http://bbs.phome.net/showthread-13-77428-0.html" target="_blank">灵动标签部分应用收集汇总</a></font></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

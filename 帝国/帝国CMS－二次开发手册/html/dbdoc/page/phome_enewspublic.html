@@ -1,0 +1,1507 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>phome_enewspublic 数据表字段解释</title>
+<link href="../images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%" border="0" align="center">
+  <tr> 
+    <td width="100%"><strong><font color="#0000FF">phome_enewspublic 数据表字段解释（系统参数配置表）</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="800" border="0" cellspacing="1" cellpadding="3" class="tableborder">
+  <tr class="header"> 
+    <td width="19%" height="30">字段名</td>
+    <td width="14%">类型</td>
+    <td width="26%">解释</td>
+    <td width="41%">附加说明</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>newsurl</strong></td>
+    <td bgcolor="#FFFFFF">varchar(120)</td>
+    <td bgcolor="#FFFFFF">网站地址</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>sitename</strong></td>
+    <td bgcolor="#FFFFFF">varchar(60)</td>
+    <td bgcolor="#FFFFFF">站点名称</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>email</strong></td>
+    <td bgcolor="#FFFFFF">varchar(50)</td>
+    <td bgcolor="#FFFFFF">管理员邮箱</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>filetype</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">后台上传限制文件扩展名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>filesize</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">后台上传限制附件大小</td>
+    <td bgcolor="#FFFFFF">单位：KB</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>hotnum</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">JS热门信息显示数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>newnum</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">JS最新信息显示数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>relistnum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">栏目页生成每组数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>renewsnum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">信息页生成每组数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>min_keyboard</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">搜索关键字最小字符</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>max_keyboard</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">搜索关键字最大字符</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>search_num</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">搜索页面每页显示数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>search_pagenum</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">搜索页面分页链接数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>newslink</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">相关链接依据</td>
+    <td bgcolor="#FFFFFF">0为标题包含关键字，1为关键字相同，2为标题包含与关键字相同</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>checked</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF"></td>
+    <td bgcolor="#FFFFFF">预定义字段，暂时用不到，默认值0</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>pltime</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">评论时间间隔</td>
+    <td bgcolor="#FFFFFF">单位：秒</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>searchtime</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">搜索时间间隔</td>
+    <td bgcolor="#FFFFFF">单位：秒</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>loginnum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">后台登录次数限制</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>logintime</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">重新登录时间间隔</td>
+    <td bgcolor="#FFFFFF">单位：分钟</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>addnews_ok</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否开启投稿功能</td>
+    <td bgcolor="#FFFFFF">0为开启，1为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>register_ok</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否开启会员注册</td>
+    <td bgcolor="#FFFFFF">0为开启，1为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>indextype</strong></td>
+    <td bgcolor="#FFFFFF">varchar(10)</td>
+    <td bgcolor="#FFFFFF">首页文件扩展名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>goodlencord</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF"></td>
+    <td bgcolor="#FFFFFF">预定义字段，暂时用不到，默认值0</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>goodtype</strong></td>
+    <td bgcolor="#FFFFFF">varchar(10)</td>
+    <td bgcolor="#FFFFFF"></td>
+    <td bgcolor="#FFFFFF">预定义字段，暂时用不到，默认值空</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>goodnum</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF"></td>
+    <td bgcolor="#FFFFFF">预定义字段，暂时用不到，默认值0</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>searchtype</strong></td>
+    <td bgcolor="#FFFFFF">varchar(10)</td>
+    <td bgcolor="#FFFFFF">高级搜索页扩展名</td>
+    <td bgcolor="#FFFFFF">/search/index.html页面</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>exittime</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">登录超时限制时间</td>
+    <td bgcolor="#FFFFFF">单位：分钟</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>smalltextlen</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">信息简介截取字数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>defaultgroupid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">注册会员默认会员组ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>fileurl</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">附件地址</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>phpmode</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">PHP是否运行于安全模式</td>
+    <td bgcolor="#FFFFFF">1为运行在安全模式，0为正常模式</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ftphost</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">FTP服务器地址</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ftpport</strong></td>
+    <td bgcolor="#FFFFFF">varchar(20)</td>
+    <td bgcolor="#FFFFFF">FTP服务器端口</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ftpusername</strong></td>
+    <td bgcolor="#FFFFFF">varchar(120)</td>
+    <td bgcolor="#FFFFFF">FTP用户名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ftppassword</strong></td>
+    <td bgcolor="#FFFFFF">varchar(120)</td>
+    <td bgcolor="#FFFFFF">FTP密码</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ftppath</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">FTP系统根目录</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ftpmode</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">FTP传送模式</td>
+    <td bgcolor="#FFFFFF">1为ASCII，0为二进制</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>install</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">安装形式</td>
+    <td bgcolor="#FFFFFF">0为服务端，1为客户端</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>plsize</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">评论内容限制字数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>plincludesize</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF"></td>
+    <td bgcolor="#FFFFFF">预定义字段，暂时用不到，默认值0</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>hotplnum</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">JS热门评论显示数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>softversion</strong></td>
+    <td bgcolor="#FFFFFF">varchar(30)</td>
+    <td bgcolor="#FFFFFF">版本</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>lctime</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">更新时间</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dorepnum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">替换字段值每组数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>loadtempnum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">导入栏目模板每组数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>firstnum</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">JS头条信息显示数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>bakdbpath</strong></td>
+    <td bgcolor="#FFFFFF">varchar(50)</td>
+    <td bgcolor="#FFFFFF">数据备份存放目录</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>bakdbzip</strong></td>
+    <td bgcolor="#FFFFFF">varchar(50)</td>
+    <td bgcolor="#FFFFFF">数据备份压缩包存放目录</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>downpass</strong></td>
+    <td bgcolor="#FFFFFF">varchar(32)</td>
+    <td bgcolor="#FFFFFF">下载验证码</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>min_userlen</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">注册用户名最小字符数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>max_userlen</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">注册用户名最大字符数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>min_passlen</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">注册密码最小字符数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>max_passlen</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">注册密码最大字符数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>filechmod</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">文件生成权限</td>
+    <td bgcolor="#FFFFFF">0为强制0777，1为不限制</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">默认数据表ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tbname</strong></td>
+    <td bgcolor="#FFFFFF">varchar(60)</td>
+    <td bgcolor="#FFFFFF">默认数据表名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>loginkey_ok</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否开启会员登陆验证码</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>limittype</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">备份是否支持MYSQL查询方式</td>
+    <td bgcolor="#FFFFFF">1为支持，0为不支持</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>plkey_ok</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否开启评论验证码</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>redodown</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">下载同一地址不重复扣点时间</td>
+    <td bgcolor="#FFFFFF">单位：小时</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>fpnum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">(商城)发票百分比费用</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>havefp</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">(商城)是否提供发票</td>
+    <td bgcolor="#FFFFFF">1为提供，0为不提供</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>candocode</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">模板是否支持程序代码</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>opennotcj</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否开启防采集</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>reuserpagenum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">自定义页面每组生成数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>revotejsnum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">投票JS每组生成数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>readjsnum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">广告JS每组生成数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qaddtran</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">前台投稿是否开启上传图片</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qaddtransize</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">前台投稿上传最大图片大小</td>
+    <td bgcolor="#FFFFFF">单位：KB</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ebakthisdb</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">备份只选择当前数据库</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>delnewsnum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">批量删除信息每组数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>markpos</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">水印位置</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>markimg</strong></td>
+    <td bgcolor="#FFFFFF">varchar(80)</td>
+    <td bgcolor="#FFFFFF">水印图片文件</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>marktext</strong></td>
+    <td bgcolor="#FFFFFF">varchar(80)</td>
+    <td bgcolor="#FFFFFF">水印文字内容</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>markfontsize</strong></td>
+    <td bgcolor="#FFFFFF">varchar(12)</td>
+    <td bgcolor="#FFFFFF">水印文字大小</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>markfontcolor</strong></td>
+    <td bgcolor="#FFFFFF">varchar(12)</td>
+    <td bgcolor="#FFFFFF">水印文字颜色</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>markfont</strong></td>
+    <td bgcolor="#FFFFFF">varchar(80)</td>
+    <td bgcolor="#FFFFFF">水印文字字体</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>adminloginkey</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">后台登陆是否开启验证码</td>
+    <td bgcolor="#FFFFFF">0为开启，1为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>php_outtime</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">PHP超时时间设置</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>listpagefun</strong></td>
+    <td bgcolor="#FFFFFF">varchar(36)</td>
+    <td bgcolor="#FFFFFF">列表分页函数(下拉)</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>textpagefun</strong></td>
+    <td bgcolor="#FFFFFF">varchar(36)</td>
+    <td bgcolor="#FFFFFF">内容分页函数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>adfile</strong></td>
+    <td bgcolor="#FFFFFF">varchar(30)</td>
+    <td bgcolor="#FFFFFF">广告JS文件前缀</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>notsaveurl</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">远程保存忽略地址</td>
+    <td bgcolor="#FFFFFF">每个地址有回车隔开</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>jstempid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">默认JS模板ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>rssnum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">RSS显示信息数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>rsssub</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">RSS简介截取字数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>savetxtf</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">内容存文本字段集合</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dorepdlevelnum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">替换地址权限每组数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>listpagelistfun</strong></td>
+    <td bgcolor="#FFFFFF">varchar(36)</td>
+    <td bgcolor="#FFFFFF">列表分页函数(列表)</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>listpagelistnum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">列表分页显示页码数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>infolinknum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">更新相关链接每组数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>searchgroupid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">搜索限制会员组ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>opencopytext</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否开启内容防复制</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>reuserjsnum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">自定义JS每组生成数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>reuserlistnum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">自定义列表每组生成数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>opentitleurl</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">信息外部链接设置</td>
+    <td bgcolor="#FFFFFF">0为统计点击，1为显示原链接地址</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qaddtranimgtype</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">前台投稿上传图片扩展名限制</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qaddtranfile</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">前台投稿是否开启上传附件</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qaddtranfilesize</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">前台投稿最大附件大小</td>
+    <td bgcolor="#FFFFFF">单位：KB</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qaddtranfiletype</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">前台投稿上传附件扩展名限制</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>sendmailtype</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">邮件发送模式</td>
+    <td bgcolor="#FFFFFF">0为mail 函数发送，1为SMTP 模块发送</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>smtphost</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">邮件SMTP服务器</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>fromemail</strong></td>
+    <td bgcolor="#FFFFFF">varchar(120)</td>
+    <td bgcolor="#FFFFFF">邮件SMTP发信人地址</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>loginemail</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">邮件SMTP是否需要登录验证</td>
+    <td bgcolor="#FFFFFF">1为需要，0为不需要</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>emailusername</strong></td>
+    <td bgcolor="#FFFFFF">varchar(60)</td>
+    <td bgcolor="#FFFFFF">邮箱SMTP登录用户名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>emailpassword</strong></td>
+    <td bgcolor="#FFFFFF">varchar(60)</td>
+    <td bgcolor="#FFFFFF">邮箱SMTP登录密码</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>smtpport</strong></td>
+    <td bgcolor="#FFFFFF">varchar(20)</td>
+    <td bgcolor="#FFFFFF">邮件SMTP端口</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>emailname</strong></td>
+    <td bgcolor="#FFFFFF">varchar(120)</td>
+    <td bgcolor="#FFFFFF">邮件SMTP发信人呢称</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>deftempid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">默认模板组ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>feedbacktfile</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">前台反馈是否开启上传附件</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>feedbackfilesize</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">前台反馈上传最大附件大小</td>
+    <td bgcolor="#FFFFFF">单位：KB</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>feedbackfiletype</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">前台反馈上传附件扩展名限制</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>searchtempvar</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">动态页是否支持公共模板变量</td>
+    <td bgcolor="#FFFFFF">0为不支持，1为支持</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>showinfolevel</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">查看会员资料限制会员组ID</td>
+    <td bgcolor="#FFFFFF">/e/member/ShowInfo页面</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>navfh</strong></td>
+    <td bgcolor="#FFFFFF">varchar(20)</td>
+    <td bgcolor="#FFFFFF">所在位置导航分隔字符</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>spicwidth</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">图片缩略图默认宽度</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>spicheight</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">图片缩略图默认高度</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>spickill</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">图片缩略图超出部分是否截取</td>
+    <td bgcolor="#FFFFFF">1为截取，0不截取</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>jpgquality</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">水印图片质量</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>markpct</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">水印透明度</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>redoview</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">查看同一信息不重复扣点时间</td>
+    <td bgcolor="#FFFFFF">单位：小时</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>reggetfen</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">注册赠送点数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>regbooktime</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">重复留言时间间隔</td>
+    <td bgcolor="#FFFFFF">单位：秒</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>revotetime</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">重复投票时间间隔</td>
+    <td bgcolor="#FFFFFF">单位：秒</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>nreclass</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">不生成栏目页的栏目ID集合</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>nreinfo</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">不生成内容页的栏目ID集合</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>nrejs</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">不生成JS的栏目ID集合</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>fpath</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">附件存放目录方式</td>
+    <td bgcolor="#FFFFFF">0为栏目目录，1为/d/file/p目录，2为/d/file目录</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>filepath</strong></td>
+    <td bgcolor="#FFFFFF">varchar(30)</td>
+    <td bgcolor="#FFFFFF">附件存放日期目录</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>openmembertranimg</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">会员表单是否开启上传图片</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>memberimgsize</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">会员表单上传最大图片大小</td>
+    <td bgcolor="#FFFFFF">单位：KB</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>memberimgtype</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">会员表单上传图片扩展名限制</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>openmembertranfile</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">会员表单是否开启上传附件</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>memberfilesize</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">会员表单上传最大附件大小</td>
+    <td bgcolor="#FFFFFF">单位：KB</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>memberfiletype</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">会员表单上传附件扩展名限制</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>nottobq</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">不调用标签的栏目ID集合</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>defspacestyleid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">默认会员空间模板ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>canposturl</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">前台允许提交的来源地址</td>
+    <td bgcolor="#FFFFFF">每个地址用回车隔开</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>openspace</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否开启会员空间</td>
+    <td bgcolor="#FFFFFF">0为开启，1为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>defadminstyle</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">默认后台界面风格ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>realltime</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">每组生成时间间隔</td>
+    <td bgcolor="#FFFFFF">单位：秒</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>closeip</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">禁止 IP 访问列表</td>
+    <td bgcolor="#FFFFFF">每个IP用回车隔开</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>openip</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">允许 IP 访问列表</td>
+    <td bgcolor="#FFFFFF">每个IP用回车隔开</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>hopenip</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">允许后台 IP 访问列表</td>
+    <td bgcolor="#FFFFFF">每个IP用回车隔开</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>plface</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">评论表情</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>plfacenum</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">评论表情每行显示数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>closewords</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">信息投稿屏蔽字符</td>
+    <td bgcolor="#FFFFFF">多个用“|”格开</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>closewordsf</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">信息投稿屏蔽字段</td>
+    <td bgcolor="#FFFFFF">多个用“|”格开</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>textpagelistnum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">内容分页每页显示页码数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>memberlistlevel</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">会员列表查看权限会员组ID</td>
+    <td bgcolor="#FFFFFF">/e/member/list页面</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>wapopen</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否开启WAP功能</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>wapdefstyle</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">默认使用WAP模板ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>wapshowmid</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">WAP只显示系统模型列表</td>
+    <td bgcolor="#FFFFFF">多个模型ID用&quot;,&quot;隔开,空为显示所有</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>waplistnum</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">WAP列表每页显示数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>wapsubtitle</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">WAP标题截取字数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>wapshowdate</strong></td>
+    <td bgcolor="#FFFFFF">varchar(50)</td>
+    <td bgcolor="#FFFFFF">WAP时间显示格式</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>wapchar</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">WAP字符集</td>
+    <td bgcolor="#FFFFFF">1为UTF-8，0为UNICODE</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ebakcanlistdb</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">空间备份是否允许数据库列表</td>
+    <td bgcolor="#FFFFFF">1为不支持，0为支持</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>paymoneytofen</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">一元可购买点数数量</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>payminmoney</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">最小支付金额</td>
+    <td bgcolor="#FFFFFF">单位：元</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>keytog</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">验证码字符组成</td>
+    <td bgcolor="#FFFFFF">0为数字，1为字母，2为数字+字母</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>keyrnd</strong></td>
+    <td bgcolor="#FFFFFF">varchar(60)</td>
+    <td bgcolor="#FFFFFF">验证码加密字符串</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>keytime</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">验证码过期时间</td>
+    <td bgcolor="#FFFFFF">单位：分钟</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>regkey_ok</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">会员注册是否开启验证码</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>opengetdown</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否开启直接下载</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>gbkey_ok</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">留言是否开启验证码</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>fbkey_ok</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">反馈是否验证码</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>newaddinfotime</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">新会员投稿限制时间</td>
+    <td bgcolor="#FFFFFF">单位：分钟</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>classnavline</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">栏目导航显示个数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>classnavfh</strong></td>
+    <td bgcolor="#FFFFFF">varchar(120)</td>
+    <td bgcolor="#FFFFFF">栏目导航分隔字符</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>plgroupid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">评论权限限制会员组ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>adminstyle</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">后台界面风格ID集合</td>
+    <td bgcolor="#FFFFFF">多个风络ID用逗号隔开，如：,1,2,</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>sitekey</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">网站关键字</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>siteintro</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">网站简介</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>docnewsnum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">批量归档信息每组数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>openschall</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否开启全站搜索</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>schallfield</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">全站搜索范围</td>
+    <td bgcolor="#FFFFFF">1为搜索标题和全文，2为搜索标题，3为搜索全文</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>schallminlen</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">全站搜索关键字最小长度</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>schallmaxlen</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">全站搜索关键字最大长度</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>schallnotcid</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">不导入搜索表的终极栏目ID</td>
+    <td bgcolor="#FFFFFF">多个栏目ID用“,”半角逗号隔开</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>schallnum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">全站搜索页面显示信息数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>schallpagenum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">全站搜索每页显示链接数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dtcanbq</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">动态列表是否支持标签</td>
+    <td bgcolor="#FFFFFF">1为支持，0为不支持</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dtcachetime</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">动态列表变量缓存时间</td>
+    <td bgcolor="#FFFFFF">单位：分钟</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>plclosewords</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">评论屏蔽字符</td>
+    <td bgcolor="#FFFFFF">多个用“|”格开，如“字符1|字符2” </td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>plf</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">评论字段集合</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>plmustf</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">评论必填字段集合</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>pldatatbs</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">评论分表集合</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>pldeftb</strong></td>
+    <td bgcolor="#FFFFFF">varchar(6)</td>
+    <td bgcolor="#FFFFFF">默认评论分表</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>defpltempid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">默认评论模板ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>buycarnum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">(商城)购物车数量限制</td>
+    <td bgcolor="#FFFFFF">0为不限制</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>shopddgroupid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">(商城)提交订单权限会员组ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>regretime</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">同一IP注册间隔限制</td>
+    <td bgcolor="#FFFFFF">单位：小时</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>regclosewords</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">注册用户名保留关键字</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>regemailonly</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">会员邮箱唯一性检查</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>repkeynum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">信息内容关键字重复替换次数</td>
+    <td bgcolor="#FFFFFF">0为不限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>getpasstime</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">取回密码链接有效期</td>
+    <td bgcolor="#FFFFFF">单位：小时</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>acttime</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">激活帐号链接有效期</td>
+    <td bgcolor="#FFFFFF">单位：小时</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>regacttype</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">会员注册审核方式</td>
+    <td bgcolor="#FFFFFF">1为邮件激活，0为正常方式</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>acttext</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">帐号激活邮件内容</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>getpasstext</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">取回密码邮件内容</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>acttitle</strong></td>
+    <td bgcolor="#FFFFFF">varchar(120)</td>
+    <td bgcolor="#FFFFFF">帐号激活邮件标题</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>getpasstitle</strong></td>
+    <td bgcolor="#FFFFFF">varchar(120)</td>
+    <td bgcolor="#FFFFFF">取回密码邮件标题</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>opengetpass</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">开启取回密码功能</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>hlistinfonum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">后台管理信息每页显示信息数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qlistinfonum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">前台结合项列表每页显示信息数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dtncanbq</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">动态内容页支持标签</td>
+    <td bgcolor="#FFFFFF">1为支持，0为不支持</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dtncachetime</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">动态内容页变量缓存时间</td>
+    <td bgcolor="#FFFFFF">单位：分钟</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>readdinfotime</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">重复投稿时间限制</td>
+    <td bgcolor="#FFFFFF">单位：秒</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qeditinfotime</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">投稿信息修改时间限制</td>
+    <td bgcolor="#FFFFFF">单位：分钟</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ftpssl</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">FTP启用 SSL 连接</td>
+    <td bgcolor="#FFFFFF">1为启用，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ftppasv</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">FTP启用被动模式(pasv)连接</td>
+    <td bgcolor="#FFFFFF">1为启用，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ftpouttime</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">FTP 传输超时时间</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>onclicktype</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">点击统计类型</td>
+    <td bgcolor="#FFFFFF">0为实时统计，1为文本缓存，2为不统计</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>onclickfilesize</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">点击统计文本缓存最大文件大小</td>
+    <td bgcolor="#FFFFFF">单位：KB</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>onclickfiletime</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">点击统计文本缓存最长时间</td>
+    <td bgcolor="#FFFFFF">单位：分钟</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>schalltime</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">全站搜索时间间隔</td>
+    <td bgcolor="#FFFFFF">单位：秒</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>defprinttempid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">默认打印模板ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>opentags</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">前台是否开启TAGS</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tagstempid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">TAGS默认列表模板ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>usetags</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">使用TAGS的系统模型</td>
+    <td bgcolor="#FFFFFF">多个模型ID用“,”隔开，如：,1,2,3,</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>chtags</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">只能选择TAGS的系统模型</td>
+    <td bgcolor="#FFFFFF">多个模型ID用“,”隔开，如：,1,2,3,</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tagslistnum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">TAGS每页显示信息数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>closeqdt</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否关闭前台所有动态页面</td>
+    <td bgcolor="#FFFFFF">1为开启，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>settop</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否开启信息置顶</td>
+    <td bgcolor="#FFFFFF">0为不使用置顶，1为栏目列表置顶，2为标签调用置顶，3为JS调用置顶，4为栏目/标签/JS置顶，5为栏目/标签置顶，6为栏目/JS置顶，7为标签/JS置顶</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qlistinfomod</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">投稿管理信息显示方式</td>
+    <td bgcolor="#FFFFFF">0为按表显示，1为按模型显示</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>pl_num</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">评论列表每页显示数量</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>gb_num</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">留言列表每页显示数量</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>member_num</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">会员列表每页显示数量</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>space_num</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">会员空间信息列表每页显示数量</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>opendoip</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">允许 IP 提交列表</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>closedoip</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">禁止 IP 提交列表</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>doiptype</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">提交控制IP动作</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>filelday</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">后台附件默认显示时间范围</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>infolday</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">后台信息默认显示时间范围</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>baktempnum</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">模板备份记录数</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dorepkey</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">内容关键字替换设置</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dorepword</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">内容过滤字符替换设置</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>onclickrnd</strong></td>
+    <td bgcolor="#FFFFFF">varchar(20)</td>
+    <td bgcolor="#FFFFFF">增加信息随机点击数范围</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>indexpagedt</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">首页模式</td>
+    <td bgcolor="#FFFFFF">0为静态，1为动态</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>keybgcolor</strong></td>
+    <td bgcolor="#FFFFFF">varchar(8)</td>
+    <td bgcolor="#FFFFFF">验证码背景颜色</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>keyfontcolor</strong></td>
+    <td bgcolor="#FFFFFF">varchar(8)</td>
+    <td bgcolor="#FFFFFF">验证码文字颜色</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>keydistcolor</strong></td>
+    <td bgcolor="#FFFFFF">varchar(8)</td>
+    <td bgcolor="#FFFFFF">验证码干扰颜色</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>indexpageid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">启用首页方案ID</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>closeqdtmsg</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">关闭动态页面提示内容</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>openfileserver</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否启用远程附件</td>
+    <td bgcolor="#FFFFFF">1为启用，0为关闭</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>closemods</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">关闭前台模块相关功能</td>
+    <td bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

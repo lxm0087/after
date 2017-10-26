@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta name="renderer" content="webkit"/>
+<meta http-equiv="X-UA-Comabsolutetible" content="IE=Edge,chrome=1" />
+<meta name="format-detection" content="telephone=on"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>[!--pagetitle--]_南昌莱美美容医院</title>
+<meta name="keywords" content="[!--pagekey--]">
+<meta name="description" content="[!--pagedes--]">
+<link href="[!--news.url--]skin/laimei2017/css/reset.css" rel="stylesheet"/>
+<link href="[!--news.url--]zxmr/css/wzgl.css" rel="stylesheet"/>
+<script src="[!--news.url--]skin/laimei2017/js/jquery-1.9.1.min.js"></script>
+<script src="[!--news.url--]skin/laimei2017/js/jquery.superslide.2.1.1.source.js"></script>
+<script src="[!--news.url--]skin/laimei2017/js/indexapp.js"></script>
+</head>
+<body>
+[!--temp.header--]
+<div class="wzitem center">
+	<div class="wznav pubW center">
+<?php $classid=$GLOBALS[navclassid];?> <!--单前栏目名称-->
+<?php
+$cid=$GLOBALS[navclassid];
+if($class_r[$cid]['bclassid']==0)
+{
+$fid=$cid;
+}
+else
+{
+$fid=$class_r[$cid]['bclassid'];
+}
+?>
+		<a href="[!--news.url--]">首页</a>>[e:loop={"select classid,classname,classpath from [!db.pre!]enewsclass where classid='$fid'",0,24,0}]<a href="<?=$public_r[newsurl]?><?=$bqr[classpath]?>"><?=$bqr[classname]?></a>[/e:loop]>[e:loop={"select classid,classname,classpath from [!db.pre!]enewsclass where classid='$classid'",0,24,0}]<a href="<?=$public_r[newsurl]?><?=$bqr[classpath]?>"><?=$bqr[classname]?></a>[/e:loop]
+	</div>
+	<div class="wz_stage1 pubW center">
+		<h1>[!--title--]</h1>
+	</div>
+	<div class="wz_stage2 pubW center" style="display:none;">
+		<p>[!--smalltext--]</p>
+	</div>
+	<div class="wz_stage3 pubW center">
+		[!--newstext--]
+	</div>
+	<div class="wz_stage4 pubW center">
+		<div class="wzPrevNext">
+			<div class="prev fl">上一篇：[!--info.pre--]</div>
+	    	<div class="next fl">下一篇：[!--info.next--]</div>
+		</div>	
+	</div>
+	<div class="content4 clearfix fonts">
+        <ul>
+        [e:loop={38,1,0,0,'id=37'}]
+          <li><a class="qiujing"  href="<?=$bqr[titleurl]?>"></a><p><?=$bqr[smalltext]?></p></li>
+        [/e:loop]
+        [e:loop={38,1,0,0,'id=38'}]
+          <li><a class="chengxin" href="<?=$bqr[titleurl]?>"></a><p><?=$bqr[smalltext]?></p></li>
+        [/e:loop]
+        [e:loop={38,1,0,0,'id=39'}]
+          <li><a class="reqing"   href="<?=$bqr[titleurl]?>"></a><p><?=$bqr[smalltext]?></p></li>
+        [/e:loop]
+        </ul>
+      </div>
+</div>
+<!--footer--> 
+[!--temp.footer--]
+<!--footer  结束-->

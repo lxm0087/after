@@ -1,0 +1,677 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">增加栏目</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="classname">&nbsp; &nbsp; &gt; 名词解释</option>
+          <option value="classsay">&nbsp; &nbsp; &gt; 栏目功能说明</option>
+		  <option value="addclass">&nbsp; &nbsp; &gt; 增加栏目</option>
+		  <option value="addclass1">&nbsp; &nbsp; &nbsp; &gt; 增加父栏目(非终极栏目)</option>
+		  <option value="addclass2">&nbsp; &nbsp; &nbsp; &gt; 增加终极栏目</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="classname"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、名词解释</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">父栏目：</font></strong>就是通常所说的大栏目，每个父栏目下面可以包含若干个子栏目和终极栏目。父栏目下不可以直接增加信息（文章）。 
+      <br> <strong><font color="#0000FF">终极栏目：</font></strong>指没有子栏目的栏目，只有终极栏目下，才能增加信息（文章）。 
+      <br> <strong><font color="#0000FF">非终极栏目：</font></strong>父栏及其子栏目统称为非终极栏目。 
+    </td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>父栏目、终极栏目关系示意图：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addclass1.gif" width="277" height="88"></td>
+  </tr>
+  <tr> 
+    <td height="25">父栏目与终极栏目既可以在网站根目录下呈并列关系，也可以是终极栏目隶属于父栏目（或父栏目下的子栏目）的关系。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>栏目支持无限级分类。</strong></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="classsay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、栏目功能说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>(一)、帝国CMS的非终极栏目的页面模式支持以下四种：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、封面式：</strong>页面由多个标签显示出栏目信息，不分页，显示样式由封面模板决定。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、列表式：</strong>信息列表分页显示，显示样式由列表模板决定。会显示所有子栏目下的信息列表。</td>
+  </tr>
+  <tr> 
+    <td height="25"><p><strong>3、页面内容式：</strong>页面同封面式，显示样式由栏目的“页面内容”决定。相对于封面式，页面内容式更独立，对于页面格式不通用的栏目用页面内容式更合适（比如关于我们等单页）。</p></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>4、栏目绑定信息：</strong>生成的页面为某一信息的内容。方便用发布信息做自定义页面。显示样式由填写的“绑定信息ID”决定。</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>(二)、帝国CMS的终极栏目的页面模式只有一种：列表式</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、列表式：</strong>信息列表分页显示，显示样式由列表模板决定。</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>(三)、增加栏目必填项：</strong></td>
+  </tr>
+  <tr>
+    <td height="25"><strong>1、非终极栏目：</strong>栏目名、栏目存放文件夹、绑定的系统模型、[封面式要选封面模板、列表式要选列表模板、页面内容式要填写页面内容、绑定信息要填写绑定的信息ID](模板选项TAB)</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、终极栏目：</strong>栏目名、栏目存放文件夹、绑定的系统模型、所属列表模板(模板选项TAB)、所属内容模板(模板选项TAB)</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="addclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、增加栏目</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(一)、进入增加栏目页面：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>管理栏目</strong>”子菜单，进入管理栏目界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/addclass2.jpg" width="401" height="431" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>管理栏目</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addclass3.jpg" width="775" height="391"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、从管理栏目页面点击“<strong>增加栏目</strong>”按钮，进入<strong>增加栏目</strong>界面。</td>
+  </tr>
+  <tr id="addclass1"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(二)、增加父栏目：（即非终极栏目）</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#FF0000">必填项：</font></strong><font color="#FF0000">栏目名、栏目存放文件夹、绑定的系统模型、[封面式要选封面模板、列表式要选列表模板、页面内容式要填写页面内容、绑定信息要填写绑定的信息ID](模板选项TAB)</font></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">1、基本属性</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addclass4.jpg" width="766" height="800"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF"><strong>栏目名称</strong></td>
+          <td width="85%" bgcolor="#FFFFFF">输入栏目名称。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">栏目别名</td>
+          <td bgcolor="#FFFFFF">填写信息标签调用时显示的栏目名。(不填则与栏目名相同)</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">所属父栏目</td>
+          <td bgcolor="#FFFFFF">选择上级栏目。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">栏目类型</td>
+          <td bgcolor="#FFFFFF"><strong>内部栏目：</strong>正常的网站栏目。<br> <strong>外部栏目：</strong>只是作为一个链接，链接到外部页面，无实际内容。（增加只需填外部栏目链接地址）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>是否终级栏目</strong></td>
+          <td bgcolor="#FFFFFF">不选为增加父栏目(非终极栏目)、勾选为增加终极栏目。（终级栏目下才能增加信息）<br>
+            （设置后，管理栏目页面还可以转换）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>栏目存放文件夹</strong></td>
+          <td bgcolor="#FFFFFF">设置栏目存放的目录。（一般只需填本栏目目录）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>绑定的系统模型</strong></td>
+          <td bgcolor="#FFFFFF">选择栏目采用哪个系统模型。（如果是父栏目，标签按父栏目调用时则调用此模型的信息）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">使用优化方案</td>
+          <td bgcolor="#FFFFFF">选择此栏目使用的优化方案。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">绑定域名</td>
+          <td bgcolor="#FFFFFF">给栏目单独绑定域名。(没有绑定，请留空.后面无需加&quot;/&quot;)</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>应用于子栏目：</strong>将绑定的域名应用于子栏目地址。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">栏目缩略图</td>
+          <td bgcolor="#FFFFFF">填写栏目缩图。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">页面关键字</td>
+          <td bgcolor="#FFFFFF">输入页面的SEO关键字，该内容显示于页面“网页keywords”处。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">栏目简介</td>
+          <td bgcolor="#FFFFFF">填写栏目简介内容。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">2、选项设置</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addclass5.jpg" width="763" height="268"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF">是否显示到导航</td>
+          <td width="85%" bgcolor="#FFFFFF">选择栏目是否显示到导航。（如：栏目导航标签，地图标签等调用时是否显示）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">显示排序</td>
+          <td bgcolor="#FFFFFF">设置显示或标签调用栏目时的显示顺序（值越小越前面）。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">栏目访问权限</td>
+          <td bgcolor="#FFFFFF">设置本栏目页面的查看权限，不选为不限(游客/会员均可访问)。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">开放投稿</td>
+          <td bgcolor="#FFFFFF">选择本栏目是否开放投稿。（如果关闭，投稿页面父栏目下的子栏目都不会显示）</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">3、模板选项</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addclass6.jpg" width="791" height="728"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF"><strong>页面显示模式</strong></td>
+          <td width="85%" bgcolor="#FFFFFF">选择栏目页面的显示模式。（封面式、列表式、页面内容式、栏目绑定信息）<br>
+            封面式要选择封面模板、列表式要选择列表模板、内容式要录入页面内容、栏目绑定信息要填绑定信息ID。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>封面模板</strong></td>
+          <td bgcolor="#FFFFFF">采用封面式时选择使用的封面模板。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>所属列表模板</strong></td>
+          <td bgcolor="#FFFFFF">采用列表式时选择使用的列表模板。（选择下拉框中白色条选项）<br>
+            （一般只需选静态页的列表模板，如果栏目同时采用静态页和动态页两种就再选动态页列表模板）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">搜索模板</td>
+          <td bgcolor="#FFFFFF">选择当按此栏目搜索时使用的搜索模板。（选择下拉框中白色条选项）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">WAP模板</td>
+          <td bgcolor="#FFFFFF">选择本栏目使用的WAP模板。WAP模块访问页面的设置。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>应用于子栏目：</strong>子栏目页面也采用此WAP模板。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>页面内容</strong></td>
+          <td bgcolor="#FFFFFF">采用页面内容式时此项需录入页面内容（支持标签同封面模板，内容可用Dreamweaver制作）。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">4、生成选项</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addclass7.jpg" width="680" height="387"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF">栏目页模式</td>
+          <td width="85%" bgcolor="#FFFFFF">静态页面：栏目页生成静态页面。<br>
+            动态页面：栏目页不生成静态页面。（动态页面访问：/e/action/ListInfo/?classid=栏目ID）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">内容页模式</td>
+          <td bgcolor="#FFFFFF">静态页面：内容页生成静态页面。<br>
+            动态生成：访问者点击信息链接时才触发生成静态页面。<br>
+            动态页面：内容页不生成静态页面。（动态页面访问：/e/action/ShowInfo.php?classid=栏目ID&amp;id=信息ID）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">管理信息排序方式</td>
+          <td bgcolor="#FFFFFF">填写后台按此栏目管理信息时的显示排序方式。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">列表式页面排序方式</td>
+          <td bgcolor="#FFFFFF">填写前台信息列表页的信息显示排序方式。（列表式时有效）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">是否生成</td>
+          <td bgcolor="#FFFFFF">不生成栏目页：选择栏目不生成页面。（要页面只能后台查看时使用）<br>
+            不生成内容页：选择栏目下的内容页不生成页面。（要页面只能后台查看时使用）<br>
+            不生成JS调用：选择栏目下的JS调用不生成。（要页面只能后台查看时使用）<br>
+            标签不调用： 选择标签按栏目调用时，不调用信息。（要页面只能后台查看时使用）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">栏目文件扩展名</td>
+          <td bgcolor="#FFFFFF">填写生成的栏目页文件扩展名。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">显示总记录数</td>
+          <td bgcolor="#FFFFFF">设置限制最大显示信息的数量。（列表式时有效）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">生成信息每页显示</td>
+          <td bgcolor="#FFFFFF">每页显示信息数量。（列表式时有效）</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">5、JS调用设置</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addclass8.jpg" width="682" height="325"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF">所用JS模板</td>
+          <td width="85%" bgcolor="#FFFFFF">选择JS调用使用的JS模板。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">最新信息JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示最新信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">热门信息JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示热门信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">推荐信息JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示最新推荐信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">热门评论信息JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示热门评论信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">头条信息JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示最新头条信息的数量。</td>
+        </tr>
+      </table> <br> </td>
+  </tr>
+  <tr id="addclass2"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(三)、增加终极栏目：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#FF0000">必填项：</font></strong><font color="#FF0000">栏目名、栏目存放文件夹、绑定的系统模型、所属列表模板(模板选项TAB)、所属内容模板(模板选项TAB)</font></td>
+  </tr>
+  <tr>
+    <td height="25"><strong><font color="#0000FF">1、基本属性</font></strong></td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/addclass9.jpg" width="744" height="801"></td>
+  </tr>
+  <tr>
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF"><strong>栏目名称</strong></td>
+          <td width="85%" bgcolor="#FFFFFF">输入栏目名称。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">栏目别名</td>
+          <td bgcolor="#FFFFFF">填写信息标签调用时显示的栏目名。(不填则与栏目名相同)</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">所属父栏目</td>
+          <td bgcolor="#FFFFFF">选择上级栏目。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">栏目类型</td>
+          <td bgcolor="#FFFFFF"><strong>内部栏目：</strong>正常的网站栏目。<br> <strong>外部栏目：</strong>只是作为一个链接，链接到外部页面，无实际内容。（增加只需填外部栏目链接地址）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>是否终级栏目</strong></td>
+          <td bgcolor="#FFFFFF">不选为增加父栏目(非终极栏目)、勾选为增加终极栏目。（终级栏目下才能增加信息）<br>
+            （设置后，管理栏目页面还可以转换） </td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>栏目存放文件夹</strong></td>
+          <td bgcolor="#FFFFFF">设置栏目存放的目录。（一般只需填本栏目目录）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>绑定的系统模型</strong></td>
+          <td bgcolor="#FFFFFF">选择栏目采用哪个系统模型。（如果是父栏目，标签按父栏目调用时则调用此模型的信息）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">使用优化方案</td>
+          <td bgcolor="#FFFFFF">选择此栏目使用的优化方案。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">绑定域名</td>
+          <td bgcolor="#FFFFFF">给栏目单独绑定域名。(没有绑定，请留空.后面无需加&quot;/&quot;)</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>应用于子栏目：</strong>将绑定的域名应用于子栏目地址。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">栏目缩略图</td>
+          <td bgcolor="#FFFFFF">填写栏目缩图。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">页面关键字</td>
+          <td bgcolor="#FFFFFF">输入页面的SEO关键字，该内容显示于页面“网页keywords”处。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">栏目简介</td>
+          <td bgcolor="#FFFFFF">填写栏目简介内容。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="25"><strong><font color="#0000FF">2、选项设置</font></strong></td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/addclass10.jpg" width="744" height="825"></td>
+  </tr>
+  <tr>
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF">是否显示到导航</td>
+          <td width="85%" bgcolor="#FFFFFF">选择栏目是否显示到导航。（如：栏目导航标签，地图标签等调用时是否显示）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">显示排序</td>
+          <td bgcolor="#FFFFFF">设置显示或标签调用栏目时的显示顺序（值越小越前面）。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">栏目访问权限</td>
+          <td bgcolor="#FFFFFF">设置本栏目页面的查看权限，不选为不限(游客/会员均可访问)。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>访问权限应用于信息：</strong>将栏目访问权限应用于栏目下的内容页。(选择后信息的查看权限可以不设置)</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">开放投稿</td>
+          <td bgcolor="#FFFFFF">选择本栏目是否开放投稿。如开启，则进行下面的前台投稿设置。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>前台投稿设置</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">验证码</td>
+          <td bgcolor="#FFFFFF">选择投稿是否开启验证码。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">投稿权限</td>
+          <td bgcolor="#FFFFFF">设置本栏目的投稿权限，不选为不限(游客/会员均可投稿)。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">投稿生成列表</td>
+          <td bgcolor="#FFFFFF">设置发布投稿后同时自动生成相关联的页面。（内容多时比较耗资源）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">投稿审核</td>
+          <td bgcolor="#FFFFFF">选择发布投稿的信息是否需要审核。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">发布信息增加</td>
+          <td bgcolor="#FFFFFF">设置发布一篇投稿增加的点数。（不增加请设为0,扣点请设为负数）<br>
+            （投稿权限设置为会员以上有效）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">管理投稿</td>
+          <td bgcolor="#FFFFFF">选择会员发布投稿后是否可编辑、删除自己投稿的信息。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>编辑信息需要审核：</strong>选择修改信息后是否需要重新审核。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>后台信息发布设置</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">增加/编辑信息</td>
+          <td bgcolor="#FFFFFF"><strong>生成内容页：</strong>后台增加或修改信息时直接生成内容页面。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>生成列表：</strong>后台增加或修改信息后自动生成相关联的页面。（内容多时比较耗资源）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>生成上一篇信息：</strong>选择后台增加/修改信息后是否同时生成上一篇信息的页面。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>检测标题重复：</strong>选择是否验证标题是否重复。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">审核设置</td>
+          <td bgcolor="#FFFFFF">选择后台增加信息时默认是否为审核状态。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">使用工作流</td>
+          <td bgcolor="#FFFFFF">选择本栏目的发布信息使用的工作流。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">信息预设投票</td>
+          <td bgcolor="#FFFFFF">选择增加信息时默认的信息投票选项。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">默认查看信息权限</td>
+          <td bgcolor="#FFFFFF">增加信息时默认的会员组权限选项。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>其他设置</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">评论功能</td>
+          <td bgcolor="#FFFFFF">本栏目前台信息是否开启用户评论功能。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>评论需要审核：</strong>选择评论是否要审核。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">信息归档</td>
+          <td bgcolor="#FFFFFF">设置归档大于几天的信息，如设为2天，则两天前的信息即设为归档。设为0，则所有信息都不归档。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>特殊模型设置</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">下载/影视模型</td>
+          <td bgcolor="#FFFFFF">模型采用downpath下载地址字段时的每行显示下载地址数设置。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">模型采用onlinepath在线地址字段时的每行显示在线观看地址数设置。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="25"><strong><font color="#0000FF">3、模板选项</font></strong></td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/addclass11.jpg" width="760" height="374"></td>
+  </tr>
+  <tr>
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF"><strong>所属列表模板</strong></td>
+          <td width="85%" bgcolor="#FFFFFF">选择使用的列表模板。（选择下拉框中白色条选项）<br>
+            （一般只需选静态页的列表模板，如果栏目同时采用静态页和动态页两种就再选动态页列表模板）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>所属内容模板</strong></td>
+          <td bgcolor="#FFFFFF">选择本栏目下的信息默认使用的内容模板。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>应用于已生成的信息：</strong>如果更改为其他内容模板，勾选将发布过的信息也采用此模板。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">所属评论模板</td>
+          <td bgcolor="#FFFFFF">选择本栏目信息使用的评论模板。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">搜索模板</td>
+          <td bgcolor="#FFFFFF">选择当按此栏目搜索时使用的搜索模板。（选择下拉框中白色条选项）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">WAP模板</td>
+          <td bgcolor="#FFFFFF">选择本栏目使用的WAP模板。WAP模块访问页面的设置。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>应用于子栏目：</strong>子栏目页面也采用此WAP模板。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="25"><strong><font color="#0000FF">4、生成选项</font></strong></td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/addclass12.jpg" width="679" height="526"></td>
+  </tr>
+  <tr>
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF">栏目页模式</td>
+          <td width="85%" bgcolor="#FFFFFF">静态页面：栏目页生成静态页面。<br>
+            动态页面：栏目页不生成静态页面。（动态页面访问：/e/action/ListInfo/?classid=栏目ID）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">内容页模式</td>
+          <td bgcolor="#FFFFFF">静态页面：内容页生成静态页面。<br>
+            动态生成：访问者点击信息链接时才触发生成静态页面。<br>
+            动态页面：内容页不生成静态页面。（动态页面访问：/e/action/ShowInfo.php?classid=栏目ID&amp;id=信息ID）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">管理信息排序方式</td>
+          <td bgcolor="#FFFFFF">填写后台按此栏目管理信息时的显示排序方式。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">列表式页面排序方式</td>
+          <td bgcolor="#FFFFFF">填写前台信息列表页的信息显示排序方式。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">是否生成</td>
+          <td bgcolor="#FFFFFF">不生成栏目页：选择栏目不生成页面。（要页面只能后台查看时使用）<br>
+            不生成内容页：选择栏目下的内容页不生成页面。（要页面只能后台查看时使用）<br>
+            不生成JS调用：选择栏目下的JS调用不生成。（要页面只能后台查看时使用）<br>
+            标签不调用： 选择标签按栏目调用时，不调用信息。（要页面只能后台查看时使用）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">栏目文件扩展名</td>
+          <td bgcolor="#FFFFFF">填写生成的栏目页文件扩展名。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">显示总记录数</td>
+          <td bgcolor="#FFFFFF">设置限制最大显示信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">生成信息每页显示</td>
+          <td bgcolor="#FFFFFF">每页显示信息数量。</td>
+        </tr>
+        <tr>
+          <td height="25" bgcolor="#FFFFFF">相关链接显示</td>
+          <td bgcolor="#FFFFFF">设置信息相关链接的数量。（0为不生成相关链接）</td>
+        </tr>
+        <tr>
+          <td height="25" bgcolor="#FFFFFF">内容页存放目录</td>
+          <td bgcolor="#FFFFFF"><strong>栏目目录：</strong>内容静态页面生成到栏目目录里。<br>
+            <strong>自定义：</strong>自定义内容静态页面生成目录。（地址从根目录开始，比如：“html”。存放到根目录设置为/）</td>
+        </tr>
+        <tr>
+          <td height="25" bgcolor="#FFFFFF">内容页目录存放形式</td>
+          <td bgcolor="#FFFFFF">填写内容静态页面生成的日期目录格式，空为不生成日期目录。（Y为年，m为月份，d为天数等）</td>
+        </tr>
+        <tr>
+          <td height="25" bgcolor="#FFFFFF">内容页文件命名形式</td>
+          <td bgcolor="#FFFFFF"><strong>[前缀]：</strong>填写内容页文件名的前缀。</td>
+        </tr>
+        <tr>
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>命名：</strong>选择内容页文件名命名规则。</td>
+        </tr>
+        <tr>
+          <td height="25" bgcolor="#FFFFFF">内容页文件扩展名</td>
+          <td bgcolor="#FFFFFF">填写生成的内容页文件扩展名。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">5、JS调用设置</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addclass8.jpg" width="682" height="325"> </td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF">所用JS模板</td>
+          <td width="85%" bgcolor="#FFFFFF">选择JS调用使用的JS模板。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">最新信息JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示最新信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">热门信息JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示热门信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">推荐信息JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示最新推荐信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">热门评论信息JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示热门评论信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">头条信息JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示最新头条信息的数量。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

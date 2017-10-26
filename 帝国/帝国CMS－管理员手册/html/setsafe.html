@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">安全参数配置</strong></td>
+    <td width="50%"><div align="center"> </div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="27" colspan="2"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>本功能为对网站安全相关参数进行配置。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25">一、登录后台，单击“<strong>系统</strong>”菜单，选择“<strong>安全参数配置</strong>”子菜单，进入安全参数配置界面：</td>
+  </tr>
+  <tr>
+    <td><img src="img/setsafe1.jpg" width="305" height="362" border="0"></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="pubvarclass"> 
+    <td width="100%" height="25"><strong>二、进入安全参数配置界面：</strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/setsafe2.jpg" width="700" height="418"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">后台安全相关配置</td>
+          <td>对应e/class/config.php文件变量</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="13%"><strong>后台登陆认证码</strong></td>
+          <td width="44%">用于验证是否内部人员，登录时需填写此认证码才能登录后台。</td>
+          <td width="43%">$do_loginauth</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>后台登录COOKIE认证码</strong></td>
+          <td>验证信息加密密钥(填写10~50个任意字符，最好多种字符组合)。</td>
+          <td>$do_ecookiernd</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>后台开启文件验证登陆</strong></td>
+          <td>以文件方式验证用户是否登录，第五重安全认证。</td>
+          <td>$do_ckhloginfile</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>后台开启验证登录IP</strong></td>
+          <td>COOKIE信息与登录IP绑定认证，假如COOKIE信息被完全获取并且随机密码没有改动，不知道登录者IP也无法通过认证，第四重安全认证。</td>
+          <td>$do_ckhloginip</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>记录登陆日志</strong></td>
+          <td>是否开启记录登陆日志。</td>
+          <td>$do_theloginlog</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>记录操作日志</strong></td>
+          <td>是否开启记录操作日志。</td>
+          <td>$do_thedolog</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="3">COOKIE配置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>COOKIE作用域<br>
+            </strong></td>
+          <td>设置COOKIE在哪个域有效，通常不用设置。</td>
+          <td>$phome_cookiedomain</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>COOKIE作用路径</strong></td>
+          <td>设置COOKIE作用路径，通常设置/。</td>
+          <td>$phome_cookiepath</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>前台COOKIE变量前缀</strong></td>
+          <td>由英文字母组成,5~12个字符组成</td>
+          <td>$phome_cookievarpre</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>后台COOKIE变量前缀</strong></td>
+          <td>由英文字母组成,5~12个字符组成</td>
+          <td>$phome_cookieadminvarpre</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>COOKIE验证随机码</strong></td>
+          <td>前台COOKIE验证信息加密密钥(填写10~50个任意字符，最好多种字符组合)。</td>
+          <td>$phome_cookieckrnd</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25"><strong>三、其他说明：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、上面是后台在线修改配置的方法，也可以直接修改e/class/config.php配置文件里的参数。</td>
+  </tr>
+  <tr> 
+    <td height="25">2、为了更安全你也可以关闭后台在线设置：修改e/class/config.php配置文件里的：<br>
+      $do_openonlinesetting=3; //开启后台在线配置参数(0为关闭,1为开启防火墙配置,2为开启安全配置,3为全开启)</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

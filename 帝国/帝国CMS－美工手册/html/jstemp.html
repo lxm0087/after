@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>JS模板制作说明</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">JS模板</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="fmjstemp">&nbsp; &nbsp; &gt; JS模板制作格式</option>
+          <option value="jstemp">&nbsp; &nbsp; &gt; 管理JS模板</option>
+		  <option value="jstempexp">&nbsp; &nbsp; &gt; JS模板制作范例</option>
+          <option value="other">&nbsp; &nbsp; &gt; 其他说明</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>JS模板是指JS调用使用的模板。（系统调用信息同时支持用标签调用与JS调用）</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="fmjstemp"> 
+    <td height="25"><strong><font color="#FFFFFF">JS模板制作格式</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="80" bgcolor="#FFFFFF">列表头<br>
+      [!--empirenews.listtemp--]<br>
+      列表内容<br>
+      [!--empirenews.listtemp--]<br>
+      列表尾</td>
+  </tr>
+  <tr> 
+    <td bgcolor="#FFFFFF"> <p><font color="#666666">说明：第一个[!--empirenews.listtemp--]表示循环开始、第二个[!--empirenews.listtemp--]表示循环结束。</font></p></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="jstemp"> 
+    <td height="24" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">管理JS模板</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>模板</strong>”菜单，选择“<strong>管理JS模板</strong>”子菜单，进入管理JS模板界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/jstemp1.jpg" width="447" height="482" border="0"></td>
+  </tr>
+  <tr>
+    <td height="25">2、进入管理JS模板界面：(蓝色背景为默认模板)</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/jstemp2.jpg" width="707" height="254"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、点击“<strong>修改</strong>”进入<strong>修改JS模板</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="32"><img src="img/jstemp3.jpg" width="686" height="664" border="0"> 
+      <br> <br> 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF">
+          <td height="25">模板名称</td>
+          <td>填写模板名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td height="25">所属系统模型</td>
+          <td>指这个JS模板用于的系统模型。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td height="25">所属分类</td>
+          <td>选择模板所属分类，方便管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td height="25">简介截取字数</td>
+          <td>设置简介字段的截取字数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td height="25">标题截取字数</td>
+          <td>设置标题字段的截取字数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="13%" height="25">时间显示格式</td>
+          <td width="87%"><p>发布时间格式，默认为[m-d]，则表示：“[12-07]”</p></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>模板内容</td>
+          <td height="25">JS模板的内容。</td>
+        </tr>
+      </table>
+      <br> <br>
+      JS模板支持的变量：<br> 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF">
+          <td height="25">[!--news.url--]：网站地址</td>
+          <td>[!--id--]:信息ID</td>
+          <td>[!--classid--]:栏目ID</td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td height="25">[!--titleurl--]:标题链接</td>
+          <td>[!--oldtitle--]:标题ALT(不截取字符)</td>
+          <td>[!--class.name--]:栏目名称</td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td height="25" bgcolor="#FFFFFF">[!--this.classname--]：栏目名称(不带链接)</td>
+          <td>[!--this.classlink--]：栏目地址</td>
+          <td>[!--no.num--]：信息编号</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--userid--]：发布者ID</td>
+          <td>[!--username--]：发布者</td>
+          <td>[!--userfen--]：查看信息扣除点数</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--onclick--]：点击数</td>
+          <td>[!--totaldown--]：下载数</td>
+          <td>[!--plnum--]：评论数</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--ttid--]：标题分类ID</td>
+          <td>[!--tt.name--]：标题分类名称</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[!--字段名--]:数据表字段内容调用</strong></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr id="jstempexp">
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">JS模板制作范例</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、用dreamweaver制作好模板界面，然后在表单加上JS模板标签变量：</td>
+  </tr>
+  <tr> 
+    <td>图1：设计视图<br>
+      <img src="img/jstemp4.gif" width="272" height="44" border="1"><br> 
+      <br>
+      代码： <br>
+      <img src="img/jstemp5.gif" width="899" height="194" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、显示效果</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/jstemp6.gif" width="295" height="221" border="1"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr id="other">
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">其他说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="23">1、“所有信息最新JS”、“所有信息热门JS”等是使用默认JS模板。</td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">结合项</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="fieldandsay">&nbsp; &nbsp; &gt; 结合项功能介绍</option>
+          <option value="fieldand">&nbsp; &nbsp; &gt; 结合项的语法说明</option>
+          <option value="fieldandexp">&nbsp; &nbsp; &gt; 使用范例</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="fieldandsay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、结合项功能介绍</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">为了使信息列表可实现按多种条件输出数据，帝国CMS独创可设置无限条件的模型结合项功能。帝国CMS的结合项功能是指按模型多个字段内容来结合显示对应的信息。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="fieldand"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、结合项的语法说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>结合项访问地址：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><font color="#FF0000"><strong>/e/action/ListInfo.php?classid=栏目ID&amp;ph=1&amp;字段名1=值1&amp;字段名2=值2......&amp;字段名N=值N</strong></font></td>
+  </tr>
+  <tr> 
+    <td height="25">1、栏目动态列表下使用结合项（有选择列表模板的栏目都可以使用动态列表链接[父栏目与终极栏目均可]）；<br>
+      2、“ph=1”为声名要使用结合项；<br>
+      3、“字段名”必须为后台系统模型选择的结合项字段；<br>
+      4、结合项字段可为数据表的所有字段，并且多个字段之间的关系是“并且(and)”；<br>
+      5、结合项有两种匹配方式：完全匹配则为值完全相等即可符合；模糊匹配则为包含字符即可符合。</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>附加语法说明：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> <font color=red><b>1、列出某一个数据表的所有信息：</b></font><br> 指定数据表的系统模型ID即可,模型ID变量名为：mid<br>
+      例子：下面链接为显示新闻表的所有信息：<br>
+      /e/action/ListInfo.php?mid=1<br>
+      <br> <font color=red><b>2、列出多栏目的信息列表：</b></font><br> 栏目ID变量名：classid<br>
+      显示多个栏目可以用逗号格开<br>
+      例子：下面为显示栏目ID=2的所有信息<br>
+      /e/action/ListInfo.php?classid=2<br>
+      <br> <font color=red><b>3、列出多专题的信息列表：</b></font><br> 专题ID变量名：ztid<br>
+      显示多个专题可以用逗号格开<br>
+      例子：下面为显示专题ID=1的所有信息<br>
+      /e/action/ListInfo.php?ztid=1<br>
+      <br> <font color=red><b>4、列出标题分类的信息列表：</b></font><br> 标题分类ID变量名：ttid<br>
+      显示多个标题分类可以用逗号格开<br>
+      例子：下面为显示标题分类ID=1的所有信息<br>
+      /e/action/ListInfo.php?ttid=1<br>
+      <br> <font color=red><b>5、指定显示的列表模板：</b></font><br> 列表模板ID变量名：tempid<br>
+      例子：下面为使用模板ID=1的列表模板<br>
+      /e/action/ListInfo.php?mid=1&amp;tempid=1<br>
+      <br> <font color=red><b>6、指定每页显示记录数：</b></font><br> 每页显示记录数变量名：line<br>
+      不指定为按指定的栏目、专题或者参数设置的每页显示条数<br>
+      例子：下面为每页显示20条的列表<br>
+      /e/action/ListInfo.php?mid=1&amp;tempid=1&amp;line=20<br>
+      <br> <font color=red><b>7、指定信息发布起始和结束时间范围：</b></font><br> 起始时间变量名：starttime 
+      ；结束时间变量名：endtime<br>
+      时间格式：'2009-08-20'，不指定起始时间则表示显示结束时间之前的所有信息<br>
+      例子：下面为显示2009-08-20当天的信息列表<br>
+      /e/action/ListInfo.php?mid=1&amp;tempid=1&amp;starttime=2009-08-20&amp;endtime=2009-08-20<br>
+      <br> <font color=red><b>8、指定排序字段：</b></font><br> 排序字段变量名：orderby ；升降序字段变量：myorder<br>
+      系统排序字段：newstime,id,onclick,totaldown,plnum<br>
+      自定义排序字段：系统模型里将字段设置为排序项的字段<br>
+      myorder=0为降序排序(默认) ；myorder=1为升序排序<br>
+      例子：下面为按信息点击数(onclick)降序排序<br>
+      /e/action/ListInfo.php?mid=1&amp;tempid=1&amp;orderby=onclick<br>
+      <br> <font color=red><b>9、页面模板支持标签调用与程序代码：</b></font><br> 实现动态列表页面效果和静态列表一样；<br>
+      可接收地址栏变量并输出相应导航等。<br>
+      <br>
+      <font color=red><b>10、字段之间的关联逻辑符：</b></font><br>
+      字段之间关联逻辑符变量名：andor<br>
+      不指定默认为“and”方式。你还可以指定为“or”方式。<br>
+      例子：下面为显示“title=标题”或者“writer=作者”的列表<br>
+      /e/action/ListInfo.php?ph=1&amp;mid=1&amp;tempid=1&amp;title=标题&amp;writer=作者&amp;andor=or<br>
+      <br>
+      <font color=red><b>11、数字范围比较逻辑运算联结符：</b></font><br>
+      显示数字之间的信息，比较格式：1__2，比较内容之间用两个下划线分隔。(结合项字段的类型要用数字型)<br>
+      例子：下面为显示价格字段在1~100之间的的信息列表<br>
+      /e/action/ListInfo.php?mid=1&amp;tempid=1&amp;price=1__100<br>
+      <br>
+      <br>
+      <font color=blue><b><font size=3>应用例子：</font></b></font><br>
+      <b>例1：显示分类信息表所有“朝阳区”地区的信息，地址为如下：</b><br>
+      /e/action/ListInfo.php?mid=8&amp;tempid=8&amp;ph=1&amp;myarea=朝阳区<br>
+      <br>
+      <b>例2：显示栏目ID=2并且专题ID=1的信息，地址为如下：</b><br>
+      /e/action/ListInfo.php?classid=2&amp;ztid=1&amp;tempid=1<br>
+      <br>
+      <b>例3：显示分类信息表中栏目id=10和17、专题ID=1、标题分类ID=1、发布时间为2009-01-01～2009-08-20、地区为“朝阳区”、联系邮箱为<a href="mailto:test@phome.net">test@phome.net</a>的所有信息，地址为如下：</b><br>
+      /e/action/ListInfo.php?mid=8&amp;tempid=1&amp;classid=10,17&amp;ztid=1&amp;ttid=1&amp;starttime=2009-01-01&amp;endtime=2009-08-20&amp;ph=1&amp;myarea=朝阳区&amp;email=test@phome.net<br>
+      <br>
+      <font color=blue><b><font size=3>其他说明：</font></b></font><br>
+      使用结合项字段要加ph=1参数</td>
+  </tr>
+  <tr> 
+    <td height="25">结合项功能非常实用灵活，更多应用期待您去实践。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="fieldandexp"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、使用范例</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>以信息分类为例(其它系统模型也是一样的设置)。</strong></td>
+  </tr>
+  <tr>
+    <td height="25"><font color="#FF0000"><strong>5.1以下版本结合项地址为：/e/action/ListInfo/<br>
+      6.0以上版本结合项地址为：/e/action/ListInfo.php</strong></font></td>
+  </tr>
+  <tr> 
+    <td height="25">1、如下图中，我们在系统模型中开启了“所在地”与“联系邮箱”为结合项。</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/fieldand1.jpg" width="703" height="582"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、假设“e/action/ListInfo.php?classid=9”显示出的是所有信息分类栏目的数据。</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/fieldand2.jpg" width="583" height="623"></td>
+  </tr>
+  <tr> 
+    <td height="25">列出所在地为“昌平区”的所有信息</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/fieldand3.jpg" width="600" height="623"></td>
+  </tr>
+  <tr> 
+    <td height="25">列出所在地为“昌平区”，并且联系邮箱是“ts@abc.com”的所有信息</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/fieldand4.jpg" width="670" height="445"></td>
+  </tr>
+  <tr> 
+    <td height="25">附加说明：上面举例的是选择完全匹配方式，也可以选择模糊匹配方式，模糊匹配则只要包含字符值即可符合条件。例：“e/action/ListInfo.php?classid=9&amp;ph=1&amp;email=abc.com”就能列出邮箱地址中包含“abc.com”字符的的所有分类信息。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tagsclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">相关链接</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><a href="http://bbs.phome.net/showthread-13-25490-0.html" target="_blank">1、帝国CMS功能解密之：系统模型结合项</a></td>
+  </tr>
+  <tr>
+    <td height="25"><a href="http://bbs.phome.net/showthread-13-108251-0.html" target="_blank">2、帝国CMS功能解密之新版结合项功能</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

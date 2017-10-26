@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">用PHP代码实现灵动标签的技巧</strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">帝国CMS用PHP代码实现灵动标签的技巧：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><b>为什么要了解这个技巧</b><br>
+      1、通过php代码可以在不支持灵动标签的页面中调用信息。<br>2、通过php代码来调用信息更灵活，可以支持标签无限嵌套的效果。<br><br><b>如何用PHP代码实现灵动标签的功能</b><br>我们先看下灵动标签语法：<br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>[e:loop={栏目ID/专题ID,显示条数,操作类型,只显示有标题图片,附加SQL条件,显示排序}]<br>模板代码内容<br>[/e:loop]</td></tr></table><br>上面对应的PHP函数是：<br>sys_ReturnEcmsLoopBq(栏目ID/专题ID,显示条数,操作类型,只显示有标题图片,附加SQL条件,显示排序)<br><br>灵动标签实际对应的原型PHP代码为如下：<br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>&lt;?php<br>$ecms_bq_sql=sys_ReturnEcmsLoopBq(栏目ID/专题ID,显示条数,操作类型,只显示有标题图片,附加SQL条件,显示排序);<br>$bqno=0;<br>while($bqr=$empire-&gt;fetch($ecms_bq_sql))<br>{<br>&nbsp; &nbsp; &nbsp; &nbsp; $bqsr=sys_ReturnEcmsLoopStext($bqr);<br>&nbsp; &nbsp; &nbsp; &nbsp; $bqno++;<br>&nbsp; &nbsp; &nbsp; &nbsp; ?&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; 模板代码内容<br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;?php<br>}<br>?&gt;</td></tr></table><br><br><b>怎么做能实现标签无限嵌套的效果？下面举例：</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>&lt;?php<br>$ecms_bq_sql=sys_ReturnEcmsLoopBq(栏目ID/专题ID,显示条数,操作类型,只显示有标题图片,附加SQL条件,显示排序);<br>$bqno=0;<br>while($bqr=$empire-&gt;fetch($ecms_bq_sql))<br>{<br>&nbsp; &nbsp; &nbsp; &nbsp; $bqsr=sys_ReturnEcmsLoopStext($bqr);<br>&nbsp; &nbsp; &nbsp; &nbsp; $bqno++;<br>&nbsp; &nbsp; &nbsp; &nbsp; ?&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; <br>&nbsp; &nbsp; &nbsp; &nbsp; <font color=red>&lt;?php<br>&nbsp; &nbsp; &nbsp; &nbsp; $ecms_bq_sql2=sys_ReturnEcmsLoopBq(栏目ID/专题ID,显示条数,操作类型,只显示有标题图片,附加SQL条件,显示排序);<br>&nbsp; &nbsp; &nbsp; &nbsp; $bqno2=0;<br>&nbsp; &nbsp; &nbsp; &nbsp; while($bqr2=$empire-&gt;fetch($ecms_bq_sql2))<br>&nbsp; &nbsp; &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $bqsr2=sys_ReturnEcmsLoopStext($bqr2);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $bqno2++;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ?&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 模板代码内容2 &lt;?=$bqr2[title]?&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;?php<br>&nbsp; &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp; &nbsp; &nbsp; ?&gt;</font><br><br>&nbsp; &nbsp; &nbsp; &nbsp; 模板代码内容 &lt;?=$bqr[title]?&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;?php<br>}<br>?&gt;</td></tr></table><br>红色部分是二次嵌套，还可以加三次、四次...，由上可以看出通过PHP代码是可以实现标签无限嵌套，只要$ecms_bq_sql、$bqno、$bqr、$bqsr变量名改下就可以了。
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">特殊字段正则的说明</strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">采集的一些特殊字段说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><strong>1、“下载地址正则”、“在线观看地址正则”、“图片集正则”。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">说明：下面的两个正则是分开的，并且是用“<strong>[!empirecms!]</strong>”格开。</td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="17%" rowspan="2">下载地址正则</td>
+          <td width="83%" height="25">格式：地址正则<font color="#666666">([!--ecmsdownpathurl--])</font><strong>[!empirecms!]</strong>名称正则<font color="#666666">([!--ecmsdownpathname--])</font></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">说明：名称正则可以不设置，由系统自己命名。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td rowspan="2">在线观看地址正则</td>
+          <td height="25">格式:地址正则<font color="#666666">([!--ecmsonlinepathurl--])</font><strong>[!empirecms!]</strong>名称正则<font color="#666666">([!--ecmsonlinepathname--])</font></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">说明：名称正则可以不设置，由系统自己命名。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td rowspan="2">图片集正则</td>
+          <td height="25">格式:缩略图([!--ecmsspicurl--])<strong>[!empirecms!]</strong>大图([!--ecmsbpicurl--])<strong>[!empirecms!]</strong>名称([!--ecmspicname--])</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">说明：大图与名称正则可以不设置。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="31"><p><strong>2、只要字段“输入表单显示元素”是“图片(img)”、“FLASH文件”、“文件(file)”均支持远程保存文件到本地。</strong></p></td>
+  </tr>
+  <tr> 
+    <td height="31"><strong>3、“newstext”字段才支持远程保存内容里的图片和FLASH到本地。</strong></td>
+  </tr>
+</table>
+</body>
+</html>

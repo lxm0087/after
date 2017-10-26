@@ -1,0 +1,2 @@
+service sshd restart
+$ ssh git@192.168.56.101 'cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub

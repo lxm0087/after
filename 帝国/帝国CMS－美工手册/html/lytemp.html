@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>留言板模板制作</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">留言板模板</strong></td>
+  </tr>
+  <tr> 
+    <td height="27" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>留言板模板为留言板插件页面的模板(/e/tool/gbook)。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">留言板模板制作格式</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><strong>模板页面格式：</strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+  <tr> 
+    <td height="80" bgcolor="#FFFFFF">列表头<br>
+      [!--empirenews.listtemp--]<br>
+      列表内容<br>
+      [!--empirenews.listtemp--]<br>
+      列表尾</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"> 
+      <p><font color="#666666">说明：第一个[!--empirenews.listtemp--]表示循环开始、第二个[!--empirenews.listtemp--]表示循环结束。</font></p>
+      </td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><strong>显示留言回复内容格式</strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+  <tr> 
+    <td height="60" bgcolor="#FFFFFF">[!--start.regbook--]<br>
+      回复显示格式内容<br>
+      [!--end.regbook--]</td>
+  </tr>
+  <tr> 
+    <td bgcolor="#FFFFFF"> <p><font color="#666666">说明：这样没有回复就不显示回复内容及格式</font></p></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">留言板模板支持变量说明</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><strong>1、整体页面支持的变量</strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">[!--newsnav--]：所在位置导航条</td>
+    <td>[!--news.url--]：网站地址(参数设置的站点地址)</td>
+    <td>[!--class.menu--]：一级栏目导航</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td height="25">[!--pagekey--]：页面关键字</td>
+    <td>[!--pagedes--]：页面描述</td>
+    <td>[!--bname--]：留言分类名称</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">[!--bid--]：留言分类ID</td>
+    <td>[!--listpage--]：分页导航</td>
+    <td>[!--num--]：总记录数</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25"><strong>支持公共模板变量</strong></td>
+    <td><strong>支持PHP代码</strong></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><strong>2、列表内容支持的变量</strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">[!--lyid--]：留言ID</td>
+    <td>[!--name--]：留言者</td>
+    <td>[!--email--]：留言者邮箱</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">[!--call--]：留言者电话</td>
+    <td>[!--lytime--]：留言时间</td>
+    <td>[!--lytext--]：留言内容</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">[!--retext--]：回复内容</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td height="25"><strong>支持PHP代码</strong></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">修改留言板模板</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>模板</strong>”菜单，选择“<strong>留言板模板</strong>”子菜单，进入修改留言板模板界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> 图片1：菜单导航<br> <img src="img/lytemp1.jpg" width="446" height="589" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入“修改留言板模板”界面，将模板代码复制到Dreamweaver编辑，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"><img src="img/lytemp2.jpg" width="668" height="649" border="1"> 
+    </td>
+  </tr>
+  <tr> 
+    <td height="25">3、把留言板模板复制到Dreamweaver后可进行可视化编辑，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="25">图1：设计视图<br> <img src="img/lytemp3.gif" width="700" height="427" border="1"><br> 
+      <br>
+      图2： 代码模式<br> <img src="img/lytemp4.gif" width="700" height="491" border="1"> 
+    </td>
+  </tr>
+  <tr> 
+    <td height="25">4、修改留言板模板后，复制页面的代码到后台的“留言板模板”文本框，然后点击“修改”即可修改完毕。</td>
+  </tr>
+  <tr>
+    <td height="25">5、前台预览效果可访问：/e/tool/gbook/?bid=1</td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">优化方案</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="yhsay">&nbsp; &nbsp; &gt; 优化方案介绍</option>
+		  <option value="addyh">&nbsp; &nbsp; &gt; 增加优化方案</option>
+          <option value="yh">&nbsp; &nbsp; &gt; 管理优化方案</option>
+		  <option value="useyh">&nbsp; &nbsp; &gt; 优化方案的使用</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="yhsay"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><font color="#FFFFFF"><strong>一、优化方案介绍：</strong></font></td>
+  </tr>
+  <tr> 
+    <td height="25"> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr>
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>当你的数据达到几百万、几千万甚至更多时管理数据如何更快？<br>
+            当你的数据量非常大时后台管理信息是否越来越慢？<br>
+            当你的数据量非常大时生成栏目列表是否吃力？<br>
+            当你的数据量非常大时是否要全部生成历史内容页？<br>
+            当你的数据量非常大时使用标签调用是否非常影响生成速度？<br>
+            当你的数据量非常大时前台动态信息列表效率是否有所下降？<br>
+            ......</td>
+        </tr>
+      </table>
+      帝国CMS的网站数据优化方案正是为解决上述问题而准备，让你管理的数据量永远只有规定时间范围内的数量，让信息显示不随数据库增大而效率下降，让你实现更大的门户网站，虽然目前市面上的CMS都没有此功能，但我们认为此功能必定是门户网站需要具备的功能。<br>
+      <br>
+      <strong>帝国CMS的优化方案功能有以下特点：</strong><br>
+      (1)、可指定后台管理信息范围；<br>
+      (2)、可指定前台会员管理信息范围；<br>
+      (3)、可指定生成信息列表和前台动态信息列表显示范围；<br>
+      (4)、可指定标签调用信息范围；<br>
+      (5)、可指定JS调用信息范围；<br>
+      (6)、可指定会员空间调用信息范围；<br>
+      (7)、可指定内容页生成范围；<br>
+      (8)、可指定相关链接检索范围；<br>
+      (9)、可按数据表、栏目、专题、标题分类等设置使用相应的优化方案。 </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="addyh"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、增加优化方案：</font></strong></td>
+  </tr>
+  <tr> 
+    <td width="100%" height="25">(一)、登录后台，单击“<strong>系统</strong>”菜单，选择“<strong>管理优化方案</strong>”子菜单，进入管理优化方案界面：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/yh1.jpg" width="342" height="308" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">(二)、进入<strong>管理优化方案</strong>界面，点击“<strong>增加优化方案</strong>”按钮进入增加优化方案界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/yh2.jpg" width="692" height="134"></td>
+  </tr>
+  <tr> 
+    <td height="25">(三)、进入增加优化方案界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/yh3.jpg" width="688" height="650"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%">方案名称</td>
+          <td width="86%">填写优化方案名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>方案说明</td>
+          <td>设置优化方案备注信息。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2"><strong>信息列表</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>后台管理列表</td>
+          <td>后台信息管理页面的信息列表优化设置。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>前台管理列表</td>
+          <td>前台会员管理投稿页面优化设置。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>前台信息列表</td>
+          <td>前台信息列表优化设置。比如栏目列表/结合项/专题页等。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2"><strong>标签调用</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>优化范围</td>
+          <td>指定标签优化方案应用于“标签调用/JS调用/会员空间标签调用”。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>最新信息</td>
+          <td>标签调用操作类型为最新信息时的方案。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>点击排行</td>
+          <td>标签调用操作类型为点击排行时的方案。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>推荐信息</td>
+          <td>标签调用操作类型为推荐信息时的方案。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>评论排行</td>
+          <td>标签调用操作类型为评论排行时的方案。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>头条信息</td>
+          <td>标签调用操作类型为头条信息时的方案。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>下载排行</td>
+          <td>标签调用操作类型为下载排行时的方案。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2"><strong>其它相关</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>内容页生成范围</td>
+          <td>后台数据更新中心，批量生成内容页的优化设置。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>相关链接检索范围</td>
+          <td>查询相关链接的优化。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="useyh"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、管理优化方案：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、增加优化方案后，返回“<strong>管理优化方案</strong>”界面：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/yh4.jpg" width="691" height="200" border="0"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="yh"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、优化方案的使用：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、增加数据表时指定优化方案：</strong>按表或按模型显示信息列表或标签调用时使用。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、增加标题分类时指定优化方案：</strong>按标题分类显示信息列表或标签调用时使用。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>3、增加栏目时指定优化方案：</strong>按栏目显示信息列表或标签调用时使用。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>4、增加专题时指定优化方案：</strong>按专题显示信息列表或标签调用时使用。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

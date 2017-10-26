@@ -1,0 +1,7 @@
+      [e:loop={'select classid,classname,classimg,classpath from [!db.pre!]enewsclass where bclassid=2 order by myorder desc limit 0,4',0,24,0}]
+      <li>
+      <img src="<?=$bqr[classimg]?>" width="413" height="285" alt="">
+        <a href="<?=$public_r[newsurl]?><?=$bqr[classpath]?>">
+      <?=$bqr[classname]?></a>
+      </li>
+      [/e:loop]

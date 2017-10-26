@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>评论列表模板制作语法说明</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">评论模板</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="plurl">&nbsp; &nbsp; &gt; 评论页面的调用</option>
+          <option value="pltemp">&nbsp; &nbsp; &gt; 管理评论模板</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>评论模板是指信息评论页面的模板，不同栏目可以设置不同的评论模板(/e/pl/)。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr id="plurl"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">评论页面的调用</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">内容模板加评论页面链接：[!--news.url--]e/pl/?classid=[!--classid--]&amp;id=[!--id--]</td>
+  </tr>
+  <tr> 
+    <td height="25">指定使用评论模板的链接：[!--news.url--]e/pl/?classid=[!--classid--]&amp;id=[!--id--]<font color="#FF0000">&amp;tempid=评论模板ID</font></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">评论列表制作格式</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+  <tr> 
+    <td height="80" bgcolor="#FFFFFF">列表头<br>
+      [!--empirenews.listtemp--]<br>
+      列表内容<br>
+      [!--empirenews.listtemp--]<br>
+      列表尾</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"> 
+      <p><font color="#666666">说明：第一个[!--empirenews.listtemp--]表示循环开始、第二个[!--empirenews.listtemp--]表示循环结束。</font></p>
+      </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="pltemp"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">管理评论模板</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>模板</strong>”菜单，选择“<strong>管理评论模板</strong>”子菜单，进入管理评论模板界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> 图片1：菜单导航<br> <img src="img/pltemp1.jpg" width="445" height="483" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入管理评论模板界面：(蓝色背景为默认模板)</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/pltemp2.jpg" width="706" height="215"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、点击“<strong>修改</strong>”进入<strong>修改评论模板</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/pltemp3.jpg" width="688" height="659"></td>
+  </tr>
+  <tr> 
+    <td height="25">(1)、整体页面支持的变量<br> 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--newsnav--]：所在位置导航条</td>
+          <td>[!--news.url--]:网站地址(参数设置的站点地址)</td>
+          <td>[!--class.menu--]：一级栏目导航</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--pagetitle--]：页面标题</td>
+          <td>[!--pagekey--]：页面关键字</td>
+          <td>[!--pagedes--]：页面描述</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--titleurl--]:信息链接</td>
+          <td>[!--title--]:信息标题</td>
+          <td>[!--classid--]:栏目ID</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--id--]:信息ID</td>
+          <td>[!--pinfopfen--]:信息平均评分</td>
+          <td>[!--infopfennum--]:总评分人数</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--key.url--]:发表评论验证码地址</td>
+          <td>[!--lusername--]:登陆会员帐号</td>
+          <td>[!--lpassword--]:登陆用户密码(加密过)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--listpage--]:分页导航</td>
+          <td>[!--plnum--]:总记录数</td>
+          <td>[!--hotnews--]:热门信息JS调用(默认表)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--newnews--]:最新信息JS调用(默认表)</td>
+          <td>[!--goodnews--]:推荐信息JS调用(默认表)</td>
+          <td>[!--hotplnews--]:评论热门信息JS调用(默认表)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>支持公共模板变量</strong></td>
+          <td><strong>支持PHP代码</strong></td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <br>
+      (2)、列表内容支持的变量<br> 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--plid--]:评论ID</td>
+          <td>[!--pltext--]:评论内容</td>
+          <td>[!--pltime--]:评论发表时间</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--plip--]:评论发表者IP</td>
+          <td>[!--username--]:发表者</td>
+          <td>[!--includelink--]:引用评论链接地址</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--zcnum--]:支持数</td>
+          <td>[!--fdnum--]:反对数</td>
+          <td>[!--classid--]:栏目ID</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--id--]:信息ID</td>
+          <td>[!--userid--]：发表者ID</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td height="25"><strong>[!--字段名--]:自定义字段内容调用</strong></td>
+          <td><strong>支持PHP代码</strong></td>
+          <td>&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">4、把评论模板内容复制到Dreamweaver进行可视化编辑，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="25">图1：设计视图<br>
+      <img src="img/pltemp4.jpg" width="700" height="574" border="1"><br> 
+      <br>
+      图2： 代码模式<br>
+      <img src="img/pltemp5.jpg" width="735" height="628" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="25">5、修改评论模板后，复制页面的代码到后台的“评论模板内容”文本框，然后点击“修改”即可修改完毕。</td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

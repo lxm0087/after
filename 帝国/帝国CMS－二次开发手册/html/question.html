@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">二次开发常见问题</strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="23"><strong>1、如果开启了“关闭前台所有动态页面”选项，二次开发的文件如何能访问？</strong></td>
+  </tr>
+  <tr> 
+    <td height="23"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>答：可以在开发的程序代码顶部一行加：define('EmpireCMSAdmin','1');<br>
+            就可以不受此设置影响。 </td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td width="100%" height="23"><strong>2、LoadLang()导入语言包文件路径是如何表示的</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>答：导入语言包文件地址是相对于 
+            ../data/language/ 目录，例子：<br>
+            (1)、如果程序文件在/e/extend/目录，比如：/e/extend/a.php，则导入语言包可以用：<br>
+            require LoadLang('pub/fun.php');<br>
+            (2)、如果程序文件在/e/extend/helloworld/目录，比如：/e/extend/helloworld/a.php，则导入语言包可以用：<br>
+            require '../'.LoadLang('pub/fun.php'); <br>
+            (3)、如果程序文件在根目录，比如：/a.php，则导入语言包可以用：<br>
+            require ECMS_PATH.'e/data/'.LoadLang('pub/fun.php');</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>3、$editor声明目录层次变量是如何表示的：</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>答：此变量如果没有使用printerror()等函数可以不设置。<br>
+            默认$editor变量为0。<br>
+            当程序文件在/e/path/目录，$editor不用设置，也就是用默认0。<br>
+            当程序文件在/e/path/path2/目录，$editor=1。<br>
+            当程序文件在/e/path/path2/path3/目录，$editor=2。<br>
+            当程序文件在/e/path/path2/path3/path4/目录，$editor=3。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>4、导入文件介绍：</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>导入栏目、专题、标题分类缓存文件：/e/data/dbcache/class.php<br>
+            导入会员组缓存文件：/e/data/dbcache/MemberLevel.php<br>
+            导入标签函数文件：/e/class/t_functions.php<br>
+            导入编译标签文件：/e/class/functions.php</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>5、推荐变量过滤处理</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>(1)、数字型变量可以用(int)或intval函数处理，例子：<br>
+            $page=(int)$_GET['page'];<br>
+            或<br>
+            $page=intval($_GET['page']);<br>
+            (2)、带小数点的数字型变量可以用(float)或floatval函数处理，例子：<br>
+            $money=(float)$money;<br>
+            或<br>
+            $money=floatval($money);<br>
+            (3)、字符型处理：<br>
+            不带空格或其他特殊符号的，用<br>
+            RepPostVar()函数过滤 
+            <p>带空格或其他特殊符号的用：<br>
+              RepPostVar2()函数过滤</p>
+            <p>写入数据库的用：<br>
+              RepPostStr()函数过滤</p> </td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

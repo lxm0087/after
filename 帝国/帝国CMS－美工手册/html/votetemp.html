@@ -1,0 +1,306 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>投票模板制作说明</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">投票模板</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="usevotetemp">&nbsp; &nbsp; &gt; 投票模板使用的地方</option>
+          <option value="fmvotetemp">&nbsp; &nbsp; &gt; 投票模板制作格式</option>
+          <option value="votetemp">&nbsp; &nbsp; &gt; 管理投票模板</option>
+		  <option value="votetempexp">&nbsp; &nbsp; &gt; 投票模板制作范例</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>投票模板是指投票插件和信息投票显示使用的模板。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr id="usevotetemp">
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">投票模板使用的地方</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>投票模板共使用在两个地方：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、供投票插件使用</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/votetemp1.jpg" width="702" height="600" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、供信息的投票使用</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/votetemp2.jpg" width="698" height="662" border="0"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="fmvotetemp"> 
+    <td height="25"><strong><font color="#FFFFFF">投票模板制作格式</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="80" bgcolor="#FFFFFF">列表头<br>
+      [!--empirenews.listtemp--]<br>
+      投票项<br>
+      [!--empirenews.listtemp--]<br>
+      列表尾</td>
+  </tr>
+  <tr> 
+    <td bgcolor="#FFFFFF"> <p><font color="#666666">说明：第一个[!--empirenews.listtemp--]表示循环开始、第二个[!--empirenews.listtemp--]表示循环结束。</font></p></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="votetemp"> 
+    <td height="25"><strong><font color="#FFFFFF">管理投票模板</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>模板</strong>”菜单，选择“<strong>管理投票模板</strong>”子菜单，进入管理投票模板界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> 图片1：菜单导航<br>
+      <img src="img/votetemp3.jpg" width="450" height="482" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入管理投票模板界面：</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/votetemp4.jpg" width="703" height="255"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、点击“<strong>修改</strong>”进入<strong>修改投票模板</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="32"><img src="img/votetemp5.jpg" width="692" height="602" border="0"> 
+      <br> <br>
+      (1)、投票插件使用时支持的模板变量列表 <br> 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF">
+          <td height="25"><div align="center">[!--news.url--]</div></td>
+          <td>网站地址</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="36%" height="25"> <div align="center">[!--vote.action--]</div></td>
+          <td width="64%">投票表单提交地址</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <div align="center">[!--title--]</div></td>
+          <td>显示投票的标题</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <div align="center">[!--vote.view--]</div></td>
+          <td>查看投票结果地址</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <div align="center">[!--width--](宽度)、[!--height--](高度)</div></td>
+          <td>弹出投票结果窗口大小</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <div align="center">[!--voteid--]</div></td>
+          <td>此投票的ID</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <div align="center">[!--vote.box--]</div></td>
+          <td>投票选项（单选框 
+            <input type="radio" name="radiobutton" value="radiobutton">
+            与复选框 
+            <input type="checkbox" name="checkbox" value="checkbox">
+            ）</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <div align="center">[!--vote.name--]</div></td>
+          <td>投票选项名称</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><div align="center">投票事件变量</div></td>
+          <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>enews</strong>&quot; 
+            value=&quot;<strong>AddVote</strong>&quot;&gt;</td>
+        </tr>
+      </table>
+      <br>
+      (2)、信息投票使用时支持的模板变量列表 <br> 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF">
+          <td height="25"><div align="center">[!--news.url--]</div></td>
+          <td>网站地址</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="36%" height="25"> <div align="center">投票表单提交地址</div></td>
+          <td width="64%">/e/enews/index.php</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><div align="center">查看投票结果地址</div></td>
+          <td>/e/public/vote/?classid=[!--classid--]&amp;id=[!--id--]</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <div align="center">[!--title--]</div></td>
+          <td>显示投票的标题</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <div align="center">[!--width--](宽度)、[!--height--](高度)</div></td>
+          <td>弹出投票结果窗口大小</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <div align="center">[!--id--]</div></td>
+          <td>信息ID</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><div align="center">[!--classid--]</div></td>
+          <td>栏目ID</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <div align="center">[!--vote.box--]</div></td>
+          <td>投票选项（单选框 
+            <input type="radio" name="radiobutton" value="radiobutton">
+            与复选框 
+            <input type="checkbox" name="checkbox2" value="checkbox">
+            ）</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <div align="center">[!--vote.name--]</div></td>
+          <td>投票选项名称</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><div align="center">投票事件变量</div></td>
+          <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>enews</strong>&quot; 
+            value=&quot;<strong>AddInfoVote</strong>&quot;&gt;</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="votetempexp"> 
+    <td height="25"><strong><font color="#FFFFFF">投票模板制作范例</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong><font color="#0000FF">一、投票模板制作范例1：投票插件使用的模板</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">用dreamweaver制作好投票表单，然后在表单加上投票模板标签变量：</td>
+  </tr>
+  <tr> 
+    <td>图1：设计视图<br>
+      <img src="img/votetemp5.gif" width="700" height="67" border="1"><br> 
+      <br>
+      代码： <br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 21px'> 
+            <p>&lt;table width=&quot;100%&quot; border=&quot;0&quot; align=&quot;center&quot; 
+              cellpadding=&quot;3&quot; cellspacing=&quot;0&quot;&gt;<br>
+              <font color="#FF0000">&lt;form name=&quot;enewsvote&quot; method=&quot;post&quot; 
+              action=&quot;[!--vote.action--]&quot; target=&quot;_blank&quot;&gt;</font><br>
+              &nbsp; &nbsp; &nbsp; &nbsp; <font color="#FF0000">&lt;input type=&quot;hidden&quot; 
+              name=&quot;voteid&quot; value=&quot;[!--voteid--]&quot;&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;hidden&quot; name=&quot;enews&quot; 
+              value=&quot;AddVote&quot;&gt;</font><br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;&lt;strong&gt;<font color="#FF0000">[!--title--]</font>&lt;/strong&gt;&lt;/td&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; <font color="#0000FF">[!--empirenews.listtemp--]</font><br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;<font color="#FF0000">[!--vote.box--]</font>&amp;nbsp;<font color="#FF0000">[!--vote.name--]</font>&lt;/td&gt;&lt;/tr&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; <font color="#0000FF">[!--empirenews.listtemp--]</font><br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td align=&quot;center&quot;&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input 
+              type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;投票&quot;&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &amp;nbsp;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input 
+              type=&quot;button&quot; name=&quot;button&quot; value=&quot;查看结果&quot; 
+              onclick=&quot;window.open('<font color="#FF0000">[!--vote.view--]</font>','','width=<font color="#FF0000">[!--width--]</font>,height=<font color="#FF0000">[!--height--]</font>,scrollbars=yes');&quot;&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;<br>
+              &lt;/form&gt;<br>
+              &lt;/table&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td>模板效果：</td>
+  </tr>
+  <tr>
+    <td><img src="img/votetemp6.gif" width="155" height="200" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong><font color="#0000FF">二、投票模板制作范例2：信息投票使用的模板</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">用dreamweaver制作好投票表单，然后在表单加上投票模板标签变量：</td>
+  </tr>
+  <tr> 
+    <td>图1：设计视图<br>
+      <img src="img/votetemp5.gif" width="700" height="67" border="1"><br> 
+      <br>
+      代码： <br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 21px'> 
+            <p>&lt;table width=&quot;100%&quot; border=&quot;0&quot; align=&quot;center&quot; 
+              cellpadding=&quot;3&quot; cellspacing=&quot;0&quot;&gt;<br>
+              <font color="#FF0000">&lt;form name=&quot;enewsvote&quot; method=&quot;post&quot; 
+              action=&quot;/e/enews/index.php&quot; target=&quot;_blank&quot;&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;hidden&quot; name=&quot;id&quot; 
+              value=&quot;[!--id--]&quot;&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;hidden&quot; name=&quot;classid&quot; 
+              value=&quot;[!--classid--]&quot;&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;hidden&quot; name=&quot;enews&quot; 
+              value=&quot;AddInfoVote&quot;&gt;</font><br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;&lt;strong&gt;<font color="#FF0000">[!--title--]</font>&lt;/strong&gt;&lt;/td&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; <font color="#0000FF">[!--empirenews.listtemp--]</font><br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;<font color="#FF0000">[!--vote.box--]</font>&amp;nbsp;<font color="#FF0000">[!--vote.name--]</font>&lt;/td&gt;&lt;/tr&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; <font color="#0000FF">[!--empirenews.listtemp--]</font><br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td align=&quot;center&quot;&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input 
+              type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;投票&quot;&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &amp;nbsp;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input 
+              type=&quot;button&quot; name=&quot;button&quot; value=&quot;查看结果&quot; 
+              onclick=&quot;window.open('<font color="#FF0000">/e/public/vote/?classid=[!--classid--]&amp;id=[!--id--]</font>','','width=<font color="#FF0000">[!--width--]</font>,height=<font color="#FF0000">[!--height--]</font>,scrollbars=yes');&quot;&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;<br>
+              &lt;/form&gt;<br>
+              &lt;/table&gt;</p></td>
+        </tr>
+      </table> </td>
+  </tr>
+  <tr> 
+    <td>模板效果：</td>
+  </tr>
+  <tr>
+    <td><img src="img/votetemp6.gif" width="155" height="200" border="1"></td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

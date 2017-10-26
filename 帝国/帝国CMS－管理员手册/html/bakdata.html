@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">网站备份</strong></td>
+    <td width="50%"><div align="center"> </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="postdatasay"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、帝国CMS网站备份说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>备份整站只需要备份以下数据：</strong><br>
+      1、备份数据库；<br>
+      2、备份“d”附件目录；<br>
+      3、模板的图片和CSS目录。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="postdata"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、备份数据库多种方法：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>方法一：可以用后台内置的备份数据功能：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、后台“系统”&gt;“备份与恢复数据”&gt;“备份数据”；<br>
+      2、备份后将e/admin/ebak/bdata下的备份目录下载本地。</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>方法二：直接复制MYSQL数据库目录：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">复制MYSQL安装目录下的“/data/数据库名”目录。（自己的服务器可以用此方法）</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>方法三：直接用第三方数据库备份工具备份数据库：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">比如：<a href="http://www.phome.net/ebak2010/">帝国备份王</a>、phpmyadmin等工具备份数据库。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="postdatasay"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、备份“d”附件目录：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>备份帝国CMS系统根目录下的“d”目录：将“d”附件目录下载到本地即可。</strong><br>
+      如果是要经常备份附件，考虑将附件存放目录设置按月目录存放(参数设置里设置)，备份时只需下载当前月目录。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="postdatasay"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、模板的图片和CSS目录：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>网站模板的图片和CSS目录下载到本地即可。<br>
+      </strong>这个只需备份一次，不需要重复备份，除非你模板的图片和css变换过。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="postdatasay"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">五、后台备份数据库常见问题：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、备份数据库出现＂You have an error in your SQL syntax;...right syntax 
+      to use near '-1' at line 1＂错误 <br>
+      解决方法：到＂参数设置＂那把＂支持MYSQL查询方式＂打勾去掉即可．</td>
+  </tr>
+  <tr> 
+    <td height="25">2、如何下载已备份的数据？<br>
+      答：直接通过FTP下载“e/admin/ebak/bdata/”下的备份目录即可，恢复时将此目录复制到的“e/admin/ebak/bdata/”目录即可。<br>
+      (小数据也可以直接在线“打包并下载”)</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25"><strong>相关链接：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、<a href="http://bbs.phome.net/showthread-35-46681-0.html" target="_blank">帝国网站管理系统之网站迁移教程</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

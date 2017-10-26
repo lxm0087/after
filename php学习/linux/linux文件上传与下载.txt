@@ -1,0 +1,2 @@
+1.第一种方式
+  [root@localhost src]# yum install -y lrzsz

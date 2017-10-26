@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<link rel="shortout icon" href="[!--news.url--]skin/laimei2017/images/favicon.ico" />
+<meta name="renderer" content="webkit"/>
+<meta http-equiv="X-UA-Comabsolutetible" content="IE=Edge,chrome=1" />
+<meta name="format-detection" content="telephone=on"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>[!--pagetitle--]_南昌莱美美容医院</title>
+<meta name="keywords" content="[!--pagekey--]">
+<meta name="description" content="[!--pagedes--]">
+<link href="[!--news.url--]zxmr/css/zxmrxm.css" rel="stylesheet"/>
+<link href="[!--news.url--]skin/laimei2017/css/reset.css" rel="stylesheet"/>
+<script src="[!--news.url--]skin/laimei2017/js/jquery-1.9.1.min.js"></script>
+<script src="[!--news.url--]skin/laimei2017/js/jquery.superslide.2.1.1.source.js"></script>
+<script src="[!--news.url--]skin/laimei2017/js/expert.js"></script>
+<script src="[!--news.url--]skin/laimei2017/js/indexapp.js"></script>
+</head>
+<body>
+[!--temp.header--]
+<!--content pinpaiContent-->
+<?php
+$cid=$GLOBALS[navclassid];
+if($class_r[$cid]['bclassid']==0)
+{
+$fid=$cid;
+}
+else
+{
+$fid=$class_r[$cid]['bclassid'];
+}
+?>
+<?php
+$classid=$GLOBALS[navclassid];
+?>
+<div class="pinpaiContent pubW center relative clearfix"> 
+  <div class="contentRight fr  relative" id="contentRight">
+  [e:loop={"select classid,classname,bclassid from [!db.pre!]enewsclass where classid='$fid'",0,24,0}]
+  <?php if($classid == 2 || $classid == 10 || $classid == 12){?>
+  		<div class="seoNavs absolute fonts"><?php $emsql = $empire->query("select classid,classname,bclassid from {$dbtbpre}enewsclass where classid='$classid'");while($bqm=$empire->fetch($emsql)){?><a href="<?=$bqm[classurl]?>"><?=$bqm[classname]?></a><?php }?></div>
+   <?}else{?>
+   		<div class="seoNavs absolute fonts"><a href="<?=$bqsr[classurl]?> "><?=$bqr[classname]?></a><?php $emsql = $empire->query("select classid,classname,bclassid from {$dbtbpre}enewsclass where classid='$classid'");while($bqm=$empire->fetch($emsql)){?> | <?=$bqm[classname]?><?php }?></div>
+   <?php }?>
+  [/e:loop]  
+    <div class="pinpaiWrapper">
+        <div class="content1 clearfix fonts">
+      <ul>
+    [!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]
+      </ul>
+      </div>
+        <div class="listpage">[!--show.listpage--]</div>
+      <div class="content4 clearfix fonts">
+        <ul>
+        [e:loop={38,1,0,0,'id=37'}]
+          <li><a class="qiujing"  href="javascript:void(0)" onClick="openZoosUrl();return false;" target="_blank"></a><p><?=$bqr[smalltext]?></p></li>
+        [/e:loop]
+        [e:loop={38,1,0,0,'id=38'}]
+          <li><a class="chengxin" href="javascript:void(0)" onClick="openZoosUrl();return false;" target="_blank"></a><p><?=$bqr[smalltext]?></p></li>
+        [/e:loop]
+        [e:loop={38,1,0,0,'id=39'}]
+          <li><a class="reqing"   href="<?=$public_r[newsurl].$class_r[25]['classpath']?>"></a><p><?=$bqr[smalltext]?></p></li>
+        [/e:loop]
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--content pinpaiContent结束-->
+<!--footer--> 
+[!--temp.footer--]
+<!--footer  结束-->
+</body>
+</html>

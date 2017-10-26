@@ -1,0 +1,475 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>模板使用说明与技巧</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">模板使用说明与技巧</strong></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="23" colspan="2"><strong><font color="#FFFFFF">模板使用说明与技巧导航</font></strong></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td width="50%" height="23"><a href="#q1">1、按SQL语句查询调用说明</a></td>
+    <td><a href="#q2">2、让标签参数支持系统变量</a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="23"><a href="#q3">3、标签调用记录范围小技巧</a></td>
+    <td><a href="#q4">4、本月热点排行的sql条件调用</a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="23"><a href="#q5">5、开启模板支持程序代码说明</a></td>
+    <td> <a href="#q6">6、下载不采用弹出窗口式说明</a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="23"><a href="#q7">7、文章内容加环饶广告</a></td>
+    <td><a href="#q8">8、在内容页面直接显示评论</a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="23"><a href="#q9">9、帝国CMS程序扩展变量说明</a></td>
+    <td><a href="#q10">10、模板中遇到\如何处理?</a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="23"><a href="#q11">11、为什么页面不统计点击数?</a></td>
+    <td><a href="#q12">12、用帝国CMS做英文站需要改什么?</a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="23"><a href="#q13">13、控制面板“[!--empirenews.template--]”样式修改</a></td>
+    <td><a href="#q14">14、为什么[!--writer--]不能在列表中调用?</a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="23"><a href="#q15">15、如何用灵动标签调用副表字段内容?</a></td>
+    <td><a href="#q16">16、如何在列表模板或标签模板中调用副表字段内容?</a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="23"><a href="#q17">17、如何调用指定某一条信息的内容?</a></td>
+    <td><a href="#q18">18、比较高效的随机调用方法</a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="23"><a href="#q19">19、模板备份份数在哪修改?</a></td>
+    <td><a href="#q20">20、如何调用各级头条和推荐?</a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="23"><a href="#q21">21、用PHP代码实现灵动标签的技巧</a></td>
+    <td><a href="#q22">22、为什么查看源文件有内容，但页面显示空白?</a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td height="23"><a href="#q23">23、截取字数加省略号的方法</a></td>
+    <td><a href="#q24">24、SQL调用非终极栏目处理技巧</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q1">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">1、按SQL语句查询调用说明</font></strong></td>
+  </tr>
+  <tr>
+    <td height="25" bgcolor="#FFFFFF"><table width="100%" border="0">
+        <tr> 
+          <td height="32">1、标签上面的“操作类型”参数要设为<strong>24</strong>，然后<strong>“栏目id”参数为SQL语句</strong></td>
+        </tr>
+        <tr> 
+          <td height="31">2、开启支持按SQL语句调用，默认是开启的，如果没有开启：打开<strong>e/class/config.php</strong>文件进行配置(粗体文字的设置)</td>
+        </tr>
+        <tr> 
+          <td height="31"> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 21px'> 
+                  //部分参数设置<br>
+                  $do_theloginlog=0; //是否记录登陆日志(0为记录,1为不记录)<br>
+                  $do_thedolog=0; //是否记录操作日志(0为记录,1为不记录)<br>
+                  <strong>$do_openbqquery=1; //开启标签支持sql语句查询(0为不支持,1为开启)</strong><br>
+                  $do_openreadfile=0; //开启支持读取本地文件,为了安全,一般情况请不要开启(0为不支持,1为开启)<br>
+                  $do_txtpath=&quot;../../d/txt/&quot;; //文本型数据存放目录<br>
+                  $saveurlimgclearurl=1; //远程保存图片自动去除图片的链接(0为保留,1为去除)<br>
+                  $ecmsdeftempid=0; //默认模板组ID</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="31">3、调用例子。以ecmsinfo为例：</td>
+        </tr>
+        <tr> 
+          <td height="31">[ecmsinfo]&quot;select * from phome_ecms_news where 
+            classid=<strong>1</strong> order by id desc limit <strong>10</strong>&quot;,10,30,0,<strong>24</strong>,1,0[/ecmsinfo] 
+            <p>注：显示栏目ID为1的10条新闻表记录<br>
+            </p></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q2">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">2、让标签参数支持系统变量</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF"><table width="100%" border="0">
+        <tr> 
+          <td height="32"><strong>让标签参数支持系统变量说明：以实现按各种条件调用信息数据。</strong></td>
+        </tr>
+        <tr> 
+          <td height="32">根据<a href="#q9" target="_blank"><strong><u>程序扩展变量的说明</u></strong></a>得出我们可以在标签参数中直接使用“字段值数组”变量。<br> 
+            <br>
+            例如：我们要列出所有信息来源相同的10条信息，标签如下(按sql语句调用)：<br>
+            [phomenews]&quot;select * from phome_ecms_news where <strong>befrom='&quot;.$navinfor[befrom].&quot;'</strong> 
+            order by id desc limit 10&quot;,10,32,0,24,0[/phomenews]</td>
+        </tr>
+        <tr> 
+          <td height="32"><strong>附加说明：$navinfor[字段名]</strong></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q3">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">3、标签调用记录范围小技巧</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF"><strong>如只调用从第10条开始的后20条记录</strong><br>
+      我们可以把显示条数改为：'10,20'，以万能标签为例子(当然所有标签都一样)：<br>
+      [ecmsinfo]栏目ID/专题ID,<strong><font size="3">'10,20'</font></strong>,标题截取数,是否显示栏目名,操作类型,模板ID,只显示有标题图片[/ecmsinfo]</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q4">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">4、本月热点排行的sql条件调用</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF"><table width="100%" border="0">
+        <tr> 
+          <td height="32"><strong>只需设置标签“附加SQL条件”参数为：'newstime&gt;UNIX_TIMESTAMP()-86400*30'</strong></td>
+        </tr>
+        <tr> 
+          <td height="32"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 21px'> 
+                  <p> <strong>以ecmsinfo标签为例:</strong><br>
+                    [ecmsinfo]0,10,30,0,4,7,0,<strong>'newstime&gt;UNIX_TIMESTAMP()-86400*<font color="#FF0000">30</font>'</strong>[/ecmsinfo]</p>
+                  <p>注意红色部分：<br>
+                    30是指30天。<br>
+                  </p></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q5">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">5、开启模板支持程序代码说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 21px'>1.开启：参数设置－》信息设置<br /> 
+            <br />
+            2.这样直接在模板加上php代码就会受系统编译了。如果不想被编译，把程序代码直接加到页面里面：<br /> &quot;&lt;&quot;用&quot;&lt;!--code.start--&gt;&quot;表示<br /> 
+            &quot;&gt;&quot;用&quot;&lt;!--code.end--&gt;&quot;表示<br /> <br />
+            例如：&lt;?&nbsp;&nbsp;echo&quot;Hello!&quot;;?&gt;<br />
+            那加到模板代码就是：&lt;!--code.start--&gt;?&nbsp;&nbsp;echo&quot;Hello!&quot;;?&lt;!--code.end--&gt;</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q6">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">6、下载不采用弹出窗口式说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 21px'><p>如果不采用弹出式下载的话，可依以下步骤完成：</p>
+            <p><strong>1.修改下载地址模板（＂公共模板＂ －＞ ＂修改下载地址模板＂）：</strong><br />
+              将：<br />
+              [ &lt;a href=#edown onclick=&quot;window.open('[!--down.url--]','','width=300,height=300');&quot;&gt;[!--down.name--]&lt;/a&gt; 
+              ]<br />
+              改成：<br />
+              [ &lt;a href=&quot;/e/DownSys/GetDown/?classid=[!--<strong>classid</strong>--]&amp;id=[!--<strong>id</strong>--]&amp;pathid=[!--<strong>pathid</strong>--]&quot;&gt;[!--down.name--]&lt;/a&gt; 
+              ]</p>
+            <p><strong>2.开启直接下载开关：</strong><br />
+              后台－》参数设置－》模型设置：“开启直接下载”</p>
+            <p><strong>3.重新刷新下载表的页面即可（记得选择刷新全部）</strong></p>
+            <p>此方案缺点：<strong>起不到防盗链作用，如果你服务器本身就有防盗效果，才推荐使用此方式．</strong></p></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q7">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">7、文章内容加环饶广告</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 21px'><p>&lt;div 
+              id=&quot;ad&quot;&gt;[phomead]广告ID[/phomead]&lt;/div&gt;</p>
+            <p>&lt;style type=&quot;text/css&quot;&gt;<br>
+              &lt;!--<br>
+              #ad {<br>
+              float: right;<br>
+              }<br>
+              --&gt;<br>
+              &lt;/style&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q8">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">8、在内容页面直接显示评论</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">内容模板增加评论JS调用：&lt;script src=&quot;[!--news.url--]e/pl/more/?classid=[!--classid--]&amp;id=[!--id--]&amp;num=<strong>10</strong>&quot;&gt;&lt;/script&gt;<br>
+      其中10为调用评论数量，显示样式修改：后台－》模板管理－》公共模板－》修改“评论JS调用模板”。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q9">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">9、帝国CMS程序扩展变量说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF"><table width="100%" border="0" id="q9">
+        <tr> 
+          <td height="32"><strong>程序扩展变量说明：通过这些变量可实现各种更复杂的系统．</strong></td>
+        </tr>
+        <tr> 
+          <td height="32"><font color="#0000FF">1、列表/封面模板变量说明：</font></td>
+        </tr>
+        <tr> 
+          <td height="32">当前栏目id：<strong>$GLOBALS[navclassid]</strong> 
+            <p>通过这个变量可以输出这个栏目id的所有数据（如：select * from phome_enewsclass where classid='$GLOBALS[navclassid]'） 
+            </p></td>
+        </tr>
+        <tr> 
+          <td height="31"><font color="#0000FF">2、内容模板变量说明：</font></td>
+        </tr>
+        <tr> 
+          <td height="31"><p>字段值数组：<strong>$navinfor<br>
+              <br>
+              </strong>调用方法：$navinfor[字段名]，比如要显示＂信息ID字段＂，那在模板里用：&lt;?=$navinfor[id]?&gt;即可输出(要开启模板支持程序代码)</p>
+            </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q10">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">10、模板中遇到\如何处理?</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">单个\用四个\表示即可，如：\r用\\\\r表示即可。<a href="http://bbs.phome.net/showthread-35-29392-0.html" target="_blank"></a>6.6以上版本还可以用转义字符函数egetzy()</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q11">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">11、为什么页面不统计点击数呢?</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">要统计页面访问率，需在内容模板底部加上“[!--page.stats--]”变量<br>
+      用户在模板那边选择是否增加此变量（如下载系统中一般不统计访问量，不加此变量就不会统计了） 
+      <p>如果你是用动态显示点击数的话，用这个即可：（显示＋统计）<br>
+        &lt;script src=&quot;[!--news.url--]e/public/ViewClick/?classid=[!--classid--]&amp;id=[!--id--]&amp;addclick=1&quot;&gt;&lt;/script&gt;</p></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q12">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">12、用帝国CMS做英文站需要改什么?</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">1.修改e/data/langauge/gb/pub/目录下的q_message.php与fun.php语言包文件为英文；<br>
+      2.前台调用用ecmsinfo万能标签或灵动标签。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q13">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">13、控制面板“[!--empirenews.template--]”样式修改</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">如果只是改表格颜色，修改模板CSS文件：/skin/default/css/style.css文件里的：<br>
+      －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－<br>
+      .header { <br>
+      background: #E9F2FB url(../images/title_bg.gif) repeat-x left top;<br>
+      color: #07519A;<br>
+      border: 1px solid #AACCEE;<br>
+      border-bottom: none;<br>
+      }<br>
+      .header a { color: #000000 }<br>
+      .tableborder { background: #E1EFFB; border: 1px solid #AACCEE }<br>
+      －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－ 
+      <p>如果要修改表格框架修改e/template目录下的模板文件即可，如控制面板首页改：e/template/member/cp.php</p></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q14">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">14、为什么[!--writer--]不能在列表中调用?</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">默认新闻模型把writer和befrom字段存放在副表，要在列表中调用要先把这两个字段转移到主表(管理字段页面点副表转移)，转移后修改模型选择这两个字段为列表模板项就可以用[!--字段名--]调用。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q15">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">15、如何用灵动标签调用副表字段内容?</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">原理：在灵动标签循环内用SQL读取副表内容。下面以读取新闻副表中的newstext字段为例：<br>
+      [e:loop={0,1,3,0}]<br>
+      <font color="#FF0000">&lt;?php<br>
+      $fr=$empire-&gt;fetch1(&quot;select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} 
+      where id='$bqr[id]'&quot;);<br>
+      ?&gt;</font><br>
+      标题：&lt;?=$bqr[title]?&gt;&lt;br&gt;<br>
+      <font color="#FF0000">副表内容字段：&lt;?=$fr[newstext]?&gt;</font><br>
+      [/e:loop]</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q16">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">16、如何在列表模板或标签模板中调用副表字段内容?</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">列表模板中要调用副表字段内容需要采用“<a href="http://bbs.phome.net/showthread-13-107990-0.html" target="_blank"><strong>list.var支持程序代码</strong></a>”。下面以读取新闻副表中的newstext字段为例的list.var模板代码：<br>
+      <font color="#FF0000">$fr=$empire-&gt;fetch1(&quot;select newstext from 
+      {$dbtbpre}ecms_news_data_{$r[stb]} where id='$r[id]'&quot;);</font><br>
+      $listtemp='&lt;a href=&quot;[!--titleurl--]&quot;&gt;[!--title--]&lt;/a&gt; 
+      &lt;br&gt;副表内容字段：<font color="#FF0000">'.$fr[newstext].'</font>&lt;br&gt;&lt;br&gt;'; 
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q17">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">17、如何调用指定某一条信息的内容?</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">标签附加SQL条件参数设置：<strong>'id=信息ID'</strong>即可。<br>
+      <strong>以ecmsinfo标签为例:</strong><br>
+      [ecmsinfo]0,10,30,0,3,7,0,<strong>'id=5<font color="#FF0000"></font>'</strong>[/ecmsinfo]</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q18">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">18、比较高效的随机调用方法</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">比较高效的随机调用方法：<a href="http://bbs.phome.net/showthread-13-169058-0.html" target="_blank">http://bbs.phome.net/showthread-13-169058-0.html</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q19">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">19、模板备份份数在哪修改?</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">后台&gt;“系统”&gt;“参数设置”&gt;“信息设置”：“模板备份记录数”。<br>
+      在每个模板下面的“[修改记录]”链接，可以还原修改记录。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q20">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">20、如何调用各级头条和推荐?</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF"><strong>“二级头条”调用：</strong>标签附加SQL条件参数设置为：'firsttitle=2'<br>
+      <strong>“四级推荐”调用：</strong>标签附加SQL条件参数设置为：'isgood=4'</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q21">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">21、用PHP代码实现灵动标签的技巧</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">帝国CMS用PHP代码实现灵动标签的技巧：<a href="http://bbs.phome.net/showthread-13-146819-0.html" target="_blank">http://bbs.phome.net/showthread-13-146819-0.html</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q22">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">22、为什么查看源文件有内容，但页面显示空白?</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">答：是因为你的HTML代码不良写法导致，修改模板将“&lt;meta http-equiv=&quot;Content-Type&quot; 
+      content=&quot;text/html; charset=utf-8&quot; /&gt;”移到“&lt;title&gt;[!--pagetitle--]&lt;/title&gt;”上面即可解决。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q23">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">23、截取字数加省略号的方法</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF">一般截取字数用<br>
+      &lt;?=esub($bqr[title],32)?&gt;
+<p>加省略号你改成这个就可以了<br>
+        &lt;?=esub($bqr[title],32<font color="#FF0000">,'...'</font>)?&gt; </p></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE" id="q24">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">24、SQL调用非终极栏目处理技巧</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#FFFFFF"><p>SQL语句调用要指定终极栏目ID，如果不想手动指定多个终极栏目ID，可以用下面方法：<br>
+        select * from [!db.pre!]ecms_news where checked=1 and &quot;.(<font color="#FF0000">$class_r[$GLOBALS[navclassid]][islast]?&quot;classid='$GLOBALS[navclassid]'&quot;:ReturnClass($class_r[$GLOBALS[navclassid]][sonclass])</font>).&quot; 
+        order by newstime desc limit 10</p></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

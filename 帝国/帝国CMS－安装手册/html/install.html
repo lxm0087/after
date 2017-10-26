@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF">
+        <tr bgcolor="8CBDEF"> 
+          <td height="25" colspan="2" bgcolor="#01A8EC"> <div align="left"><strong><font color="#FFFFFF">&nbsp;帝国网站管理系统，英文名称为EmpireCMS，简称“帝国CMS”，本文将介绍帝国网站管理系统的安装方法。</font></strong></div></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF">
+        <tr bgcolor="8CBDEF"> 
+          <td height="25" colspan="2" bgcolor="#01A8EC"> <div align="left"><strong><font color="#FFFFFF">&nbsp;一、安装前准备工作</font></strong></div></td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"> <div align="left"><strong>&nbsp;</strong>运行环境： 
+              确认您的空间（虚拟主机）支持“<strong>PHP和MySQL数据库</strong>”或服务器已经成功安装“<strong>PHP和MySQL数据库</strong>”。<br>
+              <strong>&nbsp;</strong>版本要求： PHP4.*以上版本，MySQL4.*以上版本。<br>
+              <strong>&nbsp;</strong>准备好<strong>MySQL数据库的用户名和密码</strong>（如果不清楚，可以联系空间商或者服务器管理员），以备在安装帝国产品过程中使用。</div>
+            <div align="left"></div></td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"> <strong>&nbsp;</strong>工具：FTP上传软件 
+            <div align="left"><strong><font color="#FFFFFF"></font></strong></div>
+            <div align="left"></div></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF">
+        <tr bgcolor="8CBDEF"> 
+          <td height="25" colspan="2" bgcolor="#01A8EC"> <div align="left"><strong><font color="#FFFFFF">&nbsp;二、下载帝国CMS安装包</font></strong></div></td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"> <div align="left"><strong>&nbsp;</strong>帝国CMS6.6版安装程序下载地址：<a href="http://www.phome.net/ecms66/" target="_blank">http://www.phome.net/ecms66/</a><br>
+              <strong>&nbsp;</strong>本文以简体GBK编码的安装程序为例。下载【帝国CMS6.6简体GBK版】安装程序Zip压缩包到本地或者服务器上，下载后解压得到以下文件：</div>
+            <div align="left"></div></td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"> <div align="left"><strong><font color="#FFFFFF"></font></strong></div>
+            <div align="left">
+              <table width="669" border="1">
+                <tr>
+                  <td><img src="img/01.jpg" width="669" height="118"></td>
+                </tr>
+              </table>
+            </div></td>
+        </tr>
+        <tr> 
+          <td height="30" colspan="2" bgcolor="#FFFFFF"><strong>&nbsp;</strong>doc目录是产品更新说明、安装说明、常见问题说明等相关文档。<br>
+            <strong>&nbsp;</strong>upload目录是帝国CMS系统的程序目录。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF">
+        <tr bgcolor="8CBDEF"> 
+          <td height="25" bgcolor="#01A8EC"> <div align="left"><strong><font color="#FFFFFF">&nbsp;三、上传程序目录</font></strong></div></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"> <div align="left"><strong>&nbsp;将Upload 
+              目录下的全部文件和目录，通过FTP软件（本文使用FlashFXP）以<a href="installquestion.html#q18" target="_blank"><font color="#FF0000">二进制方式上传</font></a>到空间或服务器的网站根目录</strong>（标识符为“/”，如果不清楚网站根目录所在位置，可以咨询您的空间商），本文网站根目录是：D:/empirecms。</div>
+            </td>
+        </tr>
+        <tr> 
+          <td height="12" bgcolor="#FFFFFF"> <table width="745" border="1">
+              <tr>
+                <td><img src="img/02.jpg" width="745" height="362"></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>&nbsp;目录上传完毕后，设置目录属性，使文件可以被 
+            EmpireCMS 正确读写</strong>。<br>
+            <strong>&nbsp;</strong><font color="#FFFFFF">（</font>如果您的服务器使用 Windows 
+            操作系统+Apache，目录权限一般默认就可读写，可以跳过设置目录属性这一步骤操作；<br>
+            <strong><font color="#FFFFFF">&nbsp;</font></strong><font color="#FFFFFF">（</font>如果您的服务器使用 
+            Windows 操作系统+IIS，需要设置IIS 来宾帐户可读写属性；<br>
+            <strong><font color="#FFFFFF">&nbsp;</font></strong><font color="#FFFFFF">（</font>linux服务器，可以使用ftp软件将目录、文件属性设置为777 
+            ；如果有shell权限，也可以通过执行chmod来修改目录权限。<br>
+            <strong>&nbsp;本文以Linux空间目录属性设置为例</strong>，保持FTP软件链接您的空间或服务器，然后<br>
+            <strong>&nbsp;</strong>·将<strong>网站根目录“/”的属性设置为 777</strong>： 选取要设置属性的根目录，单击右键&gt;属性，<strong>权限：777</strong>，单击“确定”按钮。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">
+<table width="396" border="1">
+              <tr>
+                <td><img src="img/03.jpg" width="396" height="479"></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>&nbsp;</strong>·再将<strong>以下目录的属性设置为 
+            777</strong>，<strong>并且所有目录权限均要应用于子目录与文件</strong>：</td>
+        </tr>
+        <tr> 
+          <td valign="top" bgcolor="#FFFFFF"> <table width="100%" height="100%" border="1">
+              <tr> 
+                <td width="41%" valign="top">/d <br>
+                  /s<br>
+                  /search<br>
+                  /index.html<br>
+                  /html<br>
+                  /e/admin/ebak/bdata<br>
+                  /e/admin/ebak/zip<br>
+                  /e/class/config.php<br>
+                  /e/class/user.php<br>
+                  /e/data<br>
+                  /e/install<br>
+                  /e/member/iframe/index.php<br>
+                  /e/member/login/loginjs.php<br>
+                  /e/pl/more/index.php<br>
+                  /e/sch/index.php<br>
+                  /e/tool/feedback/temp<br>
+                  /e/tool/gbook/index.php</td>
+                <td width="59%">&quot;/d&quot;目录属性设置方式如下图所示，其他目录及文件属性设置参考d目录设置方法。<br>
+                  选取要设置属性的目录d，单击右键&gt;属性，<br>
+                  <strong>勾选</strong>“应用改变到所有子文件夹与文件”<br>
+                  <strong>权限：777</strong>，单击“确定”按钮。<br> <img src="img/04.jpg" width="458" height="422"></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF">
+        <tr bgcolor="8CBDEF"> 
+          <td height="25" colspan="2" bgcolor="#01A8EC"> <div align="left"><strong><font color="#FFFFFF">&nbsp;四、安装</font></strong></div></td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"> <div align="left"><strong>&nbsp;</strong>帝国CMS是以网页的方式进行安装的，<br>
+              <strong>&nbsp;</strong>打开浏览器，在地址栏中输入http://您的网站域名/e/install/index.php 
+              运行，<br>
+              <strong>&nbsp;</strong>出现如下图所示的帝国CMS安装界面，页面左侧导航栏分别显示版权信息和当前安装进程；页面中部显示的是帝国CMS使用许可协议，<br>
+              <strong>&nbsp;</strong>阅读许可协议，然后单击【我同意】按钮：</div>
+            </td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"> <div align="left"><strong><font color="#FFFFFF"></font></strong>
+              <table width="750" border="1">
+                <tr>
+                  <td><img src="img/05.jpg"></td>
+                </tr>
+              </table>
+            </div>
+            </td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><strong>&nbsp;</strong>系统开始检测运行环境和目录权限：</td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><strong>&nbsp;</strong>安装过程中，系统会自动检查您的空间或服务器的运行环境、目录文件的可读写权限状态，并具备一定的纠错功能。<br>
+            <strong>&nbsp;</strong>如果您在之前某一步骤操作有问题，通常安装脚本会发现并以<strong>X</strong>提示，请您根据提示再对安装过程进行检查。<br>
+            <strong>&nbsp;</strong>检测成功的运行环境和目录权限项目均为<strong>√</strong>显示，如下图所示，可以单击【下一步】按钮：</td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><table width="748" border="1">
+              <tr>
+                <td><img src="img/06.jpg"></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><table width="748" border="1">
+              <tr>
+                <td><img src="img/07.JPG"></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><strong>&nbsp;</strong>进入数据库配置界面，如下图所示：<br>
+            ·输入您的空间或服务器的MySQL数据库信息，<strong>MySQL数据库地址、数据库名、数据库用户名和数据库密码请咨询您的空间商或者服务器管理员</strong>。<br>
+            ·内置初始数据：是帝国CMS系统的初始测试数据，提供数据演示功能。如勾选<strong>√</strong>本功能，则安装完毕后，网站将导入系统初始数据。<br>
+            ·其他选项按默认即可，单击【下一步】按钮：</td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><table width="748" border="1">
+              <tr>
+                <td><img src="img/08.jpg"></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><strong>&nbsp;</strong>系统自动建立数据表成功后，就进入创建网站后台管理员账号信息界面，如下图所示：<br>
+            ·帝国CMS系统不设默认管理员账号，您可以自行创建网站后台管理员登陆用户名和密码。<br>
+            ·登陆认证码：用于网站内部人员登录时的身份验证，具备双重密码效果，增强网站安全性。建议设置。<br>
+            <strong>&nbsp;</strong><strong>&nbsp;</strong><strong>&nbsp;</strong><strong>&nbsp;</strong><strong>&nbsp;</strong><strong>&nbsp;</strong><strong>&nbsp;</strong><strong>&nbsp;</strong><strong>&nbsp;</strong><strong>&nbsp;&nbsp;</strong><strong>&nbsp;</strong>认证码可以包含中英文、特殊符号等任意字符。如果不需要认证码功能，可以设为空。</td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><table width="748" border="1">
+              <tr>
+                <td><img src="img/09.jpg"></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><strong>&nbsp;</strong>单击【下一步】按钮，出现安装成功界面，单击【进入后台控制面板】按钮：（并马上登录FTP里删除/e/install目录）</td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><table width="715" border="1">
+              <tr>
+                <td><img src="img/10.jpg" width="713" height="470"></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><strong>&nbsp;</strong>进入网站后台登陆界面，输入安装时设置好管理员账号用户名、密码和认证码，单击【登录】按钮。<br>
+            <strong>&nbsp;</strong>后台访问地址是：http://您的网站域名/e/admin。</td>
+        </tr>
+        <tr> 
+          <td height="12" colspan="2" bgcolor="#FFFFFF"><table width="525" border="1">
+              <tr>
+                <td><img src="img/11.jpg" width="524" height="402"></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+        <tr> 
+          <td height="13" colspan="2" bgcolor="#FFFFFF"><table width="748" border="1">
+              <tr>
+                <td><img src="img/12.jpg"></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF">
+        <tr bgcolor="8CBDEF"> 
+          <td height="25" colspan="2" bgcolor="#01A8EC"> <div align="left"><strong><font color="#FFFFFF">&nbsp;五、初始化内置数据</font></strong></div></td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"> <div align="left"><strong>&nbsp;</strong>在安装过程第四步【配置数据库】中，如您勾选了【内置初始数据】选项，安装成功后，还要进行内置数据的初始化操作：<br>
+              <strong>&nbsp;</strong>依次单击【恢复栏目目录】按钮、【刷新所有信息栏目页】按钮、<br>
+              <strong>&nbsp;</strong>勾选“全部刷新”后单击【刷新所有信息内容页面】按钮、【刷新所有JS调用】按钮，出现“成功”或“完毕”字样即可。</div>
+            <div align="left"></div></td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"> <table width="740" border="1">
+              <tr>
+                <td><img src="img/13.gif" width="739" height="370"></td>
+              </tr>
+            </table>
+            <strong></strong> 
+            <div align="left"><strong><font color="#FFFFFF"></font></strong></div>
+            <div align="left"></div></td>
+        </tr>
+        <tr> 
+          <td height="13" colspan="2" bgcolor="#FFFFFF">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><strong>&nbsp;</strong>至此，帝国网站管理系统已成功安装，立即登陆网站后台体验建站的乐趣吧！</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>

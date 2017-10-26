@@ -1,0 +1,393 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">列表模板</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="fmlisttemp">&nbsp; &nbsp; &gt; 列表模板制作格式</option>
+          <option value="listtemp">&nbsp; &nbsp; &gt; 管理列表模板</option>
+		  <option value="listtempexp">&nbsp; &nbsp; &gt; 列表模板制作范例</option>
+          <option value="other">&nbsp; &nbsp; &gt; 其他说明</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>列表模板是指信息列表页面使用的模板。（制作方法基本同标签模板）</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="fmlisttemp"> 
+    <td height="25"><strong><font color="#FFFFFF">列表模板制作格式</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+  <tr> 
+    <td height="80" bgcolor="#FFFFFF">列表头<br>
+      [!--empirenews.listtemp--]<br>
+      列表内容<br>
+      [!--empirenews.listtemp--]<br>
+      列表尾</td>
+  </tr>
+  <tr> 
+    <td bgcolor="#FFFFFF"> <p><font color="#666666">说明：第一个[!--empirenews.listtemp--]表示循环开始、第二个[!--empirenews.listtemp--]表示循环结束。</font></p></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr id="listtemp"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">管理列表模板</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>模板</strong>”菜单，选择“<strong>管理列表模板</strong>”子菜单，进入管理列表模板界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/listtemp1.jpg" width="443" height="304" border="0"></td>
+  </tr>
+  <tr>
+    <td height="25">2、进入管理列表模板界面：</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/listtemp2.jpg" width="777" height="410"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、点击默认新闻列表模板的“<strong>修改</strong>”进入<strong>修改列表模板</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listtemp3.jpg" width="758" height="1120" border="0"> 
+      <br> <br> 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>模板名</strong></td>
+          <td>填写模板名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="21%" height="25"><strong>所属系统模型</strong></td>
+          <td width="79%">指这个列表模板用于的系统模型</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>所属分类</strong></td>
+          <td>方便统一按分类管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>简介截取字数</strong></td>
+          <td>针对字段设置为简介字段的内容截取设置，0为不截取</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>标题截取字数</strong></td>
+          <td>可设置截取标题的前多少字，0为不截取</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>每次显示</strong></td>
+          <td>是指每次循环记录数。一般不用设置，默认自动识别。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>时间显示格式</strong></td>
+          <td>设置newstime发布时间字段的时间格式，如“Y-m-d”就是显示“2008-08-08”</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>页面模板内容</strong></td>
+          <td>整体页面的列表模板代码。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>列表内容模板(list.var)</strong></td>
+          <td>列表内容模板代码，即＂页面模板内容＂中＂&lt;!--list.var*--&gt;＂变量显示的内容格式。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">&nbsp;</td>
+          <td><strong>使用程序代码：</strong>声明list.var模板要使用程序代码，使用方法可<a href="http://bbs.phome.net/showthread-13-107990-0.html" target="_blank"><strong>点击这里</strong></a>。<br>
+            （如果启用支持程序代码，则list.var的模板内容都要用php代码表示，不能用html表示。且要将最终模板内容赋给$listtemp变量） 
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">4、列表模板支持的变量：</td>
+  </tr>
+  <tr> 
+    <td height="25">(1)、页面模板内容支持的变量<br> 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--pagetitle--]：页面标题</td>
+          <td>[!--pagekey--]：页面关键字</td>
+          <td>[!--pagedes--]：页面描述</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--newsnav--]:导航条</td>
+          <td>[!--class.menu--]：一级栏目导航</td>
+          <td>[!--page.stats--]:统计访问</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--class.name--]：栏目名</td>
+          <td>[!--self.classid--]:本栏目/专题ID</td>
+          <td>[!--bclass.id--]:父栏目ID</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--bclass.name--]:父栏目名称</td>
+          <td>[!--class.intro--]:栏目/专题简介</td>
+          <td>[!--class.keywords--]:栏目/专题关键字</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--class.classimg--]:栏目/专题缩略图</td>
+          <td>[!--show.page--]:分页导航(下拉式)</td>
+          <td>[!--show.listpage--]:分页导航(列表式)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--list.pageno--]:当前分页号</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--hotnews--]:热门信息JS调用(默认表)<br>
+            [!--self.hotnews--]:本栏目热门信息JS调用</td>
+          <td>[!--newnews--]:最新信息JS调用(默认表)<br>
+            [!--self.newnews--]:本栏目最新信息JS调用</td>
+          <td>[!--goodnews--]:推荐信息JS调用(默认表)<br>
+            [!--self.goodnews--]:本栏目推荐信息JS调用</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--hotplnews--]:评论热门信息JS调用(默认表)<br>
+            [!--self.hotplnews--]:本栏目评论热门信息JS调用</td>
+          <td>[!--firstnews--]:头条信息JS调用(默认表)<br>
+            [!--self.firstnews--]:本栏目头条信息JS调用</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>支持公共模板变量</strong></td>
+          <td><strong>支持所有模板标签</strong></td>
+          <td><strong>支持PHP代码</strong></td>
+        </tr>
+      </table>
+      <br>
+      (2)、列表内容模板(list.var)支持的变量<br> 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--id--]:信息ID</td>
+          <td>[!--titleurl--]:标题链接</td>
+          <td>[!--oldtitle--]:标题ALT(不截取字符)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--classid--]:栏目ID</td>
+          <td>[!--class.name--]:栏目名称(带链接)</td>
+          <td>[!--this.classname--]:栏目名称(不带链接)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--this.classlink--]:栏目地址</td>
+          <td>[!--news.url--]:网站地址(参数设置的站点地址)</td>
+          <td>[!--no.num--]:信息编号</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--userid--]:发布者ID</td>
+          <td>[!--username--]:发布者</td>
+          <td>[!--userfen--]:查看信息扣除点数</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--onclick--]:点击数</td>
+          <td>[!--totaldown--]:下载数</td>
+          <td>[!--plnum--]:评论数</td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td height="25">[!--ttid--]：标题分类ID</td>
+          <td>[!--tt.name--]：标题分类名称</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[!--字段名--]:数据表字段内容调用</strong></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr id="listtempexp"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">列表模板制作范例</font></strong></td>
+  </tr>
+  <tr> 
+    <td>实现如下效果：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/listtemp8.jpg" width="721" height="458" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、制作列表模板：</strong>使用Dreamweaver制作列表模板</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listtemp10.jpg" width="746" height="292"></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2. 在制作好的界面加入模板标签及变量：</strong> </td>
+  </tr>
+  <tr> 
+    <td height="25">页面标题变量：[!--pagetitle--]，调用位置如下图①③所示；<br>
+      导航条变量[!--newsnav--]：调用位置如下图②所示。<br>
+      分页导行(下拉式)变量：[!--show.page--]，调用位置如下图⑤所示；<br>
+      插入列表模板内容变量：即列表页所有信息的显示样式变量，如“&lt;!--list.var1--&gt;(每行显示1条信息)”、“&lt;!--list.var2--&gt;(每行显示2条信息)”等，调用位置如下图④所示。<br>
+      格式：列表头[!--empirenews.listtemp--]列表内容[!--empirenews.listtemp--]列表尾 </td>
+  </tr>
+  <tr> 
+    <td height="25">图1：设计视图<br>
+      <img src="img/listtemp12.jpg" width="745" height="295" border="0"><br> 
+      <br>
+      图2： 代码模式<br> <img src="img/listtemp13.jpg" width="725" height="632"> </td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>3、制作列表内容模板</strong>：即内容变量&lt;!--list.var1--&gt;所显示的内容。代表每条信息的显示样式。</td>
+  </tr>
+  <tr> 
+    <td height="25">如“·台&quot;金援外交&quot;丑闻涉案人遭到恐吓 警方加强保护 (2008-05-04)”,<br>
+      该样式包括：标题，发布时间，标题链接三部分，分别对应的变量标签为[!--title--]、[!--newstime--]、[!--titleurl--]，<br>
+      则该信息样式可写为：(Dreamweaver可视化制作)</td>
+  </tr>
+  <tr> 
+    <td> 图1：设计视图<br> <img src="img/listtemp14.jpg" width="380" height="50" border="1"> 
+      <br> <br>
+      图2： 代码模式<br> <img src="img/listtemp15.jpg" width="883" height="126"> </td>
+  </tr>
+  <tr> 
+    <td><strong>4、将制作好的列表模板代码拷贝到系统后台“列表模板”中：</strong></td>
+  </tr>
+  <tr> 
+    <td>(1)、单击“<strong>模板</strong>”菜单 》列表模板-“<strong>管理列表模板</strong>”，选择右侧的默认新闻列表模板，单击“<strong>修改</strong>”：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/listtemp17.jpg" width="779" height="362" border="0"></td>
+  </tr>
+  <tr>
+    <td>(2)、进入修改默认新闻列表模板界面，将制作好的列表模板代码拷贝进去：</td>
+  </tr>
+  <tr>
+    <td><img src="img/listtemp16.jpg" width="755" height="1128" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>5、修改模板后，刷新栏目页面，最终列表模板的预览效果：</strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/listtemp9.jpg" width="721" height="458" border="0"> </td>
+  </tr>
+  <tr> 
+    <td height="25">5、附上面例子模板代码：</td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%">列表页面模板代码</td>
+          <td width="85%"> <textarea name="textarea" cols="100" rows="20">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot;&gt;
+&lt;title&gt;[!--pagetitle--]&lt;/title&gt;
+
+&lt;style&gt;
+td {font-size: 10pt;line-height: 14pt;}
+.line{font-size: 10pt;line-height: 14pt;}
+A:link {text-decoration: none; color:#000000}
+A:visited {text-decoration: none; color: #000000} 
+A:active {text-decoration: underline; color: #000000 } 
+A:hover {text-decoration: underline;        color: #FF0000;}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body topmargin=&quot;0&quot;&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+
+  &lt;tr&gt;
+    &lt;td height=&quot;60&quot;&gt; 
+      &lt;div align=&quot;center&quot;&gt;&lt;font size=&quot;4&quot;&gt;&lt;strong&gt;帝国CMS测试站点&lt;/strong&gt;&lt;/font&gt;&lt;/div&gt;&lt;/td&gt;
+
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;25&quot; bgcolor=&quot;#FFFFFF&quot;&gt; 
+      &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;/&quot;&gt;网站首页&lt;/a&gt; | &lt;a href=&quot;/news/china/&quot;&gt;国内新闻&lt;/a&gt; 
+        | &lt;a href=&quot;/news/world/&quot;&gt;国际新闻&lt;/a&gt; | &lt;a href=&quot;/news/ent/&quot;&gt;娱乐新闻&lt;/a&gt; | &lt;a href=&quot;/news/sports/&quot;&gt;体育新闻&lt;/a&gt;&lt;/div&gt;&lt;/td&gt;
+
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+
+  &lt;tr&gt; 
+    &lt;td width=&quot;50%&quot; height=&quot;25&quot;&gt;当前位置：[!--newsnav--]&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+
+  &lt;tr&gt; 
+    &lt;td height=&quot;23&quot;&gt;&lt;a href=&quot;/php&quot;&gt;&lt;strong&gt;[!--pagetitle--]&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;br&gt;
+
+&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+        [!--empirenews.listtemp--] 
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt; 
+            &lt;!--list.var1--&gt;
+
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        [!--empirenews.listtemp--] 
+&lt;/table&gt;     
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+
+    &lt;td height=&quot;23&quot; bgcolor=&quot;#FFFFFF&quot;&gt;[!--show.page--]&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+
+  &lt;tr&gt;
+    &lt;td height=&quot;23&quot;&gt;
+&lt;div align=&quot;center&quot;&gt;Powered by &lt;a href=&quot;http://www.phome.net&quot;&gt;EmpireCMS&lt;/a&gt; &amp;copy; 
+        2002-2011 Phome.net Corporation&lt;br&gt;
+
+      &lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>列表内容模板(list.var)</td>
+          <td> <textarea name="textarea2" cols="100" rows="6"> ·&lt;a href=&quot;[!--titleurl--]&quot; target=&quot;_blank&quot;&gt;[!--title--]&lt;/a&gt; (&lt;font color=&quot;#666666&quot;&gt;[!--newstime--]&lt;/font&gt;)</textarea></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="other"> 
+    <td height="25"><strong><font color="#FFFFFF">相关链接</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr> 
+    <td height="23"><a href="http://bbs.phome.net/showthread-35-29394-0.html" target="_blank">1、列表模板制作视频教程</a></td>
+  </tr>
+  <tr> 
+    <td height="23"><a href="ecmsinfo/ecmsinfo.html" target="_blank">2、标签模板制作教程</a></td>
+  </tr>
+  <tr>
+    <td height="23"><a href="http://bbs.phome.net/showthread-13-107990-0.html" target="_blank">3、帝国CMS功能解密之：模板list.var支持程序代码</a></td>
+  </tr>
+</table>
+<br>
+</body>
+</html>

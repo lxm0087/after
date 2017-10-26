@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">自定义列表</strong></td>
+    <td width="50%"><div align="center"> </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="votesay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、自定义列表功能说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">自定义列表功能：除了系统内置固定的栏目页、专题页等列表页面外，用户还可以通过SQL条件生成相应信息列表页面，实现各种信息集合列表更加灵活。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="addvote"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、增加自定义列表</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>增加自定义列表</strong>”子菜单，进入增加自定义列表界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/userlist1.jpg" width="396" height="379" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>增加自定义列表</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/userlist2.jpg" width="718" height="535" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>列表名称</strong></td>
+          <td>填写列表名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%" height="25"><strong>网页标题</strong></td>
+          <td width="85%">填写网页的title名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>文件存放目录</strong></td>
+          <td>填写生成的列表文件存放目录（地址从后台目录开始算，“../../”表示在根目录）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>文件扩展名</strong></td>
+          <td>填写生成的文件扩展名。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>查询SQL语句</strong></td>
+          <td><p><strong>统计记录：</strong>填写统计总信息数的SQL语句。（“select count(*) as total 
+              from ”是固定的格式）</p>
+            </td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">&nbsp;</td>
+          <td><strong>查询记录：</strong>填写查询信息的SQL语句。（查询SQL条件要和统计记录SQL一致）</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>查询总条数</strong></td>
+          <td>设置限制最大显示信息的数量。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>每页显示</strong></td>
+          <td>设置每页显示信息数量。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>使用列表模板</strong></td>
+          <td>选择页面使用的列表模板。（列表模板详细制作可以查看“美工手册”）</td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25"><strong>使用技巧</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">如果想将多个列表生成文件放到同一个目录，可以改“文件扩展名”，比如扩展名用：<font color="#FF0000">a</font>.html</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="32">3、增加自定义列表后，返回<strong>管理自定义列表</strong>页面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"><img src="img/userlist4.jpg" width="723" height="254"></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[预览]</strong></td>
+          <td>预览生成的列表页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%" height="25"><strong>[刷新]按钮</strong></td>
+          <td width="85%">更新选中的自定义列表。</td>
+        </tr>
+      </table> 
+    </td>
+  </tr>
+  <tr>
+    <td height="25">4、点击“<strong>[预览]</strong>”可看到生成的列表页面：</td>
+  </tr>
+  <tr>
+    <td height="32"><img src="img/userlist5.jpg" width="630" height="305"></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

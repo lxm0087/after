@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">扩展SQL程序编写介绍</strong></td>
+    <td width="50%"><div align="center"> </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="EmpireCMSPath"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">帝国CMS扩展SQL程序编写介绍</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> <font color=blue><b>基本范例：</b></font><br>
+      <font color=red>说明：下面例子都是以PHP文件放在系统根目录为基准。</font><br><br><b>例1：连接MYSQL程序。</b>(a.php)<br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>&lt;?php<br>require('e/class/connect.php');&nbsp; &nbsp; &nbsp; &nbsp; //引入数据库配置文件和公共函数文件<br>require('e/class/db_sql.php');&nbsp; &nbsp; &nbsp; &nbsp; //引入数据库操作文件<br>$link=db_connect();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //连接MYSQL<br>$empire=new mysqlquery();&nbsp; &nbsp; &nbsp; &nbsp; //声明数据库操作类<br><br>db_close();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //关闭MYSQL链接<br>$empire=null;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //注消操作类变量<br>?&gt;</td></tr></table><br><br><b>例2：操作MYSQL数据的程序。</b>(b.php)<br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>&lt;?php<br>require('e/class/connect.php');&nbsp; &nbsp; &nbsp; &nbsp; //引入数据库配置文件和公共函数文件<br>require('e/class/db_sql.php');&nbsp; &nbsp; &nbsp; &nbsp; //引入数据库操作文件<br>$link=db_connect();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //连接MYSQL<br>$empire=new mysqlquery();&nbsp; &nbsp; &nbsp; &nbsp; //声明数据库操作类<br><br>$empire-&gt;query(&quot;update {$dbtbpre}ecms_news set onclick=onclick+1&quot;);&nbsp; &nbsp; &nbsp; &nbsp; //给新闻表的点击数加1<br><br>db_close();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //关闭MYSQL链接<br>$empire=null;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //注消操作类变量<br>?&gt;</td></tr></table><br><br><b>例3：读MYSQL数据的程序。</b>(c.php)<br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>&lt;?php<br>require('e/class/connect.php');&nbsp; &nbsp; &nbsp; &nbsp; //引入数据库配置文件和公共函数文件<br>require('e/class/db_sql.php');&nbsp; &nbsp; &nbsp; &nbsp; //引入数据库操作文件<br>$link=db_connect();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //连接MYSQL<br>$empire=new mysqlquery();&nbsp; &nbsp; &nbsp; &nbsp; //声明数据库操作类<br><br>$sql=$empire-&gt;query(&quot;select * from {$dbtbpre}ecms_news order by newstime limit 10&quot;);&nbsp; &nbsp; &nbsp; &nbsp; //查询新闻表最新10条记录<br>while($r=$empire-&gt;fetch($sql))&nbsp; &nbsp; &nbsp; &nbsp; //循环获取查询记录<br>{<br>&nbsp; &nbsp; &nbsp; &nbsp; echo&quot;标题：&quot;.$r['title'].&quot;&lt;br&gt;&quot;;<br>}<br><br>db_close();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //关闭MYSQL链接<br>$empire=null;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //注消操作类变量<br>?&gt;</td></tr></table><br><br><br><font color=blue><b>/e/class/db_sql.php文件中数据库操作类常用的函数说明：</b></font><br><b>1、执行SQL函数：</b><br>$empire-&gt;query(&quot;SQL语句&quot;);<br>$empire-&gt;query1(&quot;SQL语句&quot;);<br><br>说明：<br>执行成功返回true，执行不成功返回false ;<br>两者区别是：query()出错直接中断程序执行，query1()出错不中断程序执行。<br><br>使用范例：<br>$sql=$empire-&gt;query(&quot;select * from {$dbtbpre}ecms_news&quot;);<br><br><b>2、循环读取数据库记录函数：</b><br>$empire-&gt;fetch($sql)<br><br>说明：<br>$sql为query执行SQL返回的结果。<br><br>使用范例：<br>$sql=$empire-&gt;query(&quot;select * from {$dbtbpre}ecms_news&quot;);<br>while($r=$empire-&gt;fetch($sql))<br>{<br>&nbsp; &nbsp; &nbsp; &nbsp; echo&quot;标题：&quot;.$r['title'].&quot;&lt;br&gt;&quot;;<br>}<br><br><b>3、读取单条数据库记录函数：</b>(不循环)<br>$empire-&gt;fetch1(&quot;SQL语句&quot;)<br><br>使用范例：<br>$r=$empire-&gt;fetch1(&quot;select * from {$dbtbpre}ecms_news where id=1&quot;);<br>echo&quot;标题：&quot;.$r['title'];<br><br><b>4、统计SQL查询记录数函数：</b><br>$empire-&gt;num(&quot;SQL语句&quot;)<br>$empire-&gt;num1($sql)<br><br>说明：<br>两者的区别是：num()直接写SQL语句，而num1()中的$sql为query执行SQL返回的结果。<br><br>使用范例：<br>$num=$empire-&gt;num(&quot;select id from {$dbtbpre}ecms_news&quot;);<br>echo&quot;新闻表共有 &quot;.$num.&quot; 条新闻&quot;;<br><br><b>5、统计SQL查询记录数函数2：</b>(相对于num更高效的函数)<br>$empire-&gt;gettotal(&quot;统计SQL语句&quot;);<br><br>说明：<br>gettotal()和num()的区别是：gettotal()采用SQL本身的count(*)函数来统计，而num()是采用PHP本身的函数，gettotal()更高效一些。<br>gettotal()里的统计数一定要as total，如：“count(*) as total”。<br><br>使用范例：<br>$num=$empire-&gt;gettotal(&quot;select count(*) as total from {$dbtbpre}ecms_news&quot;);<br>echo&quot;新闻表共有 &quot;.$num.&quot; 条新闻&quot;;<br><br><b>6、取得刚插入表的自增ID值函数：</b><br>$empire-&gt;lastid()<br><br>使用范例：<br>$empire-&gt;query(&quot;insert into {$dbtbpre}ecms_news(title) values('标题')&quot;);<br>$lastid=$empire-&gt;lastid();<br>echo&quot;刚插入的信息ID为：&quot;.$lastid;<br><br><b>7、移动SQL查询结果记录指针：</b><br>$empire-&gt;seek($sql,$pit)<br><br>说明：<br>$sql为query执行SQL返回的结果，$pit为指针的偏移数。<br><br>使用范例：<br>$sql=$empire-&gt;query(&quot;select * from {$dbtbpre}ecms_news&quot;);<br>$empire-&gt;seek($sql,2);<br><br><b>8、释放SQL查询结果函数：</b>(一般不需要使用)<br>$empire-&gt;free($sql)<br><br>说明：<br>$sql为query执行SQL返回的结果。<br><br>使用范例：<br>$sql=$empire-&gt;query(&quot;select * from {$dbtbpre}ecms_news&quot;);<br>$empire-&gt;free($sql);<br>
+	</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

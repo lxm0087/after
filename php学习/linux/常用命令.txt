@@ -1,0 +1,3 @@
+tar zcvf xxx.tar.gz xxx/ Ñ¹Ëõ
+tar zxvf xxx.tar.gz ½âÑ¹Ëõ
+service sshd restart

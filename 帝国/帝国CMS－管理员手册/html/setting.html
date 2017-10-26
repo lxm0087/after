@@ -1,0 +1,839 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">网站信息配置</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="jbsx">&nbsp; &nbsp; &gt; 基本属性</option>
+          <option value="yhsz">&nbsp; &nbsp; &gt; 用户设置</option>
+          <option value="wjsz">&nbsp; &nbsp; &gt; 文件设置</option>
+          <option value="jssz">&nbsp; &nbsp; &gt; JS设置</option>
+          <option value="fzsc">&nbsp; &nbsp; &gt; 分组生成</option>
+          <option value="sssz">&nbsp; &nbsp; &gt; 搜索设置</option>
+          <option value="xxsz">&nbsp; &nbsp; &gt; 信息设置</option>
+          <option value="ftp">&nbsp; &nbsp; &gt; FTP/EMAIL设置</option>
+          <option value="mxsz">&nbsp; &nbsp; &gt; 模型设置</option>
+          <option value="tpsz">&nbsp; &nbsp; &gt; 图片设置</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>本功能为对网站整体参数进行配置。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25">1、登录后台，单击“<strong>系统</strong>”菜单，选择“<strong>系统参数设置</strong>”子菜单，进入网站信息配置界面：</td>
+  </tr>
+  <tr>
+    <td><img src="img/setting1.jpg" width="339" height="385"></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25">2、网站信息配置介绍</td>
+  </tr>
+  <tr id="jbsx"> 
+    <td width="100%" height="25" bgcolor="4FB4DE"><strong><font color="#FFFFFF">基本属性：</font></strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/setting2.jpg" width="700" height="905"></td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>站点名称</strong></td>
+          <td width="86%">输入站点的名称，该名称显示于网站首页“网页标题”处。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>网站地址</strong></td>
+          <td>输入站点的 URL （可用相对的目录地址或绝对的域名地址），后面需加“/”，如：“/”或“http://www.phome.net/”。<br>
+            说明：一般填网站根目录地址，如果网站栏目需绑定二级域名则要填写网站域名地址。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>附件地址</strong></td>
+          <td>设置站点的附件目录访问地址，后面需加“/”，如：“/d/file/”或“http://www.phome.net/d/file/”。<br>
+            说明：一般填/d/file/目录地址，如果网站栏目需绑定二级域名则要加上域名地址。也可以绑定独立的二级域名，如将“file.phome.net”域名绑定到/d/file/目录，然后附件地址设置http://file.phome.net/ 
+            。 </td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>管理员邮箱</strong></td>
+          <td>设置站点管理员的联系邮箱。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>网站关键字</strong></td>
+          <td>输入站点的SEO关键字，该内容显示于网站首页“网页keywords”处。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>网站简介</strong></td>
+          <td>输入站点的SEO描述，该内容显示于网站首页“网页description”处。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>首页文件扩展名</strong></td>
+          <td>设置网站首页的文件扩展名。如：.html、.php等等</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>首页模式</strong></td>
+          <td>可选“静态首页”和“动态首页”两种方式。除非首页内容需要实时更新，否则选静态，因为动态耗资源。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>PHP超时时间设置</strong></td>
+          <td>PHP安装在CGI模式下该设置方有效；如安装在其他模式下，PHP超时设置需改php.ini。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>关闭前台所有动态页面</strong></td>
+          <td>如果开启，前台所有动态文件都无法使用，但性能和安全性最高。一般用于前台只让访问静态页面时启用。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>关闭动态页面提示内容</strong></td>
+          <td>上面关闭动态时访问动态页面提示的内容。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>关闭前台模块相关功能</strong></td>
+          <td>不使用的功能可以选择关闭。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>远程保存忽略地址</strong></td>
+          <td>在此列表里的网站/地址将不会将文件远程保存本地。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>前台允许提交的来源地址</strong></td>
+          <td>设置前台投稿或评论等允许的网址来源，不设置即不限制。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>验证码相关设置</strong></td>
+          <td><strong>验证码字符组成</strong>：设置验证码随机内容由什么组成。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>验证码过期时间</strong>：设置验证码失效的时间。这个时间越短效果越好，表示从填写信息到提交表单的最长时间间隔。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>验证码加密字符串</strong>：验证码的验证加密密钥。建议定期修改。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>验证码配色</strong>：设置验证码的配色方案。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="yhsz"> 
+    <td height="25" bgcolor="4FB4DE"><strong><font color="#FFFFFF">用户设置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/setting3.jpg" width="700" height="1919"></td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">后台设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>后台登陆验证码</strong></td>
+          <td width="86%">是否开启后台登陆的验证码。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>后台登录次数限制</strong></td>
+          <td>登录系统后台时允许输入的错误密码次数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>重新登录时间间隔</strong></td>
+          <td>登录后台时输入的错误密码次数大于系统设置的次数时，系统将锁定登录，设置再次登录的时间间隔（分钟）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>登录超时限制</strong></td>
+          <td>登录后台无操作时，自动登出后台的时间间隔（分钟）。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">前台设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>会员注册<br>
+            </strong></td>
+          <td>是否开启前台会员注册。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>注册会员默认会员组</strong></td>
+          <td>设置新注册会员默认所属哪个会员组。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>注册赠送点数</strong></td>
+          <td>新注册会员赠送多少点数，0为不赠送。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>注册用户名限制</strong></td>
+          <td>前台注册用户名长度限制（字节）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>注册密码限制</strong></td>
+          <td>前台注册用户密码长度限制（字节）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>会员邮箱唯一性检查</strong></td>
+          <td>前台注册会员填写的邮箱是否允许重复。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>同一IP注册间隔限制</strong></td>
+          <td>同一个IP允许再次注册会员帐号的时间间隔（小时）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>用户名保留关键字</strong></td>
+          <td>前台注册用户名不允许包含的字符，多个字符用&quot;|&quot;号隔开。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>投稿功能</strong></td>
+          <td>是否开启前台投稿功能。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>会员空间</strong></td>
+          <td>是否开启前台会员空间功能。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>会员登陆验证码</strong></td>
+          <td>是否开启前台会员登陆验证码。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>会员注册验证码</strong></td>
+          <td>是否开启前台会员注册验证码。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>会员列表查看权限</strong></td>
+          <td>允许查看网站会员列表的最低会员等级(/e/member/list/)。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>查看会员资料权限</strong></td>
+          <td>允许查看网站会员资料的最低会员等级(/e/member/ShowInfo/)。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>会员列表每页显示</strong></td>
+          <td bgcolor="#FFFFFF">会员列表每页显示会员数量(/e/member/list/)。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>会员空间信息每页显示</strong></td>
+          <td>会员空间的信息列表每页显示信息数量(/e/space/list.php)。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>会员注册审核方式</strong></td>
+          <td>“无”为按会员组里的审核设置；“邮件激活”为采用邮件激活帐号的方式。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>激活帐号链接有效期</strong></td>
+          <td>上面采用邮件激活时，设置激活帐号链接有效期。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>帐号激活邮件内容</strong></td>
+          <td>上面采用邮件激活时，设置激活邮件的内容格式。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>开启取回密码功能</strong></td>
+          <td>是否开启取回密码功能。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>取回密码链接有效期</strong></td>
+          <td>上面开启取回密码功能时，设置取回密码链接有效期。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>取回密码邮件内容</strong></td>
+          <td>上面开启取回密码功能时，设置取回密码邮件的内容格式。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">访问控制设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>禁止 IP 访问列表</strong></td>
+          <td>禁止访问网站的IP地址列表 (前台及后台有效)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>允许 IP 访问列表</strong></td>
+          <td>只允许这些IP地址访问网站 (前台及后台有效)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>允许后台 IP 访问列表</strong></td>
+          <td>只允许这些IP地址访问网站后台 (后台有效)</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">提交控制设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>控制动作</strong></td>
+          <td bgcolor="#FFFFFF">选择要限制IP的功能。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>禁止 IP 提交列表</strong></td>
+          <td bgcolor="#FFFFFF">禁止从这些IP提交信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>允许 IP 提交列表</strong></td>
+          <td bgcolor="#FFFFFF">只允许从这些IP地址提交信息。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="wjsz"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">文件设置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/setting4.jpg" width="700" height="753"></td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">文件设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>附件存放目录</strong></td>
+          <td width="86%">选择附件存放目录的三种形式—栏目目录即d/file/栏目目录；d/file/p目录；d/file目录存放。<br>
+            以及设置存放日期目录格式。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>后台上传附件大小</strong></td>
+          <td>通过后台上传附件时，允许上传的最大值（KB）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>后台上传文件扩展名</strong></td>
+          <td>通过后台上传文件时，允许上传的文件扩展名类型。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>前台投稿附件设置</strong></td>
+          <td>前台投稿，是否允许上传图片/附件，及允许上传的大小及扩展名。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>前台反馈附件设置</strong></td>
+          <td>前台反馈表单，是否允许上传附件，及允许上传的大小及扩展名。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>会员表单附件设置</strong></td>
+          <td>会员注册与修改资料表单是否允许上传图片/附件，及允许上传的大小及扩展名。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>文件生成权限</strong></td>
+          <td>通常选择不设置，但有些空间生成文件权限不是0777，依据空间要求选择。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>广告JS文件前缀</strong></td>
+          <td>如/d/js/acmsd/thea2.js中的thea。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">远程附件设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>启用远程附件<br>
+            </strong></td>
+          <td>是否启用远程附件功能。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>启用 SSL 连接</strong></td>
+          <td>连接FTP是否以SSL方式。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>被动模式(pasv)连接</strong></td>
+          <td>连接FTP是否采用被动模式。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>FTP服务器地址</strong></td>
+          <td>FTP服务器连接地址及端口设置。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>FTP用户名、FTP密码</strong></td>
+          <td>设置FTP的用户名和密码。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>传送模式</strong></td>
+          <td>FTP传送文件模式，默认为二进制。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>FTP 传输超时时间</strong></td>
+          <td>FTP传送超时时间。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>远程附件目录</strong></td>
+          <td>FTP服务器存放附件的目录地址，目录结尾不要加斜杠“/”，空为根目录。如：/phome/file 。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>远程访问地址</strong></td>
+          <td>远程附件目录的 URL 访问地址，结尾需加“/”，如：http://file.phome.net/。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>测试FTP服务器</strong></td>
+          <td>测试设置的FTP参数是否正确，无需保存设置即可测试，可测试通过后再保存。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">备份设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>数据备份存放目录</strong></td>
+          <td>设置备份数据的存放目录，该目录位于e/admin/ebak/下。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>压缩包存放目录</strong></td>
+          <td>设置备份在线压缩包的存放目录，该目录位于e/admin/ebak/下。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>备份只选择当前数据库</strong></td>
+          <td>如选择“是”，则进行备份操作时（见“系统设置”》“备份数据”），系统自动识别备份当前安装EmpireCMS的数据库。 <br>
+            如不选择，则进行备份时，系统会要求备份人员选择需备份的数据库。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>空间不支持数据库列表</strong></td>
+          <td>是否选择依据空间要求而定，因为部分空间不允许读取数据库列表。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>支持MYSQL查询方式</strong></td>
+          <td>是否选择依据空间要求而定，因为部分空间限制MYSQL查询。如果选择支持，效率会更高。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="jssz"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">JS设置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/setting5.jpg" width="700" height="246"></td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td>设置所有热门、最新、推荐、头条及热门评论信息JS调用显示条数。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="fzsc"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">分组生成设置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/setting6.jpg" width="700" height="475"></td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td>系统依据服务器配置进行刷新生成的设置，如服务器配置较低，可适当改小默认分组设置。每组生成数量越大对服务器配置要求就越高。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="sssz"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">搜索设置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/setting7.jpg" width="700" height="264"></td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>搜索用户组</strong></td>
+          <td width="86%">允许使用搜索功能的最低会员组级别。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>搜索关键字</strong></td>
+          <td>搜索关键字的数量限制范围。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>搜索时间间隔</strong></td>
+          <td>给系统设置合理的每次搜索时间间隔，可避免恶意搜索而消耗大量系统资源，单位秒。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>页面显示</strong></td>
+          <td>每页显示搜索记录数，及分页链接显示的最大数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>支持公共模板变量</strong></td>
+          <td>搜索结果页面是否支持公共模板变量。如不支持，则公共模板变量在搜索模板与信息动态列表模板中均不能使用。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>高级搜索页扩展名</strong></td>
+          <td>高级搜索表单页的文件扩展名(/search/index.html)。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="xxsz"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">信息设置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/setting8.jpg" width="700" height="1411"></td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>后台管理信息</strong></td>
+          <td width="86%">后台管理信息页面每页显示信息数量。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>前台结合项列表</strong></td>
+          <td>前台结合项列表每页显示信息数量。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>后台信息默认显示时间范围</strong></td>
+          <td>后台管理信息只显示此时间范围的信息。大数据量下管理信息效率更高。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>后台附件默认显示时间范围</strong></td>
+          <td>后台选择上传附件页面只显示此时间范围的附件。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>信息置顶设置</strong></td>
+          <td>是否开启信息置顶以及置顶范围。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>动态列表支持标签</strong></td>
+          <td>设置动态列表是否支持标签调用(栏目页、结合项页、TAGS页)。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>动态列表变量缓存</strong></td>
+          <td>上面开启动态列表支持标签时，动态页面模板的缓存时间（分钟）。如果是本地调试模板可以设置为0。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>动态内容页支持标签</strong></td>
+          <td>设置动态信息内容页是否支持标签调用。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>动态内容页变量缓存</strong></td>
+          <td>上面开启动态内容页支持标签时，动态页面模板的缓存时间（分钟）。如果是本地调试模板可以设置为0。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>新会员投稿限制</strong></td>
+          <td>设置新注册会员必须过多少分钟才能投稿(0为不限制)。防灌水机。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>重复投稿时间限制</strong></td>
+          <td>连续发布投稿的间隔时间（秒）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>投稿信息修改时间限制</strong></td>
+          <td>设置超过多少时间的投稿信息不能再修改(0为不限制)。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>投稿管理信息显示方式</strong></td>
+          <td>前台会员管理信息的列表显示方式(按模型显示效率低)。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>栏目导航分隔字符</strong></td>
+          <td>[!--class.menu--]导航变量显示的栏目间隔符。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>栏目导航显示个数</strong></td>
+          <td>[!--class.menu--]导航变量显示的栏目最大数量。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>所在位置导航分隔字符</strong></td>
+          <td>[!--newsnav--]变量显示导航的分隔符。如:“首页 &gt; 新闻”中的“&gt;”。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>信息简介截取</strong></td>
+          <td>后台增加/修改信息时，参数“内容简介”截取“新闻正文”字符数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>相关链接依据</strong></td>
+          <td>相关链接的链接依据。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>增加信息随机点击数范围</strong></td>
+          <td>增加信息时默认点击数/下载数。(格式:“最小数,最大数”，空表示不使用。例子：20,100)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>开启信息内容过滤字符替换</strong></td>
+          <td>设置是否开启newstext字段内容过滤字符替换以及什么时候处理替换。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>开启信息内容关键字替换</strong></td>
+          <td>设置是否开启newstext字段内容关键字替换以及什么时候处理替换。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>信息内容关键字重复替换</strong></td>
+          <td>设置newstext字段的内容关键字替换链接次数。(0为不限,效率高；限制替换次数会影响生成效率。)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>评论权限限制</strong></td>
+          <td>允许发布评论的最低会员组级别。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>评论内容限制</strong></td>
+          <td>评论内容字符数限制。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>评论时间间隔</strong></td>
+          <td>连续发布评论的间隔时间。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>评论验证码</strong></td>
+          <td>是否开启评论验证码。可有效防止恶意发表。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>评论每页显示</strong></td>
+          <td>评论列表页面每页显示评论数量。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>评论表情每行显示</strong></td>
+          <td>发布评论表单每行显示多少个表情。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>评论屏蔽字符</strong></td>
+          <td>设置评论屏蔽字符。多个用“|”隔开，如“字符1|字符2”。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>反馈验证码</strong></td>
+          <td>是否开启反馈表单验证码。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>留言验证码</strong></td>
+          <td>是否开启留言表单验证码。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>重复留言时间限制</strong></td>
+          <td>连续发布留言的间隔时间。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>重复投票时间限制</strong></td>
+          <td>连续投票的间隔时间。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>留言每页显示</strong></td>
+          <td>留言板页面每页显示留言数量。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>模板备份记录数</strong></td>
+          <td>修改模板时模板内容备份份数，模板修改错误可还原备份(0为不备份)。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>模板支持程序代码</strong></td>
+          <td>如开启，则模板支持使用PHP代码。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>防采集</strong></td>
+          <td>是否开启防采集功能，如开启，可有效防止采集。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>内容防复制</strong></td>
+          <td>是否开启内容防复制功能。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>列表分页函数(下拉)</strong></td>
+          <td>设置[!--show.page--]分页变量使用的函数(静态页面)。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>列表分页函数(列表)</strong></td>
+          <td>设置[!--show.listpage--]分页变量使用的函数(静态页面)。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>内容分页函数</strong></td>
+          <td>设置[!--page.url--]分页变量使用的函数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>RSS/XML设置</strong></td>
+          <td>设置RSS显示最新记录数和简介截取数。（/e/web/）</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>点击统计设置</strong></td>
+          <td>“实时统计”为访问时直接点击量加1；“文本缓存”为将访问记录缓存下来，达到一定数才更新(访问量大时效率高)；“不统计”为关闭点击数统计。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>信息外部链接设置</strong></td>
+          <td>显示原链接，则点击外部链接地址不显示统计数。</td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr id="ftp"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">FTP/EMAIL设置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/setting9.jpg" width="700" height="630"></td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">发送邮件设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>邮件发送模式</strong></td>
+          <td width="86%">“mail 函数发送”为使用PHP内置的mail函数发送；“SMTP 模块发送”为使用邮件服务器的smtp模块发送。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>SMTP 模块发送设置</strong></td>
+          <td><strong>SMTP服务器</strong>：邮件服务器的SMTP地址。如：smtp.163.com</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>SMTP端口</strong>：邮件服务器的SMTP端口。如：25</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>发信人地址</strong>：发送者邮箱地址。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>发信人呢称</strong>：发送者名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>是否需要登录验证</strong>：邮箱是否要登录验证。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>邮箱登录用户名/密码</strong>：设置登录邮箱的用户名和密码。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">FTP设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>PHP运行于安全模式<br>
+            </strong></td>
+          <td>php是否运行在安全模式。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>安装形式</strong></td>
+          <td>通常选择服务端形式（如是远程发布，请选客户端，并且需配置FTP选项）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>启用 SSL 连接</strong></td>
+          <td>连接FTP是否以SSL方式。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>被动模式(pasv)连接</strong></td>
+          <td>连接FTP是否采用被动模式。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>FTP服务器地址</strong></td>
+          <td>FTP服务器连接地址及端口设置。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>FTP用户名、FTP密码</strong></td>
+          <td>设置FTP的用户名和密码。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>传送模式</strong></td>
+          <td>FTP传送文件模式，默认为二进制。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>FTP 传输超时时间</strong></td>
+          <td>FTP传送超时时间。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>系统根目录(FTP)</strong></td>
+          <td>FTP服务器存放文件的目录地址，目录结尾不要加斜杠“/”，空为根目录。如：/phome 。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>测试FTP服务器</strong></td>
+          <td>测试设置的FTP参数是否正确，无需保存设置即可测试，可测试通过后再保存。</td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr id="mxsz"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">模型设置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/setting10.jpg" width="700" height="532"></td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">信息投稿屏蔽设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>屏蔽字段</strong></td>
+          <td width="86%">设置要屏蔽字符的字段。多个字段名用“|”隔开，如“title|newstext”。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>屏蔽字符列表</strong></td>
+          <td>设置要屏蔽的字符。多个用“|”隔开，如“字符1|字符2”。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">新闻/下载/电影模型设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>同一地址下载/观看超过</strong></td>
+          <td>已经下载(下载模型)或观看(电影模型)过的信息，再次下载或观看是否扣点的间隔时间（小时）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>同一信息查看超过</strong></td>
+          <td>已经查看过的信息，再次查看是否扣点的间隔时间（小时）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>下载验证码</strong></td>
+          <td>主要用于防盗链，请定期更新一次密码。如一周修改一次。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>开启直接下载</strong></td>
+          <td>是否开启以不弹出下载页面的方式进行下载。(/e/DownSys/GetDown/)</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">商城模型设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>提交订单权限<br>
+            </strong></td>
+          <td>允许提交订单的最低会员组级别。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>购物车数量限制</strong></td>
+          <td>购物车最多种商品数量选择限制。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>是否提供发票</strong></td>
+          <td>设置购买商品是否提供发票。</td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr id="tpsz"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">图片设置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/setting11.jpg" width="700" height="461"></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">图片缩略图设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>默认值</strong></td>
+          <td width="86%">后台上传图片时勾选生成缩图的默认尺寸。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>超出部分是否截取</strong></td>
+          <td>当图片宽度与高度不成比例时的图片处理。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td colspan="2">图片水印设置</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>水印位置</strong></td>
+          <td>水印显示位置。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>文字水印</strong></td>
+          <td>文字水印相关设置。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>图片水印</strong></td>
+          <td>图片水印相关设置（图片文件设置空为使用文字水印）。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+</body>
+</html>

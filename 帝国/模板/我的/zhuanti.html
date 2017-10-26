@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<link rel="shortout icon" href="http://www.nclaimei.com/skin/laimei2017/images/favicon.ico" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="renderer" content="webkit"/>
+<meta http-equiv="X-UA-Comabsolutetible" content="IE=Edge,chrome=1" />
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+<title>专题管理_南昌莱美美容医院</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style>
+.topDateTell .tellnumber::before, .topLogo h1, .topNav .topSearchBtn::before, .bannerSlide .preBtn i, .bannerSlide .nextBtn i {
+	background: rgba(0, 0, 0, 0) url("images/icon.png") no-repeat scroll 0 0
+}
+</style>
+<link href="/skin/css/reset.css" rel="stylesheet"/>
+<link href="/skin/css/zhuanti.css" rel="stylesheet"/>
+<script src="/skin/js/jquery-1.9.1.min.js"></script>
+<script src="/skin/js/jquery.superslide.2.1.1.source.js"></script>
+<script src="/skin/js/indexapp.js"></script>
+</head>
+<body>
+[!--temp.header--]
+<!-- content start -->
+<div class="content" id="content">
+  <div class="stageContainer pubW center">
+	<div class="xslc">
+	  <div class="xslc_focus clearfix">
+    [showclasstemp]63,13,0,4[/showclasstemp]
+	  </div>
+	  <div class="slideBox">
+		<div class="slides">
+    [e:loop={"select classid from [!db.pre!]enewsclass where bclassid='$GLOBALS[navclassid]'",6,24,0}]
+		  <div class="slide  clearfix">
+     <?php $sql = $empire->query("select titleurl,titlepic from {$dbtbpre}ecms_news where classid='$bqr[classid]' order by id desc");while( $row = $empire->fetch($sql) ){?>
+      <div class="info relative fl"> 
+  		<a href="<?=$row['titleurl']?>" target="_blank"> <img src="<?=$row['titlepic']?>" width="371" height="210">
+        </a>
+        </div>  
+           <?php } ?>
+			  
+			</div>
+    [/e:loop]
+		</div>
+	  </div>
+	</div>
+	 <div class="ztcontents clearfix fonts">
+        <ul>
+                  <li><a class="qiujing"  href="javascript:void(0)" onClick="openZoosUrl();return false;" target="_blank"></a><p>专业提供在线免费咨询服务，快速为您解答整形美容疑问。</p></li>
+                          <li><a class="chengxin" href="javascript:void(0)" onClick="openZoosUrl();return false;" target="_blank"></a><p>医生免费预约通道，到院无需排队即可享受美丽专属优惠。</p></li>
+                          <li><a class="reqing"   href="http://www.nclaimei.com/gylm/lylx"></a><p>无论您在本市还是外地，一份详细的交通指南让您轻松到达。</p></li>
+                </ul>
+      </div>
+  </div>
+</div>
+<!-- end content -->
+<!-- footer start -->
+<div class="footer">
+  <div class="pubW center clearfix">
+	<div class="footerNav">
+		<div class="footer_logo fl"></div>
+		<i></i>
+		<div class="footer_address fl">
+			<div class="footer_text center">
+				<h1>医院地址</h1>
+				<p>南昌市抚河抚河南路261号（上林春天花园北门）</p>
+				<p>免费热线：0791-86667777</p>
+				<p>乘车路线：20路、25路、218路、33路到建设路西口</p>
+			</div>
+		</div>
+		<i></i>
+		<div class="footer_qrcode fl"></div>
+	</div>
+		<p>网站内容申明：本网站信息仅供参考，不能作为诊疗及医疗依据本网站商标及图片权属本医院所有，未经授权请勿复制及转载！部分图片来源于网络且图文无关，若侵犯了您的权益请及时联系。<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb6c8806730042053a0e3f0786c2872ce' type='text/javascript'%3E%3C/script%3E"));
+</script></p>
+  </div>
+</div>
+<div class="copyright">
+	<div class="splitline"></div>
+	<p>Copyright @ 南昌莱美美容医院 All rights reserved 赣ICP备10201680号</p>
+</div>
+<!-- end footer -->
+<script language="javascript" src="/skin/js/kst.js"></script>
+<div id="ScrollTop">Top</div>
+<script>
+	window.onload = function () {
+    var top = document.getElementById("ScrollTop");
+    //滚动一屏幕时显示回到顶部
+    window.onscroll = function () {
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        currentPosition > window.screen.availHeight ? top.style.display = "block" : top.style.display = "none";
+    };
+    top.onclick = GoTop;// 注意不要括号
+    function GoTop() {
+        var timer = setInterval(function () {
+    var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            currentPosition -= 100;
+            if (currentPosition > 0) {
+                window.scrollTo(0, currentPosition);
+            }
+            else {
+                window.scrollTo(0, 0);
+                clearInterval(timer);
+            }
+        }, 30);
+    }
+}
+</script>
+
+<script>
+	$(function(){
+			$(".xslc .info").each(function(index, element) {
+				$(this).mouseenter(function(e) {
+					$(this).removeClass("active").siblings().addClass("active");
+				}).mouseleave(function(e) {
+					$(this).removeClass("active").siblings().removeClass("active");
+				});;
+			});
+			$(".xslc").slide({
+			mainCell: '.slides',
+			titCell: '.xslc_focus .txt',
+			effect: 'fade',
+			prevCell: '',
+			nextCell: '',
+			autoPlay: true,
+			mouseOverStop:true,
+			interTime: 6000,
+			delayTime:1200,
+			titOnClassName: 'active',
+		});
+	})
+</script>

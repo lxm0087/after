@@ -1,0 +1,438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">碎片管理</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="spsay">&nbsp; &nbsp; &gt; 碎片功能介绍</option>
+          <option value="spstep">&nbsp; &nbsp; &gt; 碎片使用步骤</option>
+          <option value="sptype">&nbsp; &nbsp; &gt; 帝国CMS的三种碎片用法</option>
+          <option value="jtsp">&nbsp; &nbsp; &gt; 静态信息碎片使用</option>
+		  <option value="dtsp">&nbsp; &nbsp; &gt; 动态信息碎片使用</option>
+		  <option value="dmsp">&nbsp; &nbsp; &gt; 代码碎片使用</option>
+		  <option value="spclass">&nbsp; &nbsp; &gt; 管理碎片分类</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="spsay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、帝国CMS的碎片功能介绍</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>什么是碎片？</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>碎片也就是网页中某一块信息的调用与管理。像门户中页面每块信息调用就是一个碎片，让不同管理员更新不同的区域块信息，如图：<br>
+      <img src="img/sp1.jpg" width="700" height="460"> </strong></td>
+  </tr>
+  <tr>
+    <td height="25" bgcolor="#C3EFFF"><strong>帝国CMS的碎片功能介绍</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>有了帝国CMS的碎片，可以不限栏目、表、模板和只限站内等，可以调用任何信息到网站，让网站信息变得更加的灵活和高效。</strong><br>
+      碎片是门户网站必备的功能之一。下面我们来说明一下门户网站为什么需要碎片功能和碎片在帝国CMS中的应用：<br> <b><font color=blue>第一、大数据量情况下的考虑：</font></b><br>
+      如果当你的信息达到几百万、几千万数据以上，如果用标签调用需要从这么大的数据量的数据表中查找出符合的信息，效率是很低的，而碎片调用信息确是为解决这一问题而存在，碎片集合的总信息合起来不会超过几千、几万数据。从几百万数据表中查找信息快还是从几千的数据表中查找信息快？显而易见，大数据量下碎片调用更具优势。<br> 
+      <b><font color=blue>第二、碎片也是为帝国CMS多表信息集合调用而存在，是结合帝国系统实际应用中的创新：</font></b><br>
+      相对于门户网站中的系统，帝国的碎片更灵活，而且是结合帝国系统本身实际应用开发的，更加实用。6.0以前版本我们是用分表将信息分离出去，而6.5版以上的碎片功能则是将分表信息又重新集合。所有表的信息都能推送给一个碎片或多个，碎片可调用所有表信息。在帝国CMS6.5以上中此碎片类型叫“动态信息碎片”，用来调用所有信息表中的信息。而一般门户系统中碎片都是由编辑手动修改，无自动调用原来信息表特点，编辑的工作量很大。这是帝国CMS在碎片功能上的创新。<br> 
+      <b><font color=blue>第三、碎片也为一些无规则的内容显示提供方便的方案：</font></b><br>
+      因为无规则的东西是无法用程序循环输出的，所以就有了帝国CMS6.5以上的第二个碎片类型：“代码碎片”。编辑可手动编辑调用内容和代码、并且支持历史备份，一旦修改错误可以马上还原备份记录。<br> 
+      <b><font color=blue>第四、碎片也为调用外部数据而存在：</font></b><br>
+      可以将外部的信息和帝国CMS本身的信息混合调用，于是就有了帝国CMS6.5以上的第三个碎片类型：“静态信息碎片”。比如：帝国CMS+论坛+SNS+商城+...，你要把推荐的信息全部都放在一起调用，那这个功能就非常有用了。<br> 
+      <b><font color=blue>第五、碎片也同时实现了单信息发布到多栏目/页面调用：</font></b><br>
+      支持将一个信息推送到多个碎片中调用。<br> <b><font color=blue>第六、在大数据量情况下，帝国CMS采用碎片调用和模板中不加标签调用效率是相当的：</font></b><br>
+      回顾下6.0版我们测试的“<b><a href="http://www.phome.net/ecms6/jm/20000000/20000000.html" target="_blank">2千万数据、17.3GB数据库下帝国CMS超强生成速度</a></b>”这个测试是在内容页不增加调用标签的情况下的速度，而6.5版本以上如果你内容页采用碎片调用，完全可以实现增加更复杂的调用情况下接近测试的效率。<br> 
+      <br> <b>帝国CMS的碎片功能有以下特点：</b><br>
+      (1)、碎片分类管理：可以按分类来搜索碎片，特别适合在碎片数量多的情况下非常有用；<br>
+      (2)、碎片管理：碎片可设定使用的标签模板、是否开启等。<br>
+      (3)、碎片信息更新与管理：只有碎片分配更新权限的用户才有权限更新；<br>
+      (4)、支持三种碎片类型：静态信息碎片、动态信息碎片、代码碎片；<br>
+      (5)、可按用户组、部门、帐号分配碎片更新权限，并且支持越权限推送设置；<br>
+      (6)、内置碎片调用标签“[spinfo]碎片变量名,显示条数,标题截取数[/spinfo]”，可按碎片调用信息；<br>
+      (7)、可推送任意表或任意栏目的信息到动态信息碎片；<br>
+      (8)、支持设定单个碎片存放最大的信息数量，减少冗余数据，调用效率更高。<br> </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="spstep"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、碎片使用步骤</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>碎片使用一般步骤：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> 1、增加碎片；<br>
+      2、修改模板在要显示碎片内容的地方加上碎片标签调用碎片；<br>
+      3、更新碎片里维护碎片显示内容。（碎片里设置更新权限的用户才有权限查看与更新） </td>
+  </tr>
+  <tr>
+    <td height="25">动态信息碎片可以在管理信息时将信息直接推送到碎片，支持多表推送。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="sptype"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、帝国CMS的三种碎片用法</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>帝国CMS共支持三种碎片方式：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、静态信息碎片</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">有以下两种录入方式：<br>
+      (1)、以手动方式增加信息的标题、链接、简介等内容。<br>
+      (2)、通过信息ID获取信息内容。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、动态信息碎片</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">有以下两种录入方式：<br>
+      (1)、管理信息页面里推送信息到碎片。<br>
+      (2)、手动指定要调用的信息ID。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>3、代码碎片</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">手动可视化或代码下编辑调用内容。（支持自动备份，并且可还原备份）</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="jtsp"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、静态信息碎片使用</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(一)、增加碎片：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><p>1、登录后台&gt;“栏目”&gt;“碎片管理”&gt;“管理碎片”&gt;“增加碎片”，进入增加碎片界面：</p></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp3.jpg" width="702" height="722"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>碎片类型</strong></td>
+          <td>选择要增加的碎片类型（静态信息碎片、动态信息碎片或代码碎片），设置后不可修改。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="17%" height="25"><strong>碎片名称</strong></td>
+          <td width="83%">填写碎片名称，用于识别碎片。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>碎片变量名</strong></td>
+          <td>填写标签调用时使用的碎片变量名，变量名不能重复。支持英文、数字与中文。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>所属分类</strong></td>
+          <td>选择碎片所属分类，方便按此分类统一管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>隶属信息栏目</strong></td>
+          <td>选择碎片属于哪个栏目，更新碎片时可以只显示所属栏目的碎片。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>最大信息数量</strong></td>
+          <td>设置碎片最大的存储信息数量，以减少数据库空间。静态碎片与动态碎片有效。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>使用标签模板</strong></td>
+          <td>选择模板中显示碎片信息所用的标签模板。静态碎片与动态碎片有效。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>碎片效果图</strong></td>
+          <td>设置本碎片的效果图片，让新编辑了解碎片显示模样。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>碎片描述</strong></td>
+          <td>填写备注内容。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>可越权限推送</strong></td>
+          <td>选择如果用户不在碎片权限范围内是否可以推送信息到碎片里。动态碎片有效。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>是否开启</strong></td>
+          <td>选择此碎片是否使用。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>权限设置</strong></td>
+          <td><strong>用户组：</strong>选择可更新碎片的信息的用户组。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">&nbsp;</td>
+          <td><strong>部门：</strong>选择可更新碎片的信息的部门。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">&nbsp;</td>
+          <td><strong>用户：</strong>选择可更新碎片的信息的用户。多个用户名用“,”逗号隔开。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">2、增加碎片后返回<strong>管理碎片</strong>页面，即可看到我们刚才增加的碎片：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp4.jpg" width="698" height="253"></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(二)、修改模板在要显示碎片内容的地方加上碎片标签调用碎片。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、调用碎片的信息标签语法：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">[spinfo]碎片变量名,显示条数,标题截取数[/spinfo]</td>
+  </tr>
+  <tr> 
+    <td height="25">例子：[spinfo]'jtsp1',5,36[/spinfo]</td>
+  </tr>
+  <tr> 
+    <td height="25">2<strong>、将碎片调用标签加到模板中要显示信息的位置。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(三)、更新碎片里维护碎片显示内容</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>更新碎片</strong>”子菜单，进入更新碎片信息界面：(直接点快捷菜单的更新碎片也可以)</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp5.jpg" width="555" height="437"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入更新碎片信息界面<strong>：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp6.jpg" width="758" height="257"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、点击“<strong>静态碎片1</strong>”的“<strong>[更新碎片]</strong>”，进入碎片的信息管理：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp7.jpg" width="755" height="299"><br>
+      （信息是按发布时间排序，如果要改顺序可以修改发布时间，发布时间设置空则改为当前时间。） </td>
+  </tr>
+  <tr> 
+    <td height="25">4、点击上面的信息“<strong>修改</strong>”，进入碎片信息修改页面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp8.jpg" width="752" height="426"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>标题</strong></td>
+          <td>填写信息的标题，标签模板用：[!--title--]</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="17%" height="25"><strong>标题链接</strong></td>
+          <td width="83%" bgcolor="#FFFFFF">填写信息的链接，标签模板用：[!--titleurl--]</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>标题属性</strong></td>
+          <td>设置标题加粗加色等。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">&nbsp;</td>
+          <td><strong>左边：</strong>设置标题左边显示什么字符，标签模板用：[!--titlepre--]</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">&nbsp;</td>
+          <td><strong>右边：</strong>设置标题右边显示什么字符，标签模板用：[!--titlenext--]</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>标题缩图</strong></td>
+          <td bgcolor="#FFFFFF">填写的调用缩图地址，标签模板用：[!--titlepic--]</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>标题大图</strong></td>
+          <td bgcolor="#FFFFFF">填写的调用大图地址，标签模板用：[!--bigpic--]</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25" bgcolor="#FFFFFF"><strong>发布时间</strong></td>
+          <td bgcolor="#FFFFFF">填写信息的发布时间，标签模板用：[!--newstime--]。（信息是按发布时间排序显示）</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>内容简介</strong></td>
+          <td>填写的信息的简介，标签模板用：[!--smalltext--]</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[通过信息ID获取]按钮</strong></td>
+          <td>用填写信息ID来获取已经增加的信息内容。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[当前时间]按钮</strong></td>
+          <td>把信息发布时间设为当前时间。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">5、更新碎片的信息后，生成模板调用碎片的页面就可以看到我们增加的碎片信息。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="dtsp"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">五、动态信息碎片使用</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(一)、增加碎片：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><p>1、登录后台&gt;“栏目”&gt;“碎片管理”&gt;“管理碎片”&gt;“增加碎片”，进入增加碎片界面：</p></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp9.jpg" width="684" height="717"></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(二)、修改模板在要显示碎片内容的地方加上碎片标签调用碎片。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、调用碎片的信息标签语法：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">[spinfo]碎片变量名,显示条数,标题截取数[/spinfo]</td>
+  </tr>
+  <tr> 
+    <td height="25">例子：[spinfo]'dtsp1',5,36[/spinfo]</td>
+  </tr>
+  <tr> 
+    <td height="25">2<strong>、将碎片调用标签加到模板中要显示信息的位置。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(三)、更新碎片里维护碎片显示内容</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、增加动态碎片后，管理信息页面就可以将信息推送到我们增加的碎片：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp10.jpg" width="839" height="644"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、管理信息页面点击“<strong>推送</strong>”按钮，进入加入碎片选择页面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp11.jpg" width="440" height="566"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、推送完信息，我们可以进入<strong>更新碎片</strong>信息界面，查看我们刚推送的信息：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp12.jpg" width="723" height="296"></td>
+  </tr>
+  <tr> 
+    <td height="25">4、点击“<strong>动态碎片1</strong>”的“<strong>[更新碎片]</strong>”，进入碎片的信息管理，看到我们刚推送的信息：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp13.jpg" width="688" height="386"><br>
+      （信息是按发布时间排序，如果要改顺序可以修改发布时间，发布时间设置空则改为当前时间。） </td>
+  </tr>
+  <tr> 
+    <td height="25">5、除了用推送的方式，你还可以手动增加，点击上面的“增加碎片信息”：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp14.jpg" width="685" height="237"></td>
+  </tr>
+  <tr> 
+    <td height="25">5、更新碎片的信息后，生成模板调用碎片的页面就可以看到我们推送或增加的碎片信息。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="dmsp"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">六、代码碎片使用</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(一)、增加碎片：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><p>1、登录后台&gt;“栏目”&gt;“碎片管理”&gt;“管理碎片”&gt;“增加碎片”，进入增加碎片界面：</p></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp15.jpg" width="743" height="719"></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(二)、修改模板在要显示碎片内容的地方加上碎片标签调用碎片。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、调用碎片的信息标签语法：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">[spinfo]碎片变量名,显示条数,标题截取数[/spinfo]</td>
+  </tr>
+  <tr> 
+    <td height="25">例子：[spinfo]'dmsp1',0,0[/spinfo]</td>
+  </tr>
+  <tr> 
+    <td height="25">2<strong>、将碎片调用标签加到模板中要显示信息的位置。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(三)、更新碎片里维护碎片显示内容</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、进入<strong>更新碎片</strong>信息界面，可以看到我们刚才增加的代码碎片：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp16.jpg" width="719" height="315"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、点击“<strong>代码碎片1</strong>”的“<strong>[更新碎片]</strong>”，进入代码碎片内容修改：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/sp17.jpg" width="742" height="590"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、更新碎片的信息后，生成模板调用碎片的页面就可以看到我们推送或增加的碎片信息。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="spclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">七、管理碎片分类</font></strong></td>
+  </tr>
+  <tr>
+    <td height="25">碎片分类方便统一管理碎片，在碎片非常多的情况下可以对碎片进行分类更新与管理。</td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>管理碎片分类</strong>”子菜单，进入管理碎片分类界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/sp18.jpg" width="399" height="389" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>管理碎片分类</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/sp19.jpg" width="645" height="219" border="0"></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

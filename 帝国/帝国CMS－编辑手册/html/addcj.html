@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>采集教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">增加采集节点</strong></td>
+  </tr>
+  <tr>
+    <td height="27" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>增加采集节点：也可以说是新增一个采集任务。<br>
+            <font color="#FF0000">说明：每个系统模型都有自己的采集，无论是内置的还是用户自定义的系统模型，新闻系统有新闻系统采集，下载系统有下载系统采集等等。</font> 
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">增加采集基本流程</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、增加采集节点；</td>
+  </tr>
+  <tr> 
+    <td height="25">2、预览采集正则是否正确；</td>
+  </tr>
+  <tr> 
+    <td height="25">3、预览无误后即可开始采集。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">增加采集节点</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>增加采集节点</strong>”子菜单，进入选择入库栏目界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/addcj1.jpg" width="389" height="423" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入选择入库栏目界面：<font color="#666666">（也就是选择采集的信息存放到哪个栏目）</font></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addcj2.jpg" width="689" height="626"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、选择入库栏目后，进入“<strong>增加采集节点</strong>”页面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/addcj3.jpg" width="772" height="5030" border="0"><br> 
+      <br> 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td height="25" colspan="2"><font color="#FFFFFF"><strong>基本信息</strong></font></td>
+        </tr>
+        <tr> 
+          <td width="19%" height="25" bgcolor="#FFFFFF"><strong>节点名称</strong></td>
+          <td width="81%" bgcolor="#FFFFFF">此节点的名称</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>父节点</strong></td>
+          <td bgcolor="#FFFFFF">可选择上级节点，主要方便管理，比如你可以把所有新闻的采集都归到一个父节点里。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>采集页面地址</strong></td>
+          <td bgcolor="#FFFFFF">要采集的页面列表，如果是多个列表用<strong>回车</strong>格开。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>采集页面为直接内容页：</strong>说明填写的地址为直接内容页面地址。</td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#FFFFFF"><strong>采集页面地址方式二</strong></td>
+          <td height="25" bgcolor="#FFFFFF">由系统自己生成列表，但必须是有数字规律的。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">如:“http://www.phome.net/index.php?page=<strong>[page]</strong>”<font color="#666666">([page]则为页码的范围)</font></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>内容页地址前缀</strong></td>
+          <td bgcolor="#FFFFFF">信息页链接的地址前缀。如地址前面没域名的话，系统会加上此前缀。<br>
+            如：http://www.phome.net+/news/2006/1.html</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>图片/FLASH地址前缀</strong></td>
+          <td bgcolor="#FFFFFF">新闻内容的图片/FLASH地址为相对地址时使用。<font color="#666666">(针对newstext字段，远程保存时有效)</font></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>入库栏目</strong></td>
+          <td bgcolor="#FFFFFF">采集的数据要入库的栏目。如本节点不是采集节点，请不选。<font color="#666666">(只列出属于此系统模型的栏目)</font></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>入库专题</strong></td>
+          <td bgcolor="#FFFFFF">采集的数据要入库的专题。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>节点生效时间</strong></td>
+          <td bgcolor="#FFFFFF">“开始时间”与“结束时间”这个目前可随意设置。这主要是以后版本扩展之用。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>备注</strong></td>
+          <td bgcolor="#FFFFFF">备注或说明</td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2"><strong><font color="#FFFFFF">选项</font></strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>默认相关关键字</strong></td>
+          <td bgcolor="#FFFFFF">截取标题前几个字符作为相关链接的“关键字”，推荐设为0，这样入库效率更高。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>采集记录数</strong></td>
+          <td bgcolor="#FFFFFF">可设置只采集前多少条记录。<font color="#666666">(</font><font color="#666666">&quot;0&quot;为不限，系统会从头采到页面尾)</font></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>远程保存图片到本地</strong></td>
+          <td bgcolor="#FFFFFF">选择后入库时系统会远程保存图片到本地，还可设置是否加水印。<font color="#666666">(针对newstext字段)</font></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>远程保存FLASH到本地</strong></td>
+          <td bgcolor="#FFFFFF">选择后入库时系统会远程保存FLASH到本地。<font color="#666666">(针对newstext字段)</font></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>标题图片设置</strong></td>
+          <td bgcolor="#FFFFFF">可设置选择远程保存第几个图片作为标题图片及生成缩图设置。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>每组列表采集个数</strong></td>
+          <td bgcolor="#FFFFFF">采集列表页每组记录数，单采集列表页请填1。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>每组信息采集个数</strong></td>
+          <td bgcolor="#FFFFFF">采集信息页数据每组记录数</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>每组入库数</strong></td>
+          <td bgcolor="#FFFFFF">如果要远程保存图片/FLASH则请设小，如设为1。<font color="#666666">(为防止入库超时，系统推荐将php的超时设为360以上)</font></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>每组采集时间间隔</strong></td>
+          <td bgcolor="#FFFFFF">针对部分网站限制了页面刷新时间间隔而设置的项<strong></strong></td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2"><font color="#FFFFFF"><strong>附加选项</strong></font></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>页面编码转换</strong></td>
+          <td bgcolor="#FFFFFF">页面编码的转换设置。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>是否重复采集同一链接</strong></td>
+          <td bgcolor="#FFFFFF">可设置同一链接是否重复采集。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>是否隐藏已导入的信息<br>
+            </strong></td>
+          <td bgcolor="#FFFFFF">推荐选隐藏。否则入库后的记录依然会显示到入库列表里。</td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#FFFFFF"><strong>采集后自动入库</strong></td>
+          <td height="25" bgcolor="#FFFFFF">可设置采集后自动入库，不需要人工去入库。但有可能入库超时中断。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">入库后自动删除已导入的信息：入库后同时删除备份的验证记录。</td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#FFFFFF"><strong>整体页面过滤正则<br>
+            </strong></td>
+          <td height="25" bgcolor="#FFFFFF">格式：“广告开始[!--pad--]广告结束”。多个可用“,”格开。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">针对整个页面代码进行过滤。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>对整个页面字符替换<br>
+            </strong></td>
+          <td bgcolor="#FFFFFF">原字符多个请用&quot;,&quot;格开,如果是新字符是多个，可以用&quot;,&quot;格开，系统会一一对应进行替换。</td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2"><font color="#FFFFFF"><strong>过滤选项</strong></font></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>采集关键字</strong></td>
+          <td bgcolor="#FFFFFF">标题包含关键字的信息才会采集。如不限制，请留空。多个请用&quot;,&quot;格开</td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#FFFFFF"><strong>替换</strong></td>
+          <td height="25" bgcolor="#FFFFFF"> 原字符多个请用&quot;,&quot;格开,如果是新字符是多个，可以用&quot;,&quot;格开，系统会一一对应进行替换。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">(针对标题与内容)</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>过滤广告正则</strong></td>
+          <td bgcolor="#FFFFFF">格式：“广告开始[!--ad--]广告结束”，多个请用&quot;,&quot;格开。<font color="#666666">(针对newstext字段)</font></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>内容为空不采集</strong></td>
+          <td bgcolor="#FFFFFF">如果newstext内容为空不采集设置项。</td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#FFFFFF"><strong>过滤相似</strong></td>
+          <td height="25" bgcolor="#FFFFFF">可设置不采集标题相似超过多少个字符的信息。如不限制请填&quot;0&quot;。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">可设置不采集标题完全相同的信息</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>截取内容简介</strong></td>
+          <td bgcolor="#FFFFFF">如果信息简介<font color="#666666">(smalltext)</font>没有值的话，系统会依此设置截取新闻内容<font color="#666666">(newstext)</font>多少字符作为简介。</td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2"><strong><font color="#FFFFFF">列表页正则</font></strong></td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#FFFFFF"><strong>信息链接区域正则</strong></td>
+          <td height="25" bgcolor="#FFFFFF">通常不需要设置。一般是设置<strong>只采集页面某一区域的链接</strong>或<strong>缩小采集范围</strong>才设置的</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">在要采集链接区域的代码地方加上“[!--smallurl--]”</td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#FFFFFF"><strong>信息页链接正则</strong></td>
+          <td height="25" bgcolor="#FFFFFF">采集“内容页链接”的正则（列表页里）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">在信息页链接的地方加上“[!--newsurl--]”</td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#FFFFFF"><strong>标题图片正则</strong></td>
+          <td height="25" bgcolor="#FFFFFF">采集“标题图片地址”的正则，可设置远程保存与地址前缀（列表页里，如图片在内容页，请留空）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">在标题图片地址的地方加上“[!--titlepic--]”</td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2"><strong><font color="#FFFFFF">内容页分页采集设置:(如没有分页请留空,针对newstext字段)</font></strong></td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><font color="#FF0000">说明：如果是全部列表式，则只需看第一页的页面HTML代码。</font></td>
+        </tr>
+        <tr>
+          <td height="26" bgcolor="#FFFFFF"><strong>入库是否保留原分页</strong></td>
+          <td bgcolor="#FFFFFF">如果选择“不保留分页”则入库后的信息都不分页。</td>
+        </tr>
+        <tr> 
+          <td height="26" bgcolor="#FFFFFF"><strong>分页形式</strong></td>
+          <td bgcolor="#FFFFFF">有“上下页导航式”与“全部列出式”两种形式。（一般全部列出式用的比较多）</td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#FFFFFF"><strong>&quot;全部列出&quot;式正则设置</strong></td>
+          <td height="25" bgcolor="#FFFFFF">分页区域正则([!--smallpageallzz--])</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">分页链接正则([!--pageallzz--])</td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#FFFFFF"><strong>&quot;上下页导航&quot;式正则设置</strong></td>
+          <td height="25" bgcolor="#FFFFFF">分页区域正则([!--smallpagezz--])</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">分页链接正则([!--pagezz--])</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">采集相关注意事项</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="23" bgcolor="#FFFFFF">1、按通常设置，同一链接不重复采集。</td>
+  </tr>
+  <tr> 
+    <td height="23" bgcolor="#FFFFFF">2、没有标题的信息不采集。</td>
+  </tr>
+  <tr> 
+    <td height="23" bgcolor="#FFFFFF">3、非固定内容可用“*”代表任意字符。</td>
+  </tr>
+  <tr> 
+    <td height="23" bgcolor="#FFFFFF">4、对于特殊字符请在前面加上“\\”，当然直接将特殊字符改为“*”最合适了。特殊字符如下：<br>
+      “ )”、“(”、“{”、“}”、“[”、“]”、“\”、“?”等等。</td>
+  </tr>
+  <tr> 
+    <td height="23" bgcolor="#FFFFFF">5、正则要找出唯一性的开头字符。有时候空格都会成为识别的依据。</td>
+  </tr>
+  <tr> 
+    <td height="23" bgcolor="#FFFFFF">6、增加节点后最好先预览节点，预览无误后才开始采集。(管理采集节点那可预览)<br>
+      <img src="img/addcj4.jpg" width="756" height="256" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="23" bgcolor="#FFFFFF">7、＂时间正则＂：为空的话，将为入库时间</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

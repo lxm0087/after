@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">系统扩展变量</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="pubvarclass">&nbsp; &nbsp; &gt; 管理扩展变量分类</option>
+          <option value="addpubvar">&nbsp; &nbsp; &gt; 增加扩展变量</option>
+          <option value="pubvar">&nbsp; &nbsp; &gt; 管理扩展变量</option>
+          <option value="getpubvar">&nbsp; &nbsp; &gt; 扩展变量调用说明</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>通过自定义扩展变量功能，用户可以自定义公共的程序使用变量，为用户扩展系统带来便利。比如可以增加像系统$public_r[newsurl]这样的变量，还比如扩展了某个系统模型，需要增加设置项都可以用扩展变量来实现...等等。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25">一、登录后台，单击“<strong>系统</strong>”菜单，选择“<strong>扩展变量</strong>”子菜单，进入管理扩展变量界面：</td>
+  </tr>
+  <tr>
+    <td><img src="img/pubvar1.jpg" width="300" height="343" border="0"></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="pubvarclass"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、管理扩展变量分类：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、“<strong>管理扩展变量</strong>”界面 -&gt; 点击“<strong>管理扩展变量分类</strong>”按钮进入管理扩展变量分类（见下图）：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/pubvar3.jpg" width="700" height="327" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入管理扩展变量分类界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/pubvar2.jpg" width="700" height="242" border="0"></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="addpubvar"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、增加扩展变量：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、“<strong>管理扩展变量</strong>”界面 -&gt; 点击“<strong>增加扩展变量</strong>”按钮进入增加扩展变量（见下图）：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/pubvar6.jpg" width="700" height="328" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入增加扩展变量界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/pubvar4.jpg" width="700" height="525" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>变量名</strong></td>
+          <td width="86%">填写调用变量名，变量名由英文和数字组成。比如：title</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>所属分类</td>
+          <td>选择变量所属分类，方便统一管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>变量标识</strong></td>
+          <td>变量标识方便识别变量。比如：标题</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>变量说明</td>
+          <td>填写变量的备注内容。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>是否写入缓存</td>
+          <td>选择是否写入到缓存文件里，经常用到并且是小内容的可选择写入缓存，否则不建议选择，以减少缓存文件大小，提高效率。<br>
+            写入缓存时的调用变量：$public_r['add_变量名']。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>变量排序</td>
+          <td>设置管理变量列表页面显示的变量顺序。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>变量值</strong></td>
+          <td>填写变量的值内容。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="pubvar"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、管理扩展变量：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、增加扩展变量后，返回“<strong>管理扩展变量</strong>”界面（见下图）：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/pubvar5.jpg" width="789" height="407" border="0"></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="getpubvar"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">五、扩展变量调用说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF">1、写入缓存的变量调用：</td>
+  </tr>
+  <tr> 
+    <td height="25">在任意php或模板中用$public_r['add_变量名']可取得变量内容。比如上面的“模板图片目录地址”获取用“$public_r['add_temppicpath']”。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>范例：</strong>&lt;link href=&quot;<font color="#FF0000">&lt;?=$public_r['add_temppicpath']?&gt;</font>css/style.css&quot; 
+      rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF">2、没有写入缓存的变量调用：</td>
+  </tr>
+  <tr> 
+    <td height="25">可以用内置变量返回函数(数据库读取变量内容)：ReturnPublicAddVar(变量名)。取多个变量内容可用逗号隔开，例子：<br>
+      取得单变量内容：$value=ReturnPublicAddVar('myvar'); //$value就是变量内容。<br>
+      取得多个变量内容：$value=ReturnPublicAddVar('myvar1,myvar2,myvar3'); //$value['myvar1']才是变量内容。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>单变量范例：</strong>&lt;link href=&quot;<font color="#FF0000">&lt;?=ReturnPublicAddVar('temppicpath')?&gt;</font>css/style.css&quot; 
+      rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</td>
+  </tr>
+  <tr>
+    <td height="25"><strong>多变量范例：<br>
+      </strong>&lt;?php<br>
+      <font color="#FF0000">$valuer=ReturnPublicAddVar('temppicpath,musiclistnum');</font><br>
+      ?&gt;<br>
+      &lt;link href=&quot;<font color="#FF0000">&lt;?=$valuer['temppicpath']?&gt;</font>css/style.css&quot; 
+      rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;<br>
+      音乐列表每页显示数量是：<font color="#FF0000">&lt;?=$valuer['musiclistnum']?&gt;</font></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

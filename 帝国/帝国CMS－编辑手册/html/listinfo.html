@@ -1,0 +1,677 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">管理信息</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="tolistinfo">&nbsp; &nbsp; &gt; 进入管理信息界面</option>
+          <option value="listinfotable">&nbsp; &nbsp; &gt; 管理信息界面功能介绍(按表管理)</option>
+          <option value="listinfoclass">&nbsp; &nbsp; &gt; 管理信息界面功能介绍(按栏目管理)</option>
+          <option value="listinfo">&nbsp; &nbsp; &gt; 信息管理操作</option>
+          <option value="listinfo1">&nbsp; &nbsp; &nbsp; &gt; 修改信息</option>
+		  <option value="listinfo2">&nbsp; &nbsp; &nbsp; &gt; 复制信息</option>
+		  <option value="listinfo3">&nbsp; &nbsp; &nbsp; &gt; 移动信息</option>
+		  <option value="listinfo4">&nbsp; &nbsp; &nbsp; &gt; 删除信息</option>
+		  <option value="listinfo5">&nbsp; &nbsp; &nbsp; &gt; 审核信息</option>
+		  <option value="listinfo6">&nbsp; &nbsp; &nbsp; &gt; 签发信息</option>
+		  <option value="listinfo7">&nbsp; &nbsp; &nbsp; &gt; 信息归档</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="27" colspan="2"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>管理网站的信息内容。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tolistinfo"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、进入管理信息界面：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">可通过四种途径进入管理信息界面，以下分别枚举：</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>途径一：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">通过快捷菜单：单击“<strong>管理信息</strong>”快捷菜单，见下图，进入管理信息界面。</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listinfo1.jpg" width="394" height="355"></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>途径二：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">单击“<strong>信息</strong>”菜单，左侧出现栏目菜单列表界面，单击“<strong>管理信息</strong>”子菜单，见下图，进入管理信息界面。</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listinfo2.jpg" width="394" height="355"></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>途径三：进入单个栏目下的信息管理。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">单击“<strong>信息</strong>”菜单，左侧出现栏目菜单列表界面，<strong>选择</strong>要管理信息的<strong>终极栏目</strong>（如栏目“娱乐新闻”）并<strong>单击</strong>，见下图，进入管理信息界面。</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listinfo3.jpg" width="392" height="374"></td>
+  </tr>
+  <tr>
+    <td height="25" bgcolor="#C3EFFF"><strong>途径四：</strong></td>
+  </tr>
+  <tr>
+    <td height="25">单击“<strong>栏目</strong>”菜单，左侧出现栏目管理子菜单界面，单击“<strong>管理信息</strong>”子菜单，见下图，进入管理信息界面。</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/listinfo4.jpg" width="393" height="437"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="listinfotable"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、管理信息界面功能介绍（按表管理）</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/listinfo5.jpg" width="800" height="650" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="17%" height="25"><strong>[增加信息]按钮</strong></td>
+          <td width="83%">选择要增加信息的终极栏目，然后点击“增加信息”。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[刷新首页]按钮</strong></td>
+          <td>生成网站首页。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[刷新所有信息JS]按钮</strong></td>
+          <td>生成所有JS调用文件。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[搜索]按钮</strong></td>
+          <td> 由于管理信息界面所有信息均为分页显示，所以增加了信息搜索框，以方便您查找所需管理的信息。 <br>
+            可选择属性（置顶、推荐、头条、未审核、已审核、投稿、签发、我的信息）、字段（如标题、发布者、信息ID）、专题、栏目及按信息ID（或发布时间、点击率、下载数、评论数）、升序/降序排列方式、按时间范围搜索信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[选择管理信息的表]下拉<br>
+            <img src="img/listinfo6.gif" width="175" height="22"></strong></td>
+          <td>通过下拉菜单选择所属数据表的信息。<br>
+            （默认表可以在管理数据表里指定）</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>我的信息</strong></td>
+          <td>只显示自己发布的信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong> 未审核信息</strong></td>
+          <td>只显示未审核的信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong> 签发信息</strong></td>
+          <td>只显示签发的信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>投稿信息</strong></td>
+          <td>只显示会员投稿的信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>查询重复标题A</strong></td>
+          <td>查询并显示重复标题（不包含原标题）；<br>
+            原标题指新增加的且为系统不存在的标题；<br>
+            重复标题指增加的标题名是系统已经存在的标题名，则增加的标题就是重复标题，<br>
+            通常原标题ID值小于重复标题ID值，且发布时间较早。 <br>
+            如系统内有ID值不同但标题名相同的两个标题：<br>
+            ID=1,标题名“test”（2008-01-01）；ID=8，标题名“test”（2008-03-03），单击[查询重复标题A]，则只<br>
+            显示ID=8的重复标题。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>查询重复标题B</strong></td>
+          <td>查询并显示重复标题（包含原标题）； <br>
+            如系统内有ID值不同但标题名相同的两个标题：<br>
+            ID=1,标题名“test”（2008-01-01）；ID=8，标题名“test”（2008-03-03），单击[查询重复标题B]，则ID=1<br>
+            及ID=8的标题均显示。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>更新数据</strong></td>
+          <td>进入系统数据更新中心页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>预览首页</strong></td>
+          <td>单击，弹出前台首页页面。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>信息列表</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>多选框</strong></td>
+          <td><img src="img/listinfo7.jpg" width="28" height="29" align="absmiddle">多选框，勾选即选择一条信息。<img src="img/listinfo8.jpg" width="28" height="29" align="absmiddle"> 
+            多选框为蓝色代表该条信息是未经审核，未审核的信息，不会显示到前台。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>ID</strong></td>
+          <td>信息ID值，增加信息时由系统按顺序依次生成。<br>
+            点击信息的ID链接可生成当前信息页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>标题</strong></td>
+          <td>信息标题名。点击可查看前台信息页面。<br>
+            在标题名下方，均有该标题所在栏目及链接，方便用户直接进入该栏目进行信息管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>发布者</strong></td>
+          <td>信息发布者。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>发布时间</strong></td>
+          <td>信息发布时间。将鼠标移动到发布日期（如2008-01-04 13：32：26）上，可查看信息的发布时间及修改时间。<br>
+            点击可进入信息修改页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>点击</strong></td>
+          <td>统计该信息前台页面的访问次数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论</strong></td>
+          <td>信息的评论数量。点击管理该条信息的评论。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>操作</strong></td>
+          <td><strong>修改：</strong>点击可进入信息修改页面。<br> <strong>简改：</strong>点击弹出信息基本属性修改页面。<br> 
+            <strong>删除：</strong>点击删除信息。删除的信息不可恢复，此操作需谨慎。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>信息操作功能</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type=checkbox name=chkall value=on onClick="CheckAll(this.form)"></td>
+          <td>为全部选择框，勾选后即选择当前页全部信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit3" value="删除" onClick="document.listform.enews.value='DelNews_all';document.listform.action='ecmsinfo.php';"></td>
+          <td>删除所选信息，可同时选择多条信息进行批量删除。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit8" value="审核" onClick="document.listform.enews.value='CheckNews_all';document.listform.action='ecmsinfo.php';"></td>
+          <td>审核所选信息，可同时选择多条信息进行批量审核。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit9" value="取消审核" onClick="document.listform.enews.value='NoCheckNews_all';document.listform.action='ecmsinfo.php';"></td>
+          <td>对已审核的信息进行取消审核操作，可同时选择多条信息批量取消审核。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit82" value="刷新" onClick="document.listform.enews.value='ReSingleInfo';document.listform.action='ecmschtml.php';"></td>
+          <td>生成所选信息的内容页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <input type="button" name="Submit822" value="推荐" onClick="document.listform.enews.value='GoodInfo_all';document.listform.doing.value='0';document.listform.action='ecmsinfo.php';"></td>
+          <td>所选信息设为推荐。选择推荐级别，然后点击“推荐”按钮。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <input type="button" name="Submit823" value="头条" onClick="document.listform.enews.value='GoodInfo_all';document.listform.doing.value='1';document.listform.action='ecmsinfo.php';"></td>
+          <td>所选信息设为头条。选择头条级别，然后点击“头条”按钮。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit112" value="推送" onClick="PushInfoToSp(this.form);"></td>
+          <td>将所选信息推送到碎片。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <input type="button" name="Submit7" value="置顶" onClick="document.listform.enews.value='TopNews_all';document.listform.action='ecmsinfo.php';"></td>
+          <td>对所选信息进行置顶操作，置顶级别设置越高，信息显示顺序越靠前。选择置顶级别，然后点击“置顶”按钮。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit5" value="移动" onclick="document.listform.enews.value='MoveNews_all';document.listform.action='ecmsinfo.php';"></td>
+          <td>将所选信息移动到其他栏目。选择目标栏目，然后点击“移动”按钮。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit6" value="复制" onclick="document.listform.enews.value='CopyNews_all';document.listform.action='ecmsinfo.php';"></td>
+          <td>将所选信息复制一份到其他栏目。选择目标栏目，然后点击“复制”按钮。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>其他说明</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25" colspan="2">多选框蓝色为未审核信息；发布者红色为会员投稿；信息ID粗体为未生成,点击ID可刷新页面。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="listinfoclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、管理信息界面功能介绍（按栏目管理）</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/listinfo9.jpg" width="800" height="444" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[栏目设置]</td>
+          <td>修改本栏目的设置。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[增加采集]</td>
+          <td>往本栏目增加采集节点。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[管理采集]</td>
+          <td>进入管理采集节点页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[刷新所有信息JS]</td>
+          <td>生成所有JS调用文件。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="17%" height="25"><strong>[增加信息]按钮</strong></td>
+          <td width="83%">点击进入增加本栏目的信息页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><select name="dore">
+              <option value="1">刷新当前栏目</option>
+              <option value="2">刷新首页</option>
+              <option value="3">刷新父栏目</option>
+              <option value="4">刷新当前栏目与父栏目</option>
+              <option value="5">刷新父栏目与首页</option>
+              <option value="6" selected>刷新当前栏目、父栏目与首页</option>
+            </select> <input type="button" name="Submit12" value="提交" onclick="self.location.href='ecmsinfo.php?enews=AddInfoToReHtml&classid=35&dore='+document.searchinfo.dore.value;"></td>
+          <td>生成相关联的页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[搜索]按钮</strong></td>
+          <td> 由于管理信息界面所有信息均为分页显示，所以增加了信息搜索框，以方便您查找所需管理的信息。 <br>
+            可选择属性（置顶、推荐、头条、未审核、已审核、投稿、签发、我的信息）、字段（如标题、发布者、信息ID等）、专题、按时间范围搜索信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>我的信息</strong></td>
+          <td>只显示自己发布的信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong> 未审核信息</strong></td>
+          <td>只显示未审核的信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong> 签发信息</strong></td>
+          <td>只显示签发的信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>投稿信息</strong></td>
+          <td>只显示会员投稿的信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>查询重复标题A</strong></td>
+          <td>查询并显示重复标题（不包含原标题）；<br>
+            原标题指新增加的且为系统不存在的标题；<br>
+            重复标题指增加的标题名是系统已经存在的标题名，则增加的标题就是重复标题，<br>
+            通常原标题ID值小于重复标题ID值，且发布时间较早。 <br>
+            如系统内有ID值不同但标题名相同的两个标题：<br>
+            ID=1,标题名“test”（2008-01-01）；ID=8，标题名“test”（2008-03-03），单击[查询重复标题A]，则只<br>
+            显示ID=8的重复标题。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>查询重复标题B</strong></td>
+          <td>查询并显示重复标题（包含原标题）； <br>
+            如系统内有ID值不同但标题名相同的两个标题：<br>
+            ID=1,标题名“test”（2008-01-01）；ID=8，标题名“test”（2008-03-03），单击[查询重复标题B]，则ID=1<br>
+            及ID=8的标题均显示。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>审核栏目全部信息</strong></td>
+          <td>将本栏目的所有信息状态设为已审核。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25" bgcolor="#FFFFFF"><strong>附件管理</strong></td>
+          <td>管理本栏目的信息附件。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <strong>管理归档</strong></td>
+          <td>点击进入本栏目的归档信息管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>更新数据</strong></td>
+          <td>进入系统数据更新中心页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>预览首页</strong></td>
+          <td>单击，弹出前台首页页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>预览栏目</strong></td>
+          <td>点击，弹出前台本栏目页面。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>信息列表</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>多选框</strong></td>
+          <td><img src="img/listinfo7.jpg" width="28" height="29" align="absmiddle">多选框，勾选即选择一条信息。<img src="img/listinfo8.jpg" width="28" height="29" align="absmiddle"> 
+            多选框为蓝色代表该条信息是未经审核，未审核的信息，不会显示到前台。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>ID</strong></td>
+          <td>信息ID值，增加信息时由系统按顺序依次生成。<br>
+            点击信息的ID链接可生成当前信息页面。<br>
+            点击“<u>ID</u>”链接可按ID升/降序排序显示信息列表。 </td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>标题</strong></td>
+          <td>信息标题名。点击可查看前台信息页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>发布者</strong></td>
+          <td>信息发布者。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>发布时间</strong></td>
+          <td>信息发布时间。将鼠标移动到发布日期（如2008-01-04 13：32：26）上，可查看信息的发布时间及修改时间。<br>
+            点击时间可进入信息修改页面。<br>
+            点击“<u>发布时间</u>”链接可按发布时间升/降序排序显示信息列表。 </td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>点击</strong></td>
+          <td>统计该信息前台页面的访问次数。<br>
+            点击“<u>点击</u>”链接可按点击数升/降序排序显示信息列表。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论</strong></td>
+          <td>信息的评论数量。点击管理该条信息的评论。<br>
+            点击“<u>评论</u>”链接可按评论数升/降序排序显示信息列表。 </td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>操作</strong></td>
+          <td><strong>修改：</strong>点击可进入信息修改页面。<br> <strong>简改：</strong>点击弹出信息基本属性修改页面。<br> 
+            <strong>删除：</strong>点击删除信息。删除的信息不可恢复，此操作需谨慎。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>信息操作功能</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type=checkbox name=chkall2 value=on onClick="CheckAll(this.form)"></td>
+          <td>为全部选择框，勾选后即选择当前页全部信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit32" value="删除" onClick="document.listform.enews.value='DelNews_all';document.listform.action='ecmsinfo.php';"></td>
+          <td>删除所选信息，可同时选择多条信息进行批量删除。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit83" value="审核" onClick="document.listform.enews.value='CheckNews_all';document.listform.action='ecmsinfo.php';"></td>
+          <td>审核所选信息，可同时选择多条信息进行批量审核。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit92" value="取消审核" onClick="document.listform.enews.value='NoCheckNews_all';document.listform.action='ecmsinfo.php';"></td>
+          <td>对已审核的信息进行取消审核操作，可同时选择多条信息批量取消审核。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit824" value="刷新" onClick="document.listform.enews.value='ReSingleInfo';document.listform.action='ecmschtml.php';"></td>
+          <td>生成所选信息的内容页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <input type="button" name="Submit8222" value="推荐" onClick="document.listform.enews.value='GoodInfo_all';document.listform.doing.value='0';document.listform.action='ecmsinfo.php';"></td>
+          <td>所选信息设为推荐。选择推荐级别，然后点击“推荐”按钮。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <input type="button" name="Submit8232" value="头条" onClick="document.listform.enews.value='GoodInfo_all';document.listform.doing.value='1';document.listform.action='ecmsinfo.php';"></td>
+          <td>所选信息设为头条。选择头条级别，然后点击“头条”按钮。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit1122" value="推送" onClick="PushInfoToSp(this.form);"></td>
+          <td>将所选信息推送到碎片。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit11" value="归档" onClick="document.listform.enews.value='InfoToDoc';document.listform.doing.value='0';document.listform.action='ecmsinfo.php';"></td>
+          <td>将所选信息进行归档。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <input type="button" name="Submit72" value="置顶" onClick="document.listform.enews.value='TopNews_all';document.listform.action='ecmsinfo.php';"></td>
+          <td>对所选信息进行置顶操作，置顶级别设置越高，信息显示顺序越靠前。选择置顶级别，然后点击“置顶”按钮。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <input type="button" name="Submit522" value="转移" onClick="document.listform.enews.value='DoZtNews_all';document.listform.action='ecmsinfo.php';"> 
+            <strong>[专题]</strong></td>
+          <td>将所选信息加入到专题。选择目标专题，然后点击“移动”按钮。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <input type="button" name="Submit52" value="移动" onclick="document.listform.enews.value='MoveNews_all';document.listform.action='ecmsinfo.php';"> 
+            <strong>[栏目]</strong></td>
+          <td>将所选信息移动到其他栏目。选择目标栏目，然后点击“移动”按钮。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><input type="button" name="Submit62" value="复制" onclick="document.listform.enews.value='CopyNews_all';document.listform.action='ecmsinfo.php';"></td>
+          <td>将所选信息复制一份到其他栏目。选择目标栏目，然后点击“复制”按钮。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>其他说明</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25" colspan="2">多选框蓝色为未审核信息；发布者红色为会员投稿；信息ID粗体为未生成,点击ID可刷新页面。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="listinfo"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、信息管理操作：</font></strong></td>
+  </tr>
+  <tr id="listinfo1"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(一)、修改信息</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1. 选中要修改的信息所在行，单击<strong>修改</strong>； <br>
+      2. 出现“管理信息-&gt;修改信息”界面（界面相关参数设置参考“<a href="addinfo.html" target="_blank">增加信息篇</a>”一节），修改信息相关参数设置； 
+      <br>
+      3. 单击页面底部“<strong>提交</strong>”按钮以保持您所做的修改。 </td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp; </td>
+  </tr>
+  <tr id="listinfo2"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(二)、复制信息</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1. 选中要复制的源信息所在行（可同时选择多条信息进行复制）； <br>
+      2. 在“选择要移动/复制的目标栏目”下拉框中选择要复制到的目标栏目； <br>
+      3. 单击“<strong>复制</strong>”按钮，完成信息复制操作。 <br>
+      注： 同一系统模型下的栏目之间才能进行信息复制，不同系统之间的信息不能进行复制。 </td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr id="listinfo3"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(三)、移动信息</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1. 选中要移动的原信息所在行（可同时选择多条信息进行移动）； <br>
+      2. 在“选择要移动/复制的目标栏目”下拉框中选择要移动到的目标栏目； <br>
+      3. 单击“<strong>移动</strong>”按钮，完成信息的移动操作。 <br>
+      注： 同一系统模型下的栏目之间才能进行信息移动，不同系统模型之间的信息不能进行移动操作。 <p>两个栏目之间的信息进行移动时，可使用<strong>批量转移信息</strong>功能，操作可见管理员手册。</p></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr id="listinfo4"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(四)、删除信息</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1. 选中要删除的信息所在行，单击<strong>删除</strong>链接； <br>
+      2. 出现确认对话框，单击“确定”按钮执行删除操作。 <br>
+      如果要批量删除多条信息，则 <br>
+      1. 多选要删除的信息所在行，单击（批量）<strong>“删除”按钮</strong>； <br>
+      2. 出现确认对话框，单击“确定”按钮执行删除操作。 <br>
+      注意：删除的信息不可恢复，此操作需谨慎。<br> <br>
+      删除多栏目信息时，可使用<strong>批量删除信息</strong>功能，操作可见管理员手册。 </td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr id="listinfo5"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(五)、审核信息</strong>：只有经过审核的信息才能在前台显示。</td>
+  </tr>
+  <tr> 
+    <td height="25">1. 多选要审核的信息所在行，单击<strong>“审核”按钮</strong>；<br>
+      2. 出现确认对话框，单击“确定”按钮执行审核操作。 </td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr id="listinfo6"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(六)、签发信息</strong>：信息需要上级领导或多人签字才能发布到前台。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、设置签发：</strong>设置信息流转工作流。</td>
+  </tr>
+  <tr> 
+    <td height="25">(1)、终极栏目&gt;选项设置&gt;里选择信息流转的工作流。</td>
+  </tr>
+  <tr> 
+    <td height="25">(2)、设置工作流流转后，增加信息就需要签发才能审核通过。</td>
+  </tr>
+  <tr> 
+    <td height="25">(3)、如果信息需要签发才能发布的，信息标题会显示“<strong>(审核中)</strong>”，如下图：<br>
+      点击信息标题中的“(审核中)”，可查看签发情况与退稿评语。</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listinfo10.jpg" width="800" height="245"></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、管理签发：</strong>签发人员到哪里签发呢？</td>
+  </tr>
+  <tr> 
+    <td height="25">方法1：通过快捷菜单：单击“<strong>签发信息</strong>”快捷菜单，进行签发；<br> <img src="img/listinfo11.jpg" width="497" height="99"> 
+    </td>
+  </tr>
+  <tr> 
+    <td height="25">方法2：单击“<strong>栏目</strong>”菜单，左侧出现栏目管理子菜单界面，单击“<strong>签发信息</strong>”子菜单，进入管理签发信息界面， 
+      见下图：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listinfo12.jpg" width="441" height="442"></td>
+  </tr>
+  <tr> 
+    <td height="25">进入管理签发信息界面， 见下图：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listinfo13.jpg" width="800" height="214"></td>
+  </tr>
+  <tr> 
+    <td height="25">选择需签发或退稿的信息，单击<strong>[签发]</strong>，进入签发信息界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listinfo14.jpg" width="609" height="555"></td>
+  </tr>
+  <tr> 
+    <td height="25">可对信息是否通过/返回/否决进行操作。</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr id="listinfo7"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(七)、信息归档</strong>：</td>
+  </tr>
+  <tr> 
+    <td height="25">对于一些旧的信息，用户可以采用归档功能，将其归档到其它数据表，以减轻主数据表的负担，使系统稳定性与效率更高。</td>
+  </tr>
+  <tr> 
+    <td height="25">1、从管理信息页面点击“<strong>管理归档</strong>”链接，进入管理归档信息界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listinfo15.jpg" width="800" height="331"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入管理归档信息界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listinfo16.jpg" width="800" height="298"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%">[增加信息]按钮</td>
+          <td width="86%">点击进入增加本栏目的信息页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>[刷新首页]按钮</td>
+          <td>生成网站首页。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>[刷新本栏目]按钮</td>
+          <td>生成本栏目页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>[刷新所有信息JS]按钮</td>
+          <td>生成所有JS调用文件。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>[栏目设置]按钮</td>
+          <td>修改本栏目的设置。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>[增加采集节点]按钮</td>
+          <td>往本栏目增加采集节点。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>[管理采集节点]按钮</td>
+          <td>进入管理采集节点页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>[批量归档信息]</td>
+          <td>进入批量归档信息页面（具体使用可查看“管理员手册”）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>[更新数据]</td>
+          <td>进入系统数据更新中心页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>[预览首页]</td>
+          <td>单击，弹出前台首页页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>[预览栏目]</td>
+          <td>点击，弹出前台本栏目页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>[搜索]按钮</td>
+          <td>搜索归档信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><input type="button" name="Submit33" value="删除" onClick="document.listform.enews.value='DelInfoDoc_all';document.listform.action='ecmsinfo.php';"></td>
+          <td>删除所选的归档信息。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><input type="button" name="Submit113" value="还原归档" onClick="document.listform.enews.value='InfoToDoc';document.listform.doing.value='1';document.listform.action='ecmsinfo.php';"></td>
+          <td>还原所选的归档信息。</td>
+        </tr>
+      </table> 
+    </td>
+  </tr>
+  <tr>
+    <td height="25">归档/还原归档多栏目信息时，可使用<strong>批量归档信息</strong>功能，操作可见管理员手册。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

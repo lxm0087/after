@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">采集常用技巧</strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">采集常用技巧</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><div align="left"> 
+        <table width="100%" border="0">
+          <tr> 
+            <td height="25"><strong>1、过滤文章内容的链接：</strong></td>
+          </tr>
+          <tr> 
+            <td height="25">广告过滤正则设置：“&lt;a [!--ad--]&gt;,&lt;/a&gt;”</td>
+          </tr>
+          <tr> 
+            <td height="25"><strong>2、同上得出，过滤font之类的标签：</strong></td>
+          </tr>
+          <tr> 
+            <td height="25">广告过滤正则：“&lt;font[!--ad--]&gt;,&lt;/font&gt;”，其他依此类推。</td>
+          </tr>
+          <tr> 
+            <td height="25"><strong>3、同一链接的页面如何重复采集：</strong></td>
+          </tr>
+          <tr> 
+            <td height="25">到“管理采集节点”那清空节点即可重复采集已入库的页面。</td>
+          </tr>
+          <tr> 
+            <td height="25"><strong>4、采集内容分页正则说明：</strong></td>
+          </tr>
+          <tr> 
+            <td height="25">如果是全部列表式，则只需看第一页的页面HTML代码。</td>
+          </tr>
+        </table>
+      </div></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">常见问题</font></strong></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#FFFFFF">1、提示信息：Warning: preg_replace() [function.preg-replace]: 
+      Compilation failed: range out of order in character class at offset 83 in 
+      <br> <strong>答：你的采集正则变量名写错导致，请检查你的正则变量。</strong></td>
+  </tr>
+</table>
+</body>
+</html>

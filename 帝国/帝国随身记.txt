@@ -1,0 +1,76 @@
+<?=$public_r[newsurl].$class_r[14]['classpath']?>
+
+ 当前栏目id      $GLOBALS['navclassid']
+
+ 当前父栏目id    $class_r[$cid]['bclassid']  
+
+ 栏目路径        $class_r[栏目ID]['classpath']
+
+ 当前终极栏目值  $class_r[$cid][islast]
+
+ 网站名称        $public_r[sitename]
+
+ 网站根目录      $public_r[newsurl]
+
+ 一级栏目        $public_r[classnavs]
+
+ 内页数据表字段  $navinfor[字段名]
+
+ 栏目链接        sys_ReturnBqClassname($r,9)
+
+ 取标题链接      sys_ReturnBqTitleLink($r)
+
+ 取得IP地址      egetip()
+
+ 取得当前地址    eReturnSelfPage(0)
+ 
+ 文件扩展名      GetFiletype($file)
+  
+ 万能标签 [ecmsinfo]栏目id,显示条数，标题截取数，是否显示栏目名(0为不显示)，操作类型，标签模板id,只显示有标题图片(0为不限制)[/ecmsinfo] 
+	
+ 灵动标签 ,一般使用 [e:loop={栏目ID,显示条数,操作类型,只显示有标题图片}] 还有隐藏的2个条件 1是附加条件 2是显示排序
+  
+ 变量说明：在灵动标签中
+ $bqr： 调用对应的字段内容，表示方法为$bqr[字段名]，如标题字段$bqr[title]等； 
+ $bqsr：调用特殊字段变量，$bqsr[titleurl]：标题链接；$bqsr[classname]：栏目名称；$bqsr[classurl]：栏目链接。
+ $bqno：调用序号。 
+ $public_r[newsurl]：调用网站地址 。
+ 
+ 操作类型:0  调用某栏目最新数据
+          3  按系统默认表调用
+          18 调用某数据表
+	  24 按执行sql调用	
+
+ [!db.pre!] 表示表前缀  在模板中使用
+ {$dbtbpre} 表示表前缀  在php中使用
+ [!--self.classid--]   模板中的当前classid 输出方法
+ [!--bclass.id--]      模板中的当前bclassid 输出方法
+
+  调用栏目别名的方法
+	
+ 代码一：<?=$class_r[$GLOBALS[navclassid]]['bname']?>  ：这段代码只能使用于列表模板，其它的模板用这个代码是不行的。
+
+ 代码二：[e:loop={"select bname from phome_enewsclass where classid='$GLOBALS[navclassid]'",1,24,0}] <?=$bqr[bname]?> [/e:loop]  ：
+        
+         这段使用SQL语句的灵动标签针对任何的模板都是有效的，包括：封面模板、列表模板、单页 
+
+ 在写sql的时候注意不要写 $row['classid'] 而要写这种 ‘$row[classid]’,$bqr['classid'] 这种也是一样
+
+ [!--empirenews.listtemp--]<!--list.var1-->[!--empirenews.listtemp--]  [!--show.listpage--]
+ 
+ SELECT * FROM tablename ORDER BY RAND() LIMIT 1。随机抽取一条记录
+ 
+ [showclasstemp]父栏目ID,标签模板ID,是否显示栏目信息数,显示栏目数[/showclasstemp]
+ [!--newsnav--] 表示当前位置，里面含a链接跳转 修改,
+	
+                如需去除前面的首页和>,可在e\data\language\gb\pub\fun.php中找到'index'=>'',
+
+                找到文件e/class/connect.php，搜索$fun_r['index']，
+
+                去掉前面的$_public['navfh']
+
+ [e:loop={}]  灵动标签loop后面不能有空格
+ 
+ if(time()-$bqr[truetime]<=3*24*3600) 显示多少天内的信息
+
+ $navinfor['字段名'] 内容模板变量和说明(要开启模板支持程序代码)

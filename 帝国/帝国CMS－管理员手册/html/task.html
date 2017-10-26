@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">计划任务</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="tasksay">&nbsp; &nbsp; &gt; 计划任务介绍</option>
+		  <option value="addtask">&nbsp; &nbsp; &gt; 增加计划任务</option>
+          <option value="task">&nbsp; &nbsp; &gt; 管理计划任务</option>
+		  <option value="dotask">&nbsp; &nbsp; &gt; 执行计划任务方法说明</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tasksay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、计划任务介绍：</font></strong></td>
+  </tr>
+  <tr> 
+    <td width="100%" height="25"><strong>1、计划任务是用于定时执行指定php脚本的功能。</strong><br>
+      <br>
+      <strong>2、增加计划任务的步骤：</strong><br>
+      (1)、制作要执行的php脚本文件；<br>
+      (2)、后台增加计划任务，指定要执行的脚本；<br>
+      (3)、完成。 </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="addtask"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、增加计划任务</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、先制作要执行的php脚本文件：</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/task5.jpg" width="201" height="148"></td>
+  </tr>
+  <tr> 
+    <td width="100%" height="25">2、登录后台，单击“<strong>系统</strong>”菜单，选择“<strong>管理计划任务</strong>”子菜单，进入管理计划任务界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/task1.jpg" width="363" height="310"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、进入管理计划任务界面，点击“增加计划任务”按钮进入增加计划任务界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/task2.jpg" width="700" height="113"></td>
+  </tr>
+  <tr> 
+    <td height="25">4、进入增加计划任务界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/task3.jpg" width="700" height="488"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>任务名称</strong></td>
+          <td width="86%">填写任务名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>是否开启该计划任务</strong></td>
+          <td>选择是否开启这个计划任务。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>执行者</strong></td>
+          <td>选择用户后，只有此登陆帐号才会执行这个计划任务。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>每月几号执行</strong></td>
+          <td>设置每个月几号开始执行。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>每周星期几执行</strong></td>
+          <td>设置每周几开始执行。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>每日几点执行</strong></td>
+          <td>设置每天几点开始执行。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>每小时几分钟执行</strong></td>
+          <td>设置每小时某几个分钟开始执行。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>执行文件名</strong></td>
+          <td>填写要执行的php脚本文件，脚本文件放在e/tasks目录下。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="task"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、进入管理计划任务界面：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/task4.jpg" width="700" height="180"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="dotask"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、执行计划任务方法说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">执行计划任务需要开着 e/admin/task.php 页面才会执行。</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/task6.jpg" width="582" height="535" border="1"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25"><strong>相关链接：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、<a href="http://bbs.phome.net/showthread-13-45203-0.html" target="_blank">帝国网站管理系统功能解密之计划任务功能</a></td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

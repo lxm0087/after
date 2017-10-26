@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>phome_enewsf 数据表字段解释</title>
+<link href="../images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%" border="0" align="center">
+  <tr> 
+    <td width="100%"><strong><font color="#0000FF">phome_enewsf 数据表字段解释（模型字段表）</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="800" border="0" cellspacing="1" cellpadding="3" class="tableborder">
+  <tr class="header"> 
+    <td width="20%" height="30">字段名</td>
+    <td width="15%">类型</td>
+    <td width="20%">解释</td>
+    <td width="45%">附加说明</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>fid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">字段ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>f</strong></td>
+    <td bgcolor="#FFFFFF">varchar(30)</td>
+    <td bgcolor="#FFFFFF">字段名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>fname</strong></td>
+    <td bgcolor="#FFFFFF">varchar(30)</td>
+    <td bgcolor="#FFFFFF">字段标识</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>fform</strong></td>
+    <td bgcolor="#FFFFFF">varchar(20)</td>
+    <td bgcolor="#FFFFFF">输入表单显示元素</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>fhtml</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">输入表单替换html代码</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>fzs</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">注释</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>isadd</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否系统字段</td>
+    <td bgcolor="#FFFFFF">0为系统字段，1为自己增加的字段</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>isshow</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否显示字段</td>
+    <td bgcolor="#FFFFFF">值0</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>iscj</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否为采集项</td>
+    <td bgcolor="#FFFFFF">1为采集项，0为不是采集项</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>cjhtml</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">采集表单替换html代码</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>myorder</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">显示顺序</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ftype</strong></td>
+    <td bgcolor="#FFFFFF">varchar(30)</td>
+    <td bgcolor="#FFFFFF">字段类型</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>flen</strong></td>
+    <td bgcolor="#FFFFFF">varchar(20)</td>
+    <td bgcolor="#FFFFFF">字段长度</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dotemp</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否为模板项</td>
+    <td bgcolor="#FFFFFF">值0</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">数据表ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tbname</strong></td>
+    <td bgcolor="#FFFFFF">varchar(60)</td>
+    <td bgcolor="#FFFFFF">数据表名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>savetxt</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否内容存文本</td>
+    <td bgcolor="#FFFFFF">1为存文本，0为普通字段</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>fvalue</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">字段初始值</td>
+    <td bgcolor="#FFFFFF">多个值之间用“|”分隔，如：福建|北京</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>iskey</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否为索引字段</td>
+    <td bgcolor="#FFFFFF">1为加索引，0为不加索引</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tobr</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">内容回车替换成换行符</td>
+    <td bgcolor="#FFFFFF">1为替换，0为不替换</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>dohtml</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">内容支持html代码</td>
+    <td bgcolor="#FFFFFF">1为支持，0为不支持</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qfhtml</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">投稿表单替换html代码</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>isonly</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">字段值是否唯一</td>
+    <td bgcolor="#FFFFFF">1为唯一，0为不限</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>linkfieldval</strong></td>
+    <td bgcolor="#FFFFFF">varchar(30)</td>
+    <td bgcolor="#FFFFFF">关联显示值字段名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>samedata</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">关联是否数据同步</td>
+    <td bgcolor="#FFFFFF">1为同步数据，0为不同步数据</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>fformsize</strong></td>
+    <td bgcolor="#FFFFFF">varchar(12)</td>
+    <td bgcolor="#FFFFFF">表单元素长度</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tbdataf</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否为副表字段</td>
+    <td bgcolor="#FFFFFF">0为主表，1为副表</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>ispage</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否分页字段</td>
+    <td bgcolor="#FFFFFF">1为分页字段，0为普通字段</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>adddofun</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">后台增加信息处理函数</td>
+    <td bgcolor="#FFFFFF">格式“函数名##参数”参数可不设置</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>editdofun</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">后台修改信息处理函数</td>
+    <td bgcolor="#FFFFFF">格式“函数名##参数”参数可不设置</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qadddofun</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">前台增加信息处理函数</td>
+    <td bgcolor="#FFFFFF">格式“函数名##参数”参数可不设置</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>qeditdofun</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">前台修改信息处理函数</td>
+    <td bgcolor="#FFFFFF">格式“函数名##参数”参数可不设置</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>linkfieldtb</strong></td>
+    <td bgcolor="#FFFFFF">varchar(60)</td>
+    <td bgcolor="#FFFFFF">关联数据表名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>linkfieldshow</strong></td>
+    <td bgcolor="#FFFFFF">varchar(30)</td>
+    <td bgcolor="#FFFFFF">关联显示字段</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>editorys</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">编辑器样式</td>
+    <td bgcolor="#FFFFFF">0为标准型，1为简洁型</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>issmalltext</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否简介字段</td>
+    <td bgcolor="#FFFFFF">1为简介字段，0为普通字段</td>
+  </tr>
+</table>
+</body>
+</html>

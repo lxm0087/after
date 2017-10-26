@@ -1,0 +1,111 @@
+帝国CMS系统目录结构介绍 (2012-05-10 14:21:33)转载▼
+标签： 商城 前台 功能 删除 文件目录	分类： 帝国CMS
+/ 系统根目录
+├d/          附件和数据存放目录 (data)
+│├file/    附件存放目录
+│├js/       JS调用生成目录
+│└txt/        内容存文本存放目录
+├e/          系统程序目录 (empire)
+├html/       自定义内容页存放预设目录
+├images/    默认模板图片目录
+├s/          专题目录 (special)
+├search/    高级搜索页面目录
+├skin/       模板CSS和图片存放目录
+└index.html 网站首页
+
+
+
+/e/ 系统程序目录
+├action/    信息动态列表页和内容页目录
+├admin/        后台目录 (可重命名)
+├class/        系统核心文件目录
+├data/       系统处理数据相关目录 (临时文件、缓存等)
+├DoInfo/    前台会员管理信息目录 (页面模板e/template/DoInfo)
+├DoPrint/    打印页面目录
+├DownSys/    下载系统模型功能目录 (页面模板e/template/DownSys)
+├enews/        前台处理数据入口文件
+├ftp/       FTP识别目录
+├install/    安装程序目录，安装后请删除掉
+├member/    前台会员功能目录 (页面模板e/template/member)
+├message/    提示信息页面目录
+├NewsSys/    新闻系统模型功能目录
+├payapi/    在线支付接口目录 (页面模板e/template/payapi)
+├pl/           评论页目录
+├public/    公用功能程序目录 (页面模板e/template/public)
+├sch/       全站全文搜索生成目录
+├search/    普通搜索文件目录
+├ShopSys/    商城系统模型功能目录 (页面模板e/template/ShopSys)
+├ShowKey/    前台验证码文件目录
+├space/        会员空间目录 (其中template为会员空间模板目录)
+├tags/       TAGS列表文件目录
+├tasks/        计划任务脚本存放目录
+├template/     前台动态页的模板目录
+├tool/       插件相关功能目录 (页面模板e/template/tool)
+├update/    升级程序目录 (升级程序复制到这个目录运行)
+├ViewImg/    显示图片大图目录
+├wap/       WAP功能目录 (其中template为WAP模板目录)
+└web/       RSS显示文件目录
+
+
+
+
+常见问题：
+1、不使用下载系统模型，能不能删除前台相关功能文件？
+答：可以，处理步骤：
+(1)、删除e/DownSys目录；
+(2)、修改e/class/DownSysFun.php文件，文件第二行加exit();
+<?php
+exit();
+修改后保存文件即可。
+
+2、不使用商城系统模型，能不能删除前台相关功能文件？
+答：可以，处理步骤：
+(1)、删除e/ShopSys目录；
+(2)、修改e/class/ShopSysFun.php文件，文件第二行加exit();
+<?php
+exit();
+修改后保存文件即可。
+
+3、不使用评论功能，能不能删除前台相关功能文件？
+答：可以，处理步骤：
+(1)、删除e/pl目录；
+(2)、修改e/enews/plfun.php文件，文件第二行加exit();
+<?php
+exit();
+修改后保存文件即可。
+
+4、不使用留言板功能，能不能删除前台相关功能文件？
+答：可以，处理步骤：
+(1)、删除e/tool/gbook目录；
+(2)、修改e/enews/gbookfun.php文件，文件第二行加exit();
+<?php
+exit();
+修改后保存文件即可。
+
+5、不使用投票功能，能不能删除前台相关功能文件？
+答：可以，处理步骤：
+(1)、删除e/tool/vote和e/public/vote目录；
+(2)、修改e/enews/votefun.php文件，文件第二行加exit();
+<?php
+exit();
+修改后保存文件即可。
+
+6、不使用会员取回密码和激活帐号功能，能不能删除前台相关功能文件？
+答：可以，处理步骤：
+(1)、删除e/member/GetPassword目录；
+(2)、修改e/class/qmemberfun.php文件，文件第二行加exit();
+<?php
+exit();
+修改后保存文件即可。
+
+7、除了admin、class、data、enews、message目录外，不使用的功能可以直接删除相关目录，比如：
+不使用前台动态信息页面：直接删除e/action目录
+不使用前台投稿功能：直接删除e/DoInfo目录
+不使用前台打印功能：直接删除e/DoPrint目录
+不使用在线支付接口功能：直接删除e/payapi目录
+不使用全站全文搜索功能：直接删除e/sch目录
+不使用搜索功能：直接删除e/search目录
+不使用会员空间功能：直接删除e/space目录
+不使用tags列表功能：直接删除e/tags目录
+不使用wap功能：直接删除e/wap目录
+不使用RSS功能：直接删除e/web目录

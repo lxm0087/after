@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">灵动标签调用外部数据</strong></td>
+  </tr>
+  <tr>
+    <td height="27" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>帝国CMS的标签的SQL查询调用支持调用mysql数据库的所有数据，本节通过用灵动标签的SQL语句查询来讲解调用方法。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">用灵动标签调用外部数据：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>例一：调用Discuz的最新贴子</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'><p>&lt;table 
+              width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; 
+              cellpadding=&quot;3&quot;&gt;<br>
+              [e:loop={&quot;<font color="#FF0000">select tid,subject,dateline 
+              from discuzdb.cdb_threads order by tid desc limit 10</font>&quot;,10,24,0}]<br>
+              &lt;tr&gt;&lt;td&gt;<br>
+              &lt;a href=&quot;/bbs/viewthread.php?tid=&lt;?=$bqr[tid]?&gt;&quot; 
+              target=&quot;_blank&quot;&gt;&lt;?=$bqr[subject]?&gt;&lt;/a&gt; 
+              (&lt;?=date('Y-m-d',$bqr[dateline])?&gt;) <br>
+              &lt;/td&gt;&lt;/tr&gt;<br>
+              [/e:loop]<br>
+              &lt;/table&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>discuzdb.cdb_threads</strong>为Discuz的贴子表名，其中“discuzdb”为Discuz的数据库名称。<br> 
+      <strong>limit 10</strong>为显示贴子数量。<br>
+      如果用伪静态地址可以用：/bbs/thread-&lt;?=$bqr[tid]?&gt;-1-1.html <br> <strong>如果指定单个版块的贴子，SQL用：</strong>select 
+      tid,subject,dateline from discuzdb.cdb_threads <font color="#FF0000">where 
+      fid=版块ID</font> order by tid desc limit 10<font color="#FF0000"><br>
+      </font><strong>如果指定多个版块的贴子，SQL用：</strong>select tid,subject,dateline from 
+      discuzdb.cdb_threads <font color="#FF0000">where fid in (1,2,3)</font> order 
+      by tid desc limit 10</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>例二：调用Discuz的最新贴子（含调用论坛版块名）</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'><p>&lt;table 
+              width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; 
+              cellpadding=&quot;3&quot;&gt;<br>
+              [e:loop={&quot;select tid,subject,dateline<font color="#FF0000">,fid</font> 
+              from discuzdb.cdb_threads order by tid desc limit 10&quot;,10,24,0}]<br>
+              <font color="#FF0000">&lt;?php<br>
+              $fr=$empire-&gt;fetch1(&quot;select name from discuzdb.cdb_forums 
+              where fid='$bqr[fid]'&quot;);<br>
+              ?&gt;</font> <br>
+              &lt;tr&gt;&lt;td&gt;<br>
+              [<font color="#FF0000">&lt;?=$fr[name]?&gt;</font>] &lt;a href=&quot;/bbs/viewthread.php?tid=&lt;?=$bqr[tid]?&gt;&quot; 
+              target=&quot;_blank&quot;&gt;&lt;?=$bqr[subject]?&gt;&lt;/a&gt; 
+              (&lt;?=date('Y-m-d',$bqr[dateline])?&gt;) <br>
+              &lt;/td&gt;&lt;/tr&gt;<br>
+              [/e:loop]<br>
+              &lt;/table&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>discuzdb.cdb_forums</strong>为Discuz的版块表名，其中“discuzdb”为Discuz的数据库名称。</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>例三：调用DiscuzX的最新贴子</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'><p>&lt;table 
+              width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; 
+              cellpadding=&quot;3&quot;&gt;<br>
+              [e:loop={&quot;<font color="#FF0000">select tid,subject,dateline 
+              from discuzdb.pre_forum_thread order by tid desc limit 10</font>&quot;,10,24,0}]<br>
+              &lt;tr&gt;&lt;td&gt;<br>
+              &lt;a href=&quot;/bbs/forum.php?mod=viewthread&amp;tid=&lt;?=$bqr[tid]?&gt;&quot; 
+              target=&quot;_blank&quot;&gt;&lt;?=$bqr[subject]?&gt;&lt;/a&gt; 
+              (&lt;?=date('Y-m-d',$bqr[dateline])?&gt;) <br>
+              &lt;/td&gt;&lt;/tr&gt;<br>
+              [/e:loop]<br>
+              &lt;/table&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>discuzdb.pre_forum_thread</strong>为DiscuzX的贴子表名，其中“discuzdb”为DiscuzX的数据库名称。<br> 
+      <strong>limit 10</strong>为显示贴子数量。<br>
+      如果用伪静态地址可以用：/bbs/thread-&lt;?=$bqr[tid]?&gt;-1-1.html<br> <strong>如果指定单个版块的贴子，SQL用：</strong>select 
+      tid,subject,dateline from discuzdb.pre_forum_thread <font color="#FF0000">where 
+      fid=版块ID</font> order by tid desc limit 10<font color="#FF0000"><br>
+      </font><strong>如果指定多个版块的贴子，SQL用：</strong>select tid,subject,dateline from 
+      discuzdb.pre_forum_thread <font color="#FF0000">where fid in (1,2,3)</font> 
+      order by tid desc limit 10</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>例四：调用DiscuzX的最新贴子（含调用论坛版块名）</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'><p>&lt;table 
+              width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; 
+              cellpadding=&quot;3&quot;&gt;<br>
+              [e:loop={&quot;select tid,subject,dateline<font color="#FF0000">,fid</font> 
+              from discuzdb.pre_forum_thread order by tid desc limit 10&quot;,10,24,0}]<br>
+              <font color="#FF0000">&lt;?php<br>
+              $fr=$empire-&gt;fetch1(&quot;select name from discuzdb.pre_forum_forum 
+              where fid='$bqr[fid]'&quot;);<br>
+              ?&gt;</font> <br>
+              &lt;tr&gt;&lt;td&gt;<br>
+              [<font color="#FF0000">&lt;?=$fr[name]?&gt;</font>] &lt;a href=&quot;/bbs/forum.php?mod=viewthread&amp;tid=&lt;?=$bqr[tid]?&gt;&quot; 
+              target=&quot;_blank&quot;&gt;&lt;?=$bqr[subject]?&gt;&lt;/a&gt; 
+              (&lt;?=date('Y-m-d',$bqr[dateline])?&gt;) <br>
+              &lt;/td&gt;&lt;/tr&gt;<br>
+              [/e:loop]<br>
+              &lt;/table&gt;</p></td>
+        </tr>
+      </table> </td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>discuzdb.pre_forum_forum</strong>为DiscuzX的版块表名，其中“discuzdb”为DiscuzX的数据库名称。</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>例五：调用PHPwind的最新贴子</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'><p>&lt;table 
+              width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; 
+              cellpadding=&quot;3&quot;&gt;<br>
+              [e:loop={&quot;<font color="#FF0000">select tid,subject,postdate 
+              from phpwinddb.pw_threads order by tid desc limit 10</font>&quot;,10,24,0}]<br>
+              &lt;tr&gt;&lt;td&gt;<br>
+              &lt;a href=&quot;/bbs/read.php?tid=&lt;?=$bqr[tid]?&gt;&quot; target=&quot;_blank&quot;&gt;&lt;?=$bqr[subject]?&gt;&lt;/a&gt; 
+              (&lt;?=date('Y-m-d',$bqr[postdate])?&gt;) <br>
+              &lt;/td&gt;&lt;/tr&gt;<br>
+              [/e:loop]<br>
+              &lt;/table&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="24"><strong>phpwinddb.pw_threads</strong>为phpwind的贴子表名，其中“phpwinddb”为phpwind的数据库名称。<br> 
+      <strong>limit 10</strong>为显示贴子数量。<br>
+      如果用伪静态地址可以用：/bbs/read-htm-tid-&lt;?=$bqr[tid]?&gt;.html<br> <strong>如果指定单个版块的贴子，SQL用：</strong>select 
+      tid,subject,postdate from phpwinddb.pw_threads <font color="#FF0000">where 
+      fid=版块ID</font> order by tid desc limit 10<font color="#FF0000"><br>
+      </font><strong>如果指定多个版块的贴子，SQL用：</strong>select tid,subject,postdate from 
+      phpwinddb.pw_threads <font color="#FF0000">where fid in (1,2,3)</font> order 
+      by tid desc limit 10</td>
+  </tr>
+  <tr>
+    <td height="24" bgcolor="#C3EFFF"><strong>例六：调用PHPwind的最新贴子（含调用论坛版块名）</strong></td>
+  </tr>
+  <tr>
+    <td height="24"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'><p>&lt;table 
+              width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; 
+              cellpadding=&quot;3&quot;&gt;<br>
+              [e:loop={&quot;select tid,subject,postdate<font color="#FF0000">,fid</font> 
+              from phpwinddb.pw_threads order by tid desc limit 10&quot;,10,24,0}]<br>
+              <font color="#FF0000">&lt;?php<br>
+              $fr=$empire-&gt;fetch1(&quot;select name from phpwinddb.pw_forums 
+              where fid='$bqr[fid]'&quot;);<br>
+              ?&gt;</font><br>
+              &lt;tr&gt;&lt;td&gt;<br>
+              [<font color="#FF0000">&lt;?=$fr[name]?&gt;</font>] &lt;a href=&quot;/bbs/read.php?tid=&lt;?=$bqr[tid]?&gt;&quot; 
+              target=&quot;_blank&quot;&gt;&lt;?=$bqr[subject]?&gt;&lt;/a&gt; 
+              (&lt;?=date('Y-m-d',$bqr[postdate])?&gt;) <br>
+              &lt;/td&gt;&lt;/tr&gt;<br>
+              [/e:loop]<br>
+              &lt;/table&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="24"><strong>phpwinddb.pw_forums</strong>为phpwind的版块表名，其中“phpwinddb”为phpwind的数据库名称。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">其他说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、帝国CMS的数据库帐号要有select权限查询对应数据库的表，才能读取成功。</td>
+  </tr>
+  <tr>
+    <td height="25">2、SQL调用支持调用mysql数据库的所有数据，上面只是举了几个例子。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

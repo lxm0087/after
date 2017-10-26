@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">管理专题</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="zt">&nbsp; &nbsp; &gt; 管理专题界面介绍</option>
+          <option value="editzt">&nbsp; &nbsp; &gt; 修改专题</option>
+		  <option value="delzt">&nbsp; &nbsp; &gt; 删除专题</option>
+		  <option value="togzt">&nbsp; &nbsp; &gt; 组合专题</option>
+		  <option value="ztclass">&nbsp; &nbsp; &gt; 管理专题分类</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="zt"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、管理专题界面介绍</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>管理专题</strong>”子菜单，进入管理专题界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/addzt1.jpg" width="397" height="403" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>管理专题</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addzt5.jpg" width="717" height="405"></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF"><strong>顺序</strong></td>
+          <td width="85%" bgcolor="#FFFFFF">专题在前台列表中的显示顺序值。单击修改专题顺序按钮，各专题按顺序值在前台依次排列，顺序值越小排列越靠前。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>ID</strong></td>
+          <td bgcolor="#FFFFFF">专题ID值，增加专题时由系统按顺序依次生成。常用于标签调用中的参数。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>专题名</strong></td>
+          <td bgcolor="#FFFFFF">专题名称。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>专题信息</strong></td>
+          <td bgcolor="#FFFFFF">点击管理专题下的信息。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>访问量</strong></td>
+          <td bgcolor="#FFFFFF">统计该专题前台页面的访问次数。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>专题管理</strong></td>
+          <td bgcolor="#FFFFFF"><strong>修改：</strong>点击修改专题设置。 <br> <strong>复制：</strong>点击复制专题设置。<br> 
+            <strong>组合专题：</strong>查询符合条件的已有信息加入到相应的专题分类里。操作见本页组合专题的操作说明。<br> <strong>删除：</strong>点击删除专题。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>操作</strong></td>
+          <td bgcolor="#FFFFFF"><strong>刷新：</strong>刷新该专题信息列表。<br> <strong>JS：</strong>刷新该专题JS调用。<br> 
+            <strong>调用：</strong>查看该专题的实际地址及JS调用地址。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="editzt"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、修改专题</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1. 选择要修改的专题所在行，单击<strong>修改</strong>：<br>
+      <img src="img/addzt6.jpg" width="709" height="143"> </td>
+  </tr>
+  <tr> 
+    <td height="25">2. 出现“管理专题-&gt;修改专题”界面（界面相关参数设置参考“<a href="addzt.html" target="_blank">增加专题篇</a>”一节），修改专题相关参数设置；</td>
+  </tr>
+  <tr>
+    <td height="25">3. 单击页面底部“提交”按钮以保持您所做的修改。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="delzt"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、删除专题</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1. 选择要修改的专题所在行，单击<strong>删除</strong>： <br> <img src="img/addzt7.jpg" width="709" height="143"> 
+    </td>
+  </tr>
+  <tr> 
+    <td height="25">2. 出现确认对话框，单击“确定”按钮执行删除操作。 </td>
+  </tr>
+  <tr>
+    <td height="25">注意：删除的专题不可恢复，此操作需谨慎。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="togzt"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、组合专题：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>组合专题：</strong>将已存在的信息按照查询符合条件组合到相应的专题里。</td>
+  </tr>
+  <tr> 
+    <td height="25">1. 选中要修改的专题所在行，单击<strong>组合专题</strong>： </td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addzt8.jpg" width="709" height="143"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>组合专题</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addzt9.jpg" width="666" height="586"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF"><strong>专题名称</strong></td>
+          <td width="85%" bgcolor="#FFFFFF">专题所属系统模型表，要看专题选择的列表模板所属哪个系统模型。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>组合关键字</strong></td>
+          <td bgcolor="#FFFFFF">搜索信息的关键字。(不填为不限制)</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>查询字段</strong></td>
+          <td bgcolor="#FFFFFF">可选择按“标题”、“增加者”、“内容”查询（可多选）。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>附加SQL条件</strong></td>
+          <td bgcolor="#FFFFFF">还可以设置SQL条件，如：“username='发布者'”，则是查询“username”字段值等于“发布者”的记录。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>特殊条件</strong></td>
+          <td bgcolor="#FFFFFF">可设置只查询“推荐”、“头条”、“有标题图片”、“审核过的信息”的信息。(不选为不限制)</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>查询栏目</strong></td>
+          <td bgcolor="#FFFFFF">选择专题所属系统模型下的栏目查询范围。<br>
+            （如选择所有栏目，即查询该专题所属系统模型下的所有栏目；如选择大栏目，将查询其所有子栏目）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>按时间查询</strong></td>
+          <td bgcolor="#FFFFFF">查询“增加信息时间”在某一时间段的信息(不填将查询所有信息)。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>按ID查询</strong></td>
+          <td bgcolor="#FFFFFF">查询“信息ID”在某一ID段的信息(如两个值为0将查询所有信息)。</td>
+        </tr>
+        <tr> 
+          <td rowspan="2" bgcolor="#FFFFFF"><strong>每页显示行数</strong></td>
+          <td height="25" bgcolor="#FFFFFF">如勾选直接组合专题，此处设置无效。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">如不勾选直接组合专题，则每页显示行数为组合专题的后台信息列表页面每页显示条数。</td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#CCCCCC"><strong>相关功能介绍</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>[保存参数]按钮</strong></td>
+          <td bgcolor="#FFFFFF">将组合专题设置的参数保存下来，方便以后重复使用。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>[导入参数]按钮</strong></td>
+          <td bgcolor="#FFFFFF">导入保存过的组合专题参数。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>[删除]参数按钮</strong></td>
+          <td bgcolor="#FFFFFF">删除保存的组合专题参数。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>3、组合专题实例操作：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listzt10.gif" width="719" height="497"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="722" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25" colspan="2"><strong>1). 参数设置：</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="306" height="25">组合关键字：帝国； </td>
+          <td width="411" height="25">查询栏目：选择所有栏目；</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> 查询字段：按标题查询；</td>
+          <td height="25">选择按时间查询（时间留空，即查询所有时间）；</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">附件SQL条件及特殊条件按默认设置；</td>
+          <td height="25">不勾选直接组合专题；</td>
+        </tr>
+      </table> <table width="722" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><strong>2). 保存组合参数</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF">设置本次组合参数名为dg，单击<strong>“保存参数”</strong>按钮，组合参数设置保存完毕。</td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><strong>3). 开始组合</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF">单击<strong>“开始组合”</strong>按钮；</td>
+        </tr>
+        <tr> 
+          <td height="25" colspan="2" bgcolor="#FFFFFF"><strong>4). 进入组合专题信息列表界面：</strong></td>
+        </tr>
+      </table> <img src="img/listzt11.gif" width="721" height="384"> <table width="722" height="211" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">界面显示符合组合查询条件的所有信息列表，如不希望组合某（某些）条信息，则勾选信息前多选框即可，勾选后该信息即去除组合。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">单击<strong>“开始组合专题”</strong>按钮，组合专题操作完毕。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">注：如果勾选直接组合专题<img src="img/listzt12.gif" width="329" height="25" border="0">，则不执行步骤4)。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>5). 前台查看效果</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">执行组合专题操作后，前台并不是立即显示组合效果，而是需要通过刷新操作后显示：</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">返回管理专题界面，选择专题所在行，单击<strong>刷新</strong>，</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">提示刷新信息列表成功后，单击<strong>“专题名”</strong>链接，查看前台显示效果：</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><img src="img/listzt13.gif" width="715" height="513"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="ztclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">五、管理专题分类</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>专题分类：</strong>将所有专题进行归类，加强专题管理的方便性与按分类调用专题。</td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>管理专题分类</strong>”子菜单，进入管理专题分类界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listzt14.jpg" width="395" height="409"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>管理专题分类</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listzt15.jpg" width="707" height="271"></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

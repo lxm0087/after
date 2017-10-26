@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">开发范例：显示“Hello,world”</strong></td>
+    <td width="50%"><div align="center"> </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="EmpireCMSPath"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">显示“Hello,world”程序编写例子</font></strong></td>
+  </tr>
+  <tr>
+    <td height="25" bgcolor="#C3EFFF"><strong>程序代码编写</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>存放目录格式：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'> <table width="400" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="169">插件程序存放目录用：</td>
+                <td width="216">/e/extend/helloworld/</td>
+              </tr>
+              <tr> 
+                <td>插件程序模板存放目录用：</td>
+                <td>/e/extend/helloworld/template/ </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><b>所需程序文件：</b></td>
+  </tr>
+  <tr> 
+    <td height="25"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'> <table width="500" border="0" cellspacing="1" cellpadding="3">
+              <tr> 
+                <td width="285"><font color="#0000FF">/e/extend/helloworld/index.php</font></td>
+                <td width="100">主程序文件</td>
+              </tr>
+              <tr> 
+                <td><font color="#0000FF">/e/extend/helloworld/template/index.temp.php</font></td>
+                <td>主程序模板文件</td>
+              </tr>
+            </table>
+            <br> <table width="600" border="0" cellspacing="1" cellpadding="3">
+              <tr bgcolor="#C3EFFF"> 
+                <td height="25">程序目录</td>
+                <td bgcolor="#C3EFFF">模板目录</td>
+              </tr>
+              <tr> 
+                <td width="50%" valign="top"><img src="img/showhelloworld1.jpg" width="247" height="151"></td>
+                <td valign="top"><img src="img/showhelloworld2.jpg" width="240" height="104"></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25"> <b>主程序文件内容</b>(<font color="#0000FF">/e/extend/helloworld/index.php</font>)：<br> 
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>&lt;?php<br>
+            require('../../class/connect.php'); //引入数据库配置文件和公共函数文件<br>
+            require('../../class/db_sql.php'); //引入数据库操作文件<br>
+            $link=db_connect(); //连接MYSQL<br>
+            $empire=new mysqlquery(); //声明数据库操作类<br>
+            $editor=1; //声明目录层次 <p><font color="#FF0000">$context='Hello, World!'; 
+              //定义显示内容<br>
+              require('template/index.temp.php'); //导入模板文件</font></p>
+            <p>db_close(); //关闭MYSQL链接<br>
+              $empire=null; //注消操作类变量<br>
+              ?&gt;</p></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td height="25"><b>主程序模板文件内容</b>(<font color="#0000FF">/e/extend/helloworld/template/index.temp.php</font>)：<br> 
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'><font color="#0000FF">&lt;?php<br>
+            if(!defined('InEmpireCMS'))<br>
+            {<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; exit();<br>
+            }<br>
+            ?&gt;</font><br> &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 
+            Transitional//EN&quot;&gt;<br> &lt;html&gt;<br> &lt;head&gt;<br> &lt;meta 
+            http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot;&gt;<br> 
+            &lt;title&gt;显示&lt;?=$context?&gt;例子&lt;/title&gt;<br> &lt;/head&gt;<br> 
+            &lt;body&gt;<br> &lt;br&gt;<br> &lt;br&gt;<br> &lt;br&gt;<br> &lt;table 
+            width=&quot;500&quot; border=&quot;0&quot; align=&quot;center&quot; 
+            cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CCCCCC&quot;&gt;<br> 
+            &nbsp;&nbsp;&lt;tr&gt; <br> &nbsp; &nbsp; &lt;td height=&quot;25&quot;&gt;&lt;strong&gt;显示内容为如下：&lt;/strong&gt;&lt;/td&gt;<br> 
+            &nbsp;&nbsp;&lt;/tr&gt;<br> &nbsp;&nbsp;&lt;tr&gt; <br> &nbsp; &nbsp; 
+            &lt;td height=&quot;60&quot; bgcolor=&quot;#FFFFFF&quot;&gt; &lt;div 
+            align=&quot;center&quot;&gt;&lt;strong&gt;&lt;font color=&quot;#FF0000&quot; 
+            size=&quot;5&quot;&gt;&lt;?=$context?&gt;&lt;/font&gt;&lt;/strong&gt;&lt;/div&gt;&lt;/td&gt;<br> 
+            &nbsp;&nbsp;&lt;/tr&gt;<br> &lt;/table&gt;<br> &lt;/body&gt;<br> &lt;/html&gt;</td>
+        </tr>
+      </table>
+      <strong>说明：模板可用Dreamweaver可视化制作。其中蓝色部分代码为不允许直接访问模板文件的作用。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>访问Hello World插件文件主程序：/e/extend/helloworld/index.php</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/showhelloworld3.jpg" width="642" height="227" border="1"></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">内容模板</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="newstemp">&nbsp; &nbsp; &gt; 管理内容模板</option>
+          <option value="newstempexp">&nbsp; &nbsp; &gt; 内容模板制作范例</option>
+          <option value="other">&nbsp; &nbsp; &gt; 其他说明</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>内容模板是指信息内容页面使用的模板。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr id="newstemp"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">管理内容模板</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>模板</strong>”菜单，选择“<strong>管理内容模板</strong>”子菜单，进入管理内容模板界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/newstemp1.jpg" width="447" height="336" border="0"></td>
+  </tr>
+  <tr>
+    <td height="25">2、进入管理内容模板界面：</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/newstemp2.jpg" width="702" height="407"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、点击默认新闻内容模板的“<strong>修改</strong>”进入<strong>修改内容模板</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/newstemp3.jpg" width="785" height="714" border="1"> 
+      <br> <br> 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">模板名</td>
+          <td>填写模板名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="21%" height="25">所属系统模型</td>
+          <td width="79%">指这个内容模板用于的系统模型</td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td height="25">所属分类</td>
+          <td>方便统一按分类管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">时间显示格式</td>
+          <td>设置newstime发布时间字段的时间格式，如“Y-m-d”就是显示“2008-08-08”</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">模板内容</td>
+          <td>内容模板的模板内容。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">4、内容模板支持的变量：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--pagetitle--]:页面标题</td>
+          <td>[!--pagekey--]：页面关键字</td>
+          <td>[!--pagedes--]：页面描述</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--newsnav--]:导航条</td>
+          <td>[!--class.menu--]：一级栏目导航</td>
+          <td>[!--page.stats--]:统计访问</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--id--]:信息ID</td>
+          <td>[!--titleurl--]:标题链接</td>
+          <td>[!--keyboard--]:关键字</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--classid--]:栏目ID</td>
+          <td>[!--class.name--]:栏目名称</td>
+          <td>[!--self.classid--]:本栏目ID</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--bclass.id--]: 父栏目ID</td>
+          <td>[!--bclass.name--]:父栏目名称</td>
+          <td>[!--other.link--]:相关链接</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--p.title--]：分页标题</td>
+          <td>[!--ttid--]：标题分类ID</td>
+          <td>[!--tt.name--]：标题分类名称</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--class.url--]：栏目页面地址</td>
+          <td>[!--news.url--]:网站地址(参数设置的站点地址)</td>
+          <td>[!--no.num--]:信息编号</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--userid--]:发布者ID</td>
+          <td>[!--username--]:发布者</td>
+          <td>[!--linkusername--]:带链接的用户名</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--userfen--]:查看信息扣除点数</td>
+          <td>[!--pinfopfen--]:平均评分</td>
+          <td>[!--infopfennum--]:评分人数</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--onclick--]:点击数</td>
+          <td>[!--totaldown--]:下载数</td>
+          <td>[!--plnum--]:评论数</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--page.url--]:分页导航</td>
+          <td>[!--title.select--]:标题式分页导航</td>
+          <td>[!--next.page--]:内容下一页链接</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--info.next--]:下一篇链接</td>
+          <td>[!--info.pre--]:上一篇链接</td>
+          <td>[!--info.vote--]:信息投票</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--hotnews--]:热门信息JS调用(默认表)<br>
+            [!--self.hotnews--]:本栏目热门信息JS调用</td>
+          <td>[!--newnews--]:最新信息JS调用(默认表)<br>
+            [!--self.newnews--]:本栏目最新信息JS调用 </td>
+          <td>[!--goodnews--]:推荐信息JS调用(默认表)<br>
+            [!--self.goodnews--]:本栏目推荐信息JS调用</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">[!--hotplnews--]:评论热门信息JS调用(默认表)<br>
+            [!--self.hotplnews--]:本栏目评论热门信息JS调用</td>
+          <td>[!--firstnews--]:头条信息JS调用(默认表)<br>
+            [!--self.firstnews--]:本栏目头条信息JS调用</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[!--字段名--]:数据表字段内容调用</strong></td>
+          <td><strong>支持公共模板变量</strong></td>
+          <td><strong>支持所有模板标签</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td height="25"><strong>支持PHP代码</strong></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <br>
+      其它JS调用及地址说明 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="17%" height="25">实时显示点击数(不统计)</td>
+          <td width="83%">&lt;script src=[!--news.url--]e/public/ViewClick/?classid=[!--classid--]&amp;id=[!--id--]&gt;&lt;/script&gt;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">实时显示点击数(显示+统计)</td>
+          <td>&lt;script src=[!--news.url--]e/public/ViewClick/?classid=[!--classid--]&amp;id=[!--id--]&amp;addclick=1&gt;&lt;/script&gt;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">实时显示下载数</td>
+          <td>&lt;script src=[!--news.url--]e/public/ViewClick/?classid=[!--classid--]&amp;id=[!--id--]&amp;down=1&gt;&lt;/script&gt;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">实时显示评论数</td>
+          <td>&lt;script src=[!--news.url--]e/public/ViewClick/?classid=[!--classid--]&amp;id=[!--id--]&amp;down=2&gt;&lt;/script&gt;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">实时显示平均评分数</td>
+          <td>&lt;script src=[!--news.url--]e/public/ViewClick/?classid=[!--classid--]&amp;id=[!--id--]&amp;down=3&gt;&lt;/script&gt;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">实时显示评分人数</td>
+          <td>&lt;script src=[!--news.url--]e/public/ViewClick/?classid=[!--classid--]&amp;id=[!--id--]&amp;down=4&gt;&lt;/script&gt;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">实时显示顶数</td>
+          <td>&lt;script src=[!--news.url--]e/public/ViewClick/?classid=[!--classid--]&amp;id=[!--id--]&amp;down=5&gt;&lt;/script&gt;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">实时显示踩数</td>
+          <td>&lt;script src=[!--news.url--]e/public/ViewClick/?classid=[!--classid--]&amp;id=[!--id--]&amp;down=6&gt;&lt;/script&gt;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td rowspan="2">上面多变量同时显示<br>
+            (变量1为显示,0为不显示) </td>
+          <td height="25">&lt;script src=[!--news.url--]e/public/ViewClick/ViewMore.php?classid=[!--classid--]&amp;id=[!--id--]&amp;onclick=1&amp;down=1&amp;plnum=1&amp;pfen=0&amp;pfennum=0&amp;diggtop=0&amp;diggdown=0&amp;addclick=0&gt;&lt;/script&gt;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">显示内容地方要加id=&quot;变量showdiv&quot;，比如点击数：&lt;span id=&quot;onclickshowdiv&quot;&gt;0&lt;/span&gt;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">购物车地址</td>
+          <td>[!--news.url--]e/ShopSys/buycar/?classid=[!--classid--]&amp;id=[!--id--]</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr id="newstempexp"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">内容模板制作范例</font></strong></td>
+  </tr>
+  <tr> 
+    <td>实现如下效果：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/newstemp4.jpg" width="726" height="452" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、用Dreamweaver制作好网页界面</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/newstemp6.jpg" width="732" height="269"></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、在制作好的界面加入模板标签及变量：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">页面标题变量：[!--pagetitle--]，调用位置如下图①所示；<br>
+      导航条变量[!--newsnav--]：调用位置如下图②所示。<br>
+      标题字段变量：[!--title--]，调用位置如下图③所示；<br>
+      新闻内容字段变量：[!--newstext--]，调用位置如下图④所示。</td>
+  </tr>
+  <tr> 
+    <td> <img src="img/newstemp7.jpg" width="719" height="260" border="1"> </td>
+  </tr>
+  <tr> 
+    <td><strong>3、将制作好的内容模板代码拷贝到系统后台“内容模板”中：</strong></td>
+  </tr>
+  <tr> 
+    <td>1)、单击“模板”菜单 》内容模板-“管理内容模板”，选择右侧的默认新闻内容模板，单击“修改”：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/newstemp9.jpg" width="698" height="396" border="1"></td>
+  </tr>
+  <tr>
+    <td>(2)、进入修改默认新闻内容模板界面，将制作好的内容模板代码拷贝进去：</td>
+  </tr>
+  <tr>
+    <td><img src="img/newstemp8.jpg" width="761" height="712"></td>
+  </tr>
+  <tr> 
+    <td><strong>4、修改模板后，刷新信息页面，最终内容模板的预览效果：</strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/newstemp5.jpg" width="726" height="452" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="25">5、附上面例子模板代码：</td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellspacing="1" cellpadding="3">
+        <tr> 
+          <td><textarea name="textarea" cols="100" rows="20">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot;&gt;
+&lt;title&gt;[!--pagetitle--]&lt;/title&gt;
+
+&lt;style&gt;
+td {font-size: 10pt;line-height: 14pt;}
+.line{font-size: 10pt;line-height: 14pt;}
+A:link {text-decoration: none; color:#000000}
+A:visited {text-decoration: none; color: #000000} 
+A:active {text-decoration: underline; color: #000000 } 
+A:hover {text-decoration: underline;        color: #FF0000;}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body topmargin=&quot;0&quot;&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+
+  &lt;tr&gt;
+    &lt;td height=&quot;60&quot;&gt; 
+      &lt;div align=&quot;center&quot;&gt;&lt;font size=&quot;4&quot;&gt;&lt;strong&gt;帝国CMS测试站点&lt;/strong&gt;&lt;/font&gt;&lt;/div&gt;&lt;/td&gt;
+
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;25&quot; bgcolor=&quot;#FFFFFF&quot;&gt; 
+      &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;/&quot;&gt;网站首页&lt;/a&gt; | &lt;a href=&quot;/news/china/&quot;&gt;国内新闻&lt;/a&gt; 
+        | &lt;a href=&quot;/news/world/&quot;&gt;国际新闻&lt;/a&gt; | &lt;a href=&quot;/news/ent/&quot;&gt;娱乐新闻&lt;/a&gt; | &lt;a href=&quot;/news/sports/&quot;&gt;体育新闻&lt;/a&gt;&lt;/div&gt;&lt;/td&gt;
+
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+
+  &lt;tr&gt; 
+    &lt;td width=&quot;50%&quot; height=&quot;25&quot;&gt;当前位置：[!--newsnav--]&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+
+  &lt;tr&gt; 
+    &lt;td height=&quot;23&quot;&gt;&lt;div align=&quot;center&quot;&gt;&lt;strong&gt;[!--title--]&lt;/strong&gt;&lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;[!--newstext--]&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;br&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+
+  &lt;tr&gt;
+    &lt;td height=&quot;23&quot;&gt;
+&lt;div align=&quot;center&quot;&gt;Powered by &lt;a href=&quot;http://www.phome.net&quot;&gt;EmpireCMS&lt;/a&gt; &amp;copy; 
+        2002-2011 Phome.net Corporation&lt;br&gt;
+
+      &lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="other"> 
+    <td height="25"><strong><font color="#FFFFFF">相关链接</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr> 
+    <td height="23"><a href="http://bbs.phome.net/showthread-35-29395-0.html" target="_blank">1、内容模板制作视频教程</a></td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,31 @@
+一、问题：执行git remote add origin git@github.com:yylxm/Git.git
+                    出现问题fatal: remote origin already exists.
+        解决办法：git remote显示所有的远程库，然后采用git remote rm origin删除该origin。
+
+二、问题： 采用git push -u origin master推送本地库到github
+                   出现问题fatal: I don't handle protocol 'git@https'
+       解决办法：采用git remote add origin http://github.com:yylxm/Git.git，Git.git是在github上创建的repositories 。
+
+三、问题：执行$ git push -u origin master
+                   出现问题 Username for 'https://github.com': yylxm
+                                    To https://github.com/yylxm/YYXQZ.git
+                                     ! [rejected]        master -> master (fetch first)
+                                    error: failed to push some refs to 'https://github.com/yylxm/YYXQZ.git'
+                                    hint: Updates were rejected because the remote contains work that you do
+                                    hint: not have locally. This is usually caused by another repository pushing
+                                    hint: to the same ref. You may want to first integrate the remote changes
+                                    hint: (e.g., 'git pull ...') before pushing again.
+                                    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+      解决办法：错误的主要原因是github中的README.md文件不在本地代码目录中，
+                         可以通过如下命令进行代码合并【注：pull=fetch+merge】 git pull --rebase origin master
+                         再通过命令git push -u origin master完成代码上传到github的操作。
+
+四.问题 Changes not staged for commit:  说明跟踪的文件内容发生了变化，需要添加到暂存区
+
+五.问题 、遇到问题：当用git rm --cached来删除文件夹的追踪状态是出现
+            fatal: not removing 'vendor/nimbus' recursively without -r 
+   解决办法 要用git rm -r --cached vendor/SDURLCache
+
+六.问题 1.The authenticity of host 192.168.0.xxx can't be established.
+   执行ssh  -o StrictHostKeyChecking=no  192.168.0.xxx　就OK
+   http://blog.csdn.net/hu8hong9/article/details/52851570

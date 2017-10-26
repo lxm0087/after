@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>VMware</title>
+	     www.vmware.com 官网  
+			推荐使用vm8
+			VMware 主要特点:
+			1.不需要分区或重新开机就能再同一台pc上使用两种以上的操作系统
+			2.本机系统可以与虚拟机系统网咯通信
+			3.可以设定并且随时修改虚拟机操作系统硬件环境,一半最大的是本机的一半
+			建议配置：
+			cpu 建议主频为1Ghz以上
+			初学建议安装32位的
+			虚拟化 Inter VT-x/EPT 或 AMD-V/RVI  这个选项时将主机的系统映射到虚拟机中,如果需要跑大数据时勾选这个
+			会让虚拟机的性能更强大,但是会占占真实cpu的资源。
+			桥接：
+			nat         vm8
+			host-only   vm1  不能上网  
+			vminsatal 如果虚拟机没有删除干净 可以去网上下载专门的清楚工具
+			虚拟机的硬件设置
+			桥接：与本机通信简单，占真实机的ip 推荐使用
+			使用技巧:克隆:链接克隆相当于虚拟机的影子,内存比之前的小。
+						 完整克隆，和之前的虚拟机一样，内存大小一样，删除之前的，不影响克隆后的使用。
+			系统分区， 
+			主分区：最多只能有4个
+			扩展分区：最多只能有1个。
+					 主分区加扩展分区最多有4个
+					 不能写入数据，只能包含逻辑分区
+					 逻辑分区：最多23个，从5开始
+					 格式化：又称逻辑格式化，它是指根据用户选定的文件系统(如 FAT16,FAT23,NTFS,EXT2,EXT3,EXt4)
+					 在磁盘的特定区域写入特定数据，在分区中划出一片用于存放文件分配表，目录表等用于文件管理的
+					 磁盘空间。
+			硬件设备文件名:
+				硬件                                         设备文件名
+				IDE硬盘                                  /dev/hd[a-d]
+				SCSI/SATA/USB硬盘             /dev/sd[a-p]
+				光驱                                       /dev/cdrom 或 /dev/hdc
+				打印机(25针)			   /dev/1p[0-2]
+				打印机(usb)            /dev/usb/lp[0-15]
+				鼠标                                     /dev/mouse
+			设备文件名
+			/dev/hdal      (IDE硬盘接口)
+			/dev/sdal      (SCSI硬盘接口，SATA硬盘接口)
+			挂载
+			必须分区
+			/ 根分区
+			swap分区(交换分区 不超过4G内内存2倍，否则一样大，单个 不超过2GB)虚拟内存
+			推荐分区
+			/boot(启动分区，200MB)
+			
+			给虚拟机安装系统
+			进入bios修改启动顺序，将光盘改为首次启动，当然虚拟机是智能的 不需要这样，但是真实机就不一样，安装好 系统后
+			还需要再改回来，将硬盘启动放在第一个。
+			
+			安装欢迎界面
+			Install or upgrade an existing system     安装或升级现有系统
+			Install systen with basic video driver    安装过程采用基本的显卡驱动
+			Rescue installed system                   进入系统修复模式
+			Boot from local drive                     退出安装从硬盘启动
+			Memory test                               存储介质安装
+			
+			进入bios  选择boot 更改系统启动的顺序
+			ctrl+alt+enter 全屏显示
+			软件包选择
+			Desktop                    桌面
+			Minimal Desktop            最小化桌面
+			Minimal                    最小化
+			Basic Server               基本服务器
+			Database Server            数据库服务器
+			Web Server                 网页服务器
+			Virtual Host               虚拟主机
+			software delelopment workstation
+									     软件开发工作站
+			
+			安装日志
+			/root/install.log          存储了安装在系统中的软件包及其版本信息
+			/root/install.log.syslog   存储了安装过程中留下的时间记录
+			/root/anaconda-ks.cfg      以Kickstart配置文件的格式记录安装过程中设置的选项信息
+			
+			网咯配置
+			使用DHCP 自动获取 前提是局域网内必须有DHCP服务器
+			service network restart 重启网咯服务
+			
+			xshell  远程管理linux
+			点击新建 连接 
+			在配置完IP地址之后，使用yum install net-tools来安装这个命令。
+			:w 保存文件但不退出vi
+			:w file 将修改另外保存到file中，不退出vi
+			:w! 强制保存，不推出vi
+			:wq 保存文件并退出vi
+			:wq! 强制保存文件，并退出vi
+			q: 不保存文件，退出vi
+			:q! 不保存文件，强制退出vi
+			:e! 放弃所有修改，从上次保存文件开始再编辑
+			
+
+		-->
+	</head>
+	<body>
+	</body>
+</html>

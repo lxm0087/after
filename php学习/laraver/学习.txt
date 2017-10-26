@@ -1,0 +1,138 @@
+1.laravel 支持的四种数据库
+  MySQL
+  Postgres
+  SQLite
+  SQL Server
+2.
+Laravel 服务容器是用于管理类的依赖和执行依赖注入的工具。依赖注入这个花俏名词实质上是指：类的依赖项通过构造函数，或者某些情况下通过「setter」方法「注入」到类中。
+3.
+绑定#
+
+绑定基础#
+因为几乎所有服务容器都是在 服务提供器 中注册绑定的，所以文档中大多数例子都是使用了在服务提供器中绑定的容器。
+
+如果类没有依赖任何接口，就没有必要将类绑定到容器中。容器不需要指定如何构建这些对象，因为它可以使用反射自动解析这些对象。
+
+4.路由简介
+ 简单的说就是将
+
+  基本路由
+  Route::get('basc',function(){
+		return  "hellow wrold";
+  });
+
+  多请求路由
+ Route::match(['get,''post'],function(){
+ 
+ })
+ Route::any('multy2',function(){});
+
+路由参数
+Route::get('user/{id}',function($id){})
+Route::get(‘user/{name?}’,function($name='sean'){})
+Route::get('user/{id}/{name?}',function())
+
+路由别名
+
+Route::get('user/center',['as'=>'center,function(){}]);
+
+路由群组
+
+路由中输出视图
+
+
+路由和mvc
+
+1.怎么新建一个控制器
+   新建后，在routes.php中定义 
+   Route::get('member/info','memberinfo@info');
+   数据绑定
+   Route::get('member/{id}','memberinfo@info')
+   ->where();
+2.
+
+视图
+1.怎么输出视图   直接在控制器中return  view('info'，参数);
+
+3.模型
+新建模型
+
+4.提供三钟方式
+
+5.原始查找
+Facades
+DB::select();
+DB::insert($sql,[]);
+DB::update('update student set age =? 'where name=?,[])
+dd 打印;
+DB::delete($sql,[]);
+
+6.查询构造器
+1.查询构造器简介及新增数据
+2.使用查询构造器新增数据
+  DB::table()->insert(
+   []
+   ) 
+
+  DB::table()->insertGetID( 返回新增id
+    []
+   )
+  DB::table()->insert( 插入多条
+
+   [],[],
+   );
+3.使用查询构造器更新数据
+  DB::table()
+       ->where()
+       ->update(
+  []
+ )
+4.自增
+ DB::table()
+  ->where（id,12）
+  ->increment(‘age’,3);默认自增1
+ 自减
+ DB::table()->decrement(‘age’,3);默认自减1
+ 自增同时修改其它参数
+ DB::table()->increment(‘age’,3,[name=>'小红']);默认自增1
+5.使用查询构造器删除数据
+  DB::table()
+     ->where()
+   ->delete();
+6.清空数据表
+  table()->truncate();
+7.使用查询构造器查询数据
+   get()    获取表的所有数据
+   first()  返回结果集第一条
+   where    加多个条件  whereRaw(id>? and name = ?,[])
+   pluck    返回结果集中指定字段
+   DB::table()->pluck('name'); lists 与之相同 
+   DB::table()->lists('name'，‘id’);              不同的是可以指定下标
+   select()   同field  指定查找
+   chunk
+   DB::table('student')->trunk(2,function($students){
+   
+         加上return false 就执行一次
+   });
+public function index()
+{
+    $article = Article::all();
+    $category = Category::all();
+    $tag = Tag::all();
+    $assign = [
+        'article' => $article,
+        'category' => $category,
+        'tag' => $tag
+    ];
+    return view('home.index.index', $assign);
+}
+上面代码等同于下面代码；
+
+public function index()
+{
+    $article = Article::all();
+    $category = Category::all();
+    $tag = Tag::all();
+    $assign = compact('article', 'category', 'tag');
+    return view('home.index.index', $assign);
+}

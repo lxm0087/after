@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">升级网站程序</strong></td>
+    <td width="50%"><div align="center"> </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="postdatasay"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">帝国CMS程序升级一般步骤：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> 1、升级前备份数据库数据与配置文件(如：e/class/config.php、e/class/user.php)；<br>
+      2、如果改了“e/admin”目录名，先将目录名改回“e/admin”；<br>
+      3、上传升级包upload目录里的文件到服务器帝国CMS系统目录里，覆盖已存在的文件；<br>
+      4、设置新版新增要设置777权限的目录。<br>
+      5、运行e/update/index.php升级程序。<br>
+      6、删除e/update里的文件。<br>
+      7、升级完毕。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="postdata"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">附：帝国CMS6.5版至6.6版升级说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">
+	<table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'> 说明：本升级程序不影响原6.5版的数据与模板。<br><br> ********************&nbsp;&nbsp;升级前备份工作&nbsp;&nbsp;********************<br><br> 1、备份e/class/config.php、e/class/user.php文件<br><br> 2、备份数据库数据<br><br>&nbsp; &nbsp; (小数据可以用phpmyadmin，大数据用＂帝国备份王＂：<a href="http://www.phome.net/product/Ebak.html" target="_blank">http://www.phome.net/product/Ebak.html</a>).<br><br><br> ********************&nbsp; &nbsp;&nbsp;&nbsp;升级步骤&nbsp; &nbsp;&nbsp;&nbsp;********************<br><br> 1、如果你改了“e/admin”目录名，请先将目录名改回“e/admin”；<br><br> 2、复制升级包upload目录里的文件到本地帝国CMS系统目录里，覆盖已存在的文件；<br><br> 3、从官方下载新的授权文件，并复制到e/class目录(如果是上传，记得按二进制上传)；<br><br> 4、将以下目录和文件权限设为777；(权限要应用于所有子目录与文件)<br>&nbsp; &nbsp; ------------------------------------------<br>&nbsp; &nbsp;&nbsp;&nbsp;/e/data/tmp/titlepic<br>&nbsp; &nbsp;&nbsp;&nbsp;/e/data/html/ztaddform.php<br>&nbsp; &nbsp;&nbsp;&nbsp;/e/data/html/classaddform.php<br>&nbsp; &nbsp; ------------------------------------------<br><br> 5、运行e/update/index.php文件,依提示进行升级；<br><br> 6、删除e/update里的文件；<br><br> 7、登陆后台，设置用户组权限；(新版增加的功能没有加上权限是不显示菜单的)<br><br> 8、升级完毕。<br><br><br> ********************&nbsp; &nbsp;&nbsp;&nbsp;会员接口升级说明&nbsp; &nbsp;&nbsp;&nbsp;********************<br><br> 1、如果整合过Ucenter接口，需要下载6.6版ucenter接口包进行升级(接口包里有升级说明)。<br><br> 2、如果整合通行证接口，需要下载6.6通行证接口覆盖bbs目录下的文件并配置通行证接口参数文件。<br><br><br> ********************&nbsp; &nbsp;&nbsp;&nbsp;重新升级说明&nbsp; &nbsp;&nbsp;&nbsp;********************<br>如果服务器出现意外导致升级失败可以按下面方法重新升级：<br>1、先删除数据库中帝国CMS的所有数据表。（防止表已经存在）<br>2、恢复备份的数据库。<br>3、恢复备份的e/class/config.php和e/class/user.php文件。<br>4、打开新的IE窗口重新升级即可。</td></tr></table>
+	</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

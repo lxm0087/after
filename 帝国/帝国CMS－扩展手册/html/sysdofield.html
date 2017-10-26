@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">系统内置关键字字段说明</strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">帝国CMS系统内置关键字字段说明：固定格式的字段。</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> <font color=blue><b><font size=3>系统关键字字段有以下字段：</font></b></font><br>
+      <b>1、newstext ：内容字段</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>newstext字段为自动就是编辑器，一般用于新闻内容字段。支持内容关键字替换、替换过滤字符、支持远程保存内容里的图片/FLASH、支持自动分页、支持设置第几张上传图为标题图片。</td></tr></table>
+      <br>
+      <b>2、smalltext ：简介字段</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>smalltext字段一般用于简介内容，可自动截取newstext字段内容作为简介。</td></tr></table>
+      <br>
+      <b>3、writer ：作者字段</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>writer字段和管理作者相关联(其他管理)。</td></tr></table>
+      <br>
+      <b>4、befrom ：来源字段</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>befrom字段和管理来源相关联(其他管理)。</td></tr></table>
+      <br>
+      <b>5、newstime ：时间字段</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>newstime为发布时间字段，可在模板中任意地方设置时间格式。</td></tr></table>
+      <br>
+      <b>6、downpath ：下载地址字段</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>downpath为系统内置的下载地址字段，支持多下载地址、设置权限/扣除点数、地址前缀。</td></tr></table>
+      <br>
+      <b>7、onlinepath ：在线地址字段</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>onlinepath为系统内置的在线地址字段，支持多在线地址、设置权限/扣除点数、地址前缀、选择播放器。</td></tr></table>
+      <br>
+      <b>8、playerid ：播放器字段</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>playerid和管理播放器关联(其他管理)，要与onlinepath在线地址字段搭配，字段类型用SMALLINT、长度默认不设置。</td></tr></table>
+      <br>
+      <b>9、morepic ：图片集字段</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>morepic为系统内置的多图片字段，支持多图片上传、支持大小图及图片说明设置、支持自动生成缩图。</td></tr></table>
+      <br>
+      <b>10、infoip ：IP字段</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>infoip为记录IP的字段，只需将字段设置为录入项或投稿项，增加信息时自动存储发布者IP，字段类型用VARCHAR、长度15。</td></tr></table>
+      <br>
+      <b>11、infozm ：字母字段</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>infozm为取得标题字母的字段，只需将字段设置为录入项或投稿项，增加或修改信息时自动存储标题第一个拼音字母，字段类型用VARCHAR、长度1。</td></tr></table>
+      <br>
+      <b>12、empireselfurl ：采集页地址字段</b><br><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>empireselfurl为保存采集内容页地址字段，只需将字段设置为采集项，此字段不需要设置采集规则，入库后自动为采集页面地址，字段类型用VARCHAR、长度255。</td></tr></table>
+      <br>
+      <b>13、diggtop ：Digg顶字段</b><br>
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr>
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>diggtop为digg功能的顶字段，字段类型用int、长度默认不设置。</td>
+        </tr>
+      </table> 
+      <br>
+      <b>14、diggdown ：Digg踩字段</b><br>
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr>
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>diggdown为digg功能的踩字段，字段类型用int、长度默认不设置。</td>
+        </tr>
+      </table> <br>
+      至此本节讲解完毕。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

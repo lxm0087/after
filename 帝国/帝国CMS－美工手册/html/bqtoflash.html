@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">用灵动标签制作幻灯</strong></td>
+  </tr>
+  <tr>
+    <td height="27" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="25">用灵动标签(e:loop)可以实现各种幻灯效果，本节讲解制作幻灯的基本方法。</td>
+        </tr>
+        <tr>
+          <td height="30"><img src="img/bqtoflash1.jpg" width="510" height="241"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">用灵动标签制作FLASH幻灯：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF">FLASH幻灯制作一般流程：</td>
+  </tr>
+  <tr> 
+    <td height="25">1、将幻灯代码内容和FLASH相关文件复制本地；</td>
+  </tr>
+  <tr> 
+    <td height="25">2、显示信息内容用灵动标签调用出来；</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF">常见的FLASH幻灯有下面两种方式及灵动标签调用例子：</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、分开显示式，如下面这类：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>filesarr[1] 
+            = &quot;/d/file/20110509/0ea97d787d559b4fa207b40928dca573.jpg&quot;;<br>
+            linksarr[1] = &quot;/Photography/12432934312103.html&quot;;<br>
+            textsarr[1] = &quot;标题1&quot;; <p>filesarr[2] = &quot;/d/file/20110509/f390adb68aaaca13d306fd16d8b600a2.jpg&quot;;<br>
+              linksarr[2] = &quot;/Photography/12444403612122.html&quot;;<br>
+              textsarr[2] = &quot;标题2&quot;;</p>
+            <p>filesarr[3] = &quot;/d/file/20110509/ad3fd33cccb9fe2dea55223efff51abb.jpg&quot;;<br>
+              linksarr[3] = &quot;/logodesign/12445146952128.html&quot;;<br>
+              textsarr[3] = &quot;标题3&quot;;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">用灵动标签调用出上面内容，可以用下面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>[e:loop={栏目ID/专题ID,显示条数,操作类型,只显示有标题图片}]<br>
+            filesarr[<font color="#FF0000">&lt;?=$bqno?&gt;</font>] = &quot;<font color="#FF0000">&lt;?=$bqr[titlepic]?&gt;</font>&quot;;<br>
+            linksarr[<font color="#FF0000">&lt;?=$bqno?&gt;</font>] = &quot;<font color="#FF0000">&lt;?=$bqsr[titleurl]?&gt;</font>&quot;;<br>
+            textsarr[<font color="#FF0000">&lt;?=$bqno?&gt;</font>] = &quot;<font color="#FF0000">&lt;?=$bqr[title]?&gt;</font>&quot;;<br>
+            [/e:loop] </td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">(如果序号是从0开始，则用<font color="#FF0000">&lt;?=$bqno-1?&gt;</font>)</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、连接显示式，如下面这类：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>var 
+            pics=&quot;/d/file/07b40928dca573.jpg|/d/file/306fd16d8b600a2.jpg|/d/file/223efff51abb.jpg&quot;;<br> 
+            <br>
+            var links=&quot;/Photography/12432934312103.html|/Photography/12444403612122.html|/logodesign/12445146952128.html&quot;;<br> 
+            <br>
+            var texts=&quot;标题1|标题2|标题3&quot;;</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">用灵动标签调用出上面内容，可以用下面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>[e:loop={栏目ID/专题ID,显示条数,操作类型,只显示有标题图片}]<br> 
+            &lt;?php<br>
+            $jg='|';<br>
+            if($bqno==1)<br>
+            {<br>
+            $jg='';<br>
+            }<br>
+            $pics.=$jg.<font color="#FF0000">$bqr['titlepic']</font>;<br>
+            $titles.=$jg.<font color="#FF0000">$bqr['title']</font>;<br>
+            $urls.=$jg.<font color="#FF0000">$bqsr['titleurl']</font>;<br>
+            ?&gt;<br>
+            [/e:loop]<br>
+            var pics=&quot;<font color="#FF0000">&lt;?=$pics?&gt;</font>&quot;;<br> 
+            <br>
+            var links=&quot;<font color="#FF0000">&lt;?=$urls?&gt;</font>&quot;;<br> 
+            <br>
+            var texts=&quot;<font color="#FF0000">&lt;?=$titles?&gt;</font>&quot;; 
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF">其他格式依此类推，都可以用灵动标签调用出来。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25"><strong>相关链接：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、<a href="http://bbs.phome.net/showthread-13-126114-0.html" target="_blank">帝国CMS模板制作 
+      一招鲜吃遍天教程</a></td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

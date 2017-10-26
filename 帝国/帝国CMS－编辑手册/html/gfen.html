@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>推荐赠送点数语法说明</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">会员宣传插件</strong></td>
+    <td width="50%"><div align="center"> </div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="27" colspan="2"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>会员宣传插件：会员通过推荐点击链接获得点数。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">推荐赠送点数语法说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="32"><table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 21px'><p> 
+              <strong>》链接地址为：</strong>“http://网站地址/e/tool/gfen/?id=会员帐号ID”或“http://网站地址/e/tool/gfen/?n=会员用户名”</p>
+            <p><strong>》信息基本参数配置：</strong>修改“<strong>e/tool/gfen/index.php</strong>”文件的参数设置<br>
+              //------------------参数配置<br>
+              $open=1; //1为关闭，0为开启<br>
+              $type=0; //0为按ip(同一ip不重复增加点数)，1为按cookie(同一机器不重复增加点数)<br>
+              $retime=3600; //重复增加点数时间间隔，单位为秒<br>
+              $fen=1; //单一点击点数<br>
+              $gotourl=&quot;../../../&quot;; //转向地址</p></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

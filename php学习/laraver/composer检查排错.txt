@@ -1,0 +1,4 @@
+1.composer diagnose  
+2.composer self update
+3.curl -sS https://getcomposer.org/installer | php -- --check。
+5.尝试通过运行清除Composer的缓存composer clear-cache。

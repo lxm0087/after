@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">大数据量下优化说明</strong></td>
+    <td width="50%"><div align="center"> </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">影响速度主要有以下几种原因：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、服务器配置及带宽<br>
+      2、运行环境<br>
+      3、模板：标签数量及复杂度<br>
+      4、数据表与字段配置不合理</td>
+  </tr>
+  <tr>
+    <td height="25">其中1和2的优化与服务器本身相关的，所以下面我们主要介绍帝国CMS相关的：关于3和4的优化说明。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">帝国CMS大数据量下优化介绍：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">尽量分表、减少主表字段、启用优化方案、模板优化。其中最主要是模板优化，比如：你模板加rand()随机之类调用,数据超1万马上慢。【不怕蚂蚁一样的数据，就怕乌龟一样的模板】</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、模板的优化：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>模板优化原则：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">模板优化原则是标签越少越好，如果确实标签要很多，可以把调用标签放到自定义页面来生成调用内容，模板里include自定义页面文件，此方法最大优化可使模板零标签，效率最高。</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>include自定义页面方法：</strong>（自定义页面在后台&gt;“栏目”&gt;“自定义页面”里增加）</td>
+  </tr>
+  <tr> 
+    <td height="25"> include 自定义页面有两种方法：<br>
+      第一种：页面生成.html文件情况下，模板用&lt;?php include(ECMS_PATH.'userpage.html');?&gt;调用文件。<br>
+      第二种：页面生成.shtml文件，用&lt;!--#include file=&quot;/userpage.html&quot;--&gt;调用文件。</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>技巧说明：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、自定义页面存放目录说明：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">&lt;?php include(<font color="#0000FF">ECMS_PATH.'userpage.html'</font>);?&gt;与&lt;!--#include 
+      file=&quot;<font color="#0000FF">/userpage.html</font>&quot;--&gt;</td>
+  </tr>
+  <tr> 
+    <td height="25">上面例子是以自定义页面生成到根目录为例，你也可以单独建个自定义页面存放目录，比如：/incpage/ 目录那模板include就是用：<br> 
+      &lt;?php include(<font color="#0000FF">ECMS_PATH.'/incpage/userpage.html'</font>);?&gt;与&lt;!--#include 
+      file=&quot;<font color="#0000FF">/incpage/userpage.html</font>&quot;--&gt;</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、自定义页面可以设置定义生成，以让文件内容实时更新：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">在后台&gt;“系统”&gt;“计划任务”&gt;“管理刷新任务”里增加定时刷新自定义页面。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>3、如果是不同栏目不同自定义页面如何引用？</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">(1)、增加自定义页面按栏目ID命名，比如：/incpage/userpage1.html (其中1为栏目ID)<br>
+      (2)、模板中include文件用：<br> &lt;?php include(<font color="#0000FF">ECMS_PATH.'/incpage/userpage'.<strong>$GLOBALS[navclassid]</strong>.'.html'</font>);?&gt;<br>
+      或<br> &lt;!--#include file=&quot;<font color="#0000FF">/incpage/userpage<strong>&lt;?=$GLOBALS[navclassid]?&gt;</strong>.html</font>&quot;--&gt;</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><p><strong><font color="#FFFFFF">二、数据表与字段配置优化：</font></strong></p></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、数据表优化：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">栏目尽量独立数据主表。<br>
+      副表达到一定大小就对副表进行分表。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、字段优化：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">尽量减少主表字段。<br>
+      对于字段内容的字数非常多，如小说、论文等，建议用存文本。<br>
+      数据表自定义字段最好不要太多。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>3、减少信息数据表大小方法：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">如果你的mysql数据库容量或服务器内存有限，可以用以下方法来减少信息数据表大小：<br>
+      修改title字段把字段类型从char定长格式改为varchar变长格式即可。char是定长，不论字段内容多少，都是固定大小；varchar是变长，存多少就是多大小。</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、启用系统底层优化的优化方案功能：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">帝国CMS优化方案使用可以<strong><a href="yh.html" target="_blank">点击这里</a></strong>查看。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25"><strong>相关链接：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、<a href="http://bbs.phome.net/showthread-13-122707-0.html" target="_blank">2千万数据、17.3GB数据库下帝国CMS超强生成速度</a></td>
+  </tr>
+  <tr>
+    <td height="25">2、<a href="http://bbs.phome.net/showthread-13-169058-0.html" target="_blank">比较高效的随机调用方法</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

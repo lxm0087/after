@@ -1,0 +1,11 @@
+主要目录结构描述见下表：
+
+子目录名	简要描述
+branches	Git 项目分支信息，新版 Git 已经不再使用该目录
+config	Git 项目配置信息
+description	Git 项目描述信息
+HEAD	指向 Git 项目当前分支的头指针
+hooks	默认的”hooks”脚本，被特定事件发生前后触发。
+info	里面含一个 exclude 文件，指 Git 项目要忽略的文件。
+objects	Git 的数据对象，包括：commits, trees, blobs, tags。
+refs	指向所有 Git 项目分支的指针

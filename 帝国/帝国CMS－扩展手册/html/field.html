@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">管理字段</strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">管理字段：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>系统</strong>”菜单，选择“<strong>管理数据表</strong>”子菜单，进入管理数据表界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/table1.jpg" width="344" height="316"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入管理数据表界面：(蓝色背景为默认表)</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/field3.jpg" width="800" height="405"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、点击“新闻系统数据表”的“<strong>管理字段</strong>”进入<strong>管理字段</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/field1.jpg" width="716" height="596"></td>
+  </tr>
+  <tr>
+    <td height="25">4、点击“newstext”字段的“<strong>修改</strong>”进入<strong>修改字段</strong>界面：</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/field2.jpg" width="683" height="1372"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>基本设置</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%" height="25">字段名</td>
+          <td width="86%">字段名由英文与数字组成，且不能以数字开头。比如：title</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">字段标识</td>
+          <td>字段标识方便识别字段。比如：标题</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">字段类型</td>
+          <td>设置字段所用的字段数据存放类型。<br>
+            TEXT、MEDIUMTEXT、LONGTEXT、DATE、DATETIME不需要设置字段长度。<br>
+            “FLOAT”与“DOUBLE”为有小数点的数字值，字段长度格：“总位数,小数位数”，如“11,2”。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">存放表</td>
+          <td>主表字段越少效率越高，不在列表调用字段建议将字段存在副表。<font color="#666666">(设置后管理字段里还可以转换)</font></td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>特殊属性</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">加索引</td>
+          <td>设为索引字段，一般不设置，字段经常查询的可以设置。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">值唯一</td>
+          <td>是否字段内容不能重复，如果设置为唯一，增加信息时会验证内容是否重复。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">采集项</td>
+          <td>如果要在采集表单中显示并可输入正则需要选择“是”。不是采集字段建议不选。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">分页字段</td>
+          <td>选择此字段是否为分页字段，比如新闻内容的分页。(表只可设置一个字段)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">简介字段</td>
+          <td>简介字段为模板里设置截取简介字数的字段。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">内容存文本</td>
+          <td>可设置此字段的内容存到文本文件，减少数据库大小。(设置后不能修改,表只可设置一个字段)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">前台内容显示</td>
+          <td>可设定字段值“将回车替换成换行符”与“支持html代码”，一般默认即可。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">后台增加信息处理函数</td>
+          <td rowspan="4">一般不设置，格式“函数名##参数”参数可不设置。<br>
+            详细使用方法可以<a href="http://bbs.phome.net/showthread-13-116152-0.html" target="_blank"><strong>点击这里</strong></a>查看。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">后台修改信息处理函数</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">前台增加信息处理函数</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">前台修改信息处理函数</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">显示顺序</td>
+          <td>增加系统模型与录入表单数据的先后排序。(数字越小越前面)</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>表单显示设置</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">输入表单显示元素</td>
+          <td>选择此字段在录入数据时所用的表单元素。<br>
+            选择“图片(img)/FLASH文件(flash)/文件(file)”时支持录入时上传文件与采集时支持远程保存文件。<br>
+            特殊字段：newstext、writer、befrom、downpath、onlinepath、morepic、playerid则不需要选择。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">选项</td>
+          <td>设置输入表单显示元素的长、宽等选项。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">初始值</td>
+          <td>设置增加信息时字段的默认值。<br>
+            表单元素为“下拉框(select)/单选框(radio)/复选框(checkbox)”此处为选项。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">输入表单替换html代码</td>
+          <td>增加字段后自动生成后台字段显示的html代码内容，增加字段时一般不设置，可增加字段后再修改。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">投稿表单替换html代码</td>
+          <td>增加字段后自动生成前台字段显示的html代码内容，增加字段时一般不设置，可增加字段后再修改。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">注释</td>
+          <td>填写备注内容。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">相关链接</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><a href="http://bbs.phome.net/showthread-13-44874-0.html" target="_blank">1、帝国CMS功能解密之：模型之间的字段关联</a></td>
+  </tr>
+  <tr> 
+    <td height="25"><a href="http://bbs.phome.net/showthread-13-25222-0.html" target="_blank">2、帝国CMS功能解密之：内容存文本</a></td>
+  </tr>
+  <tr> 
+    <td height="25"><a href="http://bbs.phome.net/showthread-13-25400-0.html" target="_blank">3、帝国CMS功能解密之：自定义系统模型</a></td>
+  </tr>
+  <tr> 
+    <td height="25"><a href="http://bbs.phome.net/showthread-13-108251-0.html" target="_blank">4、帝国CMS功能解密之：系统模型结合项</a></td>
+  </tr>
+  <tr>
+    <td height="25"><a href="http://bbs.phome.net/showthread-13-116152-0.html" target="_blank">5、帝国CMS功能解密之：字段处理函数</a></td>
+  </tr>
+  <tr>
+    <td height="25"><a href="http://bbs.phome.net/showthread-13-115389-0.html" target="_blank">6、帝国CMS功能解密之：系统关键字字段</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

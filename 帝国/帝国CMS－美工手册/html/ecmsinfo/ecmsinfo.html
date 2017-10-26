@@ -1,0 +1,1450 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》一招鲜吃天遍天系列教程之 万能标签使用 </title>
+<style type=text/css><!--
+body{ font-family: 宋体; font-size: 14px; text-decoration: none}
+a:hover { color: #FF0000}
+a:hover { text-decoration: none}
+a:hover { line-height: 19px}
+a:link { font-family: 宋体; font-size: 14px; line-height: 19px; color: #333333;text-decoration: none}
+a:visited { text-decoration: none; }Table{ font-family: 宋体; font-size: 13px; color: #000000;line-height: 21px; text-decoration: none } }
+--></Style>
+</head>
+
+<body topmargin="0">
+<table width="748" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+  <tr> 
+    <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF">
+        <tr bgcolor="8CBDEF"> 
+          <td height="40" colspan="2" bgcolor="#01A8EC"> <div align="center"><strong><font color="#FFFFFF">&nbsp;</font><font color="#FFFF00" size="4">《帝国网站管理系统》一招鲜吃天遍天系列教程之 
+              万能标签使用</font></strong> </div></td>
+        </tr>
+        <tr> 
+          <td width="36%" height="28" bgcolor="#FFFFFF"><strong>　<a href="http://bbs.phome.net/showthread-13-126114-0.html" target="_blank"><font color="#0000FF">点击进入论坛讨论</font></a></strong> 
+            <div align="left"></div>
+            <div align="left"></div></td>
+          <td width="64%" height="28" bgcolor="#FFFFFF"><div align="right"><strong><font color="#0000FF"> 
+              <select name="select" id="select2" onchange=window.location='#'+this.options[this.selectedIndex].value>
+                <option value="">- - -选择本节内容- - - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <option value="xgym" style="background-color:#01A8EC">&nbsp;1、制作显示效果页面</option>
+                <option value="wnbq" style="background-color:#01A8EC">&nbsp;2、修改效果页面加上万能标签ecmsinfo</option>
+                <option value="wnbqyf">&nbsp; &nbsp; &gt;万能标签语法</option>
+                <option value="fxgc">&nbsp; &nbsp; &gt;万能标签替换HTML调用内容的分析过程</option><br> 
+                <option value="fx">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一步,分析万能标签</option>
+                <option value="zjbqmb">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二步,增加标签模板</option>
+                <option value="qd">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第三步,确定万能标签</option>
+                <option value="l1" style="background-color:#FFFF66">&nbsp;&nbsp;&nbsp;&nbsp;·【例1】使用万能标签调用“国内新闻”栏目的最新3条信息</option>
+                <option value="l2" style="background-color:#FFFF66">&nbsp;&nbsp;&nbsp;&nbsp;·【例2】使用万能标签调用"新闻数据表"中,最新4条带标题图片的信息</option>
+                <option value="htgx" style="background-color:#01A8EC">&nbsp;3、将已加上万能标签的HTML效果页面代码复制到后台更新</option>
+                <option value="scxg" style="background-color:#01A8EC">&nbsp;4、查看生成后的页面效果</option><br> 
+                <option value="xhyl" style="background-color:#01A8EC">&nbsp;标签模板列表内容循环原理</option>
+                <option value="xglj" style="background-color:#01A8EC">&nbsp;相关链接</option>
+              </select>
+              </font></strong></div></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<div align="center"></div>
+<div align="center"><br>
+  <table width="748" border="0" cellpadding="3" cellspacing="0" bgcolor="#CCCCCC" id="jmjs">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+          <tr bgcolor="#01A8EC"> 
+            <td height="30" colspan="2"><strong><font color="#FFFFFF">&nbsp;《帝国网站管理系统》英文名“EmpireCMS”，简称帝国CMS。</font></strong> 
+              <font color="#FFFFFF"> 本教程适用于帝国CMS所有版本。</font></td>
+          </tr>
+          <tr bgcolor="#CCCCCC"> 
+            <td height="25"><strong><font color="#0000FF"><font color="#000000"><strong><font color="#0000FF">&nbsp;</font><font color="#01A8EC">面向用户</font></strong></font><font color="#01A8EC"><strong>：</strong></font></font></strong></td>
+            <td width="431" height="25"><font color="#0066FF"><strong><font color="#0000FF">&nbsp;</font><font color="#01A8EC">网站部署：</font></strong></font></td>
+          </tr>
+          <tr> 
+            <td width="308" height="25" bgcolor="#FFFFFF"><div align="left"><font color="#0000FF"><font color="#000000">·EmpireCMS零基础的用户；</font></font></div></td>
+            <td bgcolor="#FFFFFF">·网站栏目与数据：调用安装帝国CMS时默认的内置初始数据。</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><font color="#0000FF"><font color="#000000">·会使用Dreamweaver设计简单表格式模板的用户</font><font color="#0000FF"><font color="#000000">；</font></font></font></td>
+            <td bgcolor="#FFFFFF">·页面调用：用ecmsinfo万能标签调用各新闻栏目的数据。</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><font color="#0000FF"><font color="#000000">·能看懂基本HTML的用户。</font></font></td>
+            <td bgcolor="#FFFFFF">·系统模型：使用内置的新闻系统模型。</td>
+          </tr>
+        </table>
+        <table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;<font color="#01A8EC">准备工具：</font></font></strong><font color="#0000FF"><font color="#0066FF"><font color="#000000">·Dreamweaver（网站模板<font color="#0000FF"><font color="#000000">制作</font></font>工具）</font></font></font></td>
+          </tr>
+        </table> </td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="0" bgcolor="#CCCCCC">
+    <tr> 
+      <td width="742"><table width="741" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF">
+          <tr bgcolor="8CBDEF"> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF"><strong>&nbsp;</strong></font><font color="#089AD4">实例效果图：</font></strong></td>
+          </tr>
+        </table>
+        <table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF">
+          <tr> 
+            <td height="23" bgcolor="#FFFFFF"><img src="img/ecmsinfopage.jpg" border="0"></td>
+          </tr>
+        </table> </td>
+    </tr>
+  </table>
+  <table width="748" height="17" border="0" cellpadding="0" cellspacing="0">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲<strong>top</strong></font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF">
+          <tr bgcolor="8CBDEF"> 
+            <td height="25" colspan="2" bgcolor="#01A8EC"> <div align="left"><strong><font color="#FFFFFF">&nbsp;网页制作流程：</font><font color="#FFFFFF"></font></strong></div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"> 
+              <div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>1、制作显示效果页面；</div>
+              <div align="left"></div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>2、修改效果页面加上万能标签ecmsinfo；<strong><font color="#FFFFFF"></font></strong></div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"> <div align="left"><strong><font color="#0000FF">&nbsp;</font></strong>3、将已加上万能标签的HTML效果页面代码复制到后台更新；</div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>4、查看生成后的页面效果。</td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="750" border="0" cellpadding="0" cellspacing="0" id="fzlm">
+    <tr> 
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999" id="xgym">
+          <tr bgcolor="#CCCCCC"> 
+            <td height="30" bgcolor="#01A8EC"><strong><font color="#0000FF"><strong><font color="#0066FF">&nbsp;<font color="#FFFF33">1、制作显示效果页面</font></font></strong></font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"> <div align="left"><strong><font color="#0000FF"><strong><font color="#0066FF">&nbsp;&nbsp;</font></strong></font></strong>先用Dreamweaver做出网页效果，如下为我们预先做的普通HTML页面效果（图1）：</div></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><img src="img/1.jpg" width="740" height="605"></td>
+          </tr>
+        </table>
+        <table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+          <tr> 
+            <td height="28"><strong><font color="#FFFFFF">&nbsp;</font>效果页面HTML代码如下</strong>（HTML代码1）： 
+            </td>
+          </tr>
+        </table>
+        <table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+          <tr> 
+            <td height="25"><textarea name="textarea" cols="100" rows="12" wrap="OFF" style="WIDTH: 100%">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot;&gt;
+&lt;title&gt;ecmsinfo万能标签使用教程&lt;/title&gt;
+&lt;style&gt;
+td {font-size: 10pt;}
+.line{line-height: 14pt;font-size: 10pt;}
+A:link {text-decoration: none; color:#000000}
+A:visited {text-decoration: none; color: #000000} 
+A:active {text-decoration: underline; color: #000000 } 
+A:hover {text-decoration: underline;	color: #FF0000;}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body topmargin=&quot;0&quot;&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;60&quot;&gt; 
+      &lt;div align=&quot;center&quot;&gt;&lt;font size=&quot;6&quot;&gt;&lt;strong&gt;ecmsinfo万能标签使用教程&lt;/strong&gt;&lt;/font&gt;&lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;25&quot; bgcolor=&quot;#FFFFFF&quot;&gt;&amp;nbsp; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+  &lt;tr&gt; 
+    &lt;td width=&quot;50%&quot; valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;国内新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;
+              &lt;tr&gt; 
+                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+    &lt;td width=&quot;50%&quot; valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; align=&quot;right&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;国际新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;
+              &lt;tr&gt; 
+                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td colspan=&quot;2&quot;&gt;
+&lt;div align=&quot;center&quot;&gt;
+        &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+          &lt;tr&gt; 
+            &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;图片新闻&lt;/strong&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt; 
+            &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;3&quot; cellpadding=&quot;1&quot;&gt;
+                &lt;tr&gt; 
+                  &lt;td width=&quot;25%&quot; height=&quot;92&quot;&gt; 
+                    &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;http://www.phome.net&quot; title=&quot;帝国软件&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;pic.gif&quot; width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                  &lt;td width=&quot;25%&quot;&gt;
+                    &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;http://www.phome.net&quot; title=&quot;帝国软件&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;pic.gif&quot; width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                  &lt;td width=&quot;25%&quot;&gt;
+                    &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;http://www.phome.net&quot; title=&quot;帝国软件&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;pic.gif&quot; width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                  &lt;td width=&quot;25%&quot;&gt;
+                    &lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;http://www.phome.net&quot; title=&quot;帝国软件&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;pic.gif&quot; width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;娱乐新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;
+              &lt;tr&gt; 
+                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+    &lt;td valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; align=&quot;right&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;体育新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;
+              &lt;tr&gt; 
+                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt; 
+                &lt;td height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;div align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;23&quot;&gt;
+&lt;div align=&quot;center&quot;&gt;Powered by &lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;EmpireCMS&lt;/a&gt;&lt;br&gt;
+      &lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="750" border="0" cellpadding="0" cellspacing="0" id="sclm">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲<strong>top</strong></font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td width="744"><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999" id="wnbq">
+          <tr bgcolor="#01A8EC"> 
+            <td height="30" bgcolor="#01A8EC"><strong><font color="#FFFFFF">&nbsp;<font color="#FFFF00">2、修改效果页面加上万能标签ecmsinfo：</font></font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"> <strong><font color="#FFFFFF">&nbsp;<font color="#FFFF00"></font></font></strong>我们来分析下上面做好的HTML网页调用样式，如下图（图2）：</td>
+          </tr>
+          <tr> 
+            <td bgcolor="#FFFFFF"><img src="img/2.jpg" width="704" height="503"></td>
+          </tr>
+        </table>
+        <table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+          <tr> 
+            <td height="25" colspan="2">&nbsp;<strong></strong>上图我们分析了该网页共有两种调用显示样式：文字调用样式、图片调用样式：</td>
+          </tr>
+          <tr> 
+            <td height="22" colspan="2">&nbsp;<strong>文字调用样式</strong>：一行一列,显示内容包括&quot;标题&quot;(标题长度截取36个字符)，&quot;标题链接&quot;，&quot;发布时间&quot;格式；</td>
+          </tr>
+          <tr> 
+            <td width="102" height="22">&nbsp;</td>
+            <td width="640" height="22">应用于国内、国际、娱乐、体育新闻4个栏目,每个栏目显示最新3条信息。</td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2">&nbsp;<strong>图片调用样式</strong>：一行一列,显示内容包括&quot;标题&quot;，&quot;标题图片&quot;、&quot;标题链接&quot;格式；</td>
+          </tr>
+          <tr> 
+            <td height="22">&nbsp;</td>
+            <td height="22">调用新闻数据表内所有栏目带标题图片的信息,共显示4条最新信息。</td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2">&nbsp;因此我们需要为上述每个类别的文字（图片）调用样式中添加万能标签，调用并显示该样式。</td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" height="11" id="xglmsx">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲<strong>top</strong></font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF" id="wnbqyf">
+          <tr bgcolor="8CBDEF"> 
+            <td height="30" colspan="2" bgcolor="#01A8EC"> <div align="left"><strong><font color="#FFFFFF">&nbsp;用万能标签替换HTML效果页面调用内容：</font></strong></div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"><strong>&nbsp;万能标签语法：</strong>(详细语法说明可以<a href="http://www.phome.net/doc/ecmsedu/base/mbzz/html/ecmsinfo.html" target="_blank"><u>点击这里</u></a>查看)</td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF">&nbsp;[ecmsinfo]栏目ID,显示条数,标题截取数,是否显示栏目名,操作类型,标签模板ID,只显示有标题图片[/ecmsinfo]</td>
+          </tr>
+          <tr>
+            <td height="25" colspan="2" bgcolor="#FFFFFF">&nbsp;ecmsinfo标签与其它信息调用标签唯一不同的是：显示样式由标签模板决定。</td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"><div align="left"><strong>&nbsp;万能标签参数说明</strong>：</div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"> <div align="left"> 
+                <table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="25" colspan="3">&nbsp;显示条数表示调用信息的显示条数，也表示调用内容显示样式的循环次数。</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="25" colspan="3">&nbsp;&quot;操作类型&quot;决定&quot;栏目ID&quot;值,即标签参数中的&quot;栏目ID/专题ID/SQL语句/表&quot;参数必须与操作类型一一相对应.<a href="http://www.phome.net/doc/ecmsedu/base/mbzz/html/sysbq.html" target="_blank"><font color="#666666"> 
+                      操作类型查询</font></a></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="25" colspan="3">&nbsp;首先确定信息的调用范围(调用的是栏目?专题?数据表?默认表?标题分类还是SQL的信息),再确定操作类型和栏目ID值,例如：</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td width="23%" height="25"> &nbsp;调用某栏目的最新信息</td>
+                    <td width="28%" height="25">操作类型按栏目调用 值为0，</td>
+                    <td width="49%" height="25">栏目ID=调用栏目的ID值（在帝国CMS后台查询该栏目ID值）。</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td> <div align="left">&nbsp;调用默认表的最新信息</div></td>
+                    <td>操作类型按默认表调用 值为3，</td>
+                    <td height="40">栏目ID=0或者'' （在CMS后台设置某数据表为系统默认表）。<br>
+                      假如新闻表为系统的默认表，则调用新闻表的最新信息时：<br>
+                      栏目ID=0，操作类型=3。或者栏目ID=''，操作类型=3。 </td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="30"> <div align="left"><strong>&nbsp;</strong>调用某专题的最新信息</div></td>
+                    <td height="30">操作类型按专题调用 值为6，</td>
+                    <td height="30">栏目ID=调用专题的ID值,(在帝国CMS后台查询该专题ID值)。</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td> <div align="left">&nbsp;调用某数据表的最新信息</div></td>
+                    <td>操作类型按数据表调用 值为18，</td>
+                    <td height="40">栏目ID='数据表名'。<br>
+                      例如调用新闻表的最新信息时(这里新闻表不一定是默认表)。<br>
+                      栏目ID='news'，操作类型=18 </td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="25"> <div align="left">&nbsp;调用某标题分类的最新信息</div></td>
+                    <td height="25">操作类型按标题分类调用 值为25，</td>
+                    <td height="25">栏目ID=标题分类ID,(在帝国CMS后台查询该标题分类ID值)<strong>。</strong></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="25"> <div align="left">&nbsp;按SQL调用查询最新信息</div></td>
+                    <td height="25">操作类型按SQL调用 值为24，</td>
+                    <td height="25">栏目ID=&quot;sql语句&quot;。数据表前缀可用[!db.pre!]表示。</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="40" colspan="3">&nbsp;调用当前栏目(或当前专题)的信息时，栏目ID(或专题ID)='selfinfo',<br> 
+                      &nbsp;例如调用当前栏目(新闻栏目)的最新4条信息,则万能标签语法为:[ecmsinfo]<strong>'selfinfo'</strong>,4,36,0,0,模板ID,0[/ecmsinfo]</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="40" colspan="3">&nbsp;调用多个栏目(或专题)的信息时，栏目ID(或专题ID)之间可以用,逗号格开并引用''单引号；<br> 
+                      &nbsp;例如调用两个栏目(栏目ID值为1和2)的最新3信息，则万能标签语法为：[ecmsinfo]<strong>'1,2'</strong>,3,36,0,0,模板ID,0[/ecmsinfo]</td>
+                  </tr>
+                </table>
+                <strong><font color="#FFFFFF"></font></strong></div></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="2" bgcolor="#FFFFFF"> <table width="100%" id="fxgc">
+                <tr> 
+                  <td height="25">&nbsp;<strong>用万能标签替换HTML调用内容的分析过程图</strong>：</td>
+                </tr>
+                <tr> 
+                  <td height="25"><table width="100%" border="0" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td bgcolor="#FFFFFF"><img src="img/04.jpg" width="740" height="256"></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td>使用万能标签替换调用内容，具体分析过程如下： </td>
+                </tr>
+                <tr> 
+                  <td height="11"><table width="100%" border="0" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td height="30" colspan="4" bgcolor="#FFFFFF"><strong>第一步</strong> 
+                          <strong>分析万能标签</strong>:分析万能标签的参数。</td>
+                      </tr>
+                      <tr> 
+                        <td width="4%" valign="top" bgcolor="#FFFFFF"> 
+                          <div align="center">①</div></td>
+                        <td height="55" colspan="3" bgcolor="#FFFFFF"><font color="#FF0000"><strong>万能标签语法</strong></font>：<br>
+                          <strong>[ecmsinfo]</strong>栏目ID,显示条数,标题截取数,是否显示栏目名,操作类型,<strong><font color="#FF0000">标签模板ID</font></strong>,只显示有标题图片<strong>[/ecmsinfo]</strong><br>
+                          分析万能标签语法后我们知道，只有标签模板ID参数是未知值。接下来就要分析标签模板ID参数：</td>
+                      </tr>
+                      <tr> 
+                        <td valign="top" bgcolor="#FFFFFF"> 
+                          <div align="center">②</div></td>
+                        <td height="55" colspan="3" bgcolor="#FFFFFF"><font color="#FF0000"><strong>标签模板ID</strong></font>:<br>
+                          即标签模板的ID值，是我们在帝国CMS后台增加标签模板后，由CMS系统自动分配的。一个标签模板对应一个<font color="#000000">ID。</font><br>
+                          所以,万能标签的确定过程就是标签模板的确定过程。 因此,要得到标签模板ID值,就要先登陆帝国CMS后台<strong>增加标签模板</strong>。</td>
+                      </tr>
+                      <tr> 
+                        <td height="30" colspan="4" bgcolor="#FFFFFF"><strong>第二步</strong> 
+                          <strong></strong><strong>增加标签模板</strong>:</td>
+                      </tr>
+                      <tr> 
+                        <td height="70" colspan="2" rowspan="2" bgcolor="#FFFFFF"> 
+                          <div align="center"><strong><font color="#FF0000">标签模板</font></strong></div></td>
+                        <td width="14%" bgcolor="#FFFFFF"><strong>标签模板语法:</strong><br>
+                          列表头<br>
+                          列表内容<br>
+                          列表尾<br> </td>
+                        <td width="76%" height="70" bgcolor="#FFFFFF"><strong>语法说明:</strong><br> 
+                          <strong>列表头</strong>和<strong>列表尾</strong>用[!--empirenews.listtemp--]表示,是固定的,代表循环的开始和结束。<br> 
+                          <strong>列表内容</strong>就是列表头和列表尾之间的代码，表示每次循环的内容。<br>
+                          其中循环的信息内容用<font color="#FF0000">列表内容变量&lt;!--list.var*--&gt;</font>表示。</td>
+                      </tr>
+                      <tr> 
+                        <td height="70" colspan="2" bgcolor="#FFFFFF">根据①②的分析，我们知道万能标签是由标签模板决定的；即<br>
+                          使用万能标签所调用内容的最终显示样式，取决于标签模板是如何设置的。<br>
+                          因此,将调用内容用万能标签表示,就要先确定标签模板示。<br>
+                          而“增加标签模板”页面的未知选项包括“页面模板内容”和“列表内容模板”，下面我们将逐一分析：</td>
+                      </tr>
+                      <tr> 
+                        <td height="25" colspan="4" bgcolor="#FFFFFF">·<strong>确定万能标签的<font color="#FF0000">调用内容</font></strong>：</td>
+                      </tr>
+                      <tr> 
+                        <td valign="top" bgcolor="#FFFFFF">
+<div align="center">③</div></td>
+                        <td height="70" colspan="3" bgcolor="#FFFFFF">调用内容由循环内容和循环内容的显示样式两部分组成。<br>
+                          <strong><font color="#FF0000">循环内容</font></strong>：在调用内容中,找出具有相同循环规律的调用内容即为循环内容,循环规律可以是一行一列、一行两列等代码。<br> 
+                          <strong><font color="#FF0000">显示样式</font></strong>：在调用内容中，循环内容以外的部分，就是循环内容的显示样式。 
+                          <br> <strong><font color="#FF0000">信息内容</font></strong>：循环内容中，具有相同格式的信息显示内容即为信息内容，包括标题、标题链接、发布时间等格式。</td>
+                      </tr>
+                      <tr> 
+                        <td height="25" colspan="4" bgcolor="#FFFFFF">·<strong>确定</strong><font color="#FF0000"><strong>页面模板内容</strong></font>：</td>
+                      </tr>
+                      <tr> 
+                        <td height="55" valign="top" bgcolor="#FFFFFF"> 
+                          <div align="center">④</div></td>
+                        <td height="55" colspan="3" bgcolor="#FFFFFF"> <p>首先，保持显示样式不变，<br>
+                            其次，只保留一条循环内容，删除其他相同的循环内容，<br>
+                            然后，在循环内容的顶部和底部,分别加上列表头[!--empirenews.listtemp--]和列表尾[!--empirenews.listtemp--]<br>
+                          
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td valign="top" bgcolor="#FFFFFF"> 
+                          <div align="center">⑤</div></td>
+                        <td height="40" colspan="3" valign="middle" bgcolor="#FFFFFF">将循环内容中的信息内容用列表内容变量&lt;!--list.var*--&gt;替换，得到列表内容。<font color="#666666"><br>
+                          有几条信息内容，就需使用几个&lt;!--list.var*--&gt;，这里*代表1或2、3....</font></td>
+                      </tr>
+                      <tr> 
+                        <td height="60" valign="top" bgcolor="#FFFFFF"> 
+                          <div align="center">⑥</div></td>
+                        <td height="55" colspan="3" bgcolor="#FFFFFF">确定显示样式、列表头、列表内容、列表尾后，页面模板内容就确定了。<br> 
+                          <font color="#666666">页面模板内容支持的变量：<br>
+                          栏目名称:[!--the.classname--]；栏目ID:[!--the.classid--]；栏目链接:[!--the.classurl--] 
+                          </font> </td>
+                      </tr>
+                      <tr> 
+                        <td height="25" colspan="4" bgcolor="#FFFFFF"><div align="left">·<strong>确定</strong><font color="#FF0000"><strong>列表内容模板</strong></font>：即页面模板内容中&lt;!--list.var*--&gt;表示的信息内容代码</div></td>
+                      </tr>
+                      <tr> 
+                        <td height="12" valign="top" bgcolor="#FFFFFF">
+<div align="center">⑦</div></td>
+                        <td height="40" colspan="3" bgcolor="#FFFFFF"> 
+                          <div align="left"> 将⑤中被&lt;!--list.var*--&gt;替代的信息内容，用列表内容模板支持的变量表示，得到列表内容模板。 
+                            <br>
+                            <font color="#666666">列表内容模板(list.var)支持的变量：<a href="http://www.phome.net/doc/ecmsedu/base/mbzz/html/ecmsinfo.html" target="_blank">点击这里查看</a>。</font> 
+                          </div></td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">⑧</div></td>
+                        <td height="25" colspan="3" bgcolor="#FFFFFF"><strong>标签模板增加完毕。</strong></td>
+                      </tr>
+                      <tr> 
+                        <td height="30" colspan="4" bgcolor="#FFFFFF"><strong>第三步</strong> 
+                          <strong></strong><strong>确定万能标签</strong>:</td>
+                      </tr>
+                      <tr> 
+                        <td height="25" bgcolor="#FFFFFF"> <div align="center">⑨</div></td>
+                        <td height="25" colspan="3" bgcolor="#FFFFFF"><font color="#FF0000"><strong><font color="#FF0000">确定&quot;标签模板ID&quot;值</font></strong>:</font>标签模板增加完毕后,返回&quot;管理标签模板&quot;页面,得到由CMS系统自动分配、新增加的标签模板ID值.</td>
+                      </tr>
+                      <tr> 
+                        <td height="25" bgcolor="#FFFFFF"><div align="center">⑩</div></td>
+                        <td height="25" colspan="3" bgcolor="#FFFFFF"><font color="#FF0000"><strong>将&quot;标签模板ID&quot;值写入&quot;万能标签&quot;</strong></font>，至此，万能标签语法确定完毕。</td>
+                      </tr>
+                      <tr> 
+                        <td height="25" colspan="4" bgcolor="#FFFFFF">·<strong>最后用万能标签替换HTML效果页面的调用内容</strong>。</td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table>
+              <div align="left"></div></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" height="11" id="xglmsx">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲<strong>top</strong></font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td width="744"><table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#999999" id="l1">
+          <tr bgcolor="8CBDEF"> 
+            <td height="30" bgcolor="#01A8EC"><strong><font color="#FFFFFF">【例1】<strong> 
+              使用万能标签调用“国内新闻”栏目的最新3条信息</strong></font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><table width="100%" cellpadding="0" cellspacing="0" id="fx">
+                <tr id="1dyb"> 
+                  <td height="30" bgcolor="#CCCCCC"><strong>&nbsp;第一步，分析万能标签</strong>：</td>
+                </tr>
+                <tr id="1cs"> 
+                  <td height="25"><table width="100%" bgcolor="#CCCCCC" id="1yf">
+                      <tr> 
+                        <td height="30" bgcolor="#FFFFFF"><strong>&nbsp;<font color="#FF0000">::万能标签语法</font></strong><font color="#FF0000">：</font></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="60">&nbsp;按照文字调用样式的设定：调用&quot;国内新闻&quot;栏目的最新3条信息，标题长度截取36个字符，不显示栏目名称。<br> 
+                    <strong>&nbsp;</strong>例1中调用“国内新闻”栏目的最新3条信息，万能标签语法应为：<br> 
+                    <strong>&nbsp;[ecmsinfo]34,3,36,0,0,标签模板ID,0[/ecmsinfo]</strong></td>
+                </tr>
+                <tr> 
+                  <td><strong>&nbsp;标签参数说明</strong><br> <table width="100%" border="0" cellpadding="3" cellspacing="1" bordercolor="#CCCCCC" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td width="11%" bgcolor="#FFFFFF"> <div align="center">34</div></td>
+                        <td width="89%" height="25" bgcolor="#FFFFFF">在帝国CMS后台查得“国内新闻”栏目的ID=34；</td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">3</div></td>
+                        <td height="25" bgcolor="#FFFFFF">每个新闻栏目显示3条信息；</td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">36</div></td>
+                        <td height="25" bgcolor="#FFFFFF"> <p>标题长度截取36个字符；</p></td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">0</div></td>
+                        <td height="25" bgcolor="#FFFFFF">是否显示栏目名——0为不显示；</td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"><div align="center">0</div></td>
+                        <td height="25" bgcolor="#FFFFFF">操作类型=0，调用栏目的最新信息.操作类型<a href="http://www.phome.net/doc/ecmsedu/base/mbzz/html/sysbq.html" target="_blank"><u>点击这里</u></a>查询</td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"><div align="center"><font color="#FF0000">标签模板ID</font></div></td>
+                        <td height="25" bgcolor="#FFFFFF"><font color="#FF0000">此处先保留，下面我们将专门讲解标签模板ID；</font></td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"><div align="center">0</div></td>
+                        <td height="25" bgcolor="#FFFFFF">是否只调用带标题图片的信息——0为不限制，有无标题图片的信息都做调用。</td>
+                      </tr>
+                      <tr> 
+                        <td height="12" colspan="2" bgcolor="#FFFFFF">通过上面的分析，我们已经知道了除“标签模板ID”外的所有万能标签参数值。稍后我们将确定“标签模板ID”参数值。</td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr id="1mbdm"> 
+                  <td height="28"><table width="100%" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td height="30" bgcolor="#FFFFFF"><strong>&nbsp;<font color="#FF0000">::标签模板ID：</font></strong><font color="#000000">要知道标签模板ID值，就必须先增加标签模板。下面我们先了解决定标签模板ID值的“标签模板”。</font>&nbsp;</td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><table width="100%" cellpadding="0" cellspacing="0" id="zjbqmb">
+                <tr id="1deb"> 
+                  <td height="30" bgcolor="#CCCCCC"><strong>&nbsp;第二步，增加标签模板</strong>：</td>
+                </tr>
+                <tr> 
+                  <td height="25"><table width="100%" bgcolor="#CCCCCC" id="1bqmb">
+                      <tr> 
+                        <td height="30" bgcolor="#FFFFFF"><strong>&nbsp;<font color="#FF0000"></font><font color="#FF0000">::增加</font><a href="http://www.phome.net/doc/ecmsedu/base/mbzz/html/ecmsinfo.html" target="_blank"><font color="#FF0000">标签模板:</font></a></strong></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong>&nbsp;位置：登陆帝国CMS后台 &gt; <a href="http://www.phome.net/doc/ecmsedu/base/mbzz/img/ecmsinfo21.gif" target="_blank">“模板管理” 
+                    &gt; “管理标签模板”</a> &gt; <a href="http://www.phome.net/doc/ecmsedu/base/mbzz/img/ecmsinfo1.gif" target="_blank">“增加标签模板”</a>：</strong></td>
+                </tr>
+                <tr> 
+                  <td>&nbsp;(图10):<br> <table width="100%" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td bgcolor="#FFFFFF"><img src="img/10.jpg" width="740" height="654"></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong>“增加标签模板”页面选项说明：</strong></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;模板名：标签模板名称。例1的标签模板名称为<strong>教程-文字调用标签模板</strong></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;所属系统模型：选择标签模板所属的系统模型，例1选择<strong>新闻系统模型</strong></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;简介截取字数：针对“smalltext”、“flashsay”、“softsay”等简介字段的内容截取设置，0为不截取。</td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;每行显示：记录&lt;!--list.var*--&gt;循环条数。勾选自动识别。</td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;时间显示格式：格式化时间，如“Y-m-d”就是显示“2008-08-08”。例1选择<strong>m-d</strong>格式</td>
+                </tr>
+                <tr> 
+                  <td height="25"><table width="100%" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td width="13%" height="25" rowspan="5" bgcolor="#FFFFFF"><div align="center"><strong><font color="#FF0000">页面模板内容</font></strong></div></td>
+                        <td width="87%" bgcolor="#FFFFFF"><p>·<strong>确定万能标签的调用内容</strong>，根据调用内容得出标签模板语法：<br>
+                            例1中,我们需要用万能标签调用&quot;国内新闻&quot;栏目的最新3条信息(见文字调用样式)。<br>
+                            <strong><font color="#FF0000">调用内容</font></strong>：如图11中黑色加粗的部分，即为我们要使用万能标签调用“国内新闻”栏目的信息<strong>，</strong>(图11):<br>
+                            <strong><font color="#0000FF">&nbsp;</font></strong><img src="img/11.jpg" width="348" height="111"><br>
+                            <strong>调用内容的代码</strong>:查看图11黑色加粗部分对应的（即为图12中蓝色条内)代码,就是要用万能标签语法表示的调用内容代码，(图12):<br>
+                            <img src="img/12.jpg" width="640" height="220"> 
+                          <table width="100%">
+                            <tr> 
+                              <td height="25"><strong><font color="#FF0000">循环内容</font></strong>：在调用内容中,我们发现图12中红色框内代码具有相同的循环规律,所以循环内容代码如下</td>
+                            </tr>
+                            <tr> 
+                              <td height="84"><table width="100%" border="1">
+                                  <tr> 
+                                    <td height="25">&lt;tr&gt; <br> &lt;td width=&quot;82%&quot; 
+                                      height=&quot;23&quot;&gt;·&lt;a href=&quot;http://www.phome.net&quot; 
+                                      target=&quot;_blank&quot;&gt;帝国网站管理系统6.0正式版开源发布&lt;/a&gt;&lt;/td&gt;<br> 
+                                      &lt;td width=&quot;18%&quot;&gt;&lt;div 
+                                      align=&quot;right&quot;&gt;[11-08]&lt;/div&gt;&lt;/td&gt;<br> 
+                                      &lt;/tr&gt;</td>
+                                  </tr>
+                                </table></td>
+                            </tr>
+                            <tr> 
+                              <td height="25"><strong><font color="#FF0000">显示样式</font></strong>：在调用内容中,循环内容以外的代码就是循环内容的显示样式,即图12中红色框以外的蓝色部分代码</td>
+                            </tr>
+                            <tr> 
+                              <td height="25"><strong><font color="#FF0000">信息内容</font></strong>：找出循环内容中，具有相同格式的信息显示内容，就是信息内容。<br>
+                                例1中，循环内容中只有一条信息内容，因此循环内容就是信息内容。<br>
+                                当循环内容中包含多条信息时，找出信息内容就可以确定&lt;!--list.var*--&gt;了。</td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF">·<strong>确定页面模板内容</strong><br>
+                          首先，保持显示样式不变，<br>
+                          其次，只保留一条循环内容，删除其他相同的循环内容，<br>
+                          然后，在循环内容的顶部和底部,分别加上列表头和列表尾[!--empirenews.listtemp--]（见图13）：<br> 
+                          <img src="img/13.jpg" width="650" height="138"></td>
+                      </tr>
+                      <tr> 
+                        <td height="25" bgcolor="#FFFFFF">将循环内容中的信息内容用&lt;!--list.var1--&gt;替换，就得到<strong>列表内容：&lt;!--list.var1--&gt;</strong></td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF">确定显示样式、列表头、列表内容、列表尾后，即得到页面模板内容（见图14，蓝色条内代码）：<br>
+                          <img src="img/14.jpg" width="617" height="134"> </td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"><strong>页面模板内容代码</strong>：<br> <table width="100%" border="1">
+                            <tr> 
+                              <td>&lt;table width=&quot;100%&quot; border=&quot;0&quot; 
+                                cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;<br>
+                                [!--empirenews.listtemp--]<br> &lt;!--list.var1--&gt; 
+                                <br>
+                                [!--empirenews.listtemp--]<br> &lt;/table&gt; 
+                              </td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"><table width="100%" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td width="12%" height="25" rowspan="2" bgcolor="#FFFFFF"><div align="center"><strong><font color="#FF0000">列表内容模板<br>
+                            (list.var)</font><br>
+                            </strong></div></td>
+                        <td width="88%" bgcolor="#FFFFFF">将信息内容用变量表示，就得到列表内容模板。 
+                          根据列表内容模板(list.var)支持的变量：<br> <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+                            <tr bgcolor="#FFFFFF"> 
+                              <td width="16%"> <div align="left">标题变量</div></td>
+                              <td width="18%">[!--title--]</td>
+                              <td width="66%" rowspan="3"><p><strong>变量说明</strong>：根据列表内容模板(list.var)支持的变量说明知道，<br>
+                                  数据表字段内容调用表示方法：[!--字段名--]；<br>
+                                  本例使用的是新闻系统模型即新闻数据表，所以，<br>
+                                  标题变量:[!--title--]；发布时间变量:[!--newstime--]<br>
+                                  标题链接变量为:[!--titleurl--]。</td>
+                            </tr>
+                            <tr bgcolor="#FFFFFF"> 
+                              <td> <div align="left">标题链接变量</div></td>
+                              <td height="25">[!--titleurl--]</td>
+                            </tr>
+                            <tr bgcolor="#FFFFFF"> 
+                              <td> <div align="left">发布时间变量</div></td>
+                              <td> <p>[!--newstime--]<br>
+                                </p></td>
+                            </tr>
+                            <tr bgcolor="#FFFFFF"> 
+                              <td height="21" colspan="3">将信息内容中的标题,标题链接,发布时间用列表内容模板(list.var)支持的变量替换,<br>
+                                就得到列表内容模板(list.var)了，(见图15): <br>
+                                （图15）： <br>
+                                <img src="img/15.jpg" width="640" height="143"></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"><strong>列表内容模板(list.var)代码</strong>：<br> 
+                          <table width="100%" border="1">
+                            <tr> 
+                              <td>&lt;tr&gt; <br>
+                                &lt;td width=&quot;82%&quot; height=&quot;23&quot;&gt;·&lt;a 
+                                href=&quot;[!--titleurl--]&quot; target=&quot;_blank&quot;&gt;[!--title--]&lt;/a&gt;&lt;/td&gt;<br>
+                                &lt;td width=&quot;18%&quot;&gt;&lt;div align=&quot;right&quot;&gt;[[!--newstime--]]&lt;/div&gt;&lt;/td&gt;<br> 
+                                &lt;/tr&gt;</td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25">依次设置“增加标签模板”页面选项后，点击页面底部的“<strong>保存模板</strong>”按钮（见图10），标签模板增加完毕。</td>
+                </tr>
+                <tr> 
+                  <td height="30" bgcolor="#CCCCCC"><strong>&nbsp;第三步，确定万能标签</strong>：</td>
+                </tr>
+                <tr> 
+                  <td height="25"><table width="100%" bgcolor="#CCCCCC" id="1mbid">
+                      <tr> 
+                        <td height="30" bgcolor="#FFFFFF"><a href="qd"><strong>&nbsp;<font color="#FF0000">::确定“标签模板ID”值：</font></strong></a></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;&quot;标签模板&quot;增加完毕后,返回&quot;<strong>管理标签模板</strong>&quot;页面,可以看到我们刚才标签模板(见图16),并获得由系统自动分配的标签模板ID值:</td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;(图16)例1的标签模板ID值为13:<br> <table width="100%" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td bgcolor="#FFFFFF"><img src="img/16.jpg" width="739" height="442"></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="12"><table width="100%" bgcolor="#CCCCCC" id="2xrwnbq">
+                      <tr> 
+                        <td height="30" bgcolor="#FFFFFF"><strong>&nbsp;<font color="#FF0000">::<strong>将“标签模板ID”值写入万能标签：</strong></font></strong></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong>&nbsp;</strong>最后，将“标签模板ID”值写入万能标签，例1中调用国内新闻栏目3条最新信息的万能标签即为：</td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong>[ecmsinfo]34,3,36,0,0,13,0[/ecmsinfo]</strong></td>
+                </tr>
+                <tr>
+                  <td height="25"><strong><font color="#0000FF">&nbsp;</font></strong>自己动手练习下使用万能标签调用其他新闻栏目的信息^-^ 
+                  </td>
+                </tr>
+              </table></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" height="8" id="zjlmsxzh">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲<strong>top</strong></font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td width="744"><table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#999999" id="l2">
+          <tr bgcolor="8CBDEF"> 
+            <td height="25" bgcolor="#01A8EC"><strong><font color="#FFFFFF">【例2】 
+              <strong>使用万能标签调用新闻数据表中，所有栏目最新发布的4条带标题图片的信息</strong></font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><table width="100%" cellpadding="0" cellspacing="0" id="2dyb">
+                <tr id="1dyb"> 
+                  <td height="25" bgcolor="#CCCCCC"><strong>&nbsp;第一步，分析万能标签</strong>：</td>
+                </tr>
+                <tr> 
+                  <td height="12"> <table width="100%" bgcolor="#CCCCCC" id="2yf">
+                      <tr> 
+                        <td height="30" bgcolor="#FFFFFF"><strong>&nbsp;<font color="#FF0000">::万能标签语法</font></strong><font color="#FF0000">：</font></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="12">&nbsp;按照图片调用样式的设定：调用新闻数据表中最新4条带标题图片的信息，标题长度截取36个字符，不显示栏目名称。<br> 
+                    <strong>&nbsp;</strong>例2中调用“图片新闻”栏目的最新4条信息，万能标签语法应为：<br> 
+                    <strong>&nbsp;[ecmsinfo]'news',4,36,0,18,标签模板ID,1[/ecmsinfo]</strong> 
+                  </td>
+                </tr>
+                <tr> 
+                  <td height="13">&nbsp;标签参数说明：<br> <table width="100%" border="0" cellpadding="3" cellspacing="1" bordercolor="#CCCCCC" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td width="11%" bgcolor="#FFFFFF"> <div align="center">'news'</div></td>
+                        <td width="89%" height="25" bgcolor="#FFFFFF">操作类型决定栏目ID='数据表'，所以例2中的栏目ID值为'news'。</td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">4</div></td>
+                        <td height="25" bgcolor="#FFFFFF">显示4条带标题图片的信息。</td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">36</div></td>
+                        <td height="25" bgcolor="#FFFFFF"> <p>标题长度截取36个字符；</p></td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"> <div align="center">0</div></td>
+                        <td height="25" bgcolor="#FFFFFF">是否显示栏目名——0为不显示；</td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"><div align="center">18</div></td>
+                        <td height="25" bgcolor="#FFFFFF">由于例2的标签是调用新闻表的信息，因此操作类型选择按数据表调用各表最新信息，值为18。操作类型<a href="http://www.phome.net/doc/ecmsedu/base/mbzz/html/sysbq.html" target="_blank"><u>查询</u></a></td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"><div align="center"><font color="#FF0000">标签模板ID</font></div></td>
+                        <td height="25" bgcolor="#FFFFFF"><font color="#FF0000">此处先保留，下面我们将专门讲解模板ID；</font></td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF"><div align="center">1</div></td>
+                        <td height="25" bgcolor="#FFFFFF">1为 只调用带标题图片的信息。</td>
+                      </tr>
+                      <tr> 
+                        <td height="12" colspan="2" bgcolor="#FFFFFF">通过上面的分析，我们已经知道了除“模板ID”外的所有万能标签参数。稍后我们将专门讲解“模板ID”参数。</td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"><table width="100%" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td height="30" bgcolor="#FFFFFF"><strong>&nbsp;<font color="#FF0000">::标签模板ID：</font></strong>要知道标签模板ID值，就必须先增加标签模板。下面我们先了解决定标签模板ID值的“标签模板”。<strong>&nbsp;</strong></td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><table width="100%" cellpadding="0" cellspacing="0" id="2deb">
+                <tr id="1deb"> 
+                  <td width="174%" height="30" bgcolor="#CCCCCC">&nbsp;<strong>第二步，增加标签模板：</strong></td>
+                </tr>
+                <tr id="1cs"> 
+                  <td height="25"><table width="100%" bgcolor="#CCCCCC" id="2yf">
+                      <tr> 
+                        <td height="30" bgcolor="#FFFFFF"><strong>&nbsp;<font color="#FF0000">::增加标签模板</font></strong><font color="#FF0000">：</font></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong>&nbsp;位置：登陆帝国CMS后台 &gt; <a href="http://www.phome.net/doc/ecmsedu/base/mbzz/img/ecmsinfo21.gif" target="_blank">“模板管理” 
+                    &gt; “管理标签模板”</a> &gt; <a href="http://www.phome.net/doc/ecmsedu/base/mbzz/img/ecmsinfo1.gif" target="_blank">“增加标签模板”</a>：</strong></td>
+                </tr>
+                <tr> 
+                  <td>&nbsp;(图20):<br> <table width="100%" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td bgcolor="#FFFFFF"><img src="img/20.jpg"></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;<strong>“增加标签模板”页面选项说明</strong>：</td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;模板名：标签模板名称。例2的标签模板名称为<strong>教程-图片调用标签模板</strong></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;所属系统模型：选择标签模板所属的系统模型，例2需选择<strong>新闻系统模型</strong></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;简介截取字数：针对“smalltext”、“flashsay”、“softsay”等简介字段的内容截取设置，0为不截取。</td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;每行显示：记录&lt;!--list.var*--&gt;循环条数。勾选自动识别。</td>
+                </tr>
+                <tr> 
+                  <td height="12">&nbsp;时间显示格式：格式化时间，如“Y-m-d”就是显示“2008-08-08”。默认即可。</td>
+                </tr>
+                <tr> 
+                  <td><table width="100%" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td width="13%" rowspan="4" bgcolor="#FFFFFF"><div align="center"><strong><font color="#FF0000">页面模板内容</font></strong></div></td>
+                        <td width="87%" height="25" bgcolor="#FFFFFF"><strong>调用内容</strong>：如图21中黑色加粗的部分，即为我们要使用万能标签调用新闻数据表的信息，(图21)：<br> 
+                          <img src="img/21.jpg" width="640" height="124"><br> 
+                          <strong>调用内容的代码</strong>:查看图21黑色加粗部分调用内容对应的（即为图22中蓝色框内)代码，(图22)：<br> 
+                          <img src="img/22.jpg" width="640" height="314"><br>
+                          <font color="#FF0000"><strong>循环内容</strong></font>：在调用内容中,我们发现图22中红色框内代码具有相同的循环规律,所以循环内容代码如下<br> <table width="100%" border="1">
+                            <tr> 
+                              <td>&lt;td width=&quot;25%&quot; height=&quot;92&quot;&gt; 
+                                <br> &lt;div align=&quot;center&quot;&gt;&lt;a 
+                                href=&quot;http://www.phome.net&quot; title=&quot;帝国软件&quot; 
+                                target=&quot;_blank&quot;&gt;<br> &lt;img src=&quot;pic.gif&quot; 
+                                width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;<br> 
+                                &lt;/td&gt;</td>
+                            </tr>
+                          </table>
+                          <font color="#FF0000"><strong>显示样式</strong></font>：图22中红色框以外的蓝色部分代码。<br> 
+                          <strong><font color="#FF0000">信息内容</font></strong>：例2中，循环内容中只有一条信息内容，因此循环内容就是信息内容。</td>
+                      </tr>
+                      <tr> 
+                        <td bgcolor="#FFFFFF">·<strong>确定页面模板内容</strong><br>
+                          首先，保持显示样式不变，<br>
+                          其次，只保留一条循环内容，删除其他相同的循环内容，<br>
+                          然后，在循环内容的顶部和底部,分别加上列表头和列表尾[!--empirenews.listtemp--]（见图23）：<br> 
+                          <img src="img/23.jpg" width="640" height="160"></td>
+                      </tr>
+                      <tr> 
+                        <td height="25" bgcolor="#FFFFFF">将循环内容中的信息内容用&lt;!--list.var1--&gt;替换，就得到<strong>列表内容：&lt;!--list.var1--&gt;</strong></td>
+                      </tr>
+                      <tr> 
+                        <td height="25" bgcolor="#FFFFFF">确定页面模板内容（见图24，蓝色条内代码）：<br> 
+                          <img src="img/24.jpg" width="618" height="117"><br> 
+                          <strong>页面模板内容代码</strong>：<br> <table width="100%" border="1">
+                            <tr> 
+                              <td>&lt;table width=&quot;100%&quot; border=&quot;0&quot; 
+                                cellspacing=&quot;3&quot; cellpadding=&quot;1&quot;&gt;<br> 
+                                &lt;tr&gt; <br>
+                                [!--empirenews.listtemp--]<br> &lt;!--list.var1--&gt;<br>
+                                [!--empirenews.listtemp--]<br> &lt;/tr&gt;<br> 
+                                &lt;/table&gt;</td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"><table width="100%" bgcolor="#CCCCCC">
+                      <tr bgcolor="#FFFFFF"> 
+                        <td width="13%" rowspan="2"><div align="center"><strong><font color="#FF0000">列表内容模板<br>
+                            (list.var) <br>
+                            </font></strong></div></td>
+                        <td width="87%">根据列表内容模板(list.var)支持的变量:<br> <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+                            <tr bgcolor="#FFFFFF"> 
+                              <td width="14%"> <div align="left">标题变量</div></td>
+                              <td width="86%">标题ALT:[!--oldtitle--],表示无论标签是否设置截取标题字符,最终的样式都显示完整标题.<br>
+                                而标题[!--title--]，表示当标签设置截取标题字符时，最终的样式只显示截取后的标题。</td>
+                            </tr>
+                            <tr bgcolor="#FFFFFF"> 
+                              <td> <div align="left">标题链接变量</div></td>
+                              <td height="25">[!--titleurl--]</td>
+                            </tr>
+                            <tr bgcolor="#FFFFFF"> 
+                              <td> <div align="left">标题图片变量</div></td>
+                              <td> <p>[!--titlepic--]<br>
+                                </p></td>
+                            </tr>
+                          </table>
+                          将信息内容中的标题,标题链接,标题图片变量用列表内容模板(list.var)支持的变量替换,<br>
+                          就得到列表内容模板(list.var)了，(见图25): <br> <img src="img/25.jpg" width="640" height="191"></td>
+                      </tr>
+                      <tr bgcolor="#FFFFFF"> 
+                        <td><strong>列表内容模板(list.var)代码</strong>：<br> <table width="100%" border="1">
+                            <tr> 
+                              <td> &lt;td width=&quot;25%&quot; height=&quot;92&quot;&gt; 
+                                <br> &lt;div align=&quot;center&quot;&gt;&lt;a 
+                                href=&quot;[!--titleurl--]&quot; title=&quot;[!--oldtitle--]&quot; 
+                                target=&quot;_blank&quot;&gt;<br> &lt;img src=&quot;[!--titlepic--]&quot; 
+                                width=&quot;135&quot; height=&quot;90&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;/div&gt;<br> 
+                                &lt;/td&gt;</td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"> 
+                    <table width="100%" id="qd">
+                      <tr>
+                        <td>依次设置“增加标签模板”页面选项后，点击页面底部的“保存模板”按钮（见图20），标签模板增加完毕。</td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="30" bgcolor="#CCCCCC"><strong>&nbsp;第三步，确定万能标签</strong>：</td>
+                </tr>
+                <tr> 
+                  <td height="25"><table width="100%" bgcolor="#CCCCCC">
+                      <tr> 
+                        <td height="30" bgcolor="#FFFFFF"><strong>&nbsp;<font color="#FF0000">::确定“标签模板ID”值：</font></strong></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;&quot;标签模板&quot;增加完毕后,返回&quot;<strong>管理标签模板</strong>&quot;页面,可以看到我们刚才标签模板(见图26),并获得由系统自动分配的标签模板ID值：</td>
+                </tr>
+                <tr> 
+                  <td height="25">&nbsp;(图26)例2的标签模板ID值为14:<br> <img src="img/26.jpg" width="652" height="492"> 
+                  </td>
+                </tr>
+                <tr id="1bl"> 
+                  <td height="25"><table width="100%" bgcolor="#CCCCCC" id="2xrwnbq">
+                      <tr> 
+                        <td height="30" bgcolor="#FFFFFF"><strong>&nbsp;<font color="#FF0000">::<strong>将“标签模板ID”值写入万能标签：</strong></font></strong></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong>&nbsp;</strong>最后，例2调用新闻数据表内所有栏目4条最新信息的万能标签语法即为：</td>
+                </tr>
+                <tr> 
+                  <td height="25"><strong>&nbsp;[ecmsinfo]'news',4,36,0,18,14,1[/ecmsinfo]</strong></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" id="gllmfy">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲<strong>top</strong></font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999">
+          <tr bgcolor="#01A8EC"> 
+            <td height="25"><strong>&nbsp;<font color="#FFFFFF">用万能标签替换HTML效果页面的调用内容：</font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong>&nbsp;用万能标签替换【例1】中图11和【例2】中图21的调用内容，HTML页面效果如下（图3）：</strong></td>
+          </tr>
+          <tr> 
+            <td height="6" bgcolor="#FFFFFF"><table width="100%" bgcolor="#CCCCCC">
+                <tr> 
+                  <td bgcolor="#FFFFFF"><img src="img/3.jpg" width="742" height="390"></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong>&nbsp;已加上万能标签后的模板(见图3)HTML代码</strong>如下（HTML代码2）：</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><textarea name="textarea9" cols="100" rows="12" wrap="OFF" style="WIDTH: 100%">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot;&gt;
+&lt;title&gt;ecmsinfo万能标签使用教程&lt;/title&gt;
+&lt;style&gt;
+td {font-size: 10pt;}
+.line{line-height: 14pt;font-size: 10pt;}
+A:link {text-decoration: none; color:#000000}
+A:visited {text-decoration: none; color: #000000} 
+A:active {text-decoration: underline; color: #000000 } 
+A:hover {text-decoration: underline;	color: #FF0000;}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body topmargin=&quot;0&quot;&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;60&quot;&gt; 
+      &lt;div align=&quot;center&quot;&gt;&lt;font size=&quot;6&quot;&gt;&lt;strong&gt;ecmsinfo万能标签使用教程&lt;/strong&gt;&lt;/font&gt;&lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;25&quot; bgcolor=&quot;#FFFFFF&quot;&gt;&amp;nbsp; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+  &lt;tr&gt; 
+    &lt;td width=&quot;50%&quot; valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;国内新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;[ecmsinfo]34,3,36,0,0,13,0[/ecmsinfo]&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+    &lt;td width=&quot;50%&quot; valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; align=&quot;right&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;国际新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;[ecmsinfo]35,3,36,0,0,13,0[/ecmsinfo]&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td colspan=&quot;2&quot;&gt;
+&lt;div align=&quot;center&quot;&gt;
+        &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+          &lt;tr&gt; 
+            &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;图片新闻&lt;/strong&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt; 
+            &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;[ecmsinfo]'news',4,36,0,18,14,1[/ecmsinfo]&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; 
+    &lt;td valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;娱乐新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;[ecmsinfo]36,3,36,0,0,13,0[/ecmsinfo]&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+    &lt;td valign=&quot;top&quot;&gt; &lt;table width=&quot;98%&quot; border=&quot;0&quot; align=&quot;right&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+        &lt;tr&gt; 
+          &lt;td height=&quot;23&quot;&gt;&lt;strong&gt;体育新闻&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt; 
+          &lt;td bgcolor=&quot;#FFFFFF&quot;&gt;[ecmsinfo]37,3,36,0,0,13,0[/ecmsinfo]&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; bgcolor=&quot;#CEEEFB&quot;&gt;
+  &lt;tr&gt;
+    &lt;td height=&quot;23&quot;&gt;
+&lt;div align=&quot;center&quot;&gt;Powered by &lt;a href=&quot;http://www.phome.net&quot; target=&quot;_blank&quot;&gt;EmpireCMS&lt;/a&gt;&lt;br&gt;
+      &lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="0" cellspacing="0" id="plszlmsx">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲<strong>top</strong></font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999" id="htgx">
+          <tr bgcolor="#01A8EC"> 
+            <td height="25"><strong><font color="#FFFFFF">&nbsp;<font color="#FFFF00">3、将已加上万能标签的HTML效果页面代码复制到后台更新：</font></font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"> <strong><font color="#0000FF">&nbsp;</font></strong>位置：后台 
+              &gt; “模板管理” &gt; “管理自定义页面” &gt; “增加自定义页面”：</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>页面名称：<strong>ecmsinfo万能标签调用测试页面</strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>文件名：<strong>../../ecmsinfo.html</strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>页面内容：<strong>将已加上万能标签的模板HTML代码（HTML代码2）复制到页面内容框中（图4）：</strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><table width="100%" bgcolor="#CCCCCC">
+                <tr>
+                  <td bgcolor="#FFFFFF"><img src="img/4.jpg" width="641" height="801"></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>点击页面底部的“<strong>提交</strong>”按钮，万能标签调用测试页面增加完毕。</td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲<strong>top</strong></font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC" id="kjcz">
+    <tr> 
+      <td><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999" id="scxg">
+          <tr bgcolor="#01A8EC"> 
+            <td height="25"><strong><font color="#0000FF">&nbsp;</font><font color="#FFFFFF"><font color="#FFFF00">4、查看生成后的页面效果：</font></font><font color="#0000FF"></font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>管理自定义页面，可看到我们刚才增加的页面（图5）：</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><table width="100%" bgcolor="#CCCCCC">
+                <tr> 
+                  <td bgcolor="#FFFFFF"><img src="img/5.jpg" width="654" height="197"></td>
+                </tr>
+              </table> </td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font></strong>点击页面名称查看最终页面在网站前台的生成效果（图6）：</td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF"><table width="100%" bgcolor="#CCCCCC">
+                <tr> 
+                  <td bgcolor="#FFFFFF"><img src="img/6.jpg" width="706" height="504"></td>
+                </tr>
+              </table> </td>
+          </tr>
+          <tr> 
+            <td height="25" bgcolor="#FFFFFF">&nbsp;至此，万能标签使用讲解完毕。</td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="0" cellspacing="0">
+    <tr> 
+      <td><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲<strong>top</strong></font></a></div></td>
+    </tr>
+  </table>
+  <table width="748" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC" id="kjcz">
+    <tr> 
+      <td><table border="0" cellpadding="0" cellspacing="0" bgcolor="#999999" id="xglj">
+          <tr bgcolor="#01A8EC"> 
+            <td height="25" colspan="5"><strong><font color="#0000FF">&nbsp;</font><font color="#FFFFFF">附:</font></strong></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="5" bgcolor="#FFFFFF">&nbsp;<strong>标签模板制作举例：</strong></td>
+          </tr>
+          <tr> 
+            <td width="230" height="25" bgcolor="#FFFFFF"><strong><font color="#FF0000">&nbsp;例3：用万能标签实现如下效果图</font><br>
+              </strong> </td>
+            <td height="25" colspan="3" bgcolor="#FFFFFF"><font color="#FF0000">&nbsp;</font></td>
+            <td height="25" bgcolor="#FFFFFF"><font color="#FF0000"><strong>分析：调用内容</strong></font></td>
+          </tr>
+          <tr> 
+            <td height="3" colspan="5" bgcolor="#FFFFFF"> <table width="100%" border="1">
+                <tr> 
+                  <td width="48%" bgcolor="#FFFFFF"><strong><img src="img/30.jpg" width="306" height="136"></strong></td>
+                  <td width="52%" bgcolor="#FFFFFF"><strong><img src="img/31.jpg"></strong></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="5" bgcolor="#FFFFFF"><strong><font color="#FF0000">&nbsp;调用内容代码</font></strong>： 
+              <div align="left"></div></td>
+          </tr>
+          <tr> 
+            <td colspan="5" bgcolor="#FFFFFF"><table width="100%" height="331" border="1">
+                <tr> 
+                  <td width="48%">&lt;table width=&quot;50%&quot;&gt;<br> &lt;tr&gt;<br> 
+                    &lt;td&gt;帝国CMS-安全、强大、稳定、灵活 [01-10]&lt;/td&gt;<br> &lt;/tr&gt;<br> 
+                    &lt;tr&gt;<br> &lt;td&gt;帝国CMS-安全、强大、稳定、灵活 [01-10]&lt;/td&gt;<br> 
+                    &lt;/tr&gt;<br> &lt;tr&gt;&lt;td&gt;文字广告&lt;/td&gt;&lt;/tr&gt;<br> 
+                    &lt;tr&gt;<br> &lt;td&gt;帝国CMS-安全、强大、稳定、灵活 [01-10]&lt;/td&gt;<br> 
+                    &lt;/tr&gt;<br> &lt;tr&gt;<br> &lt;td&gt;帝国CMS-安全、强大、稳定、灵活 
+                    [01-10]&lt;/td&gt;<br> &lt;/tr&gt;<br> &lt;tr&gt;<br> &lt;td&gt;文字广告&lt;/td&gt;<br> 
+                    &lt;/tr&gt;<br> &lt;/table&gt;</td>
+                  <td width="52%"><img src="img/32.jpg" width="360" height="351"></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="50" colspan="5" bgcolor="#FFFFFF"><table width="100%">
+                <tr> 
+                  <td height="80"><strong><font color="#FF0000">&nbsp;标签模板确定过程</font></strong>：<br> 
+                    &nbsp;首先，保持显示样式不变，<br> &nbsp;其次，只保留一条循环内容，删除其他相同的循环内容，<br> 
+                    &nbsp;然后，在循环内容的顶部和底部分别加上列表头和列表尾[!--empirenews.listtemp--]<strong>：</strong></td>
+                </tr>
+              </table>
+              <table width="100%" border="1">
+                <tr> 
+                  <td><p>&lt;table width=&quot;50%&quot;&gt;<br>
+                      [!--empirenews.listtemp--] <br>
+                      &lt;tr&gt; <br>
+                      &lt;td&gt;帝国CMS-安全、强大、稳定、灵活 [01-10]&lt;/td&gt;<br>
+                      &lt;/tr&gt;<br>
+                      &lt;tr&gt;<br>
+                      &lt;td&gt;帝国CMS-安全、强大、稳定、灵活 [01-10]&lt;/td&gt;<br>
+                      &lt;/tr&gt;<br>
+                      &lt;tr&gt;<br>
+                      &lt;td&gt;文字广告&lt;/td&gt;<br>
+                      &lt;/tr&gt;<br>
+                      [!--empirenews.listtemp--] <br>
+                      &lt;/table&gt;<br>
+                  </td>
+                </tr>
+              </table>
+              <strong> </strong> <table width="100%">
+                <tr> 
+                  <td height="50">&nbsp;将循环内容中的信息内容用&lt;!--list.var*--&gt;替换,得到页面模板内容，因有两条信息内容，所以用两个&lt;!--list.var*--&gt;<br> 
+                    <font color="#FF0000"><strong>&nbsp;页面模板内容</strong></font>：</td>
+                </tr>
+              </table>
+              <table width="100%" border="1">
+                <tr> 
+                  <td>&lt;table width=&quot;50%&quot;&gt;<br>
+                    [!--empirenews.listtemp--] <br> &lt;!--list.var1--&gt;<br> 
+                    &lt;!--list.var2--&gt;<br> &lt;tr&gt;<br> &lt;td&gt;文字广告&lt;/td&gt;<br> 
+                    &lt;/tr&gt;<br>
+                    [!--empirenews.listtemp--] <br> &lt;/table&gt; </td>
+                </tr>
+              </table>
+              <table width="100%">
+                <tr> 
+                  <td height="50">&nbsp;将信息内容中的标题,标题链接,标题图片变量用列表内容模板(list.var)支持的变量替换, 
+                    得到列表内容模板(list.var)。<strong><br>
+                    <font color="#FF0000">&nbsp;列表内容模板</font>：</strong></td>
+                </tr>
+              </table>
+              <table width="100%" border="1">
+                <tr> 
+                  <td>&lt;tr&gt; <br> &lt;td&gt;[!--title--] [[!--newstime--]]&lt;/td&gt;<br> 
+                    &lt;/tr&gt;</td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="5" bgcolor="#FFFFFF">&nbsp;知道页面模板内容、列表内容模板后，标签模板就基本实现了。</td>
+          </tr>
+          <tr> 
+            <td colspan="5" bgcolor="#FFFFFF">&nbsp; </td>
+          </tr>
+          <tr> 
+            <td height="20" colspan="5" bgcolor="#FFFFFF"><table width="100%" border="1" id="xhyl">
+                <tr> 
+                  <td height="30"><strong><font color="#FF0000">&nbsp;标签模板列表内容循环原理：</font></strong></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="90" colspan="5" bgcolor="#FFFFFF">&nbsp;循环内容：列表头与列表尾之间的列表内容。<br> 
+              &nbsp;循环次数=显示条数/每次显示条数，显示条数即万能标签语法中的显示条数设置；每次显示条数即增加标签模板中的选项设置。<br> 
+              &nbsp;第一次循环执行列表头与列表尾之间的&lt;!--list.var1--&gt;与其他内容；<br> &nbsp;第二次循环执行列表头与列表尾之间的&lt;!--list.var2--&gt;与其他内容；<br> 
+              &nbsp;以例3为例：</td>
+          </tr>
+          <tr> 
+            <td colspan="5" valign="top" bgcolor="#FFFFFF"><table width="100%" border="1">
+                <tr> 
+                  <td width="35%" rowspan="2" valign="top">[!--empirenews.listtemp--] 
+                    <br> &lt;!--list.var1--&gt;<br> &lt;!--list.var2--&gt;<br> 
+                    &lt;tr&gt;<br> &lt;td&gt;文字广告&lt;/td&gt;<br> &lt;/tr&gt;<br>
+                    [!--empirenews.listtemp--] </td>
+                  <td width="33%" rowspan="2" valign="top"><img src="img/33.jpg"></td>
+                  <td width="32%">第一次循环红色框内的：<br> &lt;!--list.var1--&gt;<br> &lt;tr&gt;<br> 
+                    &lt;td&gt;文字广告&lt;/td&gt;<br> &lt;/tr&gt;</td>
+                </tr>
+                <tr> 
+                  <td>第二次循环蓝色框内的：<br> &lt;!--list.var2--&gt;<br> &lt;tr&gt;<br> 
+                    &lt;td&gt;文字广告&lt;/td&gt;<br> &lt;/tr&gt;</td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="6" colspan="5" bgcolor="#FFFFFF">&nbsp;</td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="5" bgcolor="#FFFFFF"><strong>&nbsp;本例子使用素材：</strong><a href="http://www.phome.net/doc/ecmsedu/yizhao/ecmsinfo/sc.zip" target="_blank"><u>点击这里下载素材</u></a></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="5" bgcolor="#FFFFFF"><strong><font color="#0000FF">&nbsp;</font>相关链接：</strong></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="5" bgcolor="#FFFFFF"><a href="http://www.phome.net/doc/ecmsedu/base/mbzz/html/ecmsinfo.html" target="_blank">&nbsp;ecmsinfo标签使用教程2</a></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="5" bgcolor="#FFFFFF"><a href="http://www.phome.net/doc/ecmsedu/template/ecmsinfo.htm" target="_blank">&nbsp;ecmsinfo标签使用视频教程</a></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="5" bgcolor="#FFFFFF"><a href="http://bbs.phome.net/showthread-35-29391-0.html" target="_blank">&nbsp;用ecmsinfo标签实现不规则新闻</a></td>
+          </tr>
+          <tr>
+            <td height="25" colspan="5" bgcolor="#FFFFFF"><a href="http://bbs.phome.net/showthread-13-107990-0.html" target="_blank">&nbsp;帝国CMS功能解密之：模板list.var支持程序代码</a></td>
+          </tr>
+          <tr> 
+            <td height="25" colspan="3" bgcolor="#FFFFFF"><a href="http://bbs.phome.net/showthread-35-29390-0.html" target="_blank">&nbsp;用ecmsinfo标签实现论坛贴子调用</a></td>
+            <td width="117" height="25" bgcolor="#FFFFFF"><a href="#top" title="返回顶部"><font color="#01A8EC"> 
+              </font></a> </td>
+            <td width="376" bgcolor="#FFFFFF"><div align="right"><a href="#top" title="返回顶部"><font color="#01A8EC">▲<strong>top</strong></font></a></div></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

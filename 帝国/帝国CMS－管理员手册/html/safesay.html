@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">安全设置优化说明</strong></td>
+    <td width="50%"><div align="center"> </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="pubvarclass"> 
+    <td width="100%" height="25">帝国网站管理系统的代码严谨，默认配置就很安全，本文将介绍如何使您的系统安全设置达到最优化：</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">首先我们来认识一下帝国CMS安全认证特性：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#FF0000">帝国登录四重安全验证：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">第一重：密码双重MD5加密，密码不可破解，假如数据库被下载，也无法获取真实密码。<br>
+      第二重：后台目录自定义，假如对方知道密码也找不到登录后台。<br>
+      第三重：假如知道密码和后台目录也无法知道认证码，认证码存放.php文件必须登录FTP才能查看文件内容。<br>
+      第四重：后台登录支持自定义指定独立域名，不使用指定域名无法登录后台。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#FF0000">帝国COOKIE信息五重安全认证：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">第一重：系统验证采用随机密码认证，每次登录或退出都会产生新的随机密码，无规律可寻，并且认证采用数据库+COOKIE双重认证，安全可靠。<br>
+      第二重：后台登录验证COOKIE变量前缀自定义，连变量名都不知道就无法模拟COOKIE发包。<br>
+      第三重：COOKIE信息采用COOKIE认证码验证，信息加密采用双重md5加密，无法破解COOIE认证码，并且COOIE认证码存放.php文件必须登录FTP才能查看文件内容。<br>
+      第四重：COOKIE信息与登录IP绑定认证，假如COOKIE信息被完全获取并且随机密码没有改动，不知道登录者IP也无法通过认证。<br>
+      第五重：以文件方式验证用户是否登录，假如COOKIE信息被完全获取并且随机密码没有改动，且登录者IP也被知道，用户不在线也无法通过认证。</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">下面我们来介绍帝国CMS如何设置是安全最优化的：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">(注：以下选项都是非必须设置，只是优化建议。)</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#FF0000">php配置文件php.ini设置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、magic_quotes_gpc 设置为 On</strong><br>
+      &nbsp; &nbsp;魔术引用，此项建议开启。<br>
+      <strong>2、register_globals 设置为 Off</strong><br>
+      &nbsp; &nbsp;PHP全局变量，此项建议关闭。<br>
+      <strong>3、display_errors 设置为 Off</strong><br>
+      &nbsp; &nbsp;不显示PHP错误提示，此项设置对系统安全影响不大。</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#FF0000">帝国网站管理系统设置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> <strong>1、安装时修改表前缀</strong><br>
+      &nbsp; &nbsp;建议在全新安装帝国CMS时修改表前缀。<br>
+      <strong>2、安装初始化管理员帐号时，不要将常见的诸如admin等作为管理员用户名。</strong><br>
+      <strong>3、管理员密码设置6位以上</strong><br>
+      &nbsp; &nbsp;密码由字母、数字、下划线和特殊字符组成。<br>
+      <strong>4、安装时设置登录认证码</strong><br>
+      &nbsp; &nbsp;如果安装时没有设置认证码，可以修改e/class/config.php文件里的“$do_loginauth”变量内容。(推荐用dreamweaver编辑，可防止UTF8编码文件被转换为GBK)<br>
+      <strong>5、重命名后台管理目录/e/admin</strong><br>
+      &nbsp; &nbsp;将admin重命名为不容易猜到并且好记的目录名。<br>
+      <strong>6、设置后台验证登录IP</strong><br>
+      &nbsp; &nbsp;为了照顾上网IP随时变动的用户，默认不验证登录IP，如果要开启登录IP验证，可以修改e/class/config.php文件里的“$do_ckhloginip”变量值设为1。(推荐用dreamweaver编辑，可防止UTF8编码文件被转换为GBK)<br>
+      <strong>7、退出系统时，点击后台的退出登陆链接退出</strong><br>
+      &nbsp; &nbsp;点退出登陆系统会自动产生新的随机密码 (防止因电脑中毒或网络被挟持导致本地保存的COOKIE信息外泄，而产生新的随机密码可使外泄的COOKIE信息失效)。 
+      <br>
+      <strong>8、启用网站安全防火墙。</strong><br>
+      &nbsp; &nbsp;有关防火墙配置说明见本教程<strong><a href="setfirewall.html" target="_blank">网站安全防火墙</a></strong>章节。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">系统目录结构</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="EmpireCMSPath">&nbsp; &nbsp; &gt; 目录结构介绍</option>
+          <option value="pathquestion">&nbsp; &nbsp; &gt; 常见问题</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="EmpireCMSPath"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">帝国CMS目录结构介绍</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><br>
+      <b>/ 系统根目录</b><br>
+      &nbsp; &nbsp; ├d/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;附件和数据存放目录 
+      <font color=gray>(data)</font><br>
+      &nbsp; &nbsp; │├file/&nbsp; &nbsp;&nbsp; &nbsp; 附件存放目录<br>
+      &nbsp; &nbsp; │├js/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;JS调用生成目录<br>
+      &nbsp; &nbsp; │└txt/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;内容存文本存放目录<br>
+      &nbsp; &nbsp; ├e/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;系统程序目录 
+      <font color=gray>(empire)</font><br>
+      &nbsp; &nbsp; ├html/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;自定义内容页存放预设目录<br>
+      &nbsp; &nbsp; ├images/&nbsp; &nbsp;&nbsp; &nbsp; 默认模板图片目录<br>
+      &nbsp; &nbsp; ├s/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;专题目录 
+      <font color=gray>(special)</font><br>
+      &nbsp; &nbsp; ├search/&nbsp; &nbsp;&nbsp; &nbsp; 高级搜索页面目录<br> &nbsp; &nbsp; 
+      ├skin/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;模板CSS和图片存放目录<br> &nbsp; &nbsp; 
+      ├testdata/&nbsp; &nbsp;&nbsp; 内置测试数据的附件目录 <font color="gray">(安装时选择测试数据用的，不内置测试数据可以删除) 
+      </font><br> &nbsp; &nbsp; └index.html&nbsp; &nbsp; 网站首页<br>
+      <br>
+      <br>
+      <br>
+      <b>/e/ 系统程序目录</b><br>
+      &nbsp; &nbsp; ├action/&nbsp; &nbsp;&nbsp; &nbsp; 信息动态列表页和内容页目录<br>
+      &nbsp; &nbsp; ├admin/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;后台目录 <font color=gray>(可重命名)</font><br>
+      &nbsp; &nbsp; ├class/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;系统核心文件目录<br>
+      &nbsp; &nbsp; ├data/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;系统处理数据相关目录 <font color=gray>(临时文件、缓存等)</font><br>
+      &nbsp; &nbsp; ├DoInfo/&nbsp; &nbsp;&nbsp; &nbsp; 前台会员管理信息目录 <font color=gray>(页面模板e/template/DoInfo)</font><br>
+      &nbsp; &nbsp; ├DoPrint/&nbsp; &nbsp;&nbsp; &nbsp;打印页面目录<br>
+      &nbsp; &nbsp; ├DownSys/&nbsp; &nbsp;&nbsp; &nbsp;下载系统模型功能目录 <font color=gray>(页面模板e/template/DownSys)</font><br> 
+      &nbsp; &nbsp; ├enews/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;前台处理数据入口文件<br> 
+      &nbsp; &nbsp; ├extend/&nbsp; &nbsp;&nbsp; &nbsp; 扩展程序目录 <br> &nbsp; &nbsp; 
+      ├ftp/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; FTP识别目录<br>
+      &nbsp; &nbsp; ├install/&nbsp; &nbsp;&nbsp; &nbsp;安装程序目录，安装后请删除掉<br>
+      &nbsp; &nbsp; ├member/&nbsp; &nbsp;&nbsp; &nbsp; 前台会员功能目录 <font color=gray>(页面模板e/template/member)</font><br>
+      &nbsp; &nbsp; ├message/&nbsp; &nbsp;&nbsp; &nbsp;提示信息页面目录<br>
+      &nbsp; &nbsp; ├NewsSys/&nbsp; &nbsp;&nbsp; &nbsp;新闻系统模型功能目录<br>
+      &nbsp; &nbsp; ├payapi/&nbsp; &nbsp;&nbsp; &nbsp; 在线支付接口目录 <font color=gray>(页面模板e/template/payapi)</font><br>
+      &nbsp; &nbsp; ├pl/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;评论页目录<br>
+      &nbsp; &nbsp; ├public/&nbsp; &nbsp;&nbsp; &nbsp; 公用功能程序目录 <font color=gray>(页面模板e/template/public)</font><br>
+      &nbsp; &nbsp; ├sch/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 全站全文搜索生成目录<br>
+      &nbsp; &nbsp; ├search/&nbsp; &nbsp;&nbsp; &nbsp; 普通搜索文件目录<br>
+      &nbsp; &nbsp; ├ShopSys/&nbsp; &nbsp;&nbsp; &nbsp;商城系统模型功能目录 <font color=gray>(页面模板e/template/ShopSys)</font><br>
+      &nbsp; &nbsp; ├ShowKey/&nbsp; &nbsp;&nbsp; &nbsp;前台验证码文件目录<br>
+      &nbsp; &nbsp; ├space/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;会员空间目录 <font color=gray>(其中template为会员空间模板目录)</font><br>
+      &nbsp; &nbsp; ├tags/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;TAGS列表文件目录<br>
+      &nbsp; &nbsp; ├tasks/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;计划任务脚本存放目录<br>
+      &nbsp; &nbsp; ├template/&nbsp; &nbsp;&nbsp;&nbsp;前台动态页的模板目录<br>
+      &nbsp; &nbsp; ├tool/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;插件相关功能目录 <font color=gray>(页面模板e/template/tool)</font><br>
+      &nbsp; &nbsp; ├update/&nbsp; &nbsp;&nbsp; &nbsp; 升级程序目录 <font color=gray>(升级程序复制到这个目录运行)</font><br>
+      &nbsp; &nbsp; ├ViewImg/&nbsp; &nbsp;&nbsp; &nbsp;显示图片大图目录<br>
+      &nbsp; &nbsp; ├wap/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; WAP功能目录 <font color=gray>(其中template为WAP模板目录)</font><br>
+      &nbsp; &nbsp; └web/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; RSS显示文件目录<br>
+      <br>
+      <br> <br>
+      <b>/e/template/ 动态页面模板目录</b><br>
+      &nbsp; &nbsp; ├DoInfo/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
+      &nbsp; &nbsp; 前台投稿模板目录 <font color=gray>(对应程序目录：/e/DoInfo/)</font><br>
+      &nbsp; &nbsp; │├AddInfo.php&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 发布投稿页面模板 
+      <font color=gray>(对应程序文件：/e/DoInfo/AddInfo.php)</font><br>
+      &nbsp; &nbsp; │├ChangeClass.php &nbsp;&nbsp; &nbsp;&nbsp; 发布投稿选择栏目页面模板 <font color=gray>(对应程序文件：/e/DoInfo/ChangeClass.php)</font><br>
+      &nbsp; &nbsp; │├DoInfo.php&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+      管理投稿首页页面模板 <font color=gray>(对应程序文件：/e/DoInfo/index.php)</font><br>
+      &nbsp; &nbsp; │└tran.php&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 
+      &nbsp; 发布投稿上传附件页面模板 <font color=gray>(对应程序文件：/e/DoInfo/tran.php)</font><br>
+      &nbsp; &nbsp; ├DownSys/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
+      &nbsp;  &nbsp;下载模型页面模板目录 <font color=gray>(对应程序目录：/e/DownSys/)</font><br>
+      &nbsp; &nbsp; │└report.php&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 
+      提交错误报告页面模板 <font color=gray>(对应程序文件：/e/report/index.php)</font><br>
+      &nbsp; &nbsp; ├member/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
+      &nbsp; &nbsp; 会员中心模板目录 <font color=gray>(对应程序目录：/e/member/)</font><br>
+      &nbsp; &nbsp; │├memberlist/&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 会员列表页面模板目录 
+      <font color=gray>(对应程序文件：/e/member/list/index.php)</font><br>
+      &nbsp; &nbsp; │├mspace/&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      &nbsp;管理会员空间页面模板目录 <font color=gray>(对应程序目录：/e/member/mspace/)</font><br>
+      &nbsp; &nbsp; ││├ChangeStyle.php&nbsp;&nbsp; &nbsp; 选择空间模板页面模板 <font color=gray>(对应程序文件：/e/member/mspace/ChangeStyle.php)</font><br>
+      &nbsp; &nbsp; ││├feedback.php&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 管理会员空间反馈页面模板 
+      <font color=gray>(对应程序文件：/e/member/mspace/feedback.php)</font><br>
+      &nbsp; &nbsp; ││├gbook.php&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+      管理会员空间留言页面模板 <font color=gray>(对应程序文件：/e/member/mspace/gbook.php)</font><br>
+      &nbsp; &nbsp; ││├ReGbook.php&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 管理会员空间留言回复页面模板 
+      <font color=gray>(对应程序文件：/e/member/mspace/ReGbook.php)</font><br>
+      &nbsp; &nbsp; ││├SetSpace.php&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 设置会员空间页面模板 
+      <font color=gray>(对应程序文件：/e/member/mspace/SetSpace.php)</font> <br>
+      &nbsp; &nbsp; ││└ShowFeedback.php&nbsp; &nbsp; 管理会员空间反馈显示反馈页面模板 <font color=gray>(对应程序文件：/e/member/mspace/ShowFeedback.php)</font> 
+      <br>
+      &nbsp; &nbsp; │├AddFava.php&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+      增加收藏页面模板 <font color=gray>(对应程序文件：/e/member/fava/add/index.php)</font><br>
+      &nbsp; &nbsp; │├AddFriend.php&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 增加好友页面模板 
+      <font color=gray>(对应程序文件：/e/member/friend/add/index.php)</font><br>
+      &nbsp; &nbsp; │├AddMsg.php&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+      发送站内信息页面模板 <font color=gray>(对应程序文件：/e/member/msg/AddMsg/index.php)</font><br>
+      &nbsp; &nbsp; │├buybak.php &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 购买记录页面模板 
+      <font color=gray>(对应程序文件：/e/member/buybak/index.php)</font><br>
+      &nbsp; &nbsp; │├buygroup.php&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 购买充值类型页面模板 
+      <font color=gray>(对应程序文件：/e/member/buygroup/index.php)</font><br>
+      &nbsp; &nbsp; │├card.php&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      点卡充值页面模板 <font color=gray>(对应程序文件：/e/member/card/index.php)</font><br>
+      &nbsp; &nbsp; │├ChangeFriend.php&nbsp;&nbsp; &nbsp;&nbsp; 选择好友页面模板 <font color=gray>(对应程序文件：/e/member/friend/FriendClass/index.php)</font><br>
+      &nbsp; &nbsp; │├ChangeRegister.php&nbsp;&nbsp;&nbsp; 选择注册会员组页面模板 <font color=gray>(对应程序文件：/e/member/register/ChangeRegister.php)</font><br>
+      &nbsp; &nbsp; │├cp.php&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      &nbsp; 会员中心首页页面模板 <font color=gray>(对应程序文件：/e/member/cp/index.php)</font><br>
+      &nbsp; &nbsp; │├downbak.php&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 
+      消费记录页面模板 <font color=gray>(对应程序文件：/e/member/downbak/index.php)</font><br>
+      &nbsp; &nbsp; │├EditInfo.php&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 修改资料页面模板 
+      <font color=gray>(对应程序文件：/e/member/EditInfo/index.php)</font><br>
+      &nbsp; &nbsp; │├EditSafeInfo.php&nbsp;&nbsp; &nbsp;&nbsp; 修改安全资料页面模板 <font color=gray>(对应程序文件：/e/member/EditInfo/EditSafeInfo.php)</font><br>
+      &nbsp; &nbsp; │├fava.php&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      管理收藏页面模板 <font color=gray>(对应程序文件：/e/member/fava/index.php)</font><br>
+      &nbsp; &nbsp; │├FavaClass.php&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 管理收藏分类页面模板 
+      <font color=gray>(对应程序文件：/e/member/fava/FavaClass/index.php)</font><br>
+      &nbsp; &nbsp; │├friend.php&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 
+      &nbsp;管理好友页面模板 <font color=gray>(对应程序文件：/e/member/friend/index.php)</font><br>
+      &nbsp; &nbsp; │├FriendClass.php &nbsp;&nbsp; &nbsp;&nbsp; 管理好友分类页面模板 <font color=gray>(对应程序文件：/e/member/friend/FriendClass/index.php)</font><br>
+      &nbsp; &nbsp; │├getpass.php&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 取回密码重置页面模板 
+      <font color=gray>(对应程序文件：/e/member/GetPassword/getpass.php)</font><br>
+      &nbsp; &nbsp; │├GetPassword.php&nbsp;&nbsp; &nbsp; &nbsp; 取回密码页面模板 <font color=gray>(对应程序文件：/e/member/GetPassword/index.php)</font><br>
+      &nbsp; &nbsp; │├login.php&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      会员登录页面模板 <font color=gray>(对应程序文件：/e/member/login/index.php)</font><br>
+      &nbsp; &nbsp; │├loginopen.php&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 弹出页面提示重新登陆页面模板 
+      <font color=gray>(对应程序文件：/e/member/login/login.php)</font><br>
+      &nbsp; &nbsp; │├msg.php&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+      &nbsp; 管理站内信息页面模板 <font color=gray>(对应程序文件：/e/member/msg/index.php)</font><br>
+      &nbsp; &nbsp; │├my.php&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+      &nbsp; 我的状态页面模板 <font color=gray>(对应程序文件：/e/member/my/index.php)</font><br>
+      &nbsp; &nbsp; │├register.php&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 会员注册页面模板 <font color=gray>(对应程序文件：/e/member/register/index.php)</font><br>
+      &nbsp; &nbsp; │├regsend.php&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 注册激活帐号页面模板 
+      <font color=gray>(对应程序文件：/e/member/register/regsend.php)</font><br>
+      &nbsp; &nbsp; │├ShowInfo.php&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;查看会员资料页面模板 
+      <font color=gray>(对应程序文件：/e/member/ShowInfo/index.php)</font><br>
+      &nbsp; &nbsp; │└ViewMsg.php&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 
+      &nbsp; 查看站内信息内容页面模板 <font color=gray>(对应程序文件：/e/member/msg/ViewMsg/index.php)</font><br>
+      &nbsp; &nbsp; ├payapi/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 
+      &nbsp; &nbsp;在线支付页面模板目录 <font color=gray>(对应程序目录：/e/payapi/)</font><br>
+      &nbsp; &nbsp; │└payapi.php&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 
+      在线支付页面模板 <font color=gray>(对应程序文件：/e/payapi/index.php)</font><br>
+      &nbsp; &nbsp; ├public/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 
+      &nbsp; &nbsp;公共程序页面模板目录 <font color=gray>(对应程序目录：/e/public/)</font><br>
+      &nbsp; &nbsp; │└vote.php&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 
+      &nbsp; 信息投票结果页面模板 <font color=gray>(对应程序文件：/e/public/vote/index.php)</font><br>
+      &nbsp; &nbsp; ├ShopSys/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
+      &nbsp; &nbsp;商城模型页面模板目录 <font color=gray>(对应程序目录：/e/ShopSys/)</font><br>
+      &nbsp; &nbsp; │├buycar.php&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+      购物车页面模板 <font color=gray>(对应程序文件：/e/ShopSys/buycar/index.php)</font><br>
+      &nbsp; &nbsp; │├ListDd.php&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;管理商城订单页面模板 
+      <font color=gray>(对应程序文件：/e/ShopSys/ListDd/index.php)</font><br>
+      &nbsp; &nbsp; │├order.php&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;订单提交表单页面模板 
+      <font color=gray>(对应程序文件：/e/ShopSys/order/index.php)</font><br>
+      &nbsp; &nbsp; │├ShowDd.php&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;查看商城订单内容页面模板 
+      <font color=gray>(对应程序文件：/e/ShopSys/ShowDd/index.php)</font> <br>
+      &nbsp; &nbsp; │└SubmitOrder.php&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 订单提交最终确认页面模板 
+      <font color=gray>(对应程序文件：/e/ShopSys/SubmitOrder/index.php)</font><br>
+      &nbsp; &nbsp; └tool/&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+      &nbsp; &nbsp;&nbsp; 内置插件模板目录 <font color=gray>(对应程序目录：/e/tool/)</font><br>
+      &nbsp; &nbsp;&nbsp; &nbsp; └vote.php&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp; &nbsp; &nbsp; 投票插件结果页面模板 <font color=gray>(对应程序文件：/e/tool/vote/index.php)</font><br> <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="pathquestion"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><b><font color="#FFFFFF">常见问题：</font></b></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> <b>1、不使用下载系统模型，能不能删除前台相关功能文件？</b><br>
+      答：可以，处理步骤：<br>
+      (1)、删除e/DownSys目录；<br>
+      (2)、修改e/class/DownSysFun.php文件，文件第二行加exit();<br> &lt;?php<br> <font color=red>exit();</font><br>
+      修改后保存文件即可。<br> <br> <b>2、不使用商城系统模型，能不能删除前台相关功能文件？</b><br>
+      答：可以，处理步骤：<br>
+      (1)、删除e/ShopSys目录；<br>
+      (2)、修改e/class/ShopSysFun.php文件，文件第二行加exit();<br> &lt;?php<br> <font color=red>exit();</font><br>
+      修改后保存文件即可。<br> <br> <b>3、不使用评论功能，能不能删除前台相关功能文件？</b><br>
+      答：可以，处理步骤：<br>
+      (1)、删除e/pl目录；<br>
+      (2)、修改e/enews/plfun.php文件，文件第二行加exit();<br> &lt;?php<br> <font color=red>exit();</font><br>
+      修改后保存文件即可。<br> <br> <b>4、不使用留言板功能，能不能删除前台相关功能文件？</b><br>
+      答：可以，处理步骤：<br>
+      (1)、删除e/tool/gbook目录；<br>
+      (2)、修改e/enews/gbookfun.php文件，文件第二行加exit();<br>
+      &lt;?php<br> <font color=red>exit();</font><br>
+      修改后保存文件即可。<br> <br> <b>5、不使用投票功能，能不能删除前台相关功能文件？</b><br>
+      答：可以，处理步骤：<br>
+      (1)、删除e/tool/vote和e/public/vote目录；<br>
+      (2)、修改e/enews/votefun.php文件，文件第二行加exit();<br> &lt;?php<br> <font color=red>exit();</font><br>
+      修改后保存文件即可。<br> <br> <b>6、不使用会员取回密码和激活帐号功能，能不能删除前台相关功能文件？</b><br>
+      答：可以，处理步骤：<br>
+      (1)、删除e/member/GetPassword目录；<br>
+      (2)、修改e/class/qmemberfun.php文件，文件第二行加exit();<br> &lt;?php<br> <font color=red>exit();</font><br>
+      修改后保存文件即可。<br> <br> <b>7、除了admin、class、data、enews、message目录外，不使用的功能可以直接删除相关目录，比如：</b><br>
+      不使用前台动态信息页面：直接删除e/action目录<br>
+      不使用前台投稿功能：直接删除e/DoInfo目录<br>
+      不使用前台打印功能：直接删除e/DoPrint目录<br>
+      不使用在线支付接口功能：直接删除e/payapi目录<br>
+      不使用全站全文搜索功能：直接删除e/sch目录<br>
+      不使用搜索功能：直接删除e/search目录<br>
+      不使用会员空间功能：直接删除e/space目录<br>
+      不使用tags列表功能：直接删除e/tags目录<br>
+      不使用wap功能：直接删除e/wap目录<br>
+      不使用RSS功能：直接删除e/web目录<br>
+      等等.<br> </td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

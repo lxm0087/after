@@ -1,0 +1,28 @@
+1.首先yum insatll memcached 
+2.使用命令 memcached -u root -p 11211 -d start -l 127.0.0.1 -m 128  设置并开启memcached 
+3.开始安装php扩展 yum install php-memcached
+重启php和memcached 并将memcached 开机启动
+systemctl restart memcached
+systemctl restart php-fpm
+systemctl enable memcached
+此时，可以先查看下进程
+ps -ef | grep mem
+然后就可以进入站点文件操作了，先建一个文件用来设置
+<?php
+$a = new Memcached();
+$a ->addServer('127.0.0.1',11211);
+$a ->addServer('127.0.0.1',11212);
+$a ->addServer('127.0.0.1',11223);
+$a ->set('a','red',0);
+$a ->set('b','yellow',0);
+$a ->set('c','blue',0);
+然后再建个文件来获取
+<?php
+$a = new memcached();
+$a ->addServer('127.0.0.1',11211);
+$a ->addServer('127.0.0.1',11212);
+$a ->addServer('127.0.0.1',11223);
+var_dump($a ->get('a'));
+var_dump($a ->get('b'));
+var_dump($a ->get('c'));
+~                                                       如果可以正常访问到数据,就说明可以使用了。                       

@@ -1,0 +1,131 @@
+<!-- header start -->
+<div class="header" id="header">
+  <div class="topDateTell clearfix">
+    <div class="pubW center clearfix">
+      <div class="englishTags fl"><a href="javascript:void(0)" onClick="openZoosUrl();" target="_blank">在线咨询</a>|<a href="javascript:void(0)" onClick="openZoosUrl();" target="_blank">在线留言 </a></div>
+      <span class="tellnumber fr">美丽热线 : 0791-86667777</span> <span class="openTime fr fonts">门诊时间 (无假日医院) 8:00-20:00</span> </div>
+  </div>
+  <div class="topLogo pubW center clearfix relative">
+    <h1><a href="[!--news.url--]" title="南昌莱美美容医院"></a></h1>
+    <div class="topNav fr clearfix">
+      <ul>
+        <li><a href="<?=$class_r[47]['classpath']?>" target="_blank" title="关于莱美">关于莱美</a></li>
+        <li><a href="<?=$class_r[48]['classpath']?>" target="_blank" title="医师团队">医师团队</a></li>
+        <li><a href="<?=$class_r[49]['classpath']?>" target="_blank" title="医院环境">医院环境</a></li>
+        <li><a href="<?=$class_r[50]['classpath']?>" target="_blank" title="医疗荣誉">医疗荣誉</a></li>
+        <li><a href="/" target="_blank" title="美丽案例">美丽案例</a></li>
+        <li><a href="<?=$class_r[53]['classpath']?>" target="_blank" title="来院路线">来院路线</a></li>
+      </ul>
+    </div>
+    <div class="searchBox absolute">
+        <div class="selectBox">
+          <div class="switch switch1 clearfix">
+            <div class="item item1 relative fl">
+                      <!--<span class="itemNum" style="text-align:center; color:#fff; line-height:20px;z-index:66;position:absolute;top:-10px;left:122px;display:block;width: 22px;height: 20px;background:url('images/itemnum.png') no-repeat center;"></span>-->
+              <form action="/e/search/index.php" method="post" onsubmit="if (this.search.value == ''){this.search.focus();return false;}" name="formsearch" id="formsearch">
+                      <input type="hidden" name="show" value="title" />
+                      <input type="hidden" name="tempid" value="1" />
+                      <input type="hidden" name="tbname" value="news" />
+                      <input name="keyboard" id="keyboard" class="btn-text fonts" type="text" size="22" maxlength="30" placeholder="查找您想要改变的部位" />
+                      <ul></ul>
+                  </div>
+                  <div class="itemBtn fl relative">
+                    <input type="submit" class="inputSub bt"  title="查找" value="查找" />
+                    <i class="absolute"></i>
+                  </div>
+              </form>
+          </div>
+        </div>
+        <div class="zhutiWripper">
+          <ul class="clearfix">
+          [e:loop={55,12,0,0,0,'classid desc'}]
+            <li>
+              <a class="" href="<?=$bqr['titleurl']?>" target="_blank">
+                <img src="<?=$bqr['titlepic']?>" width="58" height="58"/>
+              </a>
+              <span><?=$bqr['title']?></span>
+            </li>
+          [/e:loop]
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- end header -->
+<!-- nav banner start -->
+<div class="banner relative" id="banner"> <div class="menu absolute">
+    <ul class="active">
+     [e:loop={"select classid,classname,classpath,classimg,bname from [!db.pre!]enewsclass where bclassid=0 order by myorder limit 11",11,24,0}]
+      <?php if( $bqno == 1 || $bqno == 9 || $bqno == 11 ){ ?>
+        <li class="subNav subNav<?php if( $bqno == 1 ){ echo 10;}elseif( $bqno == 9){ echo 8;}else{ echo 9;}?>"><a href="/<?=$bqr['classpath']?>"><i></i> <span data-txt="<?=$bqr['classname']?>"></span> </a>
+          <div class="subMenu subMenu<?=$bqno?> clearfix">
+            <div class="aside fl">
+              <div class="subMenu-Logo subMenu-Logo<?=$bqno?>"> <i></i>
+              <h6><?=$bqr['classname']?></h6>
+              <p><?=$bqr['bname']?></p>
+              </div>
+            </div>
+            <div class="bside fl">
+              <div class="inner fl">
+                <dl class="clearfix fl">
+                  <dd class="clearfix">
+                   <?php $sql = $empire->query("select title,titleurl,lastdotime,classid from {$dbtbpre}ecms_news where classid = '$bqr[classid]' order by id desc limit 6");while( $row = $empire -> fetch($sql) ){ ?>
+                    <a href="<?=$row['titleurl']?>" target="_blank"><?=$row['title']?></a>
+                   <?php } ?>
+                  </dd> 
+                </dl>
+              </div>     
+            </div>
+            <div class="cside fr"> 
+              <?php $sql = $empire -> query("select titlepic,classid from {$dbtbpre}ecms_news where classid = '$bqr[classid]' order by id desc limit 2");while( $row = $empire -> fetch( $sql ) ){?>
+                  <img src="<?=$row['titlepic']?>" width="321" height="248"/> 
+              <?php } ?>    
+            </div>
+          </div>
+        </li>
+      <?php } else { ?>
+        <li class="subNav subNav<?php if( $bqno == 7){ echo 7;}elseif( $bqno == 8 ){ echo 6;}elseif( $bqno == 10 ){ echo 12; }else{ echo $bqno-1;}?>"><a href="/<?=$bqr['classpath']?>"><i></i> <span data-txt="<?=$bqr['classname']?>"></span></a>
+          <div class="subMenu subMenu<?=$bqno?> clearfix">
+            <div class="aside fl">
+              <div class="subMenu-Logo subMenu-Logo<?=$bqno?>"> <i></i>
+                <h6><?=$bqr['classname']?></h6>
+                <p><?=$bqr['bname']?></p>
+              </div>
+            </div>
+            <div class="bside fl">
+              <div class="inner fl">
+              <?php $sql = $empire -> query("select classid,classname,classpath,bclassid from {$dbtbpre}enewsclass where bclassid = '$bqr[classid]' order by myorder limit 6"); while( $row = $empire -> fetch( $sql ) ){ ?>
+                <dl class="clearfix fl">
+                  <dt><a href="/<?=$row['classpath']?>"><?=$row['classname']?></a></dt> 
+                  <?php $sql2 = $empire -> query("select title,titleurl,classid from {$dbtbpre}ecms_news where classid= '$row[classid]' order by lastdotime desc limit 6");while( $row2 = $empire ->fetch($sql2) ){ ?>
+                    <dd class="clearfix">
+                       <a href="<?=$row2['titleurl']?>" target="_blank"><?=$row2['title']?></a>
+                    </dd> 
+                  <?php } ?>  
+                </dl>
+                <?php } ?>
+              </div>     
+            </div>
+            <div class="cside fr"> 
+              <?php $sql3 = ("select classimg from {$dbtbpre}enewsclass where classid= '$bqr[classid]' order by myorder desc ");$row3 = $empire->fetch1($sql3);?>
+                <img src="<?=$row3['classimg'];?>" width="321" height="248"/>
+               
+            </div>
+          </div>
+        </li>
+      <?php } ?>
+       [/e:loop]  
+    </ul>
+</div>
+  <div class="bannerSlide relative" id="bannerSlide"><a href="javascript:void(0)" class="preBtn absolute bt"><i></i></a> <a href="javascript:void(0)" class="nextBtn absolute bt"><i></i></a>
+  <div class="focus absolute"></div>
+
+  <div class="slideBox">
+    <ul>
+   [e:loop={56,10,0,1,0,'id'}]
+    <li><a href="<?=$bqr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" width="1920" height="600"/></a></li>
+   [/e:loop]
+    </ul>
+  </div>
+  </div>
+</div>

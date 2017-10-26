@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>评论表单制作语法说明</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">评论表单制作</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="plformvar">&nbsp; &nbsp; &gt; 评论表单变量说明</option>
+          <option value="plformexp">&nbsp; &nbsp; &gt; 评论表单制作范例</option>
+          <option value="other">&nbsp; &nbsp; &gt; 评论表单其它说明</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>评论发布表单的制作，可应用于内容模板及评论列表模板。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="plformvar"> 
+    <td height="25"><strong><font color="#FFFFFF">评论表单变量说明</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+  <tr bgcolor="#C3EFFF"> 
+    <td width="16%" height="23"><font color="#000000">&nbsp;</font></td>
+    <td width="35%"><font color="#000000">变量名</font></td>
+    <td width="49%"><font color="#000000">例子</font></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">评论表单提交地址</td>
+    <td>[!--news.url--]e/enews/index.php</td>
+    <td>&lt;form name=&quot;saypl&quot; method=&quot;post&quot; action=&quot;<strong>[!--news.url--]e/enews/index.php</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">栏目ID变量</td>
+    <td>classid</td>
+    <td>&lt;input name=&quot;<strong>classid</strong>&quot; type=&quot;hidden&quot; 
+      value=&quot;<strong>[!--classid--]</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">信息ID变量</td>
+    <td>id</td>
+    <td>&lt;input name=&quot;<strong>id</strong>&quot; type=&quot;hidden&quot; 
+      value=&quot;<strong>[!--id--]</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">用户名输入框变量</td>
+    <td>username</td>
+    <td>&lt;input name=&quot;<strong>username</strong>&quot; type=&quot;text&quot; 
+      size=&quot;12&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">密码输入框变量</td>
+    <td>password</td>
+    <td>&lt;input name=&quot;<strong>password</strong>&quot; type=&quot;password&quot; 
+      size=&quot;12&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">评论内容输入框变量</td>
+    <td>saytext</td>
+    <td>&lt;textarea name=&quot;<strong>saytext</strong>&quot; cols=&quot;56&quot; 
+      rows=&quot;6&quot;&quot;&gt;&lt;/textarea&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">匿名发表变量</td>
+    <td>nomember</td>
+    <td>&lt;input name=&quot;<strong>nomember</strong>&quot; type=&quot;checkbox&quot; 
+      value=&quot;<strong>1</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">验证码输入框变量</td>
+    <td>key</td>
+    <td>&lt;input name=&quot;<strong>key</strong>&quot; type=&quot;text&quot; 
+      size=&quot;6&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">显示验证码</td>
+    <td>[!--news.url--]e/ShowKey/?v=pl</td>
+    <td>&lt;img src=&quot;<strong>[!--news.url--]e/ShowKey/?v=pl</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">回复ID记录变量</td>
+    <td>repid</td>
+    <td>&lt;input name=&quot;<strong>repid</strong>&quot; type=&quot;hidden&quot; 
+      value=&quot;<strong>0</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">评论事件变量</td>
+    <td>enews</td>
+    <td>&lt;input name=&quot;<strong>enews</strong>&quot; type=&quot;hidden&quot; 
+      value=&quot;<strong>AddPl</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td height="25">提交后返回地址变量：<strong>ecmsfrom</strong></td>
+    <td> ecmsfrom变量值有三种方式：<br>
+      1、如果不设置则返回系统默认的地址；<br>
+      2、如果值为9，那么返回的是提交地址，系统自动识别；<br>
+      3、如果设置除了9以外其它值，将返回变量值的地址。 <br></td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>ecmsfrom</strong>&quot; 
+      value=&quot;http://www.phome.net&quot;&gt;</td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="plformexp"> 
+    <td height="25"><strong><font color="#FFFFFF">评论表单制作范例</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">一、表单范例1：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、用Dreamweaver制作好表单：</td>
+  </tr>
+  <tr> 
+    <td height="25">设计视图：<br>
+      <img src="img/plform2.gif" width="452" height="260" border="1"><br> 
+      <br>
+      代码模式下的表单代码<br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 21px'> 
+            <p>&lt;table width=&quot;430&quot; border=&quot;0&quot; cellpadding=&quot;3&quot; 
+              cellspacing=&quot;1&quot; bgcolor=&quot;#8CBDEF&quot; id=&quot;saypl&quot;&gt;<br>
+              <font color="#FF0000">&lt;form name=&quot;saypl&quot; method=&quot;post&quot; 
+              action=&quot;[!--news.url--]e/enews/index.php&quot;&gt;</font><br>
+              &nbsp; &nbsp; &lt;tr&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td height=&quot;25&quot;&gt;&lt;strong&gt;&lt;font 
+              color=&quot;#FFFFFF&quot;&gt;发表评论&lt;/font&gt;&lt;/strong&gt;&lt;/td&gt;<br>
+              &nbsp; &nbsp; &lt;/tr&gt;<br>
+              &nbsp; &nbsp; &lt;tr&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td height=&quot;25&quot; bgcolor=&quot;#FFFFFF&quot;&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+              &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; 
+              cellpadding=&quot;3&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;tr&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt;用户名:<font color="#FF0000">&lt;input 
+              name=&quot;username&quot; type=&quot;text&quot; size=&quot;12&quot;&gt;</font>&lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt;密码:<font color="#FF0000">&lt;input 
+              name=&quot;password&quot; type=&quot;password&quot; size=&quot;12&quot;&gt;</font>&lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;/tr&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;tr&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt;验证码:<font color="#FF0000">&lt;input 
+              name=&quot;key&quot; type=&quot;text&quot; size=&quot;6&quot;&gt;</font><font color="#FF0000"> 
+              &lt;img src=&quot;[!--news.url--]e/ShowKey/?v=pl&quot;&gt;</font>&lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt;<font color="#FF0000">&lt;input 
+              name=&quot;nomember&quot; type=&quot;checkbox&quot; value=&quot;1&quot; 
+              checked&gt;</font>匿名发表&lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;/tr&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;tr&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&lt;td colspan=&quot;2&quot;&gt;&lt;div 
+              align=&quot;center&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 
+              <font color="#FF0000">&lt;textarea name=&quot;saytext&quot; cols=&quot;56&quot; 
+              rows=&quot;6&quot;&gt;&lt;/textarea&gt;</font><br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;/div&gt;&lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;/tr&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;tr&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&lt;td colspan=&quot;2&quot;&gt;&lt;div 
+              align=&quot;center&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 
+              &lt;input type=&quot;submit&quot; name=&quot;Submit&quot; value=&quot;提交评论&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;/div&gt;&lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;/tr&gt;<br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<font color="#FF0000">&lt;input 
+              name=&quot;id&quot; type=&quot;hidden&quot; value=&quot;[!--id--]&quot;&gt;</font><br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<font color="#FF0000">&lt;input 
+              name=&quot;classid&quot; type=&quot;hidden&quot; value=&quot;[!--classid--]&quot;&gt;</font><br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<font color="#FF0000">&lt;input 
+              name=&quot;enews&quot; type=&quot;hidden&quot; value=&quot;AddPl&quot;&gt;</font><br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<font color="#FF0000">&lt;input 
+              name=&quot;repid&quot; type=&quot;hidden&quot; value=&quot;0&quot;&gt;</font><br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;/table&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;/td&gt;<br>
+              &nbsp; &nbsp; &lt;/tr&gt;<br>
+              &lt;/form&gt;<br>
+              &lt;/table&gt; </p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">2、将表单加到内容模板或评论列表模板里即可，最终评论表单显示效果为下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"><img src="img/plform1.gif" width="451" height="278" border="1"> 
+    </td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="other"> 
+    <td height="25"><strong><font color="#FFFFFF">评论表单其它说明</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr>
+    <td height="23">1、如果会员登陆后发表评论，则系统按登陆会员帐号发表评论。</td>
+  </tr>
+  <tr>
+    <td height="23">2、在评论列表模板中，可以用[!--lusername--]显示登陆会员帐号，[!--lpassword--]显示登陆用户密码(加密过)。</td>
+  </tr>
+  <tr>
+    <td height="23">3、可直接输入用户名进行匿名发表。</td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

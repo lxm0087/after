@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">网站模板组成</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="tomaketemp">&nbsp; &nbsp; &gt; 制作帝国CMS模板需要哪些基础</option>
+		  <option value="tempsay">&nbsp; &nbsp; &gt; 帝国CMS模板的说明</option>
+          <option value="sitetemp">&nbsp; &nbsp; &gt; 帝国CMS网站模板的组成</option>
+		  <option value="dttemp">&nbsp; &nbsp; &gt; 动态页模板介绍</option>
+          <option value="tempvar">&nbsp; &nbsp; &gt; 模板名称说明</option>
+          <option value="fastmaketemp">&nbsp; &nbsp; &gt; 如何快速撑握帝国CMS模板制作？</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tomaketemp"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、制作帝国CMS模板需要哪些基础：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">至少需要撑握Dreamweaver网页设计工具、以及能看懂基本HTML的用户。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tempsay"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、帝国CMS模板的说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#FF0000">帝国CMS所有版本模板通用，不存在程序版本区别。</font>但不同编码的模板导入记得转码后再导入。</strong></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="sitetemp"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、帝国CMS网站模板的组成：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(一)、帝国CMS几个主要模板的定义：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> <table width="700" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="16%" height="25"><strong>一般网站的构成：</strong></td>
+          <td width="14%">首页</td>
+          <td width="14%">频道页</td>
+          <td width="14%">信息列表页</td>
+          <td width="14%">信息显示页</td>
+          <td width="14%">评论页面</td>
+          <td width="14%">内容搜索页</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>对应的模板就是：</strong></td>
+          <td><a href="indextemp.html" target="_blank">首页模板</a></td>
+          <td> <a href="hmtemp.html" target="_blank">封面模板</a></td>
+          <td><a href="listtemp.html" target="_blank">列表模板</a></td>
+          <td><a href="newstemp.html" target="_blank">内容模板</a></td>
+          <td><a href="pltemp.html" target="_blank">评论模板</a></td>
+          <td><a href="searchtemp.html" target="_blank">搜索模板</a></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(二)、其他模板介绍：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="700" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong><a href="ecmsinfo/ecmsinfo.html" target="_blank">标签模板</a></strong></td>
+          <td width="650">是定义ecmsinfo等标签调用数据时候用什么格式来显示。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong><a href="tempvar.html" target="_blank">公共模板变量</a></strong></td>
+          <td width="650">是指将模板中相同内容部分存放到变量里，方便在各个模板调用与统一修改。<br>
+            像模板中用到的“[!--temp.*--]”就是公共模板变量。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong><a href="userpagetemp.html" target="_blank">自定义页面模板</a></strong></td>
+          <td width="650">是指自定义页面(单页)使用的模板。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong><a href="printtemp.html" target="_blank">打印模板</a></strong></td>
+          <td width="650">是指信息打印页面的模板(/e/DoPrint/)。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong><a href="jstemp.html" target="_blank">JS模板</a></strong></td>
+          <td width="650">是指JS调用使用的模板。（系统调用信息同时支持用标签调用与JS调用）</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong><a href="votetemp.html" target="_blank">投票模板</a></strong></td>
+          <td width="650">是指投票插件和信息投票显示使用的模板</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>公共模板</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong><a href="cptemp.html" target="_blank">控制面板模板</a></strong></td>
+          <td width="650">控制会员中心相关页面的头部和尾部显示(/e/member)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong><a href="schtemp.html" target="_blank">全站搜索模板</a></strong></td>
+          <td width="650">全站全文搜索使用的搜索模板(/e/sch)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong><a href="searchform.html" target="_blank">高级搜索表单模板</a></strong></td>
+          <td>默认高级搜索表单页模板(/search)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong><a href="searchform.html" target="_blank">横向搜索JS模板</a></strong></td>
+          <td>内置的JS调用横向搜索表单模板(/d/js/js/search_news1.js)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong><a href="searchform.html" target="_blank">纵向搜索JS模板</a></strong></td>
+          <td>内置的JS调用纵向搜索表单模板(/d/js/js/search_news2.js)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>相关信息模板</strong></td>
+          <td>控制信息内容页相关链接 [!--other.link--] 显示的格式</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong><a href="lytemp.html" target="_blank">留言板模板</a></strong></td>
+          <td>留言板插件页面的模板(/e/tool/gbook)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong><a href="pljstemp.html" target="_blank">评论JS调用模板</a></strong></td>
+          <td>控制信息内容页JS调用评论的页面格式(/e/pl/more)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>最终下载页模板</strong></td>
+          <td>控制下载系统模型弹出最终的下载页面格式(/e/DownSys/DownSoft)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>下载地址模板</strong></td>
+          <td>控制下载地址字段downpath的前台显示格式([!--downpath--])</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>在线播放地址模板</strong></td>
+          <td>控制在线电影地址字段onlinepath的前台显示格式([!--onlinepath--])</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>列表分页模板</strong></td>
+          <td>控制下拉式分页导航[!--show.page--]的显示格式</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong><a href="loginiframe.html" target="_blank">登陆状态模板</a></strong></td>
+          <td>控制框架式调用会员状态的页面格式(/e/member/iframe)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong><a href="loginjs.html" target="_blank">JS调用登陆模板</a></strong></td>
+          <td>控制JS式调用会员状态的页面格式(/e/member/login/loginjs.php)</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="dttemp"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、动态页模板介绍：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="700" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong>动态页面模板目录：</strong></td>
+          <td width="650">/e/template/</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong>会员空间模板目录：</strong></td>
+          <td width="650">/e/space/template/</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong>WAP模板目录：</strong></td>
+          <td width="650"><p>/e/wap/template/</p></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tempvar"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">五、模板名称说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="700" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong>标签</strong></td>
+          <td width="650">像[ecmsinfo]...[/ecmsinfo]、[e:loop]...[/e:loop]等这种就是调用标签。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong>模板变量</strong></td>
+          <td width="650">像[!--id--]、[!--pagetitle--]等这种就是模板变量。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="150" height="25"><strong>PHP变量</strong></td>
+          <td width="650"><p>像$public_r[newsurl]、$GLOBALS[navclassid]等这种就是PHP变量。</p></td>
+        </tr>
+      </table> </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="fastmaketemp"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">六、如何快速撑握帝国CMS模板制作？</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">要快速掌握帝国CMS模板制作，主要需撑握ecmsinfo、灵动标签两个标签使用。学习可以看“<strong><a href="http://bbs.phome.net/showthread-13-126114-0.html" target="_blank">帝国CMS模板制作 
+      一招鲜吃遍天教程</a></strong>”。再就是要多动手。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25"><strong>相关链接：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、<a href="http://bbs.phome.net/showthread-13-126114-0.html" target="_blank">帝国CMS模板制作 
+      一招鲜吃遍天教程</a></td>
+  </tr>
+  <tr>
+    <td height="25">2、<a href="http://bbs.phome.net/showthread-13-45519-0.html" target="_blank">《帝国网站管理系统》零基础实例入门教程</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

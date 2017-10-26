@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">增加专题</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="ztname">&nbsp; &nbsp; &gt; 名词解释</option>
+          <option value="ztsay">&nbsp; &nbsp; &gt; 专题功能说明</option>
+		  <option value="addzt">&nbsp; &nbsp; &gt; 增加专题</option>
+		  <option value="addinfo">&nbsp; &nbsp; &gt; 增加信息时选择所属专题</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="ztname"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、名词解释</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>专题：</strong>根据主题相关性，将隶属于同一栏目或不同栏目的信息聚集在一起，形成一个主题相关、逻辑完整的页面，使访问者看到该类主题的全面信息。</td>
+  </tr>
+  <tr>
+    <td height="25"><strong>专题与栏目关系：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">专题和栏目具有交叉性，专题既可以包含某一个栏目下的信息，也可以包含不同栏目下的信息。 <br>
+      专题相比栏目更具有灵活性的特点，对于各种临时性、突发性、政策变动、社会热点等事件，使用专题可以不必更改网站结构。 <br>
+      而栏目一旦建立后，就比较固定，适用于比较稳定的信息事件类型。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="ztsay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、帝国CMS的专题功能说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>(一)、帝国CMS主要有以下两种用途：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、将已有栏目下的信息进行再次分类。</strong>就像我们论坛中的“精华贴子”，将精华的内容放到专题，方便用户查看。此类型一般采用列表式。<br> 
+      <strong>2、建立某一事件的多种信息集合。</strong>此类型一般采用封面式或页面内容式。</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>(二)、帝国CMS专题的页面模式支持三种方式：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、列表式：</strong>信息列表分页显示，显示样式由列表模板决定。一般对栏目的信息进行再次分类时使用（比如产品类型为栏目，产品品牌为专题等等）。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、封面式：</strong>页面由多个标签显示出专题信息，不分页，显示样式由封面模板决定。建立某一事件的多种信息集合时使用。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>3、页面内容式：</strong>页面同封面式，显示样式由专题的“页面内容”决定。也是建立某一事件的多种信息集合时使用。相对于封面式，页面内容式更独立，对于生成后不更改的专题用页面内容式更合适。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="addzt"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、增加专题</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>管理专题</strong>”子菜单，进入管理专题界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/addzt1.jpg" width="397" height="403" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>管理专题</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/addzt2.jpg" width="782" height="290"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、从管理专题页面点击“<strong>增加专题</strong>”按钮，进入<strong>增加专题</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/addzt3.jpg" width="732" height="1521" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25" colspan="2"><strong><font color="#FF0000">专题名称、存放文件夹、页面显示模式、选择所属列表模板为增加专题的必填项设置。</font></strong></td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>基本属性</strong></td>
+        </tr>
+        <tr> 
+          <td width="15%" height="25" bgcolor="#FFFFFF"><strong>专题名称</strong></td>
+          <td width="85%" bgcolor="#FFFFFF">输入专题名称。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">隶属信息栏目</td>
+          <td bgcolor="#FFFFFF">选择专题隶属的信息栏目。<br>
+            如果指定则只会在该栏目的增加信息时显示专题（信息选项设置中的所属专题选项）。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>存放文件夹</strong></td>
+          <td bgcolor="#FFFFFF">输入专题存放目录。“上层目录”必须为已存在的目录。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">使用优化方案</td>
+          <td bgcolor="#FFFFFF">选择此专题使用的优化方案。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">文件扩展名</td>
+          <td bgcolor="#FFFFFF">设置生成的文件扩展名。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">绑定域名</td>
+          <td bgcolor="#FFFFFF">给专题页面单独绑定域名，然后通过域名访问（如不绑定,请留空.后面无需加&quot;/&quot;）。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">所属分类</td>
+          <td bgcolor="#FFFFFF">选择专题所属分类，方便统一管理与调用专题。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">专题缩略图</td>
+          <td bgcolor="#FFFFFF">填写专题缩图。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">网页关键字</td>
+          <td bgcolor="#FFFFFF">输入页面的SEO关键字，该内容显示于页面“网页keywords”处。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">专题简介</td>
+          <td bgcolor="#FFFFFF">填写专题介绍。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">排序</td>
+          <td bgcolor="#FFFFFF">设置标签调用专题时的显示顺序（值越小越前面）。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">显示到导航</td>
+          <td bgcolor="#FFFFFF">设置专题是否显示到导航（如：专题导航标签）。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">信息可选择</td>
+          <td bgcolor="#FFFFFF">设置增加信息时是否可选此专题。如果选择否那么增加信息时不会显示这个专题。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>页面设置</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>页面设置</strong></td>
+          <td bgcolor="#FFFFFF">选择专题页面的显示模式。（封面式、列表式、页面内容式）<br>
+            封面式要选择封面模板、列表式要选择列表模板、内容式要录入页面内容。 </td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">封面模板</td>
+          <td bgcolor="#FFFFFF">采用封面式时选择使用的封面模板。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong>所用列表模板</strong></td>
+          <td bgcolor="#FFFFFF">无论专题用列表模板还是封面模板，此处为必选项，兼表明专题所属系统模型。（选择下拉框中白色条选项）</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">列表式设置</td>
+          <td bgcolor="#FFFFFF">填写信息列表的排序方式。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>显示总记录数：</strong>设置限制最大显示信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF"><strong>每页显示记录数：</strong>每页显示信息数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">页面内容</td>
+          <td bgcolor="#FFFFFF">采用页面内容式时此项需录入页面内容（支持标签同封面模板，内容可用Dreamweaver制作）。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>JS相关设置</strong></td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">是否生成JS调用</td>
+          <td bgcolor="#FFFFFF">选择是否生成此专题的JS调用。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">所用JS模板</td>
+          <td bgcolor="#FFFFFF">选择JS调用使用的JS模板。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">最新专题JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示最新信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">热门专题JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示热门信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">推荐专题JS显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示最新推荐信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">热门评论信息js显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示热门评论信息的数量。</td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">头条信息js显示</td>
+          <td bgcolor="#FFFFFF">JS调用显示最新头条信息的数量。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="addinfo"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、增加信息时选择所属专题</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">添加后的专题会显示到增加信息表单里，如下图（说明：增加信息时，选项设置中可选择信息所属专题，一条信息可隶属于多个专题）</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/addzt4.jpg" width="698" height="470" border="0"></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>采集教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">实例教你使用采集</strong></td>
+  </tr>
+  <tr>
+    <td height="27" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>本节通过采集简单的页面作为采集教程实例。<br>
+            <font color="#FF0000">每个系统模型都有自己的采集，无论是内置的还是用户自定义的系统模型，新闻系统有新闻系统采集，下载系统有下载系统采集等等。</font> 
+            <br>
+            下面讲解新闻系统模型的采集，其它系统模型采集基本雷同，用户可举一反三。 </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">采集页面地址</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">
+<p><strong>本例要采集的页面地址：<a href="http://www.phome.net/tmp/cjpage/list.html" target="_blank">http://www.phome.net/tmp/cjpage/list.html</a></strong></p></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr>
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">开始采集</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>采集一般步骤：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、增加采集节点；</td>
+  </tr>
+  <tr> 
+    <td height="25">2、预览采集正则是否正确；</td>
+  </tr>
+  <tr> 
+    <td height="25">3、开始采集；</td>
+  </tr>
+  <tr> 
+    <td height="25">4、对采集的数据进行审核并入库；</td>
+  </tr>
+  <tr> 
+    <td height="25">5、生成栏目及内容HTML页面。</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong><font color="#0000FF">一、增加采集节点：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、登录后台-&gt;“栏目”&gt;“采集管理”&gt;“增加采集节点”；</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、“选择要增加采集的栏目”（选择终极栏目）；</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/cjexp1.jpg" width="785" height="573" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>3、“选择要增加采集的栏目”后进入增加采集节点页面；</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>4、打开要采集的列表页面：<a href="http://www.phome.net/tmp/cjpage/list.html" target="_blank">http://www.phome.net/tmp/cjpage/list.html</a></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/cjexp2.gif" width="462" height="318" border="1"><br>
+      点击查看“源文件”<br>
+      <img src="img/cjexp3.gif" width="357" height="312" border="1"> <br>
+      点击查看，列表页源代码为如下：<br>
+      <img src="img/cjexp4.gif" width="700" height="346" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>5、开始设置采集节点及列表页正则：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">(1)、输入节点名称：<u>采集实例</u></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/cjexp5.gif" width="716" height="32" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">(2)、采集页面地址：<u>http://www.phome.net/tmp/cjpage/list.html</u></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/cjexp6.gif" width="714" height="162" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">(3)、由列表页的源代码：“&lt;a href=&quot;<strong>page1.html</strong>&quot; 
+      target=&quot;_blank&quot;&gt;”，我们得出“内容页地址前缀”为：http://www.phome.net/tmp/cjpage/</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/cjexp7.gif" width="716" height="47" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">(4)、设置“信息页链接正则”：由列表页的源代码得出。</td>
+  </tr>
+  <tr> 
+    <td height="25">图1：页面源代码<br>
+      <img src="img/cjexp8.gif" width="700" height="337" border="1"> <br>
+      图2：得出的信息页链接正则 <br>
+      <img src="img/cjexp9.gif" width="716" height="166" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>6、点击采集的内容页页面并查看源文件：<a href="http://www.phome.net/tmp/cjpage/page4.html" target="_blank">http://www.phome.net/tmp/cjpage/page4.html</a></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">图1：内容页页面<br>
+      <img src="img/cjexp10.gif" width="704" height="228" border="1"><br>
+      图2：内容页源代码<br>
+      <img src="img/cjexp11.gif" width="686" height="381" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>7、设置内容页内容正则：(标题及内容正则)</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">(1)、标题正则：由源代码内容我们得出“新闻标题”正则为：</td>
+  </tr>
+  <tr> 
+    <td height="25">图1：页面源代码<br>
+      <img src="img/cjexp12.gif" width="689" height="379" border="1"> <br>
+      图2：得出的标题正则 <br>
+      <img src="img/cjexp13.gif" width="713" height="201" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="25">(2)、内容正则：由源代码内容我们得出“新闻内容”正则为：</td>
+  </tr>
+  <tr> 
+    <td height="25">图1：页面源代码<br>
+      <img src="img/cjexp14.gif" width="688" height="380" border="1"> <br>
+      图2：得出的新闻内容正则 <br>
+      <img src="img/cjexp15.gif" width="718" height="204" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">8、点击“提交”按钮即可增加节点完毕，整个表单最终效果如下：</td>
+  </tr>
+  <tr> 
+    <td height="25"><a href="cjexpzz.html" target="_blank">[点击查看]</a></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong><font color="#0000FF">二、预览采集正则是否正确：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、上面增加采集节点后，我们返回“管理节点”页面，如下：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/cjexp16.gif" width="739" height="237" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、点击“预览”采集，进入节点正则预览与验证：</td>
+  </tr>
+  <tr> 
+    <td height="25">图1：采集页面地址列表<br>
+      <img src="img/cjexp17.gif" width="711" height="225" border="1"><br>
+      图2：信息链接列表<br>
+      <img src="img/cjexp18.gif" width="694" height="356" border="1"> <br>
+      图3：采集的内容页内容<br>
+      <img src="img/cjexp19.gif" width="682" height="569" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="25">3、上面链接列表页及内容页内容预览无误后方可进行采集操作。</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong><font color="#0000FF">三、开始采集：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、上面的采集节点正则预览无误后，我们返回“管理节点”页面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/cjexp20.gif" width="734" height="299" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、点击上面的“开始采集”链接，开始进行采集；</td>
+  </tr>
+  <tr> 
+    <td height="25">3、采集信息完成后，系统会转向采集入库页面，如下：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/cjexp21.gif" width="819" height="350" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong><font color="#0000FF">四、对采集的数据进行审核并入库：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/cjexp22.gif" width="819" height="406" border="1"><br>
+      即可完成入库操作：<br>
+      <img src="img/cjexp23.gif" width="683" height="205" border="1"> <br>
+      管理栏目信息也可以看到我们刚才入库的信息： <br>
+      <img src="img/cjexp24.gif" width="800" height="489" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong><font color="#0000FF">五、生成栏目及内容HTML页面：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">点击“系统”&gt;“数据更新”&gt;“数据更新中心”，进入数据更新中心页面：</td>
+  </tr>
+  <tr> 
+    <td height="25">1、生成首页：点击“刷新首页”。</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/cjexp25.gif" width="546" height="332" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、生成栏目页：“刷新多栏目页面”选择“国内新闻”这个栏目，然后点击“开始刷新”。</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/cjexp26.gif" width="548" height="300" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、生成内容页：“按条件生成信息内容页面”：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/cjexp27.gif" width="765" height="263" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong><font color="#0000FF">六、预览前台页面</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">首页：<br>
+      <img src="img/cjexp28.gif" width="800" height="619" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="25">列表页：<br>
+      <img src="img/cjexp30.gif" width="800" height="619" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="25">信息内容页：<br>
+      <img src="img/cjexp29.gif" width="800" height="615" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25">至此本实例讲解完毕。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr>
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">常见问题</font></strong></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#FFFFFF">1、提示信息：Warning: preg_replace() [function.preg-replace]: 
+      Compilation failed: range out of order in character class at offset 83 in 
+      <br> <strong>答：你的采集正则变量名写错导致，请检查你的正则变量。</strong></td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

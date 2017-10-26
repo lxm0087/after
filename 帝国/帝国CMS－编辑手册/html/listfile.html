@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">附件管理</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="listfilesay">&nbsp; &nbsp; &gt; 名词解释</option>
+          <option value="listfile">&nbsp; &nbsp; &gt; 附件管理</option>
+          <option value="listfile1">&nbsp; &nbsp; &nbsp; &gt; 数据库式管理附件</option>
+		  <option value="listfile2">&nbsp; &nbsp; &nbsp; &gt; 目录式管理附件</option>
+		  <option value="tranmorefile">&nbsp; &nbsp; &gt; 上传多附件</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>对网站上传的附件进行管理。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="listfilesay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、名词解释</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>数据库式管理附件：</strong>管理通过系统后台上传的附件。 <br>
+      <strong>目录式管理附件：</strong>管理站点所有的附件，包括FTP上传及通过系统后台上传的附件。 <br>
+      附件上传有两种方式：通过FTP上传或者帝国CMS后台直接上传。 附件管理有两种形式：数据库式管理附件、目录式管理附件。 </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="listfile"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、附件管理</font></strong></td>
+  </tr>
+  <tr id="listfile1"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(一)、数据库式管理附件</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>数据库式管理附件</strong>”子菜单，进入数据库式管理附件界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/listfile1.jpg" width="395" height="406" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>数据库式管理附件</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/listfile2.jpg" width="839" height="506" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>ID</strong></td>
+          <td>附件ID序号，增加附件时由系统按顺序依次生成。如果ID是粗体（如ID6）表示有信息引用，点击ID即可查看信息页面</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%" height="25"><strong>文件名</strong></td>
+          <td width="85%">附件文件名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>增加者</strong></td>
+          <td>附件的增加者。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>文件大小</strong></td>
+          <td>附件大小（KB）。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>增加时间</strong></td>
+          <td>附件增加的时间。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>操作</strong></td>
+          <td>[删除]：勾选多选框，单击删除按钮，删除已增加的附件。注意：删除的附件不可恢复，此操作需谨慎。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[搜索]按钮</strong></td>
+          <td>通过设置关键字、选择附件类型及栏目搜索附件进行管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[批量删除]按钮</strong></td>
+          <td>选择将删除的附件所在行，勾选多选框，单击批量删除按钮，批量删除已增加的附件。 </td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[目录式管理附件]按钮</strong></td>
+          <td>数据式-&gt;目录式管理附件转换按钮。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[上传多附件]按钮</strong></td>
+          <td>进入上传多附件按钮。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[清理失效附件]</strong></td>
+          <td>清除未经提交的信息所产生的附件。如增加信息时，编辑区上传了附件，但该信息放弃提交后，该附件即成了失效附件。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr id="listfile2"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(二)、目录式管理附件</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>目录式管理附件</strong>”子菜单，进入目录式管理附件界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listfile3.jpg" width="398" height="408"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入目录式管理附件界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32">图1：由于本教程设置附件按栏目目录存放，故图中，从非栏目上传的附件均存放于P目录中，其余9个目录为栏目上传的附件目录。<br>
+      <img src="img/listfile8.jpg" width="772" height="549"><br>
+      图2： <br>
+      <img src="img/listfile4.jpg" width="807" height="387"></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(三)、附件管理相关内容</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>附件存放目录设置：</strong><br>
+      单击菜单“系统”&gt;“系统设置”&gt;“系统参数设置”子菜单，进入网站基本信息配置界面，单击“文件设置”属性进行附件存放目录设置：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listfile7.jpg" width="762" height="347"><br>
+      还可对后台上传附件的大小、扩展名等进行设置。 </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tranmorefile"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、上传多附件</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>上传多附件</strong>”子菜单，进入上传多附件界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listfile5.jpg" width="398" height="403"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入上传多附件界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listfile6.jpg" width="774" height="398"></td>
+  </tr>
+  <tr>
+    <td height="25">从后台上传多附件时，可通过上传多附件菜单，选择需要上传的附件个数及附件类别进行上传；同时可将各附件分别命名方便管理。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

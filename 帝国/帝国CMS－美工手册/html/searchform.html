@@ -1,0 +1,350 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>搜索表单制作语法说明</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">搜索表单制作</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="searchformvar">&nbsp; &nbsp; &gt; 搜索表单的变量说明</option>
+          <option value="simplesearchformexp">&nbsp; &nbsp; &gt; 单条件搜索的表单制作范例</option>
+		  <option value="doublesearchform">&nbsp; &nbsp; &gt; 搜索表单多条件并列搜索的语法说明</option>
+		  <option value="doublesearchformexp">&nbsp; &nbsp; &gt; 多条件并列搜索的表单制作范例</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>帝国CMS内置强大的搜索功能，用户只需制作搜索表单指向搜索处理页面即可实现相应搜索。本文讲解：搜索表单制作语法。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="searchformvar"> 
+    <td height="25"><strong><font color="#FFFFFF">搜索表单的变量说明</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr bgcolor="#C3EFFF"> 
+    <td width="14%" height="23"><font color="#000000">&nbsp;变量名</font></td>
+    <td width="31%"><font color="#000000">说明</font></td>
+    <td width="55%"><font color="#000000">例子</font></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td rowspan="2">搜索表单提交地址</td>
+    <td height="25">POST方式：/e/search/index.php</td>
+    <td>&lt;form name=&quot;searchform&quot; method=&quot;post&quot; action=&quot;<strong>/e/search/index.php</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">GET方式：/e/search/?searchget=1</td>
+    <td><strong>/e/search/?searchget=1</strong>&amp;keyboard=帝国&amp;show=title</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">keyboard</td>
+    <td>搜索关键字变量</td>
+    <td>&lt;input name=&quot;<strong>keyboard</strong>&quot; type=&quot;text&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">show</td>
+    <td>搜索字段变量<font color="#666666">(多个字段用&quot;,&quot;隔开。搜索字段必须是后台系统模型开启搜索项的字段)</font></td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>show</strong>&quot; 
+      value=&quot;<strong>title,newstext</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">classid</td>
+    <td>搜索栏目ID<font color="#666666">(</font><font color="#666666">不设置为不限，多个栏目可用&quot;,&quot;隔开，设置父栏目会搜索所有子栏目)</font><br></td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>classid</strong>&quot; 
+      value=&quot;<strong>1</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">ztid</td>
+    <td>搜索专题ID<font color="#666666">(</font><font color="#666666">不设置为不限，多个专题可用&quot;,&quot;隔开)</font></td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>ztid</strong>&quot; 
+      value=&quot;<strong>1</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">tbname</td>
+    <td>按数据表搜索<font color="#666666">(需与搜索模板ID结合)<br>
+      按表时，搜索自定义字段一定要注意搜索模板选择的所属系统模型是否对应。</font></td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>tbname</strong>&quot; 
+      value=&quot;<strong>news</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">tempid</td>
+    <td>所用搜索模板ID<font color="#666666">(一般跟按表搜索结合使用)</font><br></td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>tempid</strong>&quot; 
+      value=&quot;<strong>1</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">starttime与endtime</td>
+    <td>分别为搜索发布起始时间与结束时间的信息<font color="#666666">(不填为不限．格式：2008-02-27)</font></td>
+    <td>&lt;input name=&quot;<strong>starttime</strong>&quot; type=&quot;text&quot; 
+      value=&quot;0000-00-00&quot; size=&quot;12&quot;&gt;<br> &lt;input name=&quot;<strong>endtime</strong>&quot; 
+      type=&quot;text&quot; value=&quot;0000-00-00&quot; size=&quot;12&quot;&gt; 
+    </td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">startprice与endprice</td>
+    <td>分别为商品价格的起始价格与结束价格<font color="#666666">(price字段,不填为不限)</font></td>
+    <td>&lt;input name=&quot;<strong>startprice</strong>&quot; type=&quot;text&quot; 
+      value=&quot;0&quot; size=&quot;6&quot;&gt;<br> &lt;input name=&quot;<strong>endprice</strong>&quot; 
+      type=&quot;text&quot; value=&quot;0&quot; size=&quot;6&quot;&gt; </td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">搜索特殊字段</td>
+    <td><strong>id</strong> : 按信息ID搜索<br>
+      <strong>keyboard</strong> : 按关键字搜索(可实现按tags列出信息)<br>
+      <strong>userid</strong> : 按发布者用户ID搜索<br>
+      <strong>username</strong> : 按发布者用户名搜索</td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>show</strong>&quot; 
+      value=&quot;<strong>keyboard</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">member</td>
+    <td>值为0则不限制<br>
+      值为1则为只搜索会员投稿的信息<br>
+      值为2则为只搜索管理员增加的信息</td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>member</strong>&quot; 
+      value=&quot;<strong>1</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">orderby</td>
+    <td><strong>排序字段：</strong><br>
+      可指定搜索结果页面的排序字段名。不指定为按发布时间(newstime)排序。排序字段必须是后台系统模型开启排序项的字段。<br> </td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>orderby</strong>&quot; 
+      value=&quot;<strong>id</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">myorder</td>
+    <td><strong>排序方式：</strong><br>
+      0:倒序排列(默认)<br>
+      1:顺序排列 </td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>myorder</strong>&quot; 
+      value=&quot;<strong>1</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">andor</td>
+    <td>设置多条件查询之间关联关系，有两种：<br>
+      or : 或者的关系(默认)<br>
+      and : 并且的关系</td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>andor</strong>&quot; 
+      value=&quot;<strong>and</strong>&quot;&gt;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">hh</td>
+    <td><strong>逻辑运算联结符变量：</strong><br>
+      LT : 小于<br>
+      GT : 大于<br>
+      EQ : 等于<br>
+      LE : 小于等于<br>
+      GE : 大于等于<br>
+      NE : 不等于<br>
+      IN : 包含<font color="#666666">(搜索关键字用空格隔开每个值)</font><br>
+      BT : 范围，两个值之间<font color="#666666">(搜索关键字用空格隔开两个值)</font><br>
+      LK : 模糊查询(默认)</td>
+    <td>&lt;input type=&quot;hidden&quot; name=&quot;<strong>hh</strong>&quot; 
+      value=&quot;<strong>LK</strong>&quot;&gt;</td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="simplesearchformexp"> 
+    <td height="25"><strong><font color="#FFFFFF">单条件搜索的表单制作范例</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">一、表单范例1：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、用Dreamweaver制作好表单：</td>
+  </tr>
+  <tr> 
+    <td height="25">设计视图：<br>
+      <img src="img/searchform2.gif" width="336" height="80" border="1"><br> 
+      <br>
+      代码模式下的表单代码<br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 21px'> 
+            <p>&lt;table width=&quot;320&quot; border=&quot;0&quot; cellspacing=&quot;1&quot; cellpadding=&quot;3&quot;&gt;<br>
+              <font color="#FF0000">&lt;form name=&quot;searchform&quot; method=&quot;post&quot; 
+              action=&quot;/e/search/index.php&quot;&gt;</font><br>
+              &nbsp; &nbsp; &lt;tr&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt;关键字：<font color="#FF0000">&lt;input 
+              name=&quot;keyboard&quot; type=&quot;text&quot; size=&quot;10&quot;&gt;</font>&lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt;范围：<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<font color="#FF0000">&lt;select 
+              name=&quot;show&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;title&quot;&gt;标题&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;smalltext&quot;&gt;简介&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;newstext&quot;&gt;内容&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;writer&quot;&gt;作者&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;title,smalltext,newstext,writer&quot;&gt;搜索全部&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;/select&gt;</font>&lt;/td&gt;<br>
+              &nbsp; &nbsp; &lt;/tr&gt;<br>&nbsp; &nbsp; &lt;tr&gt;<br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt;栏　目:<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<font color="#FF0000">&lt;select 
+              name=&quot;classid&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;0&quot;&gt;搜索全部&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;1&quot;&gt;新闻中心&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;4&quot;&gt;技术文档&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;option value=&quot;22&quot;&gt;下载中心&lt;/option&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;/select&gt;</font> &lt;/td&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt;&lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;搜索&quot;&gt;&lt;/td&gt;<br>&nbsp; &nbsp; &lt;/tr&gt;<br>&lt;/form&gt;<br>&lt;/table&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">2、最终搜索表单显示效果为下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"><img src="img/searchform1.gif" width="293" height="83" border="1"> 
+    </td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="doublesearchform"> 
+    <td height="25"><strong><font color="#FFFFFF">搜索表单多条件并列搜索的语法说明</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr> 
+    <td height="23"><strong><font color="#0000FF">多字段、多逻辑运算联结符并列搜索</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="23"><strong>(一)、多字段并列搜索：有“字符串”与“数组”两种传递方式</strong></td>
+  </tr>
+  <tr> 
+    <td height="23">1、字符串传递为例子：</td>
+  </tr>
+  <tr> 
+    <td height="23">&lt;input type=&quot;hidden&quot; name=&quot;hh&quot; value=&quot;LK&quot;&gt;<br> 
+      &lt;input type=&quot;hidden&quot; name=&quot;show&quot; value=&quot;title,writer&quot;&gt;<br> 
+      &lt;input type=&quot;hidden&quot; name=&quot;keyboard&quot; value=&quot;标题,作者&quot;&gt;<br> 
+      <font color="#666666">（说明：上面为模糊查询title字段包含“标题”字符或者writer字段包含“作者”的信息）</font></td>
+  </tr>
+  <tr> 
+    <td height="23">2、数组传递为例子：</td>
+  </tr>
+  <tr> 
+    <td height="23">&lt;input type=&quot;hidden&quot; name=&quot;hh&quot; value=&quot;LK&quot;&gt;<br> 
+      &lt;input type=&quot;hidden&quot; name=&quot;show[]&quot; value=&quot;title&quot;&gt;<br> 
+      &lt;input type=&quot;hidden&quot; name=&quot;keyboard[]&quot; value=&quot;标题&quot;&gt;<br> 
+      &lt;input type=&quot;hidden&quot; name=&quot;show[]&quot; value=&quot;writer&quot;&gt;<br> 
+      &lt;input type=&quot;hidden&quot; name=&quot;keyboard[]&quot; value=&quot;作者&quot;&gt;<br> 
+      <font color="#666666">（说明：上面为模糊查询title字段包含“标题”字符或者writer字段包含“作者”的信息）</font></td>
+  </tr>
+  <tr> 
+    <td height="23"><strong>（二）、多逻辑运算联结符并列搜索</strong></td>
+  </tr>
+  <tr> 
+    <td height="23">1、字符串传递为例子：</td>
+  </tr>
+  <tr> 
+    <td height="23">&lt;input type=&quot;hidden&quot; name=&quot;hh&quot; value=&quot;LK,EQ&quot;&gt;<br> 
+      &lt;input type=&quot;hidden&quot; name=&quot;show&quot; value=&quot;title,writer&quot;&gt;<br> 
+      &lt;input type=&quot;hidden&quot; name=&quot;keyboard&quot; value=&quot;标题,作者&quot;&gt;<br> 
+      <font color="#666666">（说明：上面为模糊查询title字段包含“标题”字符或者writer字段等于“作者”的信息）</font></td>
+  </tr>
+  <tr> 
+    <td height="23">2、字符串传递为例子：</td>
+  </tr>
+  <tr> 
+    <td height="23">&lt;input type=&quot;hidden&quot; name=&quot;show[]&quot; 
+      value=&quot;title&quot;&gt;<br> &lt;input type=&quot;hidden&quot; name=&quot;hh[]&quot; 
+      value=&quot;LK&quot;&gt;<br> &lt;input type=&quot;hidden&quot; name=&quot;keyboard[]&quot; 
+      value=&quot;标题&quot;&gt;<br> &lt;input type=&quot;hidden&quot; name=&quot;show[]&quot; 
+      value=&quot;writer&quot;&gt;<br> &lt;input type=&quot;hidden&quot; name=&quot;hh[]&quot; 
+      value=&quot;EQ&quot;&gt;<br> &lt;input type=&quot;hidden&quot; name=&quot;keyboard[]&quot; 
+      value=&quot;作者&quot;&gt;<br> <font color="#666666">（说明：上面为模糊查询title字段包含“标题”字符或者writer字段等于“作者”的信息）</font></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr id="doublesearchformexp"> 
+    <td height="25"><strong><font color="#FFFFFF">多条件并列搜索的表单制作范例</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">二、表单范例2：实现按标题、作者、录入者与信息ID同时搜索的表单</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、用Dreamweaver制作好表单：</td>
+  </tr>
+  <tr> 
+    <td height="25">设计视图：<br>
+      <img src="img/searchform5.gif" width="609" height="174" border="1"><br> 
+      <br>
+      代码模式下的表单代码<br>
+      <img src="img/searchform4.gif" width="742" height="978" border="1"> <br>
+      <br>
+      上面例子html代码<br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all;line-height: 21px'> 
+            <p><font color="#FF0000">&lt;form name=&quot;searchform&quot; method=&quot;post&quot; 
+              action=&quot;/e/search/index.php&quot;&gt;</font><br>
+              &nbsp;&nbsp;&lt;table width=&quot;550&quot; border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;3&quot; cellspacing=&quot;1&quot; class=&quot;tableborder&quot;&gt;<br>
+              &nbsp; &nbsp; <font color="#FF0000">&lt;input type=&quot;hidden&quot; 
+              name=&quot;tbname&quot; value=&quot;news&quot;&gt;<br>
+              &nbsp; &nbsp; &lt;input type=&quot;hidden&quot; name=&quot;tempid&quot; 
+              value=&quot;1&quot;&gt;<br>
+              &nbsp; &nbsp; &lt;input type=&quot;hidden&quot; name=&quot;andor&quot; 
+              value=&quot;and&quot;&gt;</font><br>
+              &nbsp; &nbsp; &lt;tr class=&quot;header&quot;&gt; <br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;td colspan=&quot;2&quot;&gt;新闻搜索&lt;/td&gt;<br>&nbsp; &nbsp; &lt;/tr&gt;<br>&nbsp; &nbsp; &lt;tr bgcolor=&quot;#FFFFFF&quot;&gt; <br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;td width=&quot;97&quot;&gt;标题：&lt;/td&gt;<br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;td width=&quot;388&quot;&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <font color="#FF0000">&lt;input 
+              type=&quot;hidden&quot; name=&quot;show[]&quot; value=&quot;title&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;input type=&quot;hidden&quot; 
+              name=&quot;hh[]&quot; value=&quot;LK&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;input name=&quot;keyboard[]&quot; 
+              type=&quot;text&quot;&gt;</font><br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;/td&gt;<br>&nbsp; &nbsp; &lt;/tr&gt;<br>&nbsp; &nbsp; &lt;tr bgcolor=&quot;#FFFFFF&quot;&gt; <br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt;作者：&lt;/td&gt;<br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <font color="#FF0000">&lt;input 
+              type=&quot;hidden&quot; name=&quot;show[]&quot; value=&quot;writer&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;input type=&quot;hidden&quot; 
+              name=&quot;hh[]&quot; value=&quot;LK&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;input name=&quot;keyboard[]&quot; 
+              type=&quot;text&quot;&gt;</font><br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;/td&gt;<br>&nbsp; &nbsp; &lt;/tr&gt;<br>&nbsp; &nbsp; &lt;tr bgcolor=&quot;#FFFFFF&quot;&gt; <br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt;录入者：&lt;/td&gt;<br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <font color="#FF0000">&lt;input 
+              type=&quot;hidden&quot; name=&quot;show[]&quot; value=&quot;username&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;input type=&quot;hidden&quot; 
+              name=&quot;hh[]&quot; value=&quot;EQ&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;input name=&quot;keyboard[]&quot; 
+              type=&quot;text&quot;&gt;</font><br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&lt;/td&gt;<br>&nbsp; &nbsp; &lt;/tr&gt;<br>&nbsp; &nbsp; &lt;tr bgcolor=&quot;#FFFFFF&quot;&gt; <br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt;信息ID范围：&lt;/td&gt;<br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt; <br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <font color="#FF0000">&lt;input 
+              type=&quot;hidden&quot; name=&quot;show[]&quot; value=&quot;id&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;input type=&quot;hidden&quot; 
+              name=&quot;hh[]&quot; value=&quot;BT&quot;&gt;<br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &lt;input name=&quot;keyboard[]&quot; 
+              type=&quot;text&quot;&gt;</font><br>
+              &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;font color=&quot;#666666&quot;&gt;(例：“1 6”表示1到6之间) &lt;/font&gt;<br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;/td&gt;<br>&nbsp; &nbsp; &lt;/tr&gt;<br>&nbsp; &nbsp; &lt;tr bgcolor=&quot;#FFFFFF&quot;&gt; <br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt;&amp;nbsp;&lt;/td&gt;<br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;td&gt; <br>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;input type=&quot;submit&quot; name=&quot;Submit&quot; value=&quot;马上搜索&quot;&gt;<br>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;font color=&quot;#666666&quot;&gt;(不设置为不限)&lt;/font&gt;<br>&nbsp; &nbsp;&nbsp; &nbsp;&lt;/td&gt;<br>&nbsp; &nbsp; &lt;/tr&gt;<br>&nbsp;&nbsp;&lt;/table&gt;<br>&lt;/form&gt;</p></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">2、最终搜索表单显示效果为下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"><img src="img/searchform3.gif" width="696" height="202" border="1"> 
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

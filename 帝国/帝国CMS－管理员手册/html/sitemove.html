@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">网站迁移</strong></td>
+    <td width="50%"><div align="center"> </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="postdatasay"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、网站迁移介绍：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">网站迁移就是指将帝国CMS网站在不同服务器或空间之间进行转移。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="postdata"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、帝国CMS网站迁移的多种方法：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>方法一：到新服务器重装帝国CMS的方法：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">具体步骤可以看：<a href="http://bbs.phome.net/showthread-35-46681-0.html" target="_blank">http://bbs.phome.net/showthread-35-46681-0.html</a><br>
+      <font color="#666666">（此方法的好处是不用考虑重新设置目录权限问题） </font></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>方法二：备份数据库和目录到新空间恢复：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、恢复数据库数据到新服务器；<br>
+      2、上传网站目录到新服务器，并设置好相应的目录权限；<br>
+      3、修改e/class/config.php数据库配置参数（设置数据库帐号、密码及数据库名；utf-8版修改文件要用Dreamweaver等工具修改，不能用记事本）；<br>
+      4、完成。 </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="postdata"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、恢复数据库的多种方法：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>方法一：通过后台备份功能备份的数据库：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">可以用备份王恢复或者重装帝国CMS登陆后台恢复。</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>方法二：直接复制MYSQL安装目录下的“/data/数据库名”目录备份的数据库：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><p>将备份目录复制至新服务器MYSQL安装目录下的“/data/数据库名”目录。<br>
+        （自己的服务器可以用此方法，且要注意MYSQL版本数据兼容。）</p>
+      </td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>方法三：用第三方数据库备份工具备份的数据库：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">比如：<a href="http://www.phome.net/ebak2010/">帝国备份王</a>、phpmyadmin等工具备份的数据库，用相应的备份工具恢复数据库。如用帝国备份王备份就用帝国备份王恢复数据库。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="postdatasay"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、常见问题与注意事项：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、备份数据库出现＂You have an error in your SQL syntax;...right syntax 
+      to use near '-1' at line 1＂错误<br>
+      解决方法：到＂参数设置＂那把＂支持MYSQL查询方式＂打勾去掉即可。</td>
+  </tr>
+  <tr> 
+    <td height="25">2、用“到新服务器重装帝国CMS的方法”的注意事项？<br>
+      答：如果你原来数据删除默认系统模型的数据表，新安装帝国CMS后要到管理数据表里删除原来没有的数据表，然后再恢复备份的数据库。<br>
+      还有就是模板的图片和css目录要上传。</td>
+  </tr>
+  <tr>
+    <td height="25">3、用“备份数据库和目录到新空间恢复”的注意事项？<br>
+      答：需要重新设置栏目目录和帝国CMS本身需要设置的目录权限为777。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25"><strong>相关链接：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、<a href="http://bbs.phome.net/showthread-35-46681-0.html" target="_blank">帝国网站管理系统之网站迁移教程</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

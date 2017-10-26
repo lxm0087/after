@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>phome_enewspubtemp 数据表字段解释</title>
+<link href="../images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%" border="0" align="center">
+  <tr> 
+    <td width="100%"><strong><font color="#0000FF">phome_enewspubtemp 数据表字段解释（公共模板表）</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="800" border="0" cellspacing="1" cellpadding="3" class="tableborder">
+  <tr class="header"> 
+    <td width="20%" height="30">字段名</td>
+    <td width="15%">类型</td>
+    <td width="20%">解释</td>
+    <td width="45%">附加说明</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>id</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>indextemp</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">首页模板</td>
+    <td bgcolor="#FFFFFF">/index.html页面</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>cptemp</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">控制面板模板</td>
+    <td bgcolor="#FFFFFF">所有会员动态页的头部和尾部模板</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>searchtemp</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">高级搜索表单模板</td>
+    <td bgcolor="#FFFFFF">/search/index.html页面</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>searchjstemp</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">搜索JS模板[横向]</td>
+    <td bgcolor="#FFFFFF">/d/js/js/search_news1.js</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>searchjstemp1</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">搜索JS模板[纵向]</td>
+    <td bgcolor="#FFFFFF">/d/js/js/search_news2.js</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>otherlinktemp</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">相关信息链接模板</td>
+    <td bgcolor="#FFFFFF">[!--other.link--]变量</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>downsofttemp</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">下载地址模板</td>
+    <td bgcolor="#FFFFFF">[!--downpath--]变量</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>onlinemovietemp</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">在线播放地址模板</td>
+    <td bgcolor="#FFFFFF">[!--onlinepath--]变量</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>listpagetemp</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">列表分页模板</td>
+    <td bgcolor="#FFFFFF">[!--show.page--]变量</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>gbooktemp</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">留言板模板</td>
+    <td bgcolor="#FFFFFF">/e/tool/gbook/页面</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>loginiframe</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">登陆状态模板</td>
+    <td bgcolor="#FFFFFF">框架调用，/e/member/iframe/页面</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>otherlinktempsub</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(4)</td>
+    <td bgcolor="#FFFFFF">相关链接模板标题截取字数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>otherlinktempdate</strong></td>
+    <td bgcolor="#FFFFFF">varchar(20)</td>
+    <td bgcolor="#FFFFFF">相关链接模板时间格式</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>loginjstemp</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">JS调用登陆状态模板</td>
+    <td bgcolor="#FFFFFF">JS调用，/e/member/login/loginjs.php页面</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>downpagetemp</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">最终下载页模板</td>
+    <td bgcolor="#FFFFFF">/e/DownSys/DownSoft/页面</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>pljstemp</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">评论JS调用模板</td>
+    <td bgcolor="#FFFFFF">/e/pl/more/页面</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>schalltemp</strong></td>
+    <td bgcolor="#FFFFFF">mediumtext</td>
+    <td bgcolor="#FFFFFF">全站搜索模板</td>
+    <td bgcolor="#FFFFFF">/e/sch/页面</td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>schallsubnum</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">全站搜索简介截取字数</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>schalldate</strong></td>
+    <td bgcolor="#FFFFFF">varchar(20)</td>
+    <td bgcolor="#FFFFFF">全站搜索时间格式</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+</table>
+</body>
+</html>

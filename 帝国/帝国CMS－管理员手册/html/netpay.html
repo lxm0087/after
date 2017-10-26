@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">网银支付</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="netpaysay">&nbsp; &nbsp; &gt; 网银支付介绍</option>
+		  <option value="settopay">&nbsp; &nbsp; &gt; 支付参数配置</option>
+          <option value="netpay">&nbsp; &nbsp; &gt; 网银支付接口管理与配置</option>
+		  <option value="payrecord">&nbsp; &nbsp; &gt; 管理支付记录</option>
+		  <option value="addnetpay">&nbsp; &nbsp; &gt; 新增支付接口说明</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="netpaysay"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><font color="#FFFFFF"><strong>一、网银支付介绍：</strong></font></td>
+  </tr>
+  <tr> 
+    <td height="25"> 帝国CMS默认内置“支付宝”、“财付通”、“网银在线”三种接口，同时用户还可以自己增加支付接口。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="settopay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、支付参数配置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td width="100%" height="25">(一)、登录后台，单击“<strong>其他</strong>”菜单，选择“<strong>支付参数配置</strong>”子菜单，进入支付参数配置界面：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/netpay1.jpg" width="605" height="297" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">(二)、进入支付参数配置界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/netpay2.jpg" width="700" height="198"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%">一元可购买</td>
+          <td width="86%">设置支付一元可购买多少点数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>最小支付金额</td>
+          <td>设置最小的支付金额。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="netpay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、网银支付接口管理与配置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td width="100%" height="25">(一)、登录后台，单击“<strong>其他</strong>”菜单，选择“<strong>管理支付接口</strong>”子菜单，进入管理支付接口界面：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/netpay3.jpg" width="608" height="274" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">(二)、进入<strong>管理支付接口</strong>界面，点击对应接口的“<strong>配置接口</strong>”，进入支付接口参数配置界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/netpay4.jpg" width="700" height="250"></td>
+  </tr>
+  <tr>
+    <td height="25">(三)、进入支付接口参数配置界面：</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/netpay5.jpg" width="700" height="402"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>接口类型</strong></td>
+          <td width="86%">此支付接口的唯一标识。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>接口状态</strong></td>
+          <td>选择是否启用此支付接口。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>接口名称</strong></td>
+          <td><p>填写此支付接口的名称。</p></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>接口描述</strong></td>
+          <td>填写此支付接口的介绍。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>商户号(ID)</strong></td>
+          <td>填写接口商提供给你的商户号。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>密钥(KEY)</strong></td>
+          <td>填写接口商提供给你的密钥。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>手续费</strong></td>
+          <td>填写用此支付接口是否要手续费的提示说明。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>显示排序</strong></td>
+          <td>设置此支付接口的显示顺序。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="payrecord"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><font color="#FFFFFF"><strong>四、管理支付记录：</strong></font></td>
+  </tr>
+  <tr> 
+    <td height="25"> (一)、登录后台，单击“<strong>其他</strong>”菜单，选择“<strong>管理支付记录</strong>”子菜单，进入管理支付记录界面：</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/netpay7.jpg" width="603" height="278"></td>
+  </tr>
+  <tr>
+    <td height="25">(二)、进入管理支付记录界面：</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/netpay6.jpg" width="700" height="213"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="addnetpay"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><font color="#FFFFFF"><strong>五、新增支付接口说明：</strong></font></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF">(一)、新增支付接口的步骤：</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、先制作好支付接口文件（/e/payapi/接口目录/），比如：</strong><br>
+      (1)、先复制/e/payapi/目录下的默认接口目录，比如复制“财付通”，然后目录名称用“diypay”，接着修改接口文件： <br> <img src="img/netpay8.jpg" width="217" height="305" border="1"><br>
+      (2)、然后修改接口目录里的文件：<br> <img src="img/netpay9.jpg" width="254" height="278" border="1"> 
+    </td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、然后进数据库往phome_enewspayapi表增加接口记录：paytype字段填写新增接口的目录名； 
+      </strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>3、完成。</strong></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

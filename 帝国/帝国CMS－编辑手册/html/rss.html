@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">RSS/ATOM/XML调用</strong></td>
+    <td width="50%"><div align="center"> </div></td>
+  </tr>
+  <tr> 
+    <td height="27" colspan="2" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>RSS订阅显示的信息。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="fieldand"> 
+    <td height="25" bgcolor="#4FB4DE"><font color="#FFFFFF"><strong>RSS/ATOM/XML调用语法说明：</strong></font></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>访问地址：/e/web/</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>例子：http://网站地址/e/web/?type=rss2&amp;order=0&amp;orderby=0&amp;classid=1</strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>显示类型：type</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="500" border="0" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td width="20%"><div align="center">xml</div></td>
+          <td width="80%">按XML格式输出信息内容</td>
+        </tr>
+        <tr> 
+          <td><div align="center">atom</div></td>
+          <td>按ATOM格式输出信息内容</td>
+        </tr>
+        <tr> 
+          <td><div align="center">rss1</div></td>
+          <td>按RSS 1.0格式输出信息内容</td>
+        </tr>
+        <tr> 
+          <td><div align="center">rss2</div></td>
+          <td>按RSS 2.0格式输出信息内容（默认）</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>排序方式：order</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="500" border="0" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td width="20%"><div align="center">1</div></td>
+          <td width="80%">按信息id排序</td>
+        </tr>
+        <tr> 
+          <td><div align="center">2</div></td>
+          <td>按评论数排序</td>
+        </tr>
+        <tr> 
+          <td><div align="center">3</div></td>
+          <td>按点击率排序</td>
+        </tr>
+        <tr> 
+          <td><div align="center">4</div></td>
+          <td>按下载数排序</td>
+        </tr>
+        <tr> 
+          <td><div align="center">0</div></td>
+          <td>按发布时间排序（默认）</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>排序方式：orderby</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="500" border="0" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td width="20%"><div align="center">1</div></td>
+          <td width="80%">升序排序</td>
+        </tr>
+        <tr> 
+          <td><div align="center">0</div></td>
+          <td>降序排序（默认）</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>限制显示条件：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td width="17%"><div align="center">classid</div></td>
+          <td width="83%">栏目ID，显示指定栏目的信息。显示多个栏目可以用逗号隔开，如：/e/web/?type=rss2&amp;classid=2,3</td>
+        </tr>
+        <tr> 
+          <td><div align="center">ztid</div></td>
+          <td>专题ID，显示指定专题的信息。显示多个专题可以用逗号隔开，如：/e/web/?type=rss2&amp;ztid=1,2</td>
+        </tr>
+        <tr> 
+          <td><div align="center">mid</div></td>
+          <td>模型ID，列出某一个模型数据表的所有信息，如：/e/web/?type=rss2&amp;mid=1</td>
+        </tr>
+        <tr> 
+          <td><div align="center">不指定</div></td>
+          <td>如果mid、classid与ztid不指定的话，则显示默认表的所有信息。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>其他设置</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+        <tr> 
+          <td> <div align="center"></div>
+            显示条数与简介字数到“参数设置”&gt;“信息设置”那设置。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tagsclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">相关链接</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><a href="http://bbs.phome.net/showthread-13-116463-0.html" target="_blank">1、帝国CMS功能解密之：新版RSS功能</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">友情链接系统</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="linksay">&nbsp; &nbsp; &gt; 友情链接系统说明</option>
+          <option value="link">&nbsp; &nbsp; &gt; 管理友情链接</option>
+          <option value="addlink">&nbsp; &nbsp; &gt; 增加友情链接</option>
+		  <option value="linkclass">&nbsp; &nbsp; &gt; 管理友情链接分类</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="27" colspan="2"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>通过此功能可管理整个网站的友情链接。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="linksay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、友情链接系统说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>前台投票调用方式：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>1、用友情链接标签调用</strong>（[phomelink]每行显示数,显示总数,操作类型,分类id,是否显示原链接[/phomelink]）</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>2、还可以用标签SQL调用。下面以灵动标签为例：</strong>(其中<font color="#FF0000">lname</font>为站点名称字段，<font color="#FF0000">lurl</font>为站点地址字段，<font color="#FF0000">lpic</font>为站点图标地址字段)</td>
+  </tr>
+  <tr> 
+    <td height="25">&lt;ul class=&quot;links_text&quot;&gt;<br>
+      [e:loop={'<font color="#FF0000">select lname,lurl,lpic from [!db.pre!]enewslink 
+      where checked=1 order by myorder,lid</font>',20,24,0}]<br> &lt;li&gt;&lt;a href=&quot;&lt;?=<font color="#FF0000">$bqr[lurl]</font>?&gt;&quot; 
+      target=&quot;_blank&quot; &gt;&lt;?=<font color="#FF0000">$bqr[lname]</font>?&gt;&lt;/a&gt;&lt;/li&gt;<br>
+      [/e:loop]<br> &lt;/ul&gt;</td>
+  </tr>
+  <tr>
+    <td height="25">（按某一分类调用SQL为：select lname,lurl,lpic from [!db.pre!]enewslink 
+      where checked=1<font color="#FF0000"> and classid=分类ID</font> order by myorder,lid）</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="link">
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、管理友情链接</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>插件</strong>”菜单，选择“<strong>管理友情链接</strong>”子菜单，进入管理友情链接界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/link2.jpg" width="552" height="272" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>管理友情链接</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/link3.jpg" width="732" height="634" border="0"><br>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="addlink"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、增加友情链接</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、从<strong>管理友情链接</strong>页面点击“<strong>增加友情链接</strong>”按钮，进入增加友情链接界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/link4.jpg" width="731" height="470"> 
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>站点名称（必填项）</strong></td>
+          <td width="86%">填写友情链接的站点名称。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>显示：</strong>选择是否在前台显示此友情链接。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>站点图标</strong></td>
+          <td>设置友情链接的站点LOGO及尺寸，文字链接此处可不设置。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>站点地址（必填项）</strong></td>
+          <td>设置友情链接的站点网址，及是否在新窗口打开。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>所属分类</strong></td>
+          <td>选择友情链接分类，方便统一管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>点击</strong></td>
+          <td>设置友情链接默认点击次数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>显示顺序</strong></td>
+          <td>设置友情链接在友情链接列表中的显示顺序，值越小排列越靠前。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>站长Email</strong></td>
+          <td>设置友情链接的站长联系邮箱。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>站点简介</strong></td>
+          <td>设置友情链接的站点简介。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="linkclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、友情链接分类管理</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">对于友情链接较多的站点，后台可设置选择性的显示所属类别中的友情链接，方便管理。前台还可以按对应分类调用友情链接。</td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>插件</strong>”菜单，选择“<strong>管理友情链接分类</strong>”子菜单，进入管理友情链接分类界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/link6.jpg" width="551" height="344"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入管理友情链接分类界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/link5.jpg" width="735" height="255" border="0"></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

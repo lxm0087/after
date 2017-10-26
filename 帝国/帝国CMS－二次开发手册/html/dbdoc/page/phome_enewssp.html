@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>phome_enewssp 数据表字段解释</title>
+<link href="../images/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%" border="0" align="center">
+  <tr> 
+    <td width="100%"><strong><font color="#0000FF">phome_enewssp 数据表字段解释（碎片表）</font></strong></td>
+  </tr>
+</table>
+<br>
+<table width="800" border="0" cellspacing="1" cellpadding="3" class="tableborder">
+  <tr class="header"> 
+    <td width="20%" height="30">字段名</td>
+    <td width="15%">类型</td>
+    <td width="20%">解释</td>
+    <td width="45%">附加说明</td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>spid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">碎片ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>spname</strong></td>
+    <td bgcolor="#FFFFFF">varchar(30)</td>
+    <td bgcolor="#FFFFFF">碎片名称</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>varname</strong></td>
+    <td bgcolor="#FFFFFF">varchar(30)</td>
+    <td bgcolor="#FFFFFF">碎片变量名</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>sppic</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">碎片效果图</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>spsay</strong></td>
+    <td bgcolor="#FFFFFF">varchar(255)</td>
+    <td bgcolor="#FFFFFF">碎片描述</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>sptype</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">碎片类型</td>
+    <td bgcolor="#FFFFFF">1为静态信息碎片，2为动态信息碎片，3为代码碎片</td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>cid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">分类ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>classid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">栏目ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>tempid</strong></td>
+    <td bgcolor="#FFFFFF">smallint(6)</td>
+    <td bgcolor="#FFFFFF">标签模板ID</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>maxnum</strong></td>
+    <td bgcolor="#FFFFFF">int(11)</td>
+    <td bgcolor="#FFFFFF">最大信息数量</td>
+    <td bgcolor="#FFFFFF"></td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>sptime</strong></td>
+    <td bgcolor="#FFFFFF">int(10)</td>
+    <td bgcolor="#FFFFFF">增加时间</td>
+    <td bgcolor="#FFFFFF">unix时间戳</td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>groupid</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">用户组权限</td>
+    <td bgcolor="#FFFFFF">多个用户组ID用“,”隔开，如：,1,2,3,</td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>userclass</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">部门权限</td>
+    <td bgcolor="#FFFFFF">多个部门ID用“,”隔开，如：,1,2,3,</td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>username</strong></td>
+    <td bgcolor="#FFFFFF">text</td>
+    <td bgcolor="#FFFFFF">用户权限</td>
+    <td bgcolor="#FFFFFF">多个用户名用“,”隔开，如：,admin,test,</td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>isclose</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否开启</td>
+    <td bgcolor="#FFFFFF">0为开启，1为关闭</td>
+  </tr>
+  
+  <tr> 
+    <td height="30" bgcolor="#FFFFFF"><strong>cladd</strong></td>
+    <td bgcolor="#FFFFFF">tinyint(1)</td>
+    <td bgcolor="#FFFFFF">是否可越权限推送</td>
+    <td bgcolor="#FFFFFF">0为可以，1为不可以</td>
+  </tr>
+  
+</table>
+</body>
+</html>

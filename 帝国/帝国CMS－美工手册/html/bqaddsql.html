@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">标签调用的附加SQL条件和排序参数</strong></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><font color="#FFFFFF"><strong>附加SQL条件和排序参数介绍：</strong></font></td>
+  </tr>
+  <tr> 
+    <td height="25">帝国CMS6.5以上版本在原来所有信息调用标签基础上增加了两个标签参数：“附加SQL条件”和“显示排序”。<br>
+      支持这两个参数的标签有如下：<br>
+      ecmsinfo、灵动标签、phomenews、phomenewspic、phomeflashpic、phomeautopic、listsonclass、phomenewstext 
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><font color="#FFFFFF"><strong>语法说明：</strong></font></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">以灵动标签为例，标签语法为：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">
+	<table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'><tr><td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>[e:loop={栏目ID/专题ID,显示条数,操作类型,只显示有标题图片<font color=red>,附加SQL条件,显示排序</font>}]<br>模板代码内容<br>[/e:loop]</td></tr></table>
+	</td>
+  </tr>
+  <tr>
+    <td height="25">其中“附加SQL条件”和“显示排序”这两个参数，如果不使用可以不设置或者则用''两个单引号表示。例如：<br>
+      [e:loop={1,10,0,0,'',''}]和[e:loop={1,10,0,0}]是一样的效果。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">举例说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">以灵动标签为例</font></strong><font color="#0000FF"><b>：</b></font></td>
+  </tr>
+  <tr> 
+    <td height="25"> <b>例子1：调用标题包含“cms”的新闻</b><br> 6.0以前版本要使用SQL调用，如下：<br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>[e:loop={&quot;select 
+            * from phome_ecms_news where title like '%cms%' and checked=1 order 
+            by newstime desc limit 10&quot;,10,24,0}]<br> &lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; 
+            target=&quot;_blank&quot;&gt;&lt;?=$bqr[title]?&gt;&lt;/a&gt;&lt;br&gt;<br>
+            [/e:loop]</td>
+        </tr>
+      </table>
+      <br>
+      而新版本用下面就可以实现上面效果：<br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>[e:loop={'news',10,18,0<font color=red>,&quot;title 
+            like '%cms%'&quot;,''</font>}]<br> &lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; 
+            target=&quot;_blank&quot;&gt;&lt;?=$bqr[title]?&gt;&lt;/a&gt;&lt;br&gt;<br>
+            [/e:loop]</td>
+        </tr>
+      </table>
+      <br>
+      无需写SQL语句，而且调用父栏目时不需要按原来SQL调用写全所有终极栏目ID，更简单更方便。<br> <br> <b>例子2：按DIGG顶数降序显示新闻信息</b><br>
+      6.0以前版本要使用SQL调用，如下：<br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>[e:loop={&quot;select 
+            * from phome_ecms_news where checked=1 order by diggtop desc limit 
+            10&quot;,10,24,0}]<br> &lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; 
+            target=&quot;_blank&quot;&gt;&lt;?=$bqr[title]?&gt;&lt;/a&gt;&lt;br&gt;<br>
+            [/e:loop]</td>
+        </tr>
+      </table>
+      <br>
+      而新版本用下面就可以实现上面效果：<br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>[e:loop={'news',10,18,0<font color=red>,'','diggtop 
+            desc'</font>}]<br> &lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; 
+            target=&quot;_blank&quot;&gt;&lt;?=$bqr[title]?&gt;&lt;/a&gt;&lt;br&gt;<br>
+            [/e:loop]</td>
+        </tr>
+      </table>
+      <br>
+      还支持多字段排序，比如：'istop desc,id desc,title desc'<br> <br> <b>例子3：显示一周内信息点击排行</b><br>
+      6.0以前版本要使用SQL调用，如下：<br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>[e:loop={&quot;select 
+            * from phome_ecms_news where checked=1 and newstime&gt;UNIX_TIMESTAMP()-86400*7 
+            order by onclick desc limit 10&quot;,10,24,0}]<br> &lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; 
+            target=&quot;_blank&quot;&gt;&lt;?=$bqr[title]?&gt;&lt;/a&gt;&lt;br&gt;<br>
+            [/e:loop]</td>
+        </tr>
+      </table>
+      <br>
+      而新版本用下面就可以实现上面效果：<br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>[e:loop={'news',10,18,0<font color=red>,'newstime&gt;UNIX_TIMESTAMP()-86400*7','onclick 
+            desc'</font>}]<br> &lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; 
+            target=&quot;_blank&quot;&gt;&lt;?=$bqr[title]?&gt;&lt;/a&gt;&lt;br&gt;<br>
+            [/e:loop]</td>
+        </tr>
+      </table>
+      <br>
+      <b>例子4：调用3级头条的信息</b><br>
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>[e:loop={'news',10,18,0<font color=red>,'firsttitle=3'</font>}]<br> &lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; 
+            target=&quot;_blank&quot;&gt;&lt;?=$bqr[title]?&gt;&lt;/a&gt;&lt;br&gt;<br>
+            [/e:loop]</td>
+        </tr>
+      </table> 
+      <br>
+      <b>例子5：调用5级推荐的信息</b><br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>[e:loop={'news',10,18,0<font color=red>,'isgood=5'</font>}]<br> 
+            &lt;a href=&quot;&lt;?=$bqsr[titleurl]?&gt;&quot; target=&quot;_blank&quot;&gt;&lt;?=$bqr[title]?&gt;&lt;/a&gt;&lt;br&gt;<br>
+            [/e:loop]</td>
+        </tr>
+      </table> <br>
+      <br>
+      上面是以灵动标签为例，其他信息调用标签使用也是一样，参数后面直接加上面两个参数即可。 </td>
+  </tr>
+</table>
+<p><br>
+  <br>
+</p>
+</body>
+</html>

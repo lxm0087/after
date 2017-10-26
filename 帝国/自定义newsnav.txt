@@ -1,0 +1,38 @@
+
+下面介绍一个自定义的标签来实现[!--newsnav--] 的效果，如果想修改就好弄了 
+第一步：在e/class/userfun.php中加入下面的函数，函数只有一个参数，就是当前ID 
+
+复制代码
+代码如下:
+
+//当前位置导航 
+function user_linknav($classid) 
+{ 
+global $empire,$dbtbpre; 
+$query="select classname,bclassid,classpath from {$dbtbpre}enewsclass where classid=".$classid; 
+$sql=$empire->query($query); 
+//echo "首 页"; 
+while($r=$empire->fetch($sql)) 
+{ 
+findparent($r[bclassid]); 
+echo " > ".$r[classname].""; 
+} 
+} 
+//当前位置导航，递归查询父栏目 
+function findparent($classid) 
+{ 
+global $empire,$dbtbpre; 
+$query="select classname,bclassid,classpath from {$dbtbpre}enewsclass where classid=".$classid; 
+$sql=$empire->query($query); 
+while($r=$empire->fetch($sql)) 
+{ 
+findparent($r[bclassid]); 
+echo " > ".$r[classname].""; 
+} 
+} 
+
+
+第二步：在模块管理中添加标签，标签符号为linknav,函数名为 user_linknav，标签的格式为[linknav]栏目ID[/linknav] 
+第三步：添加模板变量 nav，内容为 " 您当前的位置: [linknav]$GLOBALS[navclassid][/linknav] ” 
+
+最后。您只需要在模板中调用模板变量[!--temp.nav--] 即可。。。。。。。。。具体样式可以吧 [!--temp.nav--] 放在一个div中。然后设置div的样式即可，也可以修改userfun下面的函数。。函数很简单。就是根据当前栏目向上递归查询

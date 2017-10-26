@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">TAGS管理</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="tagssay">&nbsp; &nbsp; &gt; TAGS功能介绍</option>
+          <option value="tagspage">&nbsp; &nbsp; &gt; 前台TAGS页面语法</option>
+          <option value="settags">&nbsp; &nbsp; &gt; 设置TAGS参数</option>
+          <option value="tags">&nbsp; &nbsp; &gt; 管理TAGS</option>
+		  <option value="tagsclass">&nbsp; &nbsp; &gt; 管理TAGS分类</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tagssay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、TAGS功能介绍</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">帝国CMS的tags功能不仅是作为tags信息列表使用，而且是将tags作为自定义分类来使用，可按TAGS调用信息，可以实现碎片同样的功能，只是tags随时都能分类，更加灵活。比如：某一专题的信息，现在可以不用专题了，直接用tags就可以调用出相同tags名称的专题信息。</td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>帝国CMS的TAGS功能有以下特点：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">(1)、TAGS分类管理：可对TAGS进行分类<br>
+      (2)、管理TAGS<br>
+      (3)、TAGS参数设置：可设定启用TAGS的系统模型和只能选择TAGS的系统模型等<br>
+      (4)、新增TAGS调用标签：可按分类/推荐等属性调用TAGS<br>
+      “[showtags]分类ID,显示数量,每行显示数量,显示排序,只显示推荐,推荐TAGS属性,显示间隔符,是否显示信息数,链接附加参数[/showtags]”<br>
+      (5)、TAGS信息标签调用：标签可按TAGS调用对应信息<br>
+      “[tagsinfo]TAGS的ID,显示条数,标题截取数,标签模板ID,栏目ID,系统模型ID[/tagsinfo]”<br>
+      (6)、清理多余TAGS信息<br>
+      (7)、删除使用率低TAGS信息<br>
+      (8)、删除过期TAGS信息<br>
+      (9)、合并TAGS</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tagspage"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、前台TAGS页面语法</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>前台TAGS访问地址：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">“<strong>/e/tags/?tagid=TAG的ID</strong>”或者“<strong>/e/tags/?tagname=TAG的名称</strong>”</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>附加语法说明：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"> 1、变量 <strong>classid</strong> 指定只显示某一栏目的TAGS信息，例如：/e/tags/tagid=1&amp;classid=2</td>
+  </tr>
+  <tr> 
+    <td height="25">2、变量 <strong>mid</strong> 指定只显示某一系统模型的TAGS信息，例如：/e/tags/tagid=1&amp;mid=1</td>
+  </tr>
+  <tr> 
+    <td height="25">3、指定信息发布起始和结束时间范围：起始时间变量名：<strong>starttime</strong> ；结束时间变量名：<strong>endtime</strong>，例如：/e/tags/tagid=1&amp;starttime=2011-04-20&amp;endtime=2011-05-20</td>
+  </tr>
+  <tr> 
+    <td height="25">4、变量 <strong>line</strong> 指定每页显示信息数，例如：/e/tags/tagid=1&amp;line=30</td>
+  </tr>
+  <tr> 
+    <td height="25">5、变量 <strong>tempid</strong> 指定使用的列表模板，例如：/e/tags/tagid=1&amp;tempid=1</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="settags"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、设置TAGS参数</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>设置TAGS参数</strong>”子菜单，进入设置TAGS参数界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/tags1.jpg" width="403" height="406" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>设置TAGS参数</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/tags2.jpg" width="755" height="342" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">前台开启TAGS</td>
+          <td>设置前台/e/tags/页面是否开启使用。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%" height="25">默认使用的模板</td>
+          <td width="85%">选择不指定tempid情况下使用的列表模板。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">每页显示信息</td>
+          <td>设置不指定line情况下默认的每页显示信息数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">使用TAGS的系统模型</td>
+          <td>选择要使用TAGS功能的系统模型。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">只能选择TAGS的系统模型</td>
+          <td>选择不让手动填写TAGS的系统模型。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tags"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、管理TAGS</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>管理TAGS</strong>”子菜单，进入管理TAGS界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/tags3.jpg" width="395" height="405" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>管理TAGS</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/tags4.jpg" width="1068" height="362" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[增加TAGS]按钮</strong></td>
+          <td>手动增加TAGS。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="17%" height="25"><strong>[TAGS分类管理]按钮</strong></td>
+          <td width="83%">进入TAGS分类管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[设置TAGS]按钮</strong></td>
+          <td>进入设置TAGS参数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[清理多余TAGS信息]按钮</strong></td>
+          <td>进入清理已经变更TAGS的信息功能。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[删除使用率低的TAGS]按钮</strong></td>
+          <td>进入清理TAGS信息数少的TAGS。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><p><strong>[删除过期的TAGS信息]按钮</strong></p></td>
+          <td>进入删除过期的TAGS信息的功能。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[推荐/取消推荐]按钮</strong></td>
+          <td>[showtags]标签可以只调用推荐的TAGS。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[合并]按钮</strong></td>
+          <td>将选择的TAGS的信息合并到填写的目标TAGS里。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="tagsclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">五、管理TAGS分类</font></strong></td>
+  </tr>
+  <tr>
+    <td height="25">TAGS分类方便统一管理TAGS，以及前台按TAGS分类调用TAGS。</td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>管理TAGS分类</strong>”子菜单，进入管理TAGS分类界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/tags5.jpg" width="401" height="401" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>管理TAGS分类</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/tags6.jpg" width="822" height="250" border="0"></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

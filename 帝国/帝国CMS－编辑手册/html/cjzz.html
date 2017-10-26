@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>采集教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">采集正则写法</strong></td>
+  </tr>
+  <tr>
+    <td height="27" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>帝国CMS采集正则介绍与写法。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr>
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">帝国CMS的采集正则</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>1、作用：通过设置采集正则以便使系统识别你要采集的内容。</strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>2、帝国CMS的采集正则是什么样的，下面我们用实例讲解：</strong></td>
+  </tr>
+  <tr> 
+    <td height="32"> <table width="100%" border="0" cellspacing="1" cellpadding="3">
+        <tr> 
+          <td>(1)、假如我们要采集页面的内容页为如下页面：</td>
+        </tr>
+        <tr> 
+          <td>图1：HTML页面<br> <img src="img/cjzz1.gif" width="632" height="224" border="1"><br>
+            图2：查看页面源代码为如下：<br> <img src="img/cjzz2.gif" width="700" height="268" border="1"> 
+          </td>
+        </tr>
+        <tr> 
+          <td>(2)、由上图的源代码内容我们可以得出帝国CMS的采集正则：</td>
+        </tr>
+        <tr> 
+          <td>新闻标题正则：<br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>&nbsp; 
+                  &nbsp; &lt;td&gt;标题：&lt;strong&gt;<font color="#FF0000">[!--title--]</font>&lt;/strong&gt;&lt;/td&gt;</td>
+              </tr>
+            </table>
+            新闻内容正则： <br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>&nbsp; 
+                  &nbsp; &lt;td&gt;内容：&lt;font color=&quot;#FF0000&quot;&gt;<font color="#FF0000">[!--newstext--]</font>&lt;/font&gt;&lt;/td&gt;</td>
+              </tr>
+            </table>
+            <br>
+            上面中的“[!--title--]”与“[!--newstext--]”分别为“标题”字段与“内容”字段的正则变量。用于指定我们要采集的内容位置。</td>
+        </tr>
+        <tr> 
+          <td>(3)、由上面我们得出了，帝国CMS采集正则是把正则变量替换要采集内容后的代码内容。格式：</td>
+        </tr>
+        <tr> 
+          <td> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+              <tr> 
+                <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>识别代码头部<strong>[!--变量名--]</strong>识别代码尾部 
+                </td>
+              </tr>
+            </table>
+            <font color="#FF0000">注意事项：上面的“识别代码头部”一定是要唯一的标记。</font></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>3、帝国CMS正则还有表示任意内容的字符：“*”</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">如果“识别代码头部”中有内容是变化的，那么我们可以用*代替它。如页面源代码为如下，我们要采集下面的链接地址：<br> 
+      <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>&lt;a 
+            title=&quot;任意可变内容&quot; href=&quot;链接地址&quot;&gt;标题&lt;/a&gt; </td>
+        </tr>
+      </table>
+      通过使用“*”任意内容表示字符，我们可以用下面的正则忽略可变内容，获得链接地址：<br> <table border=0 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>&lt;a 
+            title=&quot;<font color="#FF0000">*</font>&quot; href=&quot;[!--newsurl--]&quot;&gt;</td>
+        </tr>
+      </table>
+      附加说明：[!--newsurl--]为页面链接地址的正则变量。</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>4、其他说明：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><p><font color="#FF0000">(1)、正则要找出唯一性的开头字符。有时候空格都会成为识别的依据。</font></p></td>
+  </tr>
+  <tr> 
+    <td height="25">(2)、对于特殊字符请在前面加上“\\”，当然直接将特殊字符改为“*”最合适了。特殊字符如下：<br>
+      “ )”、“(”、“{”、“}”、“[”、“]”、“\”、“?”等等。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,49 @@
+一、解决父级栏目列表页调用列表信息时，不调用采用索引链接同时发布的文章的方法：
+
+list.var 使用程序代码，列表页过滤isurl。代码如下：
+
+if($r[isurl]=='0')
+{
+$list='<li><a href="[!--titleurl--]" title="[!--oldtitle--]">[!--title--]</a> <span>[!--newstime--]</span></li>';
+}
+$listtemp=$list;
+二、解决内容页调用相关链接[!--other.link--]时，显示重复的文章的方法：
+
+以下代码复制到userfun.php文件中
+
+function dp_GetKeyboard($num=100){
+        global $empire,$public_r,$class_r,$fun_r,$dbtbpre,$class_r,$navinfor;
+        $keyid=$navinfor['keyid'];
+        $classid=$navinfor['classid'];
+        $id=$navinfor['id'];
+        $link_num=$class_r[$classid]['link_num'];
+        if(!$link_num){
+                return $fun_r['NotLinkNews'];
+        }
+        $tr=$empire->fetch1("select otherlinktemp,otherlinktempsub,otherlinktempdate from ".GetTemptb("enewspubtemp")." limit 1");
+        $temp_r=explode("[!--empirenews.listtemp--]",$tr[otherlinktemp]);
+        if($keyid){
+                $add="id in (".$keyid.") and isurl=0";
+        }else{
+                $e=$id+$num;
+                $s=$id-$num;
+                $add=" classid=".$classid." and id>".$s." and id<".$e." and isurl=0";
+        }
+        $key_sql=$empire->query("select id,newstime,title,isurl,titleurl,classid,titlepic from {$dbtbpre}ecms_".$class_r[$classid][tbname]." where ".$add." order by newstime desc limit $link_num");
+        while($link_r=$empire->fetch($key_sql)){
+                if($link_r['id']==$id){
+                        continue;
+                }
+                $keyboardtext.=RepOtherTemp($temp_r[1],$link_r,$tr);
+        }
+        if(empty($keyboardtext)){
+                return $fun_r['NotLinkNews'];
+        }
+        $keyboardtext=$temp_r[0].$keyboardtext.$temp_r[2];
+        return $keyboardtext;
+}
+在内容页调用方法：
+
+1
+<?=dp_GetKeyboard(200)?>
+不需要再用[!--other.link--]

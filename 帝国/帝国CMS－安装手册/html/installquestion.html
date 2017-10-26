@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="10"><table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+        <tr> 
+          <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="8CBDEF">
+              <tr bgcolor="8CBDEF"> 
+                <td height="25" colspan="2" bgcolor="#01A8EC"> <div align="left"><strong><font color="#FFFFFF">&nbsp;</font><img src="../images/noadd.gif" width="15" height="15"><font color="#FFFFFF"> 
+                    安装常见问题</font></strong></div></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="8">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="23"><strong>1、帝国网站管理系统之安全设置最优化</strong></td>
+  </tr>
+  <tr> 
+    <td height="23"><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' height="36" bgcolor='#FFFFFF' style='word-break:break-all'>可查看：<a href="http://bbs.phome.net/showthread-13-118056-0.html" target="_blank">http://bbs.phome.net/showthread-13-118056-0.html</a></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td width="100%" height="23"><strong>2、安装界面不能正常显示</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'><p>运行环境有问题，使用记事本打开PHP配置文件php.ini： 
+              设置short_open_tag = On<br>
+              然后重启apache或iis设置才能生效。</p></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>3、以下状况或错误提示，是没有按照安装说明中讲的“初始化内置数据”这个步骤操作的原因：</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>1、增加信息提示“建立目录不成功!请检查目录权限”；<br>
+            2、除了首页外，其他页面都打不开；<br>
+            3、页面的CSS地址错误。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>4、安装时出现如下提示</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>“建立数据表: 
+            phome_ecms_article 完毕......<br>
+            You have an error in your SQL syntax. Check the manual that corresponds 
+            to your MySQL server version for the right syntax to use near 'DEFAULT 
+            CHARSET=gbk' at line 1” 
+            <p>说明：因为您空间使用的是MySQL4.0，进行安装配置数据库时，MySQL版本选择为“MySQL4.0”即可解决。</p></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>5、登录后台提示“登录成功”，接着又提示“您还未登录”</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>/e/data/adminlogin 
+            目录权限不可写导致，请将此目录权限设置为777权限即可解决。 </td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>6、后台管理地址是什么？后台管理目录是否可以修改？</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>/e/admin<br>
+            后台管理目录e/admin中的admin可以任意重命名，如改为e/MYadmin888。但e目录不可以重命名，否则将引起系统位置故障。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>7、帝国CMS系统数据库配置文件是哪个文件？</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>/e/class/config.php</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>8、提示“Notice: Use of undefined constant”错误说明：</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>php.ini配置问题，<br>
+            修改php.ini，将error_reporting = E_ALL修改成<br>
+            error_reporting = E_ALL &amp; ~E_NOTICE<br>
+            即可解决。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>9、忘记后台管理员帐号怎么办？</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>使用MySQL数据库管理软件phpmyadmin，查看phome_enewsuser表里的记录：查看username字段的内容。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>10、忘记后台登陆密码怎么办？</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>使用MySQL数据库管理软件phpmyadmin，修改数据库中的phome_enewsuser数据表进行密码重置操作：<br>
+            修改phome_enewsuser表里的记录：将password字段的内容改为：“322d3fef02fc39251436cb4522d29a71”；将salt字段的内容改为：“abc”.<br>
+            密码就重置为：123456<br> <img src="img/pm1.jpg" width="567" height="275"> 
+            <br> <br> <img src="img/pm2.jpg" width="772" height="494"><br> <br> 
+            <img src="img/pm3.jpg" width="932" height="533"> <br>
+            然后单击页面底部的“执行”按钮，帝国CMS后台管理员密码就重置为“123456”了。<br>
+            phpmyadmin是MySQL的数据库管理工具，可访问官方网站下载：www.phpmyadmin.net </td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>11、忘记后台登陆认证码怎么办？</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>查看/e/class/config.php文件里的“$do_loginauth”变量内容。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>12、忘记后台登陆安全答案怎么办？</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>用phpmyadmin修改phome_enewsuseradd表里的记录：把“equestion”字段的内容改为0；把eanswer字段的内容改为空.<br>
+            修改后登陆时则不需要安全答案，可以登陆后再修改安全答案。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>13、后台设置IP限制后，将自己的IP都限制了，如何处理？</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>可以修改e/class/config.php里的缓存，把你这个ip去掉（closeip、openip、hopenip），然后登录后台重新设置。(推荐用dreamweaver编辑，可防止UTF8编码文件被转换为GBK)</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>14、为什么发布时间比实际时间相差8个小时？</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>你的php设置的时间有问题，是美国的时间。<br>
+            以下方法可解决：<br>
+            修改php.ini，找到：date.timezone，把前面的分号去掉，并把值设为PRC</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>15、为什么验证码均显示为“ecms”？</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>因为空间不支持GD库，所以验证码均为“ecms”。但不支持GD库不影响使用。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>16、如何安装不要内置测试数据？</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'>安装到“配置数据库”这步，将“内置初始数据”这个选项去掉即可。</td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td><strong>17、认证码和验证码的区别</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'><p>1、认证码是安装时初始化管理员账号设置的验证信息，用于内部人员验证。<br>
+              2、验证码是防灌水机重复提交时使用。</p></td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr id="q18"> 
+    <td><strong>18、常见的FTP软件的二进制方式上传图文指导：</strong></td>
+  </tr>
+  <tr> 
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' height="55" bgcolor='#FFFFFF' style='word-break:break-all'>常见FTP软件有FlashFXP、CuteFTP、LeapFTP 
+            等。<br>
+            不同FTP软件略有差别，用户应结合自身软件情况找到“二进制”处进行设置。英文版的FTP软件，选择设置传输类型为binary(image)。 
+            <br> <font color="#6600FF"><strong>FlashFXP 软件进行二进制上传</strong></font>，方法是：点击“会话”——选择“传送模式”——“二进制”即可：<br> 
+            <img src="img/FlashFXPup.gif" width="409" height="220"> <br> <br> 
+            <font color="#6600FF"><strong>CuteFTP 软件进行二进制上传</strong></font>，方法是：<br>
+            在工具栏中，工具－&gt;Global Options“全局选项”（也可以直接按 “ALT+F7”）， 在弹出来的窗口中，选择“传输”，在 
+            传输方式 中选择“二进制”；然后选择“传输”下面的“ASCII类型”，在右边列表框中找到名为“PHP”的项目，选定后点右边的“删除”，再点下面的“确定”即可。如果“PHP”项目不存在的话，可直接使用，不需另行设置。<br> 
+            <img src="img/cuteftpup.jpg" width="769" height="407"><br> <img src="img/cuteftpup2.jpg" width="588" height="405"> 
+            <br> <br> <font color="#6600FF"><strong>LeapFTP软件进行二进制上传</strong></font>，方法是：<br>
+            点击 站点－&gt;站点管理器，在弹出来的窗口中，选择“高级”，然后在传说模式中选择“二进制”，应用即可。<br> <img src="img/LeapFTPup.jpg" width="461" height="405"> 
+          </td>
+        </tr>
+      </table>
+      <br> </td>
+  </tr>
+  <tr> 
+    <td>19、帝国CMS一定要安装在网站根目录吗？可以安装在二级目录中吗？</td>
+  </tr>
+  <tr>
+    <td><table border=1 width=100% cellspacing=1 cellpadding=10 bgcolor='#cccccc' class='incthreadtext'>
+        <tr> 
+          <td width='100%' height="36" bgcolor='#FFFFFF' style='word-break:break-all'>可以。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>

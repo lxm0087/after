@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">点卡管理</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="cardsay">&nbsp; &nbsp; &gt; 充值点卡介绍</option>
+		  <option value="addcard">&nbsp; &nbsp; &gt; 增加点卡</option>
+		  <option value="addmorecard">&nbsp; &nbsp; &gt; 批量增加点卡</option>
+          <option value="card">&nbsp; &nbsp; &gt; 管理点卡</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="cardsay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、充值点卡介绍：</font></strong></td>
+  </tr>
+  <tr> 
+    <td width="100%" height="25">充值点卡和购买充值类型一样，都是前台会员通过购买充值类型来升级会员级别或增加点数的功能，只是点卡是通过卡号和密码充值，而充值类型是网银购买充值。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、增加点卡</font></strong></td>
+  </tr>
+  <tr id="addcard"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(一)、增加单点卡：</strong></td>
+  </tr>
+  <tr> 
+    <td width="100%" height="25">1、登录后台，单击“<strong>用户</strong>”菜单，选择“<strong>管理点卡</strong>”子菜单，进入管理点卡界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/membercard1.jpg" width="545" height="317"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入管理点卡界面，点击“增加点卡”按钮进入增加点卡界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/membercard2.jpg" width="700" height="154"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、进入增加点卡界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/membercard4.jpg" width="674" height="369"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>点卡帐号</strong></td>
+          <td width="86%">填写卡号。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>点卡密码</strong></td>
+          <td>填写卡密码。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>点卡金额</strong></td>
+          <td>点卡面额。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>点数</strong></td>
+          <td>充值后给会员充值多少点数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>充值有效期</strong></td>
+          <td>充值后给会员充值多少有效期。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>充值设置转向会员组：</strong>充值后给会员升级会员组。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>到期后转向的会员组：</strong>有效期到期后转回原来会员组。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>到期时间</strong></td>
+          <td>设置点卡的过期时间(0000-00-00为不限制)。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr id="addmorecard"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(二)、批量增加点卡：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、进入管理点卡界面，点击“批量增加点卡”按钮进入批量增加点卡界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/membercard3.jpg" width="700" height="154"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入批量增加点卡界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/membercard5.jpg" width="636" height="392"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="14%"><strong>批量生成点卡数量</strong></td>
+          <td width="86%">填写一次要生成多少个点卡。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>点卡帐号位数</strong></td>
+          <td>填写卡号位数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>点卡密码位数</strong></td>
+          <td>填写卡密码位数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>点卡金额</strong></td>
+          <td>点卡面额。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>点数</strong></td>
+          <td>充值后给会员充值多少点数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>充值有效期</strong></td>
+          <td>充值后给会员充值多少有效期。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>充值设置转向会员组：</strong>充值后给会员升级会员组。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td>&nbsp;</td>
+          <td><strong>到期后转向的会员组：</strong>有效期到期后转回原来会员组。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>到期时间</strong></td>
+          <td>设置点卡的过期时间(0000-00-00为不限制)。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="card"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、进入管理点卡界面：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/membercard6.jpg" width="700" height="444"></td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

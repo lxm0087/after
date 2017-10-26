@@ -1,0 +1,397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">评论管理</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="plsay">&nbsp; &nbsp; &gt; 评论相关功能介绍</option>
+          <option value="pl">&nbsp; &nbsp; &gt; 管理评论</option>
+          <option value="plface">&nbsp; &nbsp; &gt; 管理评论表情</option>
+          <option value="plf">&nbsp; &nbsp; &gt; 自定义评论字段</option>
+          <option value="pltable">&nbsp; &nbsp; &gt; 管理评论分表</option>
+		  <option value="delmorepl">&nbsp; &nbsp; &gt; 批量删除评论</option>
+		  <option value="setpl">&nbsp; &nbsp; &gt; 评论相关设置</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="27" colspan="2"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>包括信息的评论、评论自定义字段、评论分表、评论表情等管理。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="plsay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、评论相关功能介绍</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>自定义评论字段：</strong>除了默认的评论内容字段外，用户还可以自己增加评论发布项。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>管理评论分表：</strong>评论支持分表，使评论容量更大，速度更快。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>管理评论表情：</strong>对评论内容插入的表情进行管理。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>设置评论过滤字符：</strong>设置评论不允许提交的内容。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>批量删除评论：</strong>按各种条件批量删除评论。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="pl"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、管理评论</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>管理评论</strong>”子菜单，进入管理评论界面：（也可以点击快捷菜单里的<strong>管理评论</strong>）</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/pl1.jpg" width="448" height="438" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>管理评论</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/pl2.jpg" width="953" height="388" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="32"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[管理评论表情]按钮</strong></td>
+          <td>对评论内容插入的表情进行管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%" height="25"><strong>[设置评论过滤字符]按钮</strong></td>
+          <td width="85%">设置评论不允许提交的内容。（参数设置&gt;信息设置）</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[自定义评论字段]按钮</strong></td>
+          <td>除了默认的评论内容字段外，用户还可以自己增加评论发布项。对发布项进行管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[管理评论分表]按钮</strong></td>
+          <td>评论支持分表，使评论容量更大，速度更快。对分表进行管理。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[批量删除评论]按钮</strong></td>
+          <td>按各种条件批量删除评论。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[搜索评论]</strong></td>
+          <td>按栏目、审核、关键字等进行评论搜索。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[审核评论]按钮</strong></td>
+          <td>将选中的评论设为已审核状态。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[推荐评论]按钮</strong></td>
+          <td>将选中的评论设为推荐。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[取消推荐评论]按钮</strong></td>
+          <td>取消选中的评论的推荐。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[删除]按钮</strong></td>
+          <td>批量删除选中的评论。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>网名</strong></td>
+          <td>发布评论的用户名。网名为粗体表示该用户为登录会员，未加粗体的网名表示匿名用户。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论内容</strong></td>
+          <td>发表评论的内容。双击评论内容，进入前台信息评论页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>发表时间</strong></td>
+          <td>评论发表的时间。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>IP</strong></td>
+          <td>发表评论者所在的IP地址来源。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>多选框</strong></td>
+          <td><img src="img/pl3.gif" width="15" height="17">多选框，勾选即选择一条信息。 <img src="img/pl4.gif" width="20" height="19">多选框为蓝色代表该条评论是未经审核。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25" colspan="2">其他说明：多选框为蓝色代表未审核评论，加粗网名为登陆会员，发布时间红色为推荐评论。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="plface"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、管理评论表情</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、从管理评论页面点击“<strong>管理评论表情</strong>”按钮，进入管理评论表情界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/pl5.jpg" width="725" height="625"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>符号</strong></td>
+          <td>填写插入内容的符号，要区别于正常的文字内容。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%" height="25"><strong>替换成图片</strong></td>
+          <td width="85%">填写本符合替换成什么表情图片。图片要放在：/e/data/face/目录里。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>前台评论表情调用代码</strong></td>
+          <td>在要显示表情位置的评论表单里加：&lt;script src=&quot;/d/js/js/plface.js&quot;&gt;&lt;/script&gt;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">&nbsp;</td>
+          <td>评论表情每行显示数量在<strong>参数设置&gt;信息设置</strong>里设置。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="plf"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、自定义评论字段</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、从管理评论页面点击“<strong>自定义评论字段</strong>”按钮，进入<strong>管理评论自定义字段</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/pl7.jpg" width="666" height="351"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="85%" height="25"><strong>评论表单：</strong>在评论表单加上字段表单元素显示，格式：name=&quot;字段名&quot;。例如：&lt;input 
+            type=&quot;radio&quot; <font color="#FF0000">name=&quot;kwpf&quot;</font> 
+            value=&quot;1&quot;&gt;</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论列表模板调用：</strong>模板中加“[!--字段名--]”。例如：<font color="#FF0000">[!--kwpf--]</font></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">2、点击上面的“kwpf”字段的修改，进入字段修改页面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/pl8.jpg" width="662" height="414"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>字段名</strong></td>
+          <td>字段名由英文与数字组成，且不能以数字开头。比如：title</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%" height="25"><strong>字段标识</strong></td>
+          <td width="85%">字段标识方便识别字段。比如：标题</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>字段类型</strong></td>
+          <td>选择字段的存放类型。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">&nbsp;</td>
+          <td><strong>字段长度：</strong>选择字段的存放长度。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>必填项</strong></td>
+          <td>设置此字段内容不能为空。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>注释</strong></td>
+          <td>填写备注内容。</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="25">3、使用范例：</td>
+  </tr>
+  <tr>
+    <td height="25">举例说明：制作“简单的餐馆评分”：<a href="http://bbs.phome.net/showthread-13-115815-0.html" target="_blank">http://bbs.phome.net/showthread-13-115815-0.html</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="pltable"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">五、管理评论分表</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、从管理评论页面点击“<strong>管理评论分表</strong>”按钮，进入<strong>管理评论分表</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/pl9.jpg" width="656" height="258"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="delmorepl"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">六、批量删除评论</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、从管理评论页面点击“<strong>批量删除评论</strong>”按钮，进入<strong>批量删除评论</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/pl10.jpg" width="719" height="602"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>多条件批量删除评论</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>发布者包含字符</strong></td>
+          <td>删除发布者包含此字符的评论，空为不限。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%" height="25"><strong>是否会员发布</strong></td>
+          <td width="85%">是否只删除游客或会员发布的评论。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论IP包含</strong></td>
+          <td>删除发布者IP包含字符的评论。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>所属信息</strong></td>
+          <td><strong>所属栏目：</strong>选择只删除某一栏目的评论。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25">&nbsp;</td>
+          <td><strong>信息ID：</strong>填写要删除评论的信息ID。(多个ID用“,”半角逗号隔开)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论ID 介于</strong></td>
+          <td>设置删除某一ID段的评论。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论时间 介于</strong></td>
+          <td>设置删除某一时间段的评论。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>是否审核</strong></td>
+          <td>选择是否只删除已审核或未审核评论。</td>
+        </tr>
+        <tr bgcolor="#C3EFFF"> 
+          <td height="25" colspan="2"><strong>按内容批量删除评论</strong></td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论内容包含字符</strong></td>
+          <td>删除评论内容包含此字符的评论。(多个字符用“|”隔开)</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>所属栏目</strong></td>
+          <td>选择只删除某一栏目的评论。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="setpl"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">七、评论相关设置</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(一)、参数设置</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台&gt;“<strong>系统</strong>”&gt;“<strong>系统设置</strong>”&gt;“<strong>系统参数设置</strong>”：<strong>信息设置</strong>，进入评论参数设置界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/pl11.jpg" width="756" height="314"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论权限限制</strong></td>
+          <td>允许发布评论的最低会员组级别。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%" height="25"><strong>评论内容限制</strong></td>
+          <td width="85%">评论内容字符数限制。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论时间间隔</strong></td>
+          <td>连续发布评论的间隔时间。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论验证码</strong></td>
+          <td>是否开启评论验证码。可有效防止恶意发表。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论每页显示</strong></td>
+          <td>评论列表页面每页显示评论数量。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论表情每行显示</strong></td>
+          <td>发布评论表单每行显示多少个表情。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>评论屏蔽字符</strong></td>
+          <td>设置评论屏蔽字符。多个用“|”隔开，如“字符1|字符2”。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(二)、评论是否开启与审核</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">增加/修改终极栏目时，栏目属性选项设置中设置该栏目是否开启评论，如选择开启，可继续选择评论是否需要审核。</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/pl12.jpg" width="535" height="98"></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(三)、评论模板与表单</strong></td>
+  </tr>
+  <tr>
+    <td height="25">评论模板与评论表单制作可查看“美工手册”。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="votesay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">相关链接</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><a href="http://bbs.phome.net/showthread-13-115815-0.html" target="_blank">1、帝国CMS功能解密之：评论自定义字段</a></td>
+  </tr>
+  <tr> 
+    <td height="25"><a href="http://bbs.phome.net/showthread-35-29392-0.html" target="_blank">2、帝国CMS功能解密之：内容页评论调用</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

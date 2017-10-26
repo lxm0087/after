@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<link rel="shortout icon" href="http://www.nclaimei.com/skin/laimei2017/images/favicon.ico" />
+<meta name="renderer" content="webkit"/>
+<meta http-equiv="X-UA-Comabsolutetible" content="IE=Edge,chrome=1" />
+<meta name="format-detection" content="telephone=on"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>[!--pagetitle--]_南昌莱美美容医院</title>
+<meta name="keywords" content="[!--pagekey--]">
+<meta name="description" content="[!--pagedesc--]">
+<link href="/skin/css/zxmr.css" rel="stylesheet"/>
+<link href="/skin/css/reset.css" rel="stylesheet"/>
+<script src="/skin//js/jquery-1.9.1.min.js"></script>
+<script src="/skin/js/jquery.superslide.2.1.1.source.js"></script>
+<script src="/skin/js/expert.js"></script>
+<script src="/skin/js/indexapp.js"></script>
+</head>
+<body>
+[!--temp.header--]
+<!--content pinpaiContent-->
+<div class="pinpaiContent pubW center relative clearfix"> 
+  <div class="contentRight fr  relative" id="contentRight">
+      <div class="seoNavs absolute fonts">[!--temp.nav--]</div>
+    <div class="pinpaiWrapper">
+        <div class="content1 clearfix fonts">
+      <ul>
+        [e:loop={"select classname,classpath,classimg from [!db.pre!]enewsclass where bclassid ='$GLOBALS[navclassid]'",10,24,0}]
+          <li>
+            <a href="<?=$public_r[newsurl].$bqr['classpath']?>" class="img" target="_blank">
+             <img src="<?=$bqr['classimg']?>" width="413" height="285" "></a>
+            <a href="<?=$public_r[newsurl].$bqr['classpath']?>" target="_blank"><?=$bqr['classname']?></a>
+          </li>
+        [/e:loop]
+          </ul>
+      </div>
+      <div class="content2 clearfix fonts">
+      <h1>猜你喜欢</h1>
+      <ul>
+              <li><a href="/s/FreckleRemovinga/index.html" target="_blank"><img src="/skin/picture/20921c0e5d66f0a3e858a959f60886a7.png" width="356" height="219" alt=""></a></li>
+              <li><a href="/s/RemoveEyeBaga/index.html" target="_blank"><img src="/skin/picture/11488dc20370d236e76f8bcdff549b7d.png" width="356" height="219" alt=""></a></li>
+              <li><a href="/s/Teethas/index.html" target="_blank"><img src="/skin/picture/b25d9186a79496dbaef0913088b47130.png" width="356" height="219" alt=""></a></li>
+            </ul>
+      </div>
+      <div class="content4 clearfix fonts">
+        <ul>
+                  <li><a class="qiujing"  href="javascript:void(0)" onClick="openZoosUrl();return false;" target="_blank"></a><p>专业提供在线免费咨询服务，快速为您解答整形美容疑问。</p></li>
+                          <li><a class="chengxin" href="javascript:void(0)" onClick="openZoosUrl();return false;" target="_blank"></a><p>医生免费预约通道，到院无需排队即可享受美丽专属优惠。</p></li>
+                          <li><a class="reqing"   href="http://www.nclaimei.com/gylm/lylx"></a><p>无论您在本市还是外地，一份详细的交通指南让您轻松到达。</p></li>
+                </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--content pinpaiContent结束-->
+[!--temp.footer--]
+</body>
+</html>

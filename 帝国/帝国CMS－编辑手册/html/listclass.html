@@ -1,0 +1,367 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">管理栏目</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="eclass">&nbsp; &nbsp; &gt; 管理栏目界面介绍</option>
+          <option value="editclass">&nbsp; &nbsp; &gt; 修改栏目</option>
+		  <option value="copyclass">&nbsp; &nbsp; &gt; 复制栏目</option>
+		  <option value="delclass">&nbsp; &nbsp; &gt; 删除栏目</option>
+		  <option value="editorder">&nbsp; &nbsp; &gt; 修改栏目顺序</option>
+		  <option value="changeclass">&nbsp; &nbsp; &gt; 终极栏目属性转换</option>
+		  <option value="listclasspage">&nbsp; &nbsp; &gt; 管理栏目(分页)</option>
+		  <option value="setmoreclass">&nbsp; &nbsp; &gt; 批量设置栏目属性</option>
+		  <option value="rightmenu">&nbsp; &nbsp; &gt; 管理栏目快捷操作小贴士</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="eclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、管理栏目界面介绍</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">(一)、登录后台，单击“<strong>栏目</strong>”菜单，选择“<strong>管理栏目</strong>”子菜单，进入管理栏目界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/listclass2.jpg" width="393" height="422" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">(二)、进入<strong>管理栏目</strong>界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/listclass1.jpg" width="791" height="230"></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">1、栏目列表相关说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF"><strong><font color="#0066FF">&nbsp;<font color="#000000">顺序</font></font></strong></td>
+          <td height="25" bgcolor="#FFFFFF">栏目在前台/后台栏目列表中的显示顺序值。单击<img src="img/listclass3.gif" width="108" height="22">按钮，各栏目按顺序值依次排列，顺序值越小排列越靠前。</td>
+        </tr>
+        <tr> 
+          <td width="61" rowspan="5" bgcolor="#FFFFFF"> <div align="left"><font color="#0066FF">&nbsp;<font color="#666666"><img src="img/listclass4.gif" width="14" height="15">.<img src="img/listclass5.gif" width="15" height="14"></font></font></div></td>
+          <td width="678" height="25" bgcolor="#FFFFFF">栏目收缩展开按钮。</td>
+        </tr>
+        <tr> 
+          <td height="20" bgcolor="#FFFFFF">单击栏目收缩按钮，则只显示根目录下的终极栏目、父栏目（父栏目所在行为蓝色条）。</td>
+        </tr>
+        <tr> 
+          <td height="20" bgcolor="#FFFFFF">单击栏目展开按钮，则显示所有的终极栏目、父栏目及其子栏目。</td>
+        </tr>
+        <tr> 
+          <td height="20" bgcolor="#FFFFFF"><img src="img/listclass6.gif" width="11" height="13"> 
+            图标表示 该栏目为终极栏目。 <img src="img/listclass7.gif" width="15" height="13"> 
+            图标表示 该栏目为非终极栏目（包括父栏目及其子栏目）。 </td>
+        </tr>
+        <tr> 
+          <td height="25" bgcolor="#FFFFFF">点击<img src="img/listclass6.gif" width="11" height="13"> 
+            图标进入增加栏目下的信息。</td>
+        </tr>
+      </table>
+      <table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+        <tr> 
+          <td width="61" height="25" rowspan="2" bgcolor="#FFFFFF"><strong><font color="#0066FF"> 
+            &nbsp;<font color="#000000">ID</font></font></strong></td>
+          <td width="678" height="20" bgcolor="#FFFFFF">栏目ID值，增加栏目时由系统按顺序依次生成。常用于标签调用中的参数。</td>
+        </tr>
+        <tr> 
+          <td height="20" bgcolor="#FFFFFF">如[ecmsinfo]<strong>栏目ID</strong>/专题ID,显示条数,标题截取数,是否显示栏目名,操作类型,模板ID,只显示有标题图片[/ecmsinfo]标签。</td>
+        </tr>
+      </table>
+      <table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="61"><strong><font color="#0066FF">&nbsp;<font color="#000000">栏目名</font></font></strong></td>
+          <td width="678" height="25">栏目名称。单击栏目名称，如“国内新闻”，则显示该栏目的前台地址网页。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong><font color="#000000">&nbsp;访问</font></strong></td>
+          <td height="25">统计该栏目的前台访问次数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td rowspan="3"><strong><font color="#0066FF">&nbsp;<font color="#000000">栏目管理</font></font></strong></td>
+          <td height="20"><strong>修改：</strong>修改栏目。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="20"><strong>复制：</strong>复制栏目的参数。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="20"><strong>删除：</strong>删除栏目。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td rowspan="6"><strong><font color="#0066FF">&nbsp;<font color="#000000">操作</font></font></strong></td>
+          <td height="20"><strong>刷新：</strong>生成该栏目页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="20"><strong>信息：</strong>生成该栏目的内容页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="20"><strong>JS：</strong>生成该栏目JS调用。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="20"><strong>调用：</strong>查看该栏目的实际地址及JS调用地址。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="20"><strong>分类：</strong>设置栏目使用的标题分类。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="20"><strong>归档：</strong>将不需要的信息归到另一个数据表，以减少主表的数据负担。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">2、管理栏目界面操作按钮说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="742" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="154"><strong>[增加栏目]按钮</strong></td>
+          <td width="585" height="25">点击进入增加栏目页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>[刷新首页]按钮</strong></td>
+          <td height="25">生成网站首页。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>[刷新所有栏目页]按钮</strong></td>
+          <td height="25">生成所有栏目页面和专题页面。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>[刷新所有信息页面]按钮</strong></td>
+          <td height="25">生成所有内容页。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>[刷新所有JS调用]按钮</strong></td>
+          <td height="25">生成所有JS调用文件。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>[修改栏目顺序]按钮</strong></td>
+          <td height="25">本操作将修改前台及后台栏目显示和排列的顺序。单击此按钮并确定后，各栏目将按照从小到大的顺序排列。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>[刷新栏目页面]按钮</strong></td>
+          <td height="25">刷新所选栏目页面，可同时选择多个栏目进行刷新。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>[终极栏目属性转换]按钮</strong></td>
+          <td height="25">非终极栏目与终极栏目互转操作按钮。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong><font color="#0000FF">3、归档信息说明：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">首先，设置归档日期，即归档大于几天的信息（参见本教程<a href="addclass.html" target="_blank"><strong>增加栏目</strong></a>一节中选项设置相关说明）；<br>
+      然后，单击“归档”链接，将不需要的信息归档到另一个数据表中。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="editclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、修改栏目</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1. 选中要修改的栏目所在行，单击“修改”；<br>
+      <img src="img/listclass8.jpg" width="791" height="230"> </td>
+  </tr>
+  <tr> 
+    <td height="25">2. 出现“管理栏目-&gt;修改栏目”界面（界面相关参数设置参考“<a href="addclass.html" target="_blank">增加栏目篇</a>”一节），修改栏目相关参数设置； 
+    </td>
+  </tr>
+  <tr>
+    <td height="25">3. 单击页面底部“<strong>提交</strong>”按钮以保持您所做的修改。 </td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="copyclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、复制栏目</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1. 选中要复制的源栏目所在行，单击“<strong>复制</strong>”； <br> <img src="img/listclass9.jpg" width="791" height="230"> 
+    </td>
+  </tr>
+  <tr> 
+    <td height="25">2. 出现“管理栏目-&gt;修改栏目”界面（界面相关参数设置参考“<a href="addclass.html" target="_blank">增加栏目篇</a>”一节），修改栏目相关参数设置； 
+    </td>
+  </tr>
+  <tr> 
+    <td height="25">3. 单击页面底部“<strong>提交</strong>”按钮以保持您所做的修改。 </td>
+  </tr>
+  <tr>
+    <td height="25">栏目复制功能，可供您快捷、方便地建立与源栏目基本属性设置相似的栏目。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="delclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、删除栏目</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1. 选择要删除的栏目所在行，单击“<strong>删除</strong>”； <br>
+      <img src="img/listclass10.jpg" width="791" height="230"> </td>
+  </tr>
+  <tr> 
+    <td height="25">2. 出现确认对话框，单击“确定”按钮执行删除操作。 </td>
+  </tr>
+  <tr>
+    <td height="25">注意：删除栏目时，则其所属子栏目及信息也将被删除，此操作需谨慎。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="editorder"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">五、修改栏目顺序：</font></strong><font color="#FFFFFF">修改前台及后台栏目显示和排列的顺序。</font></td>
+  </tr>
+  <tr> 
+    <td height="25">单击<img src="img/listclass3.gif" width="108" height="22">按钮；各栏目将按照从小到大的顺序排列。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="changeclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">六、终极栏目属性转换：</font></strong><font color="#FFFFFF">非终极栏目与终极栏目互转操作。</font></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="741" height="170" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="25"><strong>终极栏目如何转为非终极栏目？</strong> </td>
+        </tr>
+        <tr> 
+          <td height="25"><strong>&nbsp;转换前提</strong>：该终极栏目下面没有信息数据方可顺利进行转换；</td>
+        </tr>
+        <tr> 
+          <td height="25">如该栏目下已建立信息，则须先将当前栏目的信息数据转移，再进行栏目属性转换，否则会出现冗余数据。</td>
+        </tr>
+        <tr> 
+          <td height="12"><strong>&nbsp;转换操作</strong>：选中终极栏目（每次只能选中一个终极栏目进行转换），单击<img src="img/listclass11.gif" width="145" height="22">按钮.“确定”已转换为非终极栏目</td>
+        </tr>
+        <tr> 
+          <td height="30"><strong>&nbsp;非终极栏目如何转换为终极栏目？</strong></td>
+        </tr>
+        <tr> 
+          <td height="25"><table width="741" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td height="25"><strong>&nbsp;转换前提</strong>：该非终极栏目下面不能有子栏目，方可顺利进行转换。</td>
+              </tr>
+              <tr> 
+                <td height="25"><strong>&nbsp;转换操作</strong>：选中非终极栏目（每次只能选中一个非终极栏目进行转换），单击<img src="img/listclass11.gif" width="145" height="22">按钮.“确定”已转换为终极栏目</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="listclasspage"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">七、管理栏目(分页)：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="803" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999">
+        <tr> 
+          <td width="179" rowspan="4" bgcolor="#FFFFFF"> <div align="center"></div>
+            <div align="center"></div>
+            <div align="center"><img src="img/listclass12.jpg" width="179" height="92"></div></td>
+          <td width="624" height="19" bgcolor="#FFFFFF">&nbsp;栏目管理菜单有两个操作界面可供您选择，其中“管理栏目(分页)”为分页界面，呈分页列表形式。</td>
+        </tr>
+        <tr> 
+          <td height="19" bgcolor="#FFFFFF">&nbsp;单击“<strong>栏目管理</strong>”-&gt;“<strong>管理栏目（分页）</strong>”菜单，出现管理栏目界面，</td>
+        </tr>
+        <tr> 
+          <td height="19" bgcolor="#FFFFFF">&nbsp;由于该操作界面所有栏目均为分页显示，所以相比“管理栏目”菜单，“管理栏目(分页)”菜单增加了栏目搜索框，</td>
+        </tr>
+        <tr> 
+          <td height="19" valign="top" bgcolor="#FFFFFF">&nbsp;以方便您查找所需管理的栏目。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="setmoreclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">八、批量设置栏目属性：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="742" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999">
+        <tr> 
+          <td width="179" rowspan="6" bgcolor="#FFFFFF"> <div align="center"></div>
+            <div align="center"></div>
+            <div align="center"><img src="img/listclass13.jpg" width="179" height="92"> 
+            </div></td>
+          <td height="20" colspan="2" bgcolor="#FFFFFF">&nbsp;利用系统提供的批量设置栏目属性功能，您可以对栏目所需的相同属性进行更快捷直观的设置。</td>
+          <td width="41" rowspan="6" bgcolor="#FFFFFF">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td height="20" colspan="2" bgcolor="#FFFFFF">&nbsp;1. 单击“<strong>栏目管理</strong>”-&gt;“<strong>批量设置栏目属性</strong>”菜单，出现批量设置栏目界面（见右图）：</td>
+        </tr>
+        <tr> 
+          <td width="21" height="20" bgcolor="#FFFFFF">&nbsp;</td>
+          <td width="501" bgcolor="#FFFFFF">在左侧框中显示了当前所有的栏目，同时按住Ctrl（或Shift）键并单击鼠标可选择多个栏目；</td>
+        </tr>
+        <tr> 
+          <td height="20" colspan="2" bgcolor="#FFFFFF">&nbsp;2. 在左侧框中选择要进行批量设置的栏目名；</td>
+        </tr>
+        <tr> 
+          <td height="20" bgcolor="#FFFFFF">&nbsp;</td>
+          <td height="20" bgcolor="#FFFFFF">在右侧框中选择并设置栏目参数（参见本教程<a href="addclass.html" target="_blank"><strong>增加栏目</strong></a>一节中栏目参数设置相关说明）；</td>
+        </tr>
+        <tr> 
+          <td height="20" colspan="2" bgcolor="#FFFFFF">&nbsp;3. 设置好右侧中栏目的参数后，单击页面底部“<strong>提交</strong>”按钮，执行对所选栏目的批量设置。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="rightmenu"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">九、管理栏目快捷操作小贴士：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="769" border="0" cellpadding="0" cellspacing="0" bgcolor="#999999">
+        <tr> 
+          <td width="346" rowspan="4" bgcolor="#FFFFFF"><img src="img/listclass14.jpg" width="346" height="447"></td>
+          <td width="423" height="90" bgcolor="#FFFFFF">&nbsp; 快捷管理栏目：</td>
+        </tr>
+        <tr> 
+          <td height="90" bgcolor="#FFFFFF"> &nbsp;&nbsp;单击“<strong>信息</strong>”菜单，界面左侧出现呈树状结构的站点所有栏目列表，见左图；</td>
+        </tr>
+        <tr> 
+          <td height="90" bgcolor="#FFFFFF">&nbsp; 右键单击目标栏目（如栏目“国内新闻”），出现如左图所示的右键菜单；</td>
+        </tr>
+        <tr> 
+          <td height="90" bgcolor="#FFFFFF">&nbsp; 根据需要进行增加、复制、修改栏目及进行相关的刷新等操作。 
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

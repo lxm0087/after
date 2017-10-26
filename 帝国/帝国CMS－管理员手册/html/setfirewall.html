@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">网站安全防火墙</strong></td>
+    <td width="50%"><div align="center">
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="aboutecmsfirewall">&nbsp; &nbsp; &gt; 帝国CMS网站防火墙介绍</option>
+          <option value="setfirewall">&nbsp; &nbsp; &gt; 网站防火墙配置说明</option>
+        </select>
+      </div></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="aboutecmsfirewall"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">帝国CMS网站防火墙介绍：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">帝国CMS网站防火墙可以对网站前台的提交内容进行检查和屏蔽，可以对后台的程序页面进行非法访问拦截，使网站安全更加牢固。帝国CMS代码严谨的过滤已经非常安全了，而设计帝国系统网站防火墙的初衷是为了防范假如php或mysql本身出漏洞情况下的处理，可以将所有可能出现的攻击内容进行拦截屏蔽，起到假使出现漏洞攻击者也无法攻击的作用。</td>
+  </tr>
+  <tr>
+    <td height="25"><strong>帝国CMS6.0及以前版本安全构架：</strong></td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/setfirewall3.jpg" width="526" height="377"></td>
+  </tr>
+  <tr>
+    <td height="25"><strong>帝国CMS6.5及以上版本安全构架：双重保障更牢固</strong></td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/setfirewall4.jpg" width="650" height="488"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="setfirewall">
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">网站防火墙配置：</font></strong></td>
+  </tr>
+  <tr> 
+    <td width="100%" height="25">一、登录后台，单击“<strong>系统</strong>”菜单，选择“<strong>网站防火墙</strong>”子菜单，进入网站防火墙配置界面：</td>
+  </tr>
+  <tr> 
+    <td><img src="img/setfirewall1.jpg" width="304" height="353" border="0"></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25"><strong>二、进入网站防火墙配置界面：</strong></td>
+  </tr>
+  <tr> 
+    <td><img src="img/setfirewall2.jpg" width="700" height="418"></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#C3EFFF"> 
+          <td>设置项</td>
+          <td>项说明</td>
+          <td>对应e/class/config.php文件变量</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%"><strong>开启防火墙</strong></td>
+          <td width="44%">选择是否开启防火墙功能。</td>
+          <td width="41%">$efw_open</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>防火墙加密密钥</strong></td>
+          <td>此项必须设置，填写10~50个任意字符，最好多种字符组合。<br>
+            并且建议每星期或每个月变更一次。</td>
+          <td>$efw_pass</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>允许后台登陆的域名</strong></td>
+          <td>设置只允许访问后台的域名，域名绑定到网站根目录，只有通过这个域名访问e/admin后台才是被允许的。域名一般用网站的二级域名即可，如果为了更保险也可绑定一个全新域名的二级域名。比如：网站域名：http://www.phome.net，而访问后台域名则用http://abc.digod.com<br>
+            并且绑定的域名还支持增加端口，比如：http://abc.phome.net:8080，前提是服务器支持使用这个端口访问网站。<br>
+            绑定域名(http://abc.digod.com)后的访问后台地址是：http://abc.digod.com/e/admin/，而通过其他域名访问后台都是空白。</td>
+          <td>$efw_adminloginurl</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>允许登陆后台的时间点</strong></td>
+          <td rowspan="2">方便工作时间工作的单位设置，使网站安全维护更容易把控，不让用户在工作时间外进入后台。<br>
+            如果紧急事件例外可以手动修改e/class/config.php文件配置。</td>
+          <td>$efw_adminhour</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>允许登陆后台的星期<br>
+            </strong></td>
+          <td>$efw_adminweek</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>防火墙后台预登陆验证变量名</strong></td>
+          <td rowspan="2">这两项必须设置。<br>
+            预登陆验证变量名：可由英文字母+数字组成(必须是字母开头)，5~20个字符组成。<br>
+            预登陆认证码：填写10~50个任意字符，最好多种字符组合。<br>
+            并且建议每星期或每个月变更一次。<br></td>
+          <td>$efw_adminckpassvar</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>防火墙后台预登陆认证码</strong></td>
+          <td>$efw_adminckpassval</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td><strong>屏蔽提交敏感字符</strong></td>
+          <td>此功能是安全防火墙的核心，可对前台用户所有录入的信息进行安全过滤。通常设置php、mysql等攻击的相关字符。<br>
+            比如：sql注入通常会用到的字符：select,outfile,union,delete,insert,update,replace,sleep,benchmark,load_file,create</td>
+          <td>$efw_cleargettext</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td width="100%" height="25"><strong>三、其他说明：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、上面是后台在线修改配置的方法，也可以直接修改e/class/config.php配置文件里的参数。</td>
+  </tr>
+  <tr> 
+    <td height="25">2、为了更安全你也可以关闭后台在线设置：修改e/class/config.php配置文件里的：<br>
+      $do_openonlinesetting=3; //开启后台在线配置参数(0为关闭,1为开启防火墙配置,2为开启安全配置,3为全开启)</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

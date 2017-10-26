@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">广告系统</strong></td>
+    <td width="50%"><div align="center"> 
+        <select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="adsay">&nbsp; &nbsp; &gt; 广告系统说明</option>
+          <option value="ad">&nbsp; &nbsp; &gt; 管理广告</option>
+          <option value="addad">&nbsp; &nbsp; &gt; 增加广告</option>
+		  <option value="adclass">&nbsp; &nbsp; &gt; 广告分类管理</option>
+        </select>
+      </div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="27" colspan="2"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>广告系统：通过此功能可管理整个网站的广告。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="adsay"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、广告系统说明</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>系统目前支持以下四种广告：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>图片/FLASH广告：</strong>增加图片广告与FLASH广告。</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>文字广告：</strong>增加文字链接广告。如：<a href="http://www.phome.net/ecms66/" target="_blank"><u>帝国CMS下载</u></a></td>
+  </tr>
+  <tr>
+    <td height="25"><strong>HTML广告：</strong>增加直接代码类型的广告。如：google广告</td>
+  </tr>
+  <tr>
+    <td height="25"><strong>弹出广告：</strong>增加弹出页面窗口(window.open)的广告。</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>前台广告调用方式：同时支持标签调用和JS调用</strong></td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>标签调用广告：</strong>用广告调用标签（[phomead]广告ID[/phomead]）</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>JS调用广告：</strong>&lt;script src=&quot;广告JS文件地址&quot;&gt;&lt;/script&gt;，比如：&lt;script 
+      src=&quot;http://127.0.0.1/d/js/acmsd/thea1.js&quot;&gt;&lt;/script&gt;</td>
+  </tr>
+  <tr> 
+    <td height="25">（以上两种方式选其一，页面经常更新的可以用标签调用，页面不经常更新的推荐用JS调用）</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="ad">
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、管理广告</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>插件</strong>”菜单，选择“<strong>管理广告</strong>”子菜单，进入管理广告界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/ad1.jpg" width="557" height="293" border="0"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入<strong>管理广告</strong>界面，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"> <img src="img/ad2.jpg" width="900" height="314" border="0"><br>
+      <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr bgcolor="#FFFFFF">
+          <td height="25"><strong>[广告ID]</strong></td>
+          <td>广告调用标签使用的广告ID。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td width="15%" height="25"><strong>[搜索]</strong></td>
+          <td width="85%">可按广告分类、广告类型显示广告记录。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[管理过期广告]</strong></td>
+          <td>显示过期的广告列表。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"> <p><strong>[预览]</strong></p></td>
+          <td>对广告JS调用效果的预览。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>[JS调用 | 标签调用]</strong></td>
+          <td>点击直接复制相应调用代码，到模板处粘贴即可。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr id="addad"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、增加广告</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">从<strong>广告管理</strong>页面，点击“<strong>增加广告</strong>”按钮进入增加广告界面：</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>增加图片/FLASH广告</strong></td>
+  </tr>
+  <tr> 
+    <td>增加图片/FLASH广告界面：（其中蓝色条为必填项）</td>
+  </tr>
+  <tr> 
+    <td><img src="img/ad3.jpg" width="817" height="671" border="0"><br> <br> <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+        <tr bgcolor="#FFFFFF"> 
+          <td width="22%" height="25"><strong>过期时间</strong></td>
+          <td width="78%">广告过期时间不要设置太长。</td>
+        </tr>
+        <tr bgcolor="#FFFFFF"> 
+          <td height="25"><strong>链接地址</strong></td>
+          <td>图片广告有效，因为FLASH广告链接地址在swf文件本身已经定义。</td>
+        </tr>
+      </table> </td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>增加文字广告</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">增加文字广告界面：（其中蓝色条为必填项）</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/ad4.jpg" width="857" height="709"></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>增加HTML广告</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">增加HTML广告：（其中蓝色条为必填项）</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/ad5.jpg" width="818" height="729"></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>增加弹出广告</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">增加弹出广告：（其中蓝色条为必填项）</td>
+  </tr>
+  <tr>
+    <td height="25"><img src="img/ad6.jpg" width="814" height="572"></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="adclass"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">四、广告分类管理</font></strong></td>
+  </tr>
+  <tr>
+    <td height="25">对于广告较多的站点，后台可设置选择性的显示所属广告类别中的广告，方便管理。</td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>插件</strong>”菜单，选择“<strong>管理广告分类</strong>”子菜单，进入管理广告分类界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/ad7.jpg" width="558" height="287"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入管理广告分类界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> <img src="img/ad8.jpg" width="672" height="257" border="0"></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>

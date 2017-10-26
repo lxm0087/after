@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>评论JS调用模板制作</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="100%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">评论JS调用模板</strong></td>
+  </tr>
+  <tr> 
+    <td height="27" bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>评论JS调用模板为控制信息内容页JS调用评论的页面格式(/e/pl/more) 。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">评论JS调用模板制作格式</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+  <tr> 
+    <td height="80" bgcolor="#FFFFFF">列表头<br>
+      [!--empirenews.listtemp--]<br>
+      列表内容<br>
+      [!--empirenews.listtemp--]<br>
+      列表尾</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"> 
+      <p><font color="#666666">说明：第一个[!--empirenews.listtemp--]表示循环开始、第二个[!--empirenews.listtemp--]表示循环结束。</font></p>
+      </td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">评论JS调用模板支持变量说明</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#8CBDEF">
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">[!--news.url--]：网站地址(参数设置的站点地址)</td>
+    <td>[!--classid--]：栏目ID</td>
+    <td>[!--id--]：信息ID</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">[!--plid--]：评论ID</td>
+    <td>[!--pltext--]：评论内容</td>
+    <td>[!--pltime--]：评论发表时间</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">[!--plip--]：发表者IP</td>
+    <td>[!--userid--]：发表者ID</td>
+    <td>[!--username--]：发表者</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25">[!--zcnum--]：支持数</td>
+    <td>[!--fdnum--]：反对数<br></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td height="25"><strong>支持PHP代码</strong></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="25" colspan="3">内容模板调用JS评论地址：&lt;script src=&quot;[!--news.url--]e/pl/more/?classid=[!--classid--]&amp;id=[!--id--]&amp;num=10&quot;&gt;&lt;/script&gt;</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+  <tr> 
+    <td height="25"><strong><font color="#FFFFFF">修改评论JS调用模板</font></strong></td>
+  </tr>
+</table>
+<table width="98%" border="0" align="center">
+  <tr> 
+    <td height="25">1、登录后台，单击“<strong>模板</strong>”菜单，选择“<strong>评论JS调用模板</strong>”子菜单，进入修改评论JS调用模板界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"> 图片1：菜单导航<br>
+      <img src="img/pljstemp1.jpg" width="502" height="592" border="1"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、进入“修改评论JS调用模板”界面，将模板代码复制到Dreamweaver编辑，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="32"><img src="img/pljstemp2.jpg" width="700" height="609" border="1"> 
+    </td>
+  </tr>
+  <tr> 
+    <td height="25">3、把评论JS调用模板复制到Dreamweaver后可进行可视化编辑，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="25">图1：设计视图<br>
+      <img src="img/pljstemp3.jpg" width="700" height="223" border="1"><br> 
+      <br>
+      图2： 代码模式<br>
+      <img src="img/pljstemp4.jpg" width="688" height="583" border="1"> </td>
+  </tr>
+  <tr> 
+    <td height="25">4、修改评论JS调用模板后，复制页面的代码到后台的“评论JS调用模板”文本框，然后点击“修改”即可修改完毕。</td>
+  </tr>
+  <tr>
+    <td height="25">5、前台显示：内容模板加调用JS评论：&lt;script src=&quot;[!--news.url--]e/pl/more/?classid=[!--classid--]&amp;id=[!--id--]&amp;num=10&quot;&gt;&lt;/script&gt;</td>
+  </tr>
+</table>
+<br>
+<br>
+</body>
+</html>

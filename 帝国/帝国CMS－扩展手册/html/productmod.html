@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>《帝国网站管理系统》教程</title>
+<link href="../images/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center" bgcolor="#C3EFFF">
+  <tr> 
+    <td width="50%" height="27"><strong><img src="../images/noadd.gif" width="15" height="15">演示制作产品展示系统</strong></td>
+    <td width="50%"><div align="center"><select name="xx" id="xx" onchange=window.location='#'+this.options[this.selectedIndex].value>
+          <option value="">选择本节内容&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="modstep">&nbsp; &nbsp; &gt; 一、自定义系统模型一般步骤</option>
+          <option value="productmod">&nbsp; &nbsp; &gt; 二、举例说明：制作“产品展示系统”</option>
+		  <option value="productmod1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt; (一)、系统分析</option>
+		  <option value="productmod2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt; (二)、增加数据表</option>
+		  <option value="productmod3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt; (三)、增加字段</option>
+		  <option value="productmod4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &gt; (四)、增加系统模型</option>
+		  <option value="testproductmod">&nbsp; &nbsp; &gt; 三、测试制作好的“产品展示系统”模型</option>
+        </select></div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td height="27" colspan="2"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td> 本文通过制作产品系统来演示“自定义系统模型”功能操作，用户可以依本文举一反三，去增加与实现其它系统。</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="modstep"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">一、自定义系统模型一般步骤：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、系统分析；<br>
+      2、增加数据表；<br>
+      3、增加字段；<br>
+      4、增加系统模型；<br>
+      5、完成。</td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center">
+  <tr id="productmod"> 
+    <td width="100%" height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">二、举例说明：制作“产品展示系统”：</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">说明：由于只是教程，所以我们下面只实例制作比较简单的产品系统，用户也可以依自己实际情况增加产品参数字段。</td>
+  </tr>
+  <tr id="productmod1"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(一)、系统分析： </strong></td>
+  </tr>
+  <tr> 
+    <td height="25">通常的产品系统由“产品名称”、“价格”、“型号”、“产品缩略图”、“产品图片”、“产品介绍”等组成。</td>
+  </tr>
+  <tr> 
+    <td height="25">经过上面分析我们需要的字段如下。<font color="#666666">（其中“title”、“special.field”、“newstime”、“titlepic”为系统字段，不用设置）</font></td>
+  </tr>
+  <tr> 
+    <td height="25"><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#4FB4DE">
+        <tr> 
+          <td width="14%"> <div align="center"><strong><font color="#FFFFFF">产品参数</font></strong></div></td>
+          <td width="14%" height="23"> <div align="center"><font color="#FFFFFF"><strong>字段名</strong></font></div></td>
+          <td width="12%"> <div align="center"><font color="#FFFFFF"><strong>字段标识</strong></font></div></td>
+          <td width="23%"> <div align="center"><font color="#FFFFFF"><strong>字段类型</strong></font></div></td>
+          <td width="10%"> <div align="center"><strong><font color="#FFFFFF">字段长度</font></strong></div></td>
+          <td width="19%"> <div align="center"><font color="#FFFFFF"><strong>表单元素</strong></font></div></td>
+          <td width="8%"> <div align="center"><font color="#FFFFFF"><strong>字段顺序</strong></font></div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><div align="center"><strong>产品名称</strong></div></td>
+          <td height="23" bgcolor="#FFFFFF"> <div align="center"><font color="#FF0000">title</font></div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">标题</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">---</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">---</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">按默认即可</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">0</div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><div align="center"><strong>---</strong></div></td>
+          <td height="23" bgcolor="#FFFFFF"><div align="center"><font color="#FF0000">special.field</font></div></td>
+          <td bgcolor="#FFFFFF"><div align="center">特殊属性</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">---</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">---</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">按默认即可</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">1</div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><div align="center"><strong>---</strong></div></td>
+          <td height="23" bgcolor="#FFFFFF"><div align="center"><font color="#FF0000">newstime</font></div></td>
+          <td bgcolor="#FFFFFF"><div align="center">发布时间</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">---</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">---</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">按默认即可</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">2</div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><div align="center"><strong>型号</strong></div></td>
+          <td height="23" bgcolor="#FFFFFF"> <div align="center">ptype</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">型号</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">字符型0-255字节(VARCHAR)</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">30</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">单行文本框(text)</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">3</div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><div align="center"><strong>价格</strong></div></td>
+          <td height="23" bgcolor="#FFFFFF"> <div align="center">price</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">价格</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">数值浮点型(FLOAT)</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">11,2</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">单行文本框(text)</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">4</div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><div align="center"><strong>产品缩略图</strong></div></td>
+          <td height="23" bgcolor="#FFFFFF"> <div align="center"><font color="#FF0000">titlepic</font></div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">标题图片</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">---</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">---</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">按默认即可</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">5</div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><div align="center"><strong>产品图片</strong></div></td>
+          <td height="23" bgcolor="#FFFFFF"> <div align="center">productpic</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">产品图片</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">字符型0-255字节(VARCHAR)</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">200</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">图片(img)</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">6</div></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#FFFFFF"><div align="center"><strong>产品介绍</strong></div></td>
+          <td height="23" bgcolor="#FFFFFF"> <div align="center">productsay</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">产品介绍</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">中型字符型(MEDIUMTEXT)</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">---</div></td>
+          <td bgcolor="#FFFFFF"> <div align="center">编辑器(editor)</div></td>
+          <td bgcolor="#FFFFFF"><div align="center">7</div></td>
+        </tr>
+        <tr> 
+          <td height="23" colspan="7" bgcolor="#FFFFFF">说明：红色字段名为系统字段。</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr id="productmod2"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(二)、增加数据表：</strong>建立存放产品信息的数据表</td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台-&gt;“系统”-&gt;“数据表与系统模型”-&gt;“新建数据表”，进入如下界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/productmod1.jpg" width="722" height="346"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、提交后，数据表即可增加成功，转至“<strong>管理数据表</strong>”会显示刚才新建的表，如下图: </td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/productmod2.jpg" width="848" height="503"></td>
+  </tr>
+  <tr id="productmod3"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(三)、增加字段：</strong>由于产品名称与产品缩略图是系统内置字段，所以下面我们增加其余字段。</td>
+  </tr>
+  <tr> 
+    <td height="25"> 1、登录后台-&gt;“系统”-&gt;“数据表与系统模型”-&gt;“管理数据表”-&gt;点击产品数据表的“管理字段”-&gt;“增加字段”，进入如下界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><strong>图1：(增加“型号”字段)<br>
+      <img src="img/productmod3.jpg" width="683" height="1332"> <br>
+      图2：(增加“价格”字段)<br>
+      <img src="img/productmod4.jpg" width="683" height="1332"> <br>
+      图3：(增加“产品图片”字段)<br>
+      <img src="img/productmod5.jpg" width="683" height="1332"> <br>
+      图4：(增加“产品介绍”字段)<br>
+      <img src="img/productmod6.jpg" width="683" height="1372"> </strong></td>
+  </tr>
+  <tr> 
+    <td height="25">2、至此，所需字段全部新建完毕，转至“<strong>字段管理</strong>”会显示刚才新增加的字段，如下图: 
+    </td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/productmod7.jpg" width="710" height="597"></td>
+  </tr>
+  <tr> 
+    <td height="25">3、现在我们调整下字段的显示顺序，如下图：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/productmod8.jpg" width="710" height="595"></td>
+  </tr>
+  <tr> 
+    <td height="25">修改字段顺序后字段列表显示如下图：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/productmod9.jpg" width="711" height="595"></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr id="productmod4"> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(四)、增加系统模型：</strong>建立录入数据界面的格式</td>
+  </tr>
+  <tr> 
+    <td height="25"><font color="#FF0000">说明：每个系统模型都可以有自己的“后台信息发布与管理”、“前台会员投稿与管理”与“信息采集”。</font></td>
+  </tr>
+  <tr> 
+    <td height="25"> 1、登录后台-&gt;“系统”-&gt;“数据表与系统模型”-&gt;“管理数据表”-&gt;点击产品数据表的“管理系统模型”-&gt;“增加系统模型”，进入如下界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/productmod10.jpg" width="843" height="1528"></td>
+  </tr>
+  <tr> 
+    <td height="25">2、增加系统模型成功后，转至“<strong>管理系统模型</strong>”查看已增加的系统模型，如下图: </td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/productmod11.jpg" width="841" height="227"></td>
+  </tr>
+  <tr> 
+    <td height="25">附加说明：增加模型后，如果对显示表单样式不满意，还可以修改“后台录入表单模板”与“前台投稿表单模板”输出样式:（可用Dreamweaver编辑）</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/productmod12.jpg" width="843" height="1528"></td>
+  </tr>
+  <tr> 
+    <td height="25">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>五、至此，“产品展示系统”制作完毕。</strong></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr id="testproductmod"> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">三、测试制作好的“产品展示系统”模型</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25" bgcolor="#C3EFFF"><strong>(一)、增加栏目：</strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、登录后台-&gt;“栏目管理”-&gt;“增加栏目”，进入如下界面：</td>
+  </tr>
+  <tr> 
+    <td height="25">图1：(选择“产品展示系统模型”)<br>
+      <img src="img/productmod13.jpg" width="789" height="817"><br>
+      图2：(如果要开启前台会员发布与管理，可仔细设置下面的选项)<br>
+      <img src="img/productmod14.jpg" width="789" height="843"> </td>
+  </tr>
+  <tr>
+    <td height="25">2、查看后台发布产品信息的表单: </td>
+  </tr>
+  <tr>
+    <td height="25">图1：（增加产品）<br>
+      <img src="img/productmod15.jpg" width="844" height="806"><br>
+      图2：（管理产品）<br>
+      <img src="img/productmod16.jpg" width="925" height="296"> </td>
+  </tr>
+  <tr>
+    <td height="25">3、查看前台会员发布产品信息的表单: </td>
+  </tr>
+  <tr>
+    <td height="25">图1：（选择栏目）<br>
+      <img src="img/productmod17.jpg" width="961" height="1096"><br>
+      图2：（投稿提交表单）<br>
+      <img src="img/productmod18.jpg" width="967" height="1096"> <br>
+      图3：（会员管理投稿）<br>
+      <img src="img/productmod19.jpg" width="961" height="1096"> <br>
+      附加说明：记得到参数设置那开启投稿支持上传图片与附件。 </td>
+  </tr>
+  <tr>
+    <td height="25">4、查看采集的表单: </td>
+  </tr>
+  <tr> 
+    <td height="25">登录后台-&gt;“栏目”-&gt;“采集管理”-&gt;“增加采集节点”-&gt;选择“产品栏目”，进入如下界面：</td>
+  </tr>
+  <tr> 
+    <td height="25"><img src="img/productmod20.jpg" width="843" height="4859"></td>
+  </tr>
+  <tr> 
+    <td height="25">5、模板调用自定义字段说明：用“[!--字段名--]”表示即可，如：“[!--productsay--]”表示产品介绍。</td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  <tr> 
+    <td height="25" bgcolor="#4FB4DE"><strong><font color="#FFFFFF">相关链接</font></strong></td>
+  </tr>
+  <tr> 
+    <td height="25">1、<a href="http://bbs.phome.net/showthread-13-25400-0.html" target="_blank">帝国CMS功能解密之：自定义系统模型</a></td>
+  </tr>
+  <tr> 
+    <td height="25">2、<a href="http://bbs.phome.net/showthread-35-29397-0.html" target="_blank">视频演示通过自定义系统模型制作简单的MTV系统</a></td>
+  </tr>
+  <tr> 
+    <td height="25">3、<a href="http://bbs.phome.net/showthread-35-29383-0.html" target="_blank">TryLife：帝国CMS【系统模型】实战视频语言教程</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+</body>
+</html>
