@@ -1,2 +1,4 @@
 http://www.golaravel.com/post/2016-ban-laravel-xi-lie-ru-men-jiao-cheng-yi/
 https://baijunyao.com/article/64
+http://php.net/manual/zh/book.reflection.php  自动搜寻依赖需求的功能  php反射
+http://laravelacademy.org/post/769.html       服务容器详解

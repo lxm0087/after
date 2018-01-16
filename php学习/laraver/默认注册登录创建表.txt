@@ -1,0 +1,3 @@
+php artisan migrate
+
+http://www.3qphp.com/php/laravel/128.html   laravel源码分析用户认证系统之登录

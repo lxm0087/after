@@ -1,0 +1,12 @@
+service sshd restart
+$ ssh git@192.168.56.101 'cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub
+
+云服务器 ECS Linux CentOS 7 下重启服务不再通过 service  操作，而是通过 systemctl 操作。
+
+查看：systemctl status sshd.service
+
+启动：systemctl start sshd.service
+
+重启：systemctl restart sshd.service
+
+自启：systemctl enable sshd.service

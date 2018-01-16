@@ -1,0 +1,73 @@
+wife/管理员密码：yqy19941029
+
+netstat -ntlp   列出所有端口
+
+服务器地址：139.196.93.247 
+
+
+bcef507b-3c3c-4dfd-b657-f1c3b1c43ed6  我的备案服务号
+
+账号：root   密码：Ecs-4epn
+
+数据库账号密码  root ycll722
+
+阿里云
+账号：1479672753@qq.com
+密码：MM:soufin8140
+
+276898 远程连接密码
+
+
+域名备案账号：
+yuqingyong
+yqy19941029
+
+useradd -d /home/www/test -g ftp -s /sbin/nologin test  # 指定用户 test 属于组 ftp，只能访问的目录是 /home/www/test，不能登陆系统
+
+
+netstat -ntlp 查看端口占用情况
+然后执行命令启动memcached 
+#/usr/local/bin/memcached -d -m 1024 -u root -p 11211 -P /tmp/memcached.pid 
+
+http://www.linuxidc.com/Linux/2015-05/117170.htm memcache扩展安装
+the host '139.169.93.247' is unreachable.
+the host may be down, or there may be a problem with the network connection
+Sometimes such problems can also be caused by a misconfigured firewall
+
+-A syn-flood -J REJECT --reject-with icmp-port-unreachable
+Redirecting to /bin/systemctl start iptables.service
+
+
+
+关于yum源安装GD库
+本来使用yum install php-gd*安装的话是默认安装的php5.3的源，但是我使用的是PHP5.6版本，所以不能安装，会报错，
+而我的yum源有多种方式安装，默认是base安装，所以我们要指定安装源
+yum install --enablerepo=remi --enablerepo=remi-php56 php-gd 使用这条就可以指定使用remi源安装
+
+
+ftp账号密码：
+luxiating     lxt7221
+liuxiaoming   lxm7222
+chengda       cd7223
+yuqingyong    yqy7224
+
+
+
+之前把网站放在虚拟空间，没有自己去搞个服务器；
+心里总有点不是滋味，索性就跟几个同事合伙买了个服务器；
+服务器买了吧，需要装个环境，我那几位朋友也没啥时间；
+所以这重担就落在我的身上，没办法，人长得帅，责任也大O(∩_∩)O；
+可是当我真正动手开始装环境的时候，我是崩溃的；
+what？远程链接需要借助SSH工具？等等，SSH工具是啥；
+好吧，这是一个连接远程Linux服务器的工具，可能是我在虚拟机上用习惯了；
+看到远程连接只有一个命令窗口，没有图形界面，有点不习惯；
+好在有SSH工具，基本上跟图形界面没什么差别。
+至于SSH工具怎么使用，自行百度，跟ftp工具有点像；
+好了，能连接服务器了，开始装环境了，嗯，系统是centos7.2，跟我在虚拟机上玩的6.5应该没差别吧；
+可往往事与愿违，差别的确没多大，但是有些shell命令修改了，比如：
+以前我们启动httpd服务是这样的：/etc/init.d/httpd restart,
+在7.2是这样的，换了一个命令，systemctl start httpd;
+不过没关系，问题不大，跟6.5一样装环境就是了；
+我一开始是使用一键安装包的方式安装的，装完之后才发现，不对劲，环境有点乱；
+
+果断重置了阿里云的磁盘，再来一次，这次咱手动一个个安装，
