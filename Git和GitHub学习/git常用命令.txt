@@ -1,4 +1,5 @@
 Git基本常用命令如下：
+  git config core.quotepath false   防止中文乱码
 
    mkdir：         XX (创建一个空目录 XX指目录名)
 

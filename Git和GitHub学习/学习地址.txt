@@ -2,3 +2,5 @@ https://backlogtool.com/git-tutorial/cn/stepup/stepup2_8.html
 http://www.yiibai.com/git/git_pull.html
 http://blog.csdn.net/endlu/article/details/51605861
 http://blog.csdn.net/liuwengai/article/details/52072344
+https://www.cnblogs.com/zhaoyanjun/p/5882784.html GitHub 实现多人协同提交代码并且权限分组管理
+https://www.cnblogs.com/abelsu/p/5138136.html            使用Git进行协同开发

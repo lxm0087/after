@@ -1,3 +1,4 @@
 tar zcvf xxx.tar.gz xxx/ 压缩
 tar zxvf xxx.tar.gz 解压缩
 service sshd restart
+netstat -tnlp 查看 程序 端口 PID
